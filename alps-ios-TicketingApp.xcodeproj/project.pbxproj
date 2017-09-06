@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A5A1B3EE57B54E35A27E75B /* Pods_alps_ios_TicketingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB0947071476B9F0BC4270C /* Pods_alps_ios_TicketingAppTests.framework */; };
+		1EFE57DEBC3B0301D08365DE /* Pods_alps_ios_TicketingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C247850AC74DB22B69B4D8 /* Pods_alps_ios_TicketingApp.framework */; };
+		84110D721F5E8A7500C3E28D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D711F5E8A7500C3E28D /* AppDelegate.swift */; };
+		84110D741F5E8A7500C3E28D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D731F5E8A7500C3E28D /* ViewController.swift */; };
+		84110D791F5E8A7500C3E28D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84110D781F5E8A7500C3E28D /* Assets.xcassets */; };
+		84110D7C1F5E8A7500C3E28D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84110D7A1F5E8A7500C3E28D /* LaunchScreen.storyboard */; };
+		84110D871F5E8A7500C3E28D /* alps_ios_TicketingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D861F5E8A7500C3E28D /* alps_ios_TicketingAppTests.swift */; };
+		84110D921F5E91D800C3E28D /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D911F5E91D800C3E28D /* TicketTableViewCell.swift */; };
+		84110D941F5E93DE00C3E28D /* TicketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D931F5E93DE00C3E28D /* TicketTableViewController.swift */; };
+		844410E91F602F30002AC090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844410E71F602F30002AC090 /* Main.storyboard */; };
+		847BC9B51F5FE4B90011F939 /* PublicationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BC9B41F5FE4B80011F939 /* PublicationTableViewController.swift */; };
+		847BC9B91F5FF8D90011F939 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BC9B81F5FF8D90011F939 /* LoginViewController.swift */; };
+		84823D3F1F5EEBE40039CA42 /* MobilePublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D3E1F5EEBE40039CA42 /* MobilePublicationViewController.swift */; };
+		84823D411F5EEBF40039CA42 /* PinPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D401F5EEBF40039CA42 /* PinPublicationViewController.swift */; };
+		84823D431F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D421F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift */; };
+		84823D451F5EF2DA0039CA42 /* PublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D441F5EF2DA0039CA42 /* PublicationViewController.swift */; };
+		84823D471F5EFB8A0039CA42 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D461F5EFB8A0039CA42 /* UserViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84110D831F5E8A7500C3E28D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84110D661F5E8A7500C3E28D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84110D6D1F5E8A7500C3E28D;
+			remoteInfo = "alps-ios-TicketingApp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16C247850AC74DB22B69B4D8 /* Pods_alps_ios_TicketingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alps_ios_TicketingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B29BA4F25738A14D00375C /* Pods-alps-ios-TicketingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		84110D6E1F5E8A7500C3E28D /* alps-ios-TicketingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alps-ios-TicketingApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84110D711F5E8A7500C3E28D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84110D731F5E8A7500C3E28D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84110D781F5E8A7500C3E28D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84110D7B1F5E8A7500C3E28D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84110D7D1F5E8A7500C3E28D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84110D821F5E8A7500C3E28D /* alps-ios-TicketingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "alps-ios-TicketingAppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84110D861F5E8A7500C3E28D /* alps_ios_TicketingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alps_ios_TicketingAppTests.swift; sourceTree = "<group>"; };
+		84110D881F5E8A7500C3E28D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84110D911F5E91D800C3E28D /* TicketTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
+		84110D931F5E93DE00C3E28D /* TicketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketTableViewController.swift; sourceTree = "<group>"; };
+		844410E81F602F30002AC090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "alps-ios-TicketingApp/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		847BC9B41F5FE4B80011F939 /* PublicationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewController.swift; sourceTree = "<group>"; };
+		847BC9B81F5FF8D90011F939 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84823D3E1F5EEBE40039CA42 /* MobilePublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilePublicationViewController.swift; sourceTree = "<group>"; };
+		84823D401F5EEBF40039CA42 /* PinPublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinPublicationViewController.swift; sourceTree = "<group>"; };
+		84823D421F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconPublicationViewController.swift; sourceTree = "<group>"; };
+		84823D441F5EF2DA0039CA42 /* PublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationViewController.swift; sourceTree = "<group>"; };
+		84823D461F5EFB8A0039CA42 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		97536278F80C45A044A3B7D7 /* Pods-alps-ios-TicketingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.release.xcconfig"; sourceTree = "<group>"; };
+		AD0CAF92B32FB984A04427B5 /* Pods-alps-ios-TicketingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		DAB0947071476B9F0BC4270C /* Pods_alps_ios_TicketingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alps_ios_TicketingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C2CF535021A73EC086875E /* Pods-alps-ios-TicketingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84110D6B1F5E8A7500C3E28D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EFE57DEBC3B0301D08365DE /* Pods_alps_ios_TicketingApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84110D7F1F5E8A7500C3E28D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A5A1B3EE57B54E35A27E75B /* Pods_alps_ios_TicketingAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3577D8159F284C17C934FC8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3C2CF535021A73EC086875E /* Pods-alps-ios-TicketingApp.debug.xcconfig */,
+				97536278F80C45A044A3B7D7 /* Pods-alps-ios-TicketingApp.release.xcconfig */,
+				29B29BA4F25738A14D00375C /* Pods-alps-ios-TicketingAppTests.debug.xcconfig */,
+				AD0CAF92B32FB984A04427B5 /* Pods-alps-ios-TicketingAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		84110D651F5E8A7500C3E28D = {
+			isa = PBXGroup;
+			children = (
+				84110D701F5E8A7500C3E28D /* alps-ios-TicketingApp */,
+				84110D851F5E8A7500C3E28D /* alps-ios-TicketingAppTests */,
+				84110D6F1F5E8A7500C3E28D /* Products */,
+				3577D8159F284C17C934FC8F /* Pods */,
+				E8CFFABEF137C0216E6FDC61 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84110D6F1F5E8A7500C3E28D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84110D6E1F5E8A7500C3E28D /* alps-ios-TicketingApp.app */,
+				84110D821F5E8A7500C3E28D /* alps-ios-TicketingAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84110D701F5E8A7500C3E28D /* alps-ios-TicketingApp */ = {
+			isa = PBXGroup;
+			children = (
+				84110D711F5E8A7500C3E28D /* AppDelegate.swift */,
+				84110D731F5E8A7500C3E28D /* ViewController.swift */,
+				844410E71F602F30002AC090 /* Main.storyboard */,
+				847BC9B81F5FF8D90011F939 /* LoginViewController.swift */,
+				84823D441F5EF2DA0039CA42 /* PublicationViewController.swift */,
+				84110D931F5E93DE00C3E28D /* TicketTableViewController.swift */,
+				84110D911F5E91D800C3E28D /* TicketTableViewCell.swift */,
+				84823D3E1F5EEBE40039CA42 /* MobilePublicationViewController.swift */,
+				847BC9B41F5FE4B80011F939 /* PublicationTableViewController.swift */,
+				84823D401F5EEBF40039CA42 /* PinPublicationViewController.swift */,
+				84823D461F5EFB8A0039CA42 /* UserViewController.swift */,
+				84823D421F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift */,
+				84110D781F5E8A7500C3E28D /* Assets.xcassets */,
+				84110D7A1F5E8A7500C3E28D /* LaunchScreen.storyboard */,
+				84110D7D1F5E8A7500C3E28D /* Info.plist */,
+			);
+			path = "alps-ios-TicketingApp";
+			sourceTree = "<group>";
+		};
+		84110D851F5E8A7500C3E28D /* alps-ios-TicketingAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				84110D861F5E8A7500C3E28D /* alps_ios_TicketingAppTests.swift */,
+				84110D881F5E8A7500C3E28D /* Info.plist */,
+			);
+			path = "alps-ios-TicketingAppTests";
+			sourceTree = "<group>";
+		};
+		E8CFFABEF137C0216E6FDC61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16C247850AC74DB22B69B4D8 /* Pods_alps_ios_TicketingApp.framework */,
+				DAB0947071476B9F0BC4270C /* Pods_alps_ios_TicketingAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84110D6D1F5E8A7500C3E28D /* alps-ios-TicketingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84110D8B1F5E8A7500C3E28D /* Build configuration list for PBXNativeTarget "alps-ios-TicketingApp" */;
+			buildPhases = (
+				1485559D73B41B6CC89F2552 /* [CP] Check Pods Manifest.lock */,
+				84110D6A1F5E8A7500C3E28D /* Sources */,
+				84110D6B1F5E8A7500C3E28D /* Frameworks */,
+				84110D6C1F5E8A7500C3E28D /* Resources */,
+				4EF8CBE1651380625E6FA5C7 /* [CP] Embed Pods Frameworks */,
+				5390C3688D41A3F244779973 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "alps-ios-TicketingApp";
+			productName = "alps-ios-TicketingApp";
+			productReference = 84110D6E1F5E8A7500C3E28D /* alps-ios-TicketingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84110D811F5E8A7500C3E28D /* alps-ios-TicketingAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84110D8E1F5E8A7500C3E28D /* Build configuration list for PBXNativeTarget "alps-ios-TicketingAppTests" */;
+			buildPhases = (
+				33F865541F6F8F44A8F804DF /* [CP] Check Pods Manifest.lock */,
+				84110D7E1F5E8A7500C3E28D /* Sources */,
+				84110D7F1F5E8A7500C3E28D /* Frameworks */,
+				84110D801F5E8A7500C3E28D /* Resources */,
+				AE9E56014A01479896EAB38E /* [CP] Embed Pods Frameworks */,
+				A4B6FF75662C2D1DF3D15B9F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84110D841F5E8A7500C3E28D /* PBXTargetDependency */,
+			);
+			name = "alps-ios-TicketingAppTests";
+			productName = "alps-ios-TicketingAppTests";
+			productReference = 84110D821F5E8A7500C3E28D /* alps-ios-TicketingAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84110D661F5E8A7500C3E28D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = WhenWens;
+				TargetAttributes = {
+					84110D6D1F5E8A7500C3E28D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = PAYVP3AFKX;
+						ProvisioningStyle = Automatic;
+					};
+					84110D811F5E8A7500C3E28D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = PAYVP3AFKX;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 84110D6D1F5E8A7500C3E28D;
+					};
+				};
+			};
+			buildConfigurationList = 84110D691F5E8A7500C3E28D /* Build configuration list for PBXProject "alps-ios-TicketingApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84110D651F5E8A7500C3E28D;
+			productRefGroup = 84110D6F1F5E8A7500C3E28D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84110D6D1F5E8A7500C3E28D /* alps-ios-TicketingApp */,
+				84110D811F5E8A7500C3E28D /* alps-ios-TicketingAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84110D6C1F5E8A7500C3E28D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84110D7C1F5E8A7500C3E28D /* LaunchScreen.storyboard in Resources */,
+				84110D791F5E8A7500C3E28D /* Assets.xcassets in Resources */,
+				844410E91F602F30002AC090 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84110D801F5E8A7500C3E28D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1485559D73B41B6CC89F2552 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		33F865541F6F8F44A8F804DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4EF8CBE1651380625E6FA5C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5390C3688D41A3F244779973 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4B6FF75662C2D1DF3D15B9F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE9E56014A01479896EAB38E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84110D6A1F5E8A7500C3E28D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847BC9B91F5FF8D90011F939 /* LoginViewController.swift in Sources */,
+				84110D921F5E91D800C3E28D /* TicketTableViewCell.swift in Sources */,
+				84823D471F5EFB8A0039CA42 /* UserViewController.swift in Sources */,
+				847BC9B51F5FE4B90011F939 /* PublicationTableViewController.swift in Sources */,
+				84823D3F1F5EEBE40039CA42 /* MobilePublicationViewController.swift in Sources */,
+				84110D941F5E93DE00C3E28D /* TicketTableViewController.swift in Sources */,
+				84823D451F5EF2DA0039CA42 /* PublicationViewController.swift in Sources */,
+				84110D741F5E8A7500C3E28D /* ViewController.swift in Sources */,
+				84110D721F5E8A7500C3E28D /* AppDelegate.swift in Sources */,
+				84823D411F5EEBF40039CA42 /* PinPublicationViewController.swift in Sources */,
+				84823D431F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84110D7E1F5E8A7500C3E28D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84110D871F5E8A7500C3E28D /* alps_ios_TicketingAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84110D841F5E8A7500C3E28D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84110D6D1F5E8A7500C3E28D /* alps-ios-TicketingApp */;
+			targetProxy = 84110D831F5E8A7500C3E28D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84110D7A1F5E8A7500C3E28D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84110D7B1F5E8A7500C3E28D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		844410E71F602F30002AC090 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				844410E81F602F30002AC090 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84110D891F5E8A7500C3E28D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84110D8A1F5E8A7500C3E28D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84110D8C1F5E8A7500C3E28D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3C2CF535021A73EC086875E /* Pods-alps-ios-TicketingApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PAYVP3AFKX;
+				INFOPLIST_FILE = "alps-ios-TicketingApp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Matchmore.alps-ios-TicketingApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		84110D8D1F5E8A7500C3E28D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97536278F80C45A044A3B7D7 /* Pods-alps-ios-TicketingApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PAYVP3AFKX;
+				INFOPLIST_FILE = "alps-ios-TicketingApp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Matchmore.alps-ios-TicketingApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		84110D8F1F5E8A7500C3E28D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29B29BA4F25738A14D00375C /* Pods-alps-ios-TicketingAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PAYVP3AFKX;
+				INFOPLIST_FILE = "alps-ios-TicketingAppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Matchmore.alps-ios-TicketingAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alps-ios-TicketingApp.app/alps-ios-TicketingApp";
+			};
+			name = Debug;
+		};
+		84110D901F5E8A7500C3E28D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD0CAF92B32FB984A04427B5 /* Pods-alps-ios-TicketingAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PAYVP3AFKX;
+				INFOPLIST_FILE = "alps-ios-TicketingAppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Matchmore.alps-ios-TicketingAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/alps-ios-TicketingApp.app/alps-ios-TicketingApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84110D691F5E8A7500C3E28D /* Build configuration list for PBXProject "alps-ios-TicketingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84110D891F5E8A7500C3E28D /* Debug */,
+				84110D8A1F5E8A7500C3E28D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84110D8B1F5E8A7500C3E28D /* Build configuration list for PBXNativeTarget "alps-ios-TicketingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84110D8C1F5E8A7500C3E28D /* Debug */,
+				84110D8D1F5E8A7500C3E28D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84110D8E1F5E8A7500C3E28D /* Build configuration list for PBXNativeTarget "alps-ios-TicketingAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84110D8F1F5E8A7500C3E28D /* Debug */,
+				84110D901F5E8A7500C3E28D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84110D661F5E8A7500C3E28D /* Project object */;
+}

@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "385AED1204281BFC5C4696062D0866464EB49562" : 9223372036854775807,
+    "2A7CC117A0328588DBC06BB0A67A77A6C90443FD" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E9488519-6EF9-45BB-AB86-3EDDADED759D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "385AED1204281BFC5C4696062D0866464EB49562" : "alps-ios-api\/",
+    "2A7CC117A0328588DBC06BB0A67A77A6C90443FD" : "alps-ios-sdk\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "alps-ios-TicketingApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "alps-ios-TicketingApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MatchMore\/alps-ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2A7CC117A0328588DBC06BB0A67A77A6C90443FD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/MatchMore\/alps-ios-api.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "385AED1204281BFC5C4696062D0866464EB49562"
+    }
+  ]
+}

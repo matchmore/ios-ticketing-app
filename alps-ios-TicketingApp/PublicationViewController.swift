@@ -16,6 +16,9 @@ class PublicationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mobileView.isHidden = false
+        pinView.isHidden = true
+        iBeaconView.isHidden = true
         // Do any additional setup after loading the view.
     }
 

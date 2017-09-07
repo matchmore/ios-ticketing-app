@@ -10,7 +10,6 @@
 		0A5A1B3EE57B54E35A27E75B /* Pods_alps_ios_TicketingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB0947071476B9F0BC4270C /* Pods_alps_ios_TicketingAppTests.framework */; };
 		1EFE57DEBC3B0301D08365DE /* Pods_alps_ios_TicketingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C247850AC74DB22B69B4D8 /* Pods_alps_ios_TicketingApp.framework */; };
 		84110D721F5E8A7500C3E28D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D711F5E8A7500C3E28D /* AppDelegate.swift */; };
-		84110D741F5E8A7500C3E28D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D731F5E8A7500C3E28D /* ViewController.swift */; };
 		84110D791F5E8A7500C3E28D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84110D781F5E8A7500C3E28D /* Assets.xcassets */; };
 		84110D7C1F5E8A7500C3E28D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84110D7A1F5E8A7500C3E28D /* LaunchScreen.storyboard */; };
 		84110D871F5E8A7500C3E28D /* alps_ios_TicketingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D861F5E8A7500C3E28D /* alps_ios_TicketingAppTests.swift */; };
@@ -22,8 +21,9 @@
 		84823D3F1F5EEBE40039CA42 /* MobilePublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D3E1F5EEBE40039CA42 /* MobilePublicationViewController.swift */; };
 		84823D411F5EEBF40039CA42 /* PinPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D401F5EEBF40039CA42 /* PinPublicationViewController.swift */; };
 		84823D431F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D421F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift */; };
-		84823D451F5EF2DA0039CA42 /* PublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D441F5EF2DA0039CA42 /* PublicationViewController.swift */; };
+		84823D451F5EF2DA0039CA42 /* AddPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D441F5EF2DA0039CA42 /* AddPublicationViewController.swift */; };
 		84823D471F5EFB8A0039CA42 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D461F5EFB8A0039CA42 /* UserViewController.swift */; };
+		8484E2261F6143D80086C887 /* PublicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484E2251F6143D80086C887 /* PublicationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 		29B29BA4F25738A14D00375C /* Pods-alps-ios-TicketingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		84110D6E1F5E8A7500C3E28D /* alps-ios-TicketingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alps-ios-TicketingApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84110D711F5E8A7500C3E28D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84110D731F5E8A7500C3E28D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84110D781F5E8A7500C3E28D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84110D7B1F5E8A7500C3E28D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84110D7D1F5E8A7500C3E28D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,8 +55,9 @@
 		84823D3E1F5EEBE40039CA42 /* MobilePublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilePublicationViewController.swift; sourceTree = "<group>"; };
 		84823D401F5EEBF40039CA42 /* PinPublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinPublicationViewController.swift; sourceTree = "<group>"; };
 		84823D421F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconPublicationViewController.swift; sourceTree = "<group>"; };
-		84823D441F5EF2DA0039CA42 /* PublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationViewController.swift; sourceTree = "<group>"; };
+		84823D441F5EF2DA0039CA42 /* AddPublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPublicationViewController.swift; sourceTree = "<group>"; };
 		84823D461F5EFB8A0039CA42 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		8484E2251F6143D80086C887 /* PublicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewCell.swift; sourceTree = "<group>"; };
 		97536278F80C45A044A3B7D7 /* Pods-alps-ios-TicketingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.release.xcconfig"; sourceTree = "<group>"; };
 		AD0CAF92B32FB984A04427B5 /* Pods-alps-ios-TicketingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		DAB0947071476B9F0BC4270C /* Pods_alps_ios_TicketingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alps_ios_TicketingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,13 +119,13 @@
 			isa = PBXGroup;
 			children = (
 				84110D711F5E8A7500C3E28D /* AppDelegate.swift */,
-				84110D731F5E8A7500C3E28D /* ViewController.swift */,
 				844410E71F602F30002AC090 /* Main.storyboard */,
 				847BC9B81F5FF8D90011F939 /* LoginViewController.swift */,
-				84823D441F5EF2DA0039CA42 /* PublicationViewController.swift */,
+				84823D441F5EF2DA0039CA42 /* AddPublicationViewController.swift */,
 				84110D931F5E93DE00C3E28D /* TicketTableViewController.swift */,
 				84110D911F5E91D800C3E28D /* TicketTableViewCell.swift */,
 				84823D3E1F5EEBE40039CA42 /* MobilePublicationViewController.swift */,
+				8484E2251F6143D80086C887 /* PublicationTableViewCell.swift */,
 				847BC9B41F5FE4B80011F939 /* PublicationTableViewController.swift */,
 				84823D401F5EEBF40039CA42 /* PinPublicationViewController.swift */,
 				84823D461F5EFB8A0039CA42 /* UserViewController.swift */,
@@ -359,14 +359,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8484E2261F6143D80086C887 /* PublicationTableViewCell.swift in Sources */,
 				847BC9B91F5FF8D90011F939 /* LoginViewController.swift in Sources */,
 				84110D921F5E91D800C3E28D /* TicketTableViewCell.swift in Sources */,
 				84823D471F5EFB8A0039CA42 /* UserViewController.swift in Sources */,
 				847BC9B51F5FE4B90011F939 /* PublicationTableViewController.swift in Sources */,
 				84823D3F1F5EEBE40039CA42 /* MobilePublicationViewController.swift in Sources */,
 				84110D941F5E93DE00C3E28D /* TicketTableViewController.swift in Sources */,
-				84823D451F5EF2DA0039CA42 /* PublicationViewController.swift in Sources */,
-				84110D741F5E8A7500C3E28D /* ViewController.swift in Sources */,
+				84823D451F5EF2DA0039CA42 /* AddPublicationViewController.swift in Sources */,
 				84110D721F5E8A7500C3E28D /* AppDelegate.swift in Sources */,
 				84823D411F5EEBF40039CA42 /* PinPublicationViewController.swift in Sources */,
 				84823D431F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift in Sources */,

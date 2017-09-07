@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PublicationViewController: UIViewController {
+class AddPublicationViewController: UIViewController {
 
     @IBOutlet weak var mobileView: UIView!
     @IBOutlet weak var pinView: UIView!

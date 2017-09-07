@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 
 class PinPublicationViewController: UIViewController {
+    @IBOutlet weak var publishButton: UIButton!
 
     @IBOutlet weak var mapView: MKMapView!
     let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)

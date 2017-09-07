@@ -8,15 +8,29 @@
 
 import UIKit
 import MapKit
+import AlpsSDK
 
 class MobilePublicationViewController: UIViewController {
 
+    // MARK: Properties
+    
+    @IBOutlet weak var concertTextField: UITextField!
+    @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var imageTextField: UITextField!
+    @IBOutlet weak var rangeTextField: UITextField!
+    @IBOutlet weak var durationTextField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var publishButton: UIButton!
+    // Using appDelegate as a singleton
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var alps : AlpsManager!
+    
     let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
     let regionRadius: CLLocationDistance = 1000
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        alps = self.appDelegate.alps
         centerMapOnLocation(location: initialLocation)
         // Do any additional setup after loading the view.
     }
@@ -26,12 +40,60 @@ class MobilePublicationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        publishButton.isEnabled = true
+    }
+    
+    @IBAction func publishAction(_ sender: Any) {
+    }
+    
+    // Triggers when publishButton is pressed
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        publishButton.isEnabled = false
+        // Configure the destination view controller only when the publish button is pressed.
+        guard let button = sender as? UIButton, button === publishButton else {
+            return
+        }
+        if let price = Double(priceTextField.text!), let range = Double(rangeTextField.text!), let duration = Double(durationTextField.text!), let image = imageTextField.text, let concert = concertTextField.text {
+            createPublication(concert: concert, price: price, image: image, range: range, duration: duration)
+//                () in
+//                let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+//                secondViewController.selectedIndex = 1
+//                self.navigationController?.present(secondViewController, animated: true)
+            
+        } else {
+            print("Issue with price.")
+            print("Issue with duration.")
+            print("Issue with range.")
+        }
+    }
 
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
+    
+    // MARK: - AlpsSDK
+    func createPublication(concert: String, price: Double, image: String, range: Double, duration: Double) {
+        if self.appDelegate.device != nil {
+            // XXX: the property syntax is tricky at the moment: mood is a variable and 'happy' is a string value
+            var properties : [String:String] = [:]
+            properties["concert"] = concert
+            properties["price"] = "\(price)"
+            properties["image"] = image
+            self.alps.createPublication(topic: "ticketstosale",
+                                        range: range, duration: duration,
+                                        properties: properties) {
+                                            (_ publication) in
+                                            if let p = publication {
+                                                print("Created publication: id = \(String(describing: p.id)), topic = \(String(describing: p.topic)), properties = \(String(describing: p.properties))")
+//                                                completionHandler()
+                                            }
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

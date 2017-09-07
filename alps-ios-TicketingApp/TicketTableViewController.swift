@@ -14,15 +14,31 @@ import Alps
 class TicketTableViewController: UITableViewController {
     
     var matches = [Match]()
+    var notificationCounter = 0
+    // Using appDelegate as a singleton
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var alps : AlpsManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.93, green:0.51, blue:0.31, alpha:1.0)
+        self.navigationController?.navigationBar.barTintColor = self.appDelegate.orange
+        // This function will be called everytime there is a match.
+        self.monitorMatchesWithCompletion { (_ match) in self.notificationOnMatch(match: match)}
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if appDelegate.userId != nil && appDelegate.deviceId != nil {
+            // call the API, to retrieve all the subscriptions for current user and device
+            getAllMatches()
+            self.resetNotificationOnMatch()
+        }else{
+            print("ERROR in MATCHESVIEWCONTROLLER: UserId or deviceId is nil.")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,8 +65,10 @@ class TicketTableViewController: UITableViewController {
         }
         
         let match = matches[indexPath.row]
+        let properties = match.publication?.properties
         // Configure the cell...
-        
+        cell.concertLabel.text = properties?["concert"]
+        cell.priceLabel.text = properties?["price"]
 
         return cell
     }
@@ -99,5 +117,70 @@ class TicketTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //MARK: HELPER method
+    
+    // Get the match at index in matches array
+    func matchAtIndexPath(indexPath: NSIndexPath) -> Match{
+        let match = matches[indexPath.row]
+        return match
+    }
+    
+    // Use this function to transform timestampe to local date displayed in String
+    func transformTimestampToDate(timestamp : Int64) -> String {
+        let dateTimeStamp = NSDate(timeIntervalSince1970:Double(timestamp)/1000)  //UTC time
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = NSTimeZone.local //Edit
+        dateFormatter.dateFormat = "MMM dd YYYY hh:mm a"
+        dateFormatter.dateStyle = DateFormatter.Style.full
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        let strDateSelect = dateFormatter.string(from: dateTimeStamp as Date)
+        
+        return strDateSelect
+    }
+    
+    
+    //MARK: Notification related
+    
+    // Shows notifications on match
+    func notificationOnMatch(match: Match){
+        notificationCounter += 1
+        tabBarController?.tabBar.items?[0].badgeValue = String(describing: notificationCounter)
+//        let topic = match.publication?.topic
+//        let selector = match.subscription?.selector
+//        let alert = UIAlertController(title: "An interesting offer is close to you!", message: "Topic : \(String(describing: topic!))\nSelector : \(String(describing: selector!))", preferredStyle: .actionSheet)
+//        alert.addAction(UIAlertAction(title: "Understood", style: .default, handler: nil))
+//        self.present(alert, animated: true)
+    }
+    
+    // Resets the TabBar Item badge value
+    func resetNotificationOnMatch(){
+        notificationCounter = 0
+        tabBarController?.tabBar.items?[0].badgeValue = nil
+    }
+    
+    //MARK: AlpsSDK functions
+    
+    // Start the match service
+    func monitorMatches() {
+        self.appDelegate.alps.startMonitoringMatches()
+    }
+    
+    // Get the match
+    func monitorMatchesWithCompletion(completion: @escaping (_ match: Match) -> Void) {
+        self.appDelegate.alps.onMatch(completion: completion)
+        self.appDelegate.alps.startMonitoringMatches()
+    }
+    
+    // Calls the SDK to get all matches for actual userId and deviceId
+    func getAllMatches(){
+        self.appDelegate.alps.getAllMatches() {
+            (_ matches) in
+            self.matches = matches
+            self.tableView.reloadData()
+        }
+    }
+
 
 }

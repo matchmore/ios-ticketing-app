@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jBo-pB-EBV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sNd-mC-6Ae">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cc2-tl-Hjn" id="2MO-ux-IIe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="No_image_available" translatesAutoresizingMaskIntoConstraints="NO" id="rbt-RK-EP4">
@@ -68,7 +68,7 @@
         <!--Sell your tickets-->
         <scene sceneID="hT5-db-SST">
             <objects>
-                <viewController id="ZBE-bE-ORn" customClass="PublicationViewController" customModule="alps_ios_TicketingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZBE-bE-ORn" customClass="AddPublicationViewController" customModule="alps_ios_TicketingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8qZ-BP-RyJ"/>
                         <viewControllerLayoutGuide type="bottom" id="SgR-bQ-FNT"/>
@@ -137,55 +137,6 @@
             </objects>
             <point key="canvasLocation" x="2320.289855072464" y="574.72826086956525"/>
         </scene>
-        <!--User's information-->
-        <scene sceneID="nq1-cP-Vma">
-            <objects>
-                <viewController id="WC2-Od-0TV" customClass="UserViewController" customModule="alps_ios_TicketingApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="txh-AH-TdE"/>
-                        <viewControllerLayoutGuide type="bottom" id="WKy-Du-Udp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="atV-1j-bbL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkx-PD-LWj">
-                                <rect key="frame" x="20" y="28" width="79" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHa-AK-YRn">
-                                <rect key="frame" x="20" y="57" width="104" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User ID :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOS-ah-v5G">
-                                <rect key="frame" x="20" y="86" width="66" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mobile Device ID :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rg-Rx-xHM">
-                                <rect key="frame" x="20" y="115" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="User's information" id="SbL-0b-DpF"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1tq-2Y-GgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="890" y="-106"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="dps-3P-rnt">
             <objects>
@@ -220,14 +171,17 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4tM-ed-88E" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="20" y="324" width="374" height="39"/>
+                                <rect key="frame" x="20" y="324" width="374" height="39.333333333333314"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJv-d9-Le9">
-                                <rect key="frame" x="20" y="371" width="374" height="30"/>
+                                <rect key="frame" x="20" y="371.33333333333331" width="374" height="30"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="sNd-mC-6Ae" eventType="touchUpInside" id="AdC-3g-IHC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -244,6 +198,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="BJv-d9-Le9" id="AIK-89-l49"/>
                         <outlet property="usernameLabel" destination="4tM-ed-88E" id="VhV-7X-PCK"/>
                     </connections>
                 </viewController>
@@ -254,15 +209,15 @@
         <!--Tab Bar Controller-->
         <scene sceneID="pnc-RW-BzC">
             <objects>
-                <tabBarController id="jBo-pB-EBV" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="jBo-pB-EBV" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SJu-Rv-Lhs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Op0-rV-KiQ" kind="relationship" relationship="viewControllers" id="mO3-O1-WCl"/>
                         <segue destination="LRn-OV-f7x" kind="relationship" relationship="viewControllers" id="gEX-Is-5aC"/>
+                        <segue destination="Op0-rV-KiQ" kind="relationship" relationship="viewControllers" id="mO3-O1-WCl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJA-VS-axI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -312,7 +267,7 @@
         <!--Mobile Publication View Controller-->
         <scene sceneID="4K0-H0-S7Q">
             <objects>
-                <viewController id="ZZ3-kp-GpL" customClass="MobilePublicationViewController" customModule="alps_ios_TicketingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MobilePublicationView" id="ZZ3-kp-GpL" customClass="MobilePublicationViewController" customModule="alps_ios_TicketingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tnp-q7-wFc"/>
                         <viewControllerLayoutGuide type="bottom" id="GGw-SC-S0L"/>
@@ -342,7 +297,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OtQ-Ig-zuf">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Montreux Jaz" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OtQ-Ig-zuf" userLabel="Concert Text Field">
                                                 <rect key="frame" x="108" y="0.0" width="226" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -362,7 +317,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFG-SK-qfe">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100.0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YFG-SK-qfe">
                                                 <rect key="frame" x="108" y="0.0" width="226" height="29.999999999999986"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -382,7 +337,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRa-Mr-9c4">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://dev.matchmore.com/static/img/demo/ticket_128x128.png" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRa-Mr-9c4">
                                                 <rect key="frame" x="108" y="0.0" width="226" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -402,7 +357,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzI-Id-OUh">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzI-Id-OUh">
                                                 <rect key="frame" x="108" y="0.0" width="226" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -422,7 +377,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CzR-o6-44R">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="300" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CzR-o6-44R">
                                                 <rect key="frame" x="108" y="0.0" width="226" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -444,12 +399,15 @@
                                 <rect key="frame" x="16" y="255.66666666666663" width="334" height="232.33333333333337"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kto-Ap-4Yq">
-                                <rect key="frame" x="122" y="496" width="90" height="40"/>
+                                <rect key="frame" x="138" y="496" width="90" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="L62-sY-Rua"/>
                                     <constraint firstAttribute="width" constant="90" id="OO3-Cb-C6y"/>
                                 </constraints>
                                 <state key="normal" title="Publish"/>
+                                <connections>
+                                    <segue destination="xkZ-3v-eYv" kind="unwind" unwindAction="unwindToSubscriptionListWithSender:" id="oxq-Pd-c8D"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -460,18 +418,25 @@
                             <constraint firstItem="oeL-E1-n0G" firstAttribute="leading" secondItem="q1s-tb-SOp" secondAttribute="leading" id="bJx-3x-KD9"/>
                             <constraint firstItem="GGw-SC-S0L" firstAttribute="top" secondItem="Kto-Ap-4Yq" secondAttribute="bottom" constant="35" id="cPE-iy-rrD"/>
                             <constraint firstItem="oeL-E1-n0G" firstAttribute="trailing" secondItem="q1s-tb-SOp" secondAttribute="trailing" id="eql-tQ-3dK"/>
-                            <constraint firstItem="Kto-Ap-4Yq" firstAttribute="leading" secondItem="Dok-Q0-dfA" secondAttribute="leading" constant="122" id="fMC-wn-yhk"/>
+                            <constraint firstItem="Kto-Ap-4Yq" firstAttribute="leading" secondItem="Dok-Q0-dfA" secondAttribute="leading" constant="138" id="fMC-wn-yhk"/>
                             <constraint firstItem="Kto-Ap-4Yq" firstAttribute="top" secondItem="oeL-E1-n0G" secondAttribute="bottom" constant="8" symbolic="YES" id="oeS-AS-QbX"/>
                             <constraint firstItem="oeL-E1-n0G" firstAttribute="top" secondItem="q1s-tb-SOp" secondAttribute="bottom" constant="9" id="qKu-56-uZp"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="oeL-E1-n0G" id="BKQ-cg-xJC"/>
+                        <outlet property="concertTextField" destination="OtQ-Ig-zuf" id="Yz9-nm-DPf"/>
+                        <outlet property="durationTextField" destination="CzR-o6-44R" id="cTH-bZ-kph"/>
+                        <outlet property="imageTextField" destination="aRa-Mr-9c4" id="wh8-a1-bIf"/>
+                        <outlet property="mapView" destination="oeL-E1-n0G" id="WI2-L1-wUf"/>
+                        <outlet property="priceTextField" destination="YFG-SK-qfe" id="Lb0-nq-CjE"/>
+                        <outlet property="publishButton" destination="Kto-Ap-4Yq" id="nEv-8u-kih"/>
+                        <outlet property="rangeTextField" destination="kzI-Id-OUh" id="fGu-6B-gc1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wf0-lw-Suc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xkZ-3v-eYv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3044" y="193.85307346326837"/>
+            <point key="canvasLocation" x="3044" y="-33"/>
         </scene>
         <!--Pin Publication View Controller-->
         <scene sceneID="eqR-wg-Maf">
@@ -608,7 +573,7 @@
                                 <rect key="frame" x="16" y="226" width="334" height="232"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDQ-xF-dIj">
-                                <rect key="frame" x="138" y="466" width="90" height="40"/>
+                                <rect key="frame" x="138.33333333333334" y="466" width="90" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NBS-Yz-vzE"/>
                                     <constraint firstAttribute="width" constant="90" id="o07-g1-Xe9"/>
@@ -631,6 +596,7 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="bg9-0p-arU" id="GYk-cI-DyI"/>
+                        <outlet property="publishButton" destination="uDQ-xF-dIj" id="1jE-lG-szS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2h-Bw-K9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -672,27 +638,27 @@
         <scene sceneID="W75-JJ-rdj">
             <objects>
                 <tableViewController id="uFn-6J-jNn" customClass="PublicationTableViewController" customModule="alps_ios_TicketingApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fJM-hi-Bvr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="fJM-hi-Bvr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="ZtV-il-SWl">
-                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PublicationTableViewCell" rowHeight="90" id="ZtV-il-SWl" customClass="PublicationTableViewCell" customModule="alps_ios_TicketingApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZtV-il-SWl" id="LTG-yU-CZc">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Concert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9og-9j-qrK">
-                                            <rect key="frame" x="8" y="8" width="62" height="21"/>
+                                            <rect key="frame" x="8" y="8" width="398" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9q-0w-tcl">
-                                            <rect key="frame" x="8" y="37" width="39" height="21"/>
+                                            <rect key="frame" x="8" y="37" width="398" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -700,6 +666,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="concertLabel" destination="9og-9j-qrK" id="m7b-MQ-eb9"/>
+                                    <outlet property="priceLabel" destination="Q9q-0w-tcl" id="suE-uk-vt0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -718,7 +688,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YpZ-zq-PZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584" y="576"/>
+            <point key="canvasLocation" x="1582.608695652174" y="575.54347826086962"/>
         </scene>
     </scenes>
     <resources>

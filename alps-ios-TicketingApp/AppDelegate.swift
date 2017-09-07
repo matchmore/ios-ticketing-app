@@ -7,15 +7,40 @@
 //
 
 import UIKit
+import AlpsSDK
+import Alps
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    // MARK: TO DO
+    let APIKEY = "ea0df90a-db0a-11e5-bd35-3bd106df139b" // <- Please provide a valid Matchmore Application Api-key, obtain it for free on dev.matchmore.io, see the README.md file for more informations
+    
+    // MARK: Properties
+    // AlpsManager is the SDK core class that will communicate with the API Alps, which will then communicate with Matchmore services
+    var alps: AlpsManager!
+    // In short, it will manage all the related calls with the device location. To learn more about CLLocationManager please refers to CoreLocation Documentation
+    var locationManager = CLLocationManager()
+    // UUID identifier given by Matchmore to identify users
+    var username : String?
+    var userId : String?
+    // UUID identifier given by Matchmore to identify devices
+    var deviceId : String?
+    var device : MobileDevice?
+    
+    // MARK: UI Interface
+    let orange = UIColor(red:0.93, green:0.51, blue:0.31, alpha:1.0)
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if APIKEY.isEmpty {
+            fatalError("To run this project, please provide a valid Matchmore Application Api-key. Obtain it for free on dev.matchmore.io, see the README.md file for more informations")
+        }else{
+            alps = AlpsManager(apiKey: APIKEY, clLocationManager : locationManager)
+        }
         return true
     }
 

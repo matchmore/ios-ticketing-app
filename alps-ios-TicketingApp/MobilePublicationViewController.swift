@@ -55,17 +55,16 @@ class MobilePublicationViewController: UIViewController {
             return
         }
         if let price = Double(priceTextField.text!), let range = Double(rangeTextField.text!), let duration = Double(durationTextField.text!), let image = imageTextField.text, let concert = concertTextField.text {
-            createPublication(concert: concert, price: price, image: image, range: range, duration: duration)
-//                () in
-//                let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
-//                secondViewController.selectedIndex = 1
-//                self.navigationController?.present(secondViewController, animated: true)
-            
+            createPublication(concert: concert, price: price, image: image, range: range, duration: duration, completion: {
+                () in
+                print("FINI")
+            })
         } else {
             print("Issue with price.")
             print("Issue with duration.")
             print("Issue with range.")
         }
+        print("apresfini")
     }
 
     func centerMapOnLocation(location: CLLocation) {
@@ -75,7 +74,7 @@ class MobilePublicationViewController: UIViewController {
     }
     
     // MARK: - AlpsSDK
-    func createPublication(concert: String, price: Double, image: String, range: Double, duration: Double) {
+    func createPublication(concert: String, price: Double, image: String, range: Double, duration: Double, completion: @escaping () -> Void) {
         if self.appDelegate.device != nil {
             // XXX: the property syntax is tricky at the moment: mood is a variable and 'happy' is a string value
             var properties : [String:String] = [:]
@@ -84,12 +83,13 @@ class MobilePublicationViewController: UIViewController {
             properties["image"] = image
             self.alps.createPublication(topic: "ticketstosale",
                                         range: range, duration: duration,
-                                        properties: properties) {
-                                            (_ publication) in
+                                        properties: properties, completion: {(_ publication) in
                                             if let p = publication {
                                                 print("Created publication: id = \(String(describing: p.id)), topic = \(String(describing: p.topic)), properties = \(String(describing: p.properties))")
-//                                                completionHandler()
+                                                completion()
                                             }
+                                            
+            })
             }
         }
     }
@@ -103,5 +103,3 @@ class MobilePublicationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}

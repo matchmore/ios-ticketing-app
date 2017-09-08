@@ -22,7 +22,10 @@ class PublicationTableViewController: UITableViewController {
         self.navigationController?.navigationBar.barTintColor = self.appDelegate.orange
         if self.appDelegate.userId != nil && self.appDelegate.deviceId != nil {
             // call the API, to retrieve all the subscriptions for current user and device
-            getAllPublicationsForDevice(self.appDelegate.userId!, deviceId: self.appDelegate.deviceId!)
+            getAllPublicationsForDevice(self.appDelegate.userId!, deviceId: self.appDelegate.deviceId!){
+                () in
+                
+            }
         }else{
             print("ERROR in PUBLICATIONTABLEVIEWCONTROLLER: UserId or deviceId is nil.")
         }
@@ -40,7 +43,10 @@ class PublicationTableViewController: UITableViewController {
         if self.appDelegate.userId != nil && self.appDelegate.deviceId != nil {
             // call the API, to retrieve all the subscriptions for current user and device
             print("HEY")
-            getAllPublicationsForDevice(self.appDelegate.userId!, deviceId: self.appDelegate.deviceId!)
+            getAllPublicationsForDevice(self.appDelegate.userId!, deviceId: self.appDelegate.deviceId!){
+                () in
+                
+            }
         }else{
             print("ERROR in PUBLICATIONTABLEVIEWCONTROLLER: UserId or deviceId is nil.")
         }
@@ -81,6 +87,16 @@ class PublicationTableViewController: UITableViewController {
     }
 
     @IBAction func unwindToSubscriptionList(sender: UIStoryboardSegue) {
+        if self.appDelegate.userId != nil && self.appDelegate.deviceId != nil {
+            // call the API, to retrieve all the subscriptions for current user and device
+            print("HEY")
+            getAllPublicationsForDevice(self.appDelegate.userId!, deviceId: self.appDelegate.deviceId!) {
+                () in
+                
+            }
+        }else{
+            print("ERROR in PUBLICATIONTABLEVIEWCONTROLLER: UserId or deviceId is nil.")
+        }
     }
     /*
     // Override to support conditional editing of the table view.
@@ -138,11 +154,15 @@ class PublicationTableViewController: UITableViewController {
     //MARK: AlpsSDK Functions
     
     // Calls the SDK to get all publications for specified userId and deviceId
-    func getAllPublicationsForDevice(_ userId:String, deviceId: String) {
+    func getAllPublicationsForDevice(_ userId:String, deviceId: String, completion : @escaping () -> Void ) {
         self.appDelegate.alps.getAllPublicationsForDevice(userId, deviceId: deviceId) {
             (_ publications) in
             self.publications = publications
             self.tableView.reloadData()
+            completion()
+        }
+        for p in publications {
+            print(p)
         }
     }
 

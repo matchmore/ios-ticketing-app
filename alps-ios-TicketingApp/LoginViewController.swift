@@ -145,7 +145,7 @@ class LoginViewController: UIViewController {
     func createSubscription(){
         if self.appDelegate.device != nil {
             let topic = "ticketstosale"
-            let selector = "concert='Montreux Jaz'"
+            let selector = "concert='Montreux Jazz'"
             let range = 100.0
             let duration = 300.0
             self.appDelegate.alps.createSubscription(topic: topic,

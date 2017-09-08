@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // UUID identifier given by Matchmore to identify devices
     var deviceId : String?
     var device : MobileDevice?
+    var publications : [Publication] = []
     
     // MARK: UI Interface
     let orange = UIColor(red:0.93, green:0.51, blue:0.31, alpha:1.0)

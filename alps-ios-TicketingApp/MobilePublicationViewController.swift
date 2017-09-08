@@ -45,26 +45,31 @@ class MobilePublicationViewController: UIViewController {
     }
     
     @IBAction func publishAction(_ sender: Any) {
-    }
-    
-    // Triggers when publishButton is pressed
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         publishButton.isEnabled = false
-        // Configure the destination view controller only when the publish button is pressed.
-        guard let button = sender as? UIButton, button === publishButton else {
-            return
-        }
+        
         if let price = Double(priceTextField.text!), let range = Double(rangeTextField.text!), let duration = Double(durationTextField.text!), let image = imageTextField.text, let concert = concertTextField.text {
             createPublication(concert: concert, price: price, image: image, range: range, duration: duration, completion: {
                 () in
-                print("FINI")
+                self.navigationController?.popToRootViewController(animated: true)
             })
         } else {
             print("Issue with price.")
             print("Issue with duration.")
             print("Issue with range.")
         }
-        print("apresfini")
+        
+        
+    }
+    
+    // Triggers when publishButton is pressed
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        publishButton.isEnabled = false
+        // Configure the destination view controller only when the publish button is pressed.
+        guard let button = sender as? UIButton, button === publishButton else {
+            return
+        }
     }
 
     func centerMapOnLocation(location: CLLocation) {
@@ -92,14 +97,4 @@ class MobilePublicationViewController: UIViewController {
             })
             }
         }
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+}

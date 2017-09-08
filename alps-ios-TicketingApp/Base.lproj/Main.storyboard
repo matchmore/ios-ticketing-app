@@ -227,7 +227,7 @@
         <!--Home-->
         <scene sceneID="PjR-0o-pPk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LRn-OV-f7x" sceneMemberID="viewController">
+                <navigationController id="LRn-OV-f7x" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home" id="Pkj-Si-LBZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rR6-sW-c4a">
@@ -247,7 +247,7 @@
         <!--Publish-->
         <scene sceneID="ghU-4T-H65">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Op0-rV-KiQ" sceneMemberID="viewController">
+                <navigationController id="Op0-rV-KiQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="Publish" image="ticket" selectedImage="ticket" id="WYf-3M-G36"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2SB-Zs-QyA">
@@ -256,6 +256,10 @@
                         <color key="tintColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NxX-lU-xeW">
+                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="uFn-6J-jNn" kind="relationship" relationship="rootViewController" id="a9K-c8-DSI"/>
                     </connections>
@@ -297,7 +301,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Montreux Jaz" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OtQ-Ig-zuf" userLabel="Concert Text Field">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Montreux Jazz" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OtQ-Ig-zuf" userLabel="Concert Text Field">
                                                 <rect key="frame" x="108" y="0.0" width="226" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -406,7 +410,7 @@
                                 </constraints>
                                 <state key="normal" title="Publish"/>
                                 <connections>
-                                    <segue destination="xkZ-3v-eYv" kind="unwind" unwindAction="unwindToSubscriptionListWithSender:" id="oxq-Pd-c8D"/>
+                                    <action selector="publishAction:" destination="ZZ3-kp-GpL" eventType="touchUpInside" id="RrO-r4-QqK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -434,7 +438,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wf0-lw-Suc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="xkZ-3v-eYv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3044" y="-33"/>
         </scene>

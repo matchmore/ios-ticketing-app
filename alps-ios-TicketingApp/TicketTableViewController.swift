@@ -69,6 +69,7 @@ class TicketTableViewController: UITableViewController {
         // Configure the cell...
         cell.concertLabel.text = properties?["concert"]
         cell.priceLabel.text = properties?["price"]
+        cell.deviceTypeLabel.text = properties?["deviceType"]
 
         return cell
     }

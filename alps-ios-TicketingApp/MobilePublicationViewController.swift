@@ -25,13 +25,13 @@ class MobilePublicationViewController: UIViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var alps : AlpsManager!
     
-    let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
     let regionRadius: CLLocationDistance = 1000
     
     override func viewDidLoad() {
         super.viewDidLoad()
         alps = self.appDelegate.alps
-        centerMapOnLocation(location: initialLocation)
+        let initialLocation = self.appDelegate.locationManager.location
+        centerMapOnLocation(location: initialLocation!)
         // Do any additional setup after loading the view.
     }
 
@@ -86,6 +86,7 @@ class MobilePublicationViewController: UIViewController {
             properties["concert"] = concert
             properties["price"] = "\(price)"
             properties["image"] = image
+            properties["deviceType"] = "mobile"
             self.alps.createPublication(topic: "ticketstosale",
                                         range: range, duration: duration,
                                         properties: properties, completion: {(_ publication) in

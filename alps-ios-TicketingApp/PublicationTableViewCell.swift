@@ -14,6 +14,7 @@ class PublicationTableViewCell: UITableViewCell {
     
     @IBOutlet weak var concertLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var deviceTypeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

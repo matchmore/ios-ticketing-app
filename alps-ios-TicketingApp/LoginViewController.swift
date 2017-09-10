@@ -179,6 +179,9 @@ class LoginViewController: UIViewController {
                 (_ device) in
                 if device != nil {
                     self.createSubscription()
+                    self.alps.startRangingBeacons(forUuid: UUID.init(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "ESTIMOTE DEFAULT BEACON UUID")
+                    self.alps.startBeaconsProximityEvent(forCLProximity: .immediate)
+                    self.alps.startBeaconsProximityEvent(forCLProximity: .near)
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
                     vc.modalTransitionStyle = UIModalTransitionStyle.crossDissolve

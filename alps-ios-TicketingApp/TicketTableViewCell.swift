@@ -14,7 +14,7 @@ class TicketTableViewCell: UITableViewCell {
     @IBOutlet weak var concertLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet var ticketImageView: UIImageView!
-    
+    @IBOutlet weak var deviceTypeLabel: UILabel!
     
     
     

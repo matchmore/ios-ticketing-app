@@ -23,6 +23,7 @@ class PublicationTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("SHOULD BE AFTER CREATED PUB")
         getPublications()
     }
     
@@ -56,6 +57,7 @@ class PublicationTableViewController: UITableViewController {
         }
         cell.concertLabel.text = pub.properties?["concert"]
         cell.priceLabel.text = pub.properties?["price"]
+        cell.deviceTypeLabel.text = pub.properties?["deviceType"]
         
         return cell
     }
@@ -77,7 +79,7 @@ class PublicationTableViewController: UITableViewController {
 //        self.appDelegate.alps.getAllPublicationsForDevice(self.appDelegate.userId!, deviceId: self.appDelegate.deviceId!, completion: {
 //            (_ publications) in
 //            self.publications = publications
-//            self.tableView.reloadData()
+//            self.tableView?.reloadData()
 //        })
         self.appDelegate.alps.getAllPublications(completion: {
             (_ publications) in

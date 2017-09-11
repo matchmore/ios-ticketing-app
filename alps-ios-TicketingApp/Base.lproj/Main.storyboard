@@ -186,7 +186,10 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJv-d9-Le9">
                                 <rect key="frame" x="16" y="371" width="343" height="30"/>
-                                <state key="normal" title="Login"/>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.50588235290000005" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="login:" destination="sNd-mC-6Ae" eventType="touchUpInside" id="AdC-3g-IHC"/>
                                 </connections>
@@ -212,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbF-zU-x6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1769.5652173913045" y="755.70652173913049"/>
+            <point key="canvasLocation" x="-1770.4000000000001" y="755.17241379310349"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pnc-RW-BzC">
@@ -236,7 +239,7 @@
         <scene sceneID="PjR-0o-pPk">
             <objects>
                 <navigationController id="LRn-OV-f7x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Buy" image="home" selectedImage="home" id="Pkj-Si-LBZ"/>
+                    <tabBarItem key="tabBarItem" title="Buy" image="buy" selectedImage="home" id="Pkj-Si-LBZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rR6-sW-c4a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -258,10 +261,10 @@
                 <navigationController id="Op0-rV-KiQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="Sell" image="ticket" selectedImage="ticket" id="WYf-3M-G36"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2SB-Zs-QyA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2SB-Zs-QyA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="NxX-lU-xeW">
@@ -369,7 +372,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzI-Id-OUh">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzI-Id-OUh">
                                                 <rect key="frame" x="108" y="0.0" width="195" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -412,11 +415,14 @@
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kto-Ap-4Yq">
                                 <rect key="frame" x="122.5" y="427" width="90" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ed7-gl-8aD"/>
                                     <constraint firstAttribute="width" constant="90" id="lP4-hx-fAB"/>
                                 </constraints>
-                                <state key="normal" title="Publish"/>
+                                <state key="normal" title="Publish">
+                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="publishAction:" destination="ZZ3-kp-GpL" eventType="touchUpInside" id="RrO-r4-QqK"/>
                                 </connections>
@@ -582,7 +588,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q3d-Cc-8LL">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q3d-Cc-8LL">
                                                 <rect key="frame" x="108" y="0.0" width="195" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -631,11 +637,14 @@
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDQ-xF-dIj">
                                 <rect key="frame" x="122" y="440" width="90" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="NBS-Yz-vzE"/>
                                     <constraint firstAttribute="width" constant="90" id="o07-g1-Xe9"/>
                                 </constraints>
-                                <state key="normal" title="Publish"/>
+                                <state key="normal" title="Publish">
+                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="publishAction:" destination="Egt-Qj-s70" eventType="touchUpInside" id="Uen-nG-gEe"/>
                                 </connections>
@@ -872,11 +881,14 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTh-no-3Cn">
                                 <rect key="frame" x="122.5" y="322.5" width="90" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="8dE-SP-mgh"/>
                                     <constraint firstAttribute="height" constant="40" id="GIJ-zG-Wcp"/>
                                 </constraints>
-                                <state key="normal" title="Publish"/>
+                                <state key="normal" title="Publish">
+                                    <color key="titleColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="publishAction:" destination="nOX-Ue-YSa" eventType="touchUpInside" id="fbv-j1-i4L"/>
                                 </connections>
@@ -962,7 +974,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Publication" id="vgQ-4c-Sb0">
                         <barButtonItem key="rightBarButtonItem" title="Sell a ticket" id="a77-53-InM">
-                            <color key="tintColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="ZBE-bE-ORn" kind="show" id="Daa-AW-Wtg"/>
                             </connections>
@@ -976,6 +987,7 @@
     </scenes>
     <resources>
         <image name="No_image_available" width="137" height="137"/>
+        <image name="buy" width="25" height="25"/>
         <image name="home" width="50" height="50"/>
         <image name="ticket" width="29" height="29"/>
     </resources>

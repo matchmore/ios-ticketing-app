@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import AlpsSDK
 
-class MobilePublicationViewController: UIViewController {
+class MobilePublicationViewController: UIViewController, UITextFieldDelegate{
 
     // MARK: Properties
     
@@ -32,12 +32,21 @@ class MobilePublicationViewController: UIViewController {
         alps = self.appDelegate.alps
         let initialLocation = self.appDelegate.locationManager.location
         centerMapOnLocation(location: initialLocation!)
-        // Do any additional setup after loading the view.
+        self.concertTextField.delegate = self
+        self.priceTextField.delegate = self
+        self.imageTextField.delegate = self
+        self.durationTextField.delegate = self
+        self.rangeTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -96,6 +105,6 @@ class MobilePublicationViewController: UIViewController {
                                             }
                                             
             })
-            }
         }
+    }
 }

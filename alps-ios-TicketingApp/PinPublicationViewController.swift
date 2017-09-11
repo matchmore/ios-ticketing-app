@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import AlpsSDK
 
-class PinPublicationViewController: UIViewController {
+class PinPublicationViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var concertTextField: UITextField!
@@ -34,6 +34,13 @@ class PinPublicationViewController: UIViewController {
         alps = self.appDelegate.alps
         let initialLocation = self.appDelegate.locationManager.location
         centerMapOnLocation(location: initialLocation!)
+        self.concertTextField.delegate = self
+        self.priceTextField.delegate = self
+        self.imageTextField.delegate = self
+        self.durationTextField.delegate = self
+        self.latitudeTextField.delegate = self
+        self.longtitudeTextField.delegate = self
+        self.rangeTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -44,6 +51,11 @@ class PinPublicationViewController: UIViewController {
             longtitudeTextField.text = String(long)
         }
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     @IBAction func publishAction(_ sender: Any) {

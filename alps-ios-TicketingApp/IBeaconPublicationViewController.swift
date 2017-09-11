@@ -9,7 +9,7 @@
 import UIKit
 import AlpsSDK
 
-class IBeaconPublicationViewController: UIViewController {
+class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var concertTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
@@ -28,10 +28,22 @@ class IBeaconPublicationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         alps = self.appDelegate.alps
+        self.concertTextField.delegate = self
+        self.priceTextField.delegate = self
+        self.imageTextField.delegate = self
+        self.durationTextField.delegate = self
+        self.proximityUUIDTextField.delegate = self
+        self.majorTextField.delegate = self
+        self.minorTextField.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         publishButton.isEnabled = true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     @IBAction func publishAction(_ sender: Any) {
@@ -73,8 +85,11 @@ class IBeaconPublicationViewController: UIViewController {
                 self.alps.createPublication(userId: self.appDelegate.userId!, deviceId: deviceId, topic: "ticketstosale", range: 0.0, duration: duration, properties: properties, completion: {
                     (_ publication) in
                     if let p = publication {
+                        print("DEVICE ID : ")
+                        print(device?.id)
                         print("Created publication: id = \(String(describing: p.id)), topic = \(String(describing: p.topic)), properties = \(String(describing: p.properties))")
                         self.i += 1
+                        self.appDelegate.alps.addBeacon(beacon: device!)
                         completion()
                     }
                 })

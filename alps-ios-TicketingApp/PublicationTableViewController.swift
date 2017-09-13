@@ -23,7 +23,6 @@ class PublicationTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("SHOULD BE AFTER CREATED PUB")
         getPublications()
     }
     

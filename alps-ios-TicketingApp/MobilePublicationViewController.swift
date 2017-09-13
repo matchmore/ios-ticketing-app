@@ -39,6 +39,10 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate{
         self.rangeTextField.delegate = self
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        publishButton.isEnabled = true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,10 +51,6 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        publishButton.isEnabled = true
     }
     
     @IBAction func publishAction(_ sender: Any) {

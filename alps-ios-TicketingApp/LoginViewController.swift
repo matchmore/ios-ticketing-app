@@ -187,7 +187,7 @@ class LoginViewController: UIViewController {
                     vc.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
                     self.present(vc, animated: true, completion: nil)
                 } else {
-                    print("ERROR IN API CALL, check MatchMore service is working.")
+                    print("ERROR IN API CALL, check MatchMore service is active.")
                 }
             }
         } else {

@@ -239,7 +239,7 @@
         <scene sceneID="PjR-0o-pPk">
             <objects>
                 <navigationController id="LRn-OV-f7x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Buy" image="buy" selectedImage="home" id="Pkj-Si-LBZ"/>
+                    <tabBarItem key="tabBarItem" title="Buy" image="buy" selectedImage="buy" id="Pkj-Si-LBZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rR6-sW-c4a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -261,7 +261,7 @@
                 <navigationController id="Op0-rV-KiQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="Sell" image="ticket" selectedImage="ticket" id="WYf-3M-G36"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2SB-Zs-QyA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2SB-Zs-QyA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -988,7 +988,6 @@
     <resources>
         <image name="No_image_available" width="137" height="137"/>
         <image name="buy" width="25" height="25"/>
-        <image name="home" width="50" height="50"/>
         <image name="ticket" width="29" height="29"/>
     </resources>
 </document>

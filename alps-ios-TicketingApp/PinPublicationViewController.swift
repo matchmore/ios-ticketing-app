@@ -41,6 +41,11 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
         self.latitudeTextField.delegate = self
         self.longtitudeTextField.delegate = self
         self.rangeTextField.delegate = self
+        self.priceTextField.keyboardType = .numbersAndPunctuation
+        self.durationTextField.keyboardType = .numbersAndPunctuation
+        self.rangeTextField.keyboardType = .numbersAndPunctuation
+        self.latitudeTextField.keyboardType = .numbersAndPunctuation
+        self.longtitudeTextField.keyboardType = .numbersAndPunctuation
         // Do any additional setup after loading the view.
     }
     

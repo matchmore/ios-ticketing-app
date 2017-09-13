@@ -35,6 +35,10 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate {
         self.proximityUUIDTextField.delegate = self
         self.majorTextField.delegate = self
         self.minorTextField.delegate = self
+        self.priceTextField.keyboardType = .numbersAndPunctuation
+        self.durationTextField.keyboardType = .numbersAndPunctuation
+        self.majorTextField.keyboardType = .numbersAndPunctuation
+        self.minorTextField.keyboardType = .numbersAndPunctuation
     }
     
     override func viewDidAppear(_ animated: Bool) {

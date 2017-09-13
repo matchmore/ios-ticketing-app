@@ -37,6 +37,9 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate{
         self.imageTextField.delegate = self
         self.durationTextField.delegate = self
         self.rangeTextField.delegate = self
+        self.priceTextField.keyboardType = .numbersAndPunctuation
+        self.durationTextField.keyboardType = .numbersAndPunctuation
+        self.rangeTextField.keyboardType = .numbersAndPunctuation
     }
 
     override func viewDidAppear(_ animated: Bool) {

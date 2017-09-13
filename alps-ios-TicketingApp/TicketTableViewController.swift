@@ -21,12 +21,18 @@ class TicketTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.alps = self.appDelegate.alps
         self.navigationController?.navigationBar.barTintColor = self.appDelegate.orange
         // This function will be called everytime there is a match.
         self.monitorMatchesWithCompletion { (_ match) in self.notificationOnMatch(match: match)}
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        self.alps.getDevice(completion: {
+            (device) in
+            
+                print(device.id)
+        })
         if appDelegate.userId != nil && appDelegate.deviceId != nil {
             // call the API, to retrieve all the subscriptions for current user and device
             getAllMatches()

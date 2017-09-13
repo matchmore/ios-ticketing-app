@@ -93,7 +93,7 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate {
                         print(device?.id)
                         print("Created publication: id = \(String(describing: p.id)), topic = \(String(describing: p.topic)), properties = \(String(describing: p.properties))")
                         self.i += 1
-                        self.appDelegate.alps.addBeacon(beacon: device!)
+//                        self.appDelegate.alps.addBeacon(beacon: device!)
                         completion()
                     }
                 })

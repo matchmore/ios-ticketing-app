@@ -39,7 +39,9 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         self.priceTextField.keyboardType = .numbersAndPunctuation
         self.durationTextField.keyboardType = .numbersAndPunctuation
         self.pickerData = self.appDelegate.alps.getBeacons()
-        self.selectedValue = pickerData[0]
+        if !pickerData.isEmpty {
+            self.selectedValue = pickerData[0]
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

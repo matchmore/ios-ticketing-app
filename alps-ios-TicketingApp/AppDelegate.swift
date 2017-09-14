@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if APIKEY.isEmpty {
             fatalError("To run this project, please provide a valid Matchmore Application Api-key. Obtain it for free on dev.matchmore.io, see the README.md file for more informations")
         }else{
-            alps = AlpsManager(apiKey: "3d286969-bdd0-4e53-b58b-6cedc91713e6", clLocationManager : locationManager)
+            alps = AlpsManager(apiKey: APIKEY, clLocationManager : locationManager)
         }
         return true
     }

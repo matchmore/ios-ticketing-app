@@ -178,14 +178,29 @@ class LoginViewController: UIViewController {
             createDevice(username: username){
                 (_ device) in
                 if device != nil {
-                    self.createSubscription()
-                    self.alps.startRangingBeacons(forUuid: UUID.init(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "ESTIMOTE DEFAULT BEACON UUID")
-                    self.alps.startBeaconsProximityEvent(forCLProximity: .immediate)
-                    self.alps.startBeaconsProximityEvent(forCLProximity: .near)
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
-                    vc.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-                    self.present(vc, animated: true, completion: nil)
+                    let refreshAlert = UIAlertController(title: "Subscription", message: "Do you want to subscribe to the topic : ticketstosale and selector : Montreux Jazz ?", preferredStyle: UIAlertControllerStyle.alert)
+                    
+                    refreshAlert.addAction(UIAlertAction(title: "Yes, please subscribe to this topic", style: .default, handler: { (action: UIAlertAction!) in
+                        self.createSubscription()
+                        self.alps.startRangingBeacons(forUuid: UUID.init(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "ESTIMOTE DEFAULT BEACON UUID")
+                        self.alps.startBeaconsProximityEvent(forCLProximity: .immediate)
+                        self.alps.startBeaconsProximityEvent(forCLProximity: .near)
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+                        vc.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                        self.present(vc, animated: true, completion: nil)
+                    }))
+                    
+                    refreshAlert.addAction(UIAlertAction(title: "No, thank you", style: .default, handler: { (action: UIAlertAction!) in
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+                        vc.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                        self.present(vc, animated: true, completion: nil)
+                    }))
+                    
+                    self.present(refreshAlert, animated: true, completion: nil)
+                    
+                    
                 } else {
                     print("ERROR IN API CALL, check MatchMore service is active.")
                 }

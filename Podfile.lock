@@ -7,25 +7,15 @@ PODS:
   - SkyFloatingLabelTextField (3.1.0)
 
 DEPENDENCIES:
-  - Alps (from `https://github.com/MatchMore/alps-ios-api.git`, tag `0.4.0`)
-  - AlpsSDK (from `https://github.com/MatchMore/alps-ios-sdk.git`, tag `0.4.0`)
+  - Alps (from `../alps-ios-api`)
+  - AlpsSDK (from `../alps-ios-sdk`)
   - SkyFloatingLabelTextField (~> 3.0)
 
 EXTERNAL SOURCES:
   Alps:
-    :git: https://github.com/MatchMore/alps-ios-api.git
-    :tag: 0.4.0
+    :path: ../alps-ios-api
   AlpsSDK:
-    :git: https://github.com/MatchMore/alps-ios-sdk.git
-    :tag: 0.4.0
-
-CHECKOUT OPTIONS:
-  Alps:
-    :git: https://github.com/MatchMore/alps-ios-api.git
-    :tag: 0.4.0
-  AlpsSDK:
-    :git: https://github.com/MatchMore/alps-ios-sdk.git
-    :tag: 0.4.0
+    :path: ../alps-ios-sdk
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
@@ -33,6 +23,6 @@ SPEC CHECKSUMS:
   AlpsSDK: a60836dcaa6599d4dbba3aa5ce56ed95bb5220ca
   SkyFloatingLabelTextField: 26a92ad407044dd5a7c3e4e348738ff0991514fe
 
-PODFILE CHECKSUM: abbb7f41d8f9b1dc7a3f3659b0c086e62e3e1345
+PODFILE CHECKSUM: da1b86db5fdec57cf1975e30595fe333aad75254
 
 COCOAPODS: 1.2.1

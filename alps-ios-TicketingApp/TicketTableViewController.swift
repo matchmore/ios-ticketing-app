@@ -28,11 +28,6 @@ class TicketTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.alps.getDevice(completion: {
-            (device) in
-            
-                print(device.id)
-        })
         if appDelegate.userId != nil && appDelegate.deviceId != nil {
             // call the API, to retrieve all the subscriptions for current user and device
             getAllMatches()

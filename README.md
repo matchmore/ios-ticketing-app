@@ -133,24 +133,31 @@ To set Alice's device location :
 
    You will get a notification every time you get a match !!
 
-   ![get the match](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/match.png "match")
+![get the match](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/match.png "match")
+
 
 ### You have iBeacons ?
 
 Our technology integrate iBeacon, if you have iBeacons you can attach publication/subscription on it and our cloud service will deliver the match with soon to come pusher endpoints such as Apple Pusher Notifications.
 
 * First, you need to register the beacons on our portal. On your dashboard, click on `Beacons`.
+![add Beacon step 1](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/addBeacon1.png "add Beacon step 1")
 * Start, to register your beacons for future use in your application.
+![add Beacon step 2](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/addBeacon2.png "add Beacon step 2")
 
 In order to register your beacon(s), you need to **provide their current UUID, Major and Minor**. The name of the beacon could be his color or his form, something that helps you to recognize this beacon.
 
 When you are done your beacons dashboard should show informations about your registered beacons.
+![add Beacon step 3](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/addBeacon3.png "add Beacon step 3")
 
 Now assign your beacons in each application(s) you want to make use of them.
 * Go to “Applications” in your dashboard.
+![add Beacon step 4](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/addBeacon4.png "add Beacon step 4")
 * Click on the `+ beacon` icon, under the application in which you want to assign beacon(s).
+![add Beacon step 5](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/addBeacon5.png "add Beacon step 5")
 
-Choose the beacons and click on assign. You should have that under your application.
+Choose the beacons and click on assign. See image below for an example of what you should have.
+![add Beacon step 6](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/addBeacon6.png "add Beacon step 6")
 
 **NOTE :** The userId of the owner of the beacons in this app is equal to the api- key.
 
@@ -161,3 +168,4 @@ Look at `iBeacon`, you should be able to choose between the beacons you assigned
 
 When, re-run the Ticketing-App on your physical iPhone (Bob´s device / the subscriber).
 * Approach the beacons in which you published to trigger matches.
+![select iBeacon](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/selectIBeacon.png "add Beacon step final")

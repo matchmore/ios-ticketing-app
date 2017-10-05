@@ -64,6 +64,8 @@ We have already set a pod file in this project but remember to add these lines t
       pod 'Alps', :git => 'https://github.com/MatchMore/alps-ios-api.git', :tag => '0.4.0'
       pod 'AlpsSDK', :git => 'https://github.com/MatchMore/alps-ios-sdk.git', :tag => ‘0.4.2’
 
+**NOTE :** Always check our [github ALPS SDK](https://github.com/MatchMore/alps-ios-sdk.git) and [ALPS](https://github.com/MatchMore/alps-ios-api.git) to get the last release.
+
 Then save the file, and go to your terminal (which is inside of Ticketing App folder) and enter the command :
 
       pod install
@@ -94,7 +96,7 @@ Then save the file, and go to your terminal (which is inside of Ticketing App fo
 * Enter “Alice” in the username textfield and press login.
 * Selecting “No, thank you” will not create a subscription for Alice’s device.
 
-![Register Alice](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/1.png "1.")
+![Register Alice](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/1..png "1.")
 
 #### Attach a publication to Alice’s device ( Device 1 in Live demo )
 

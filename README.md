@@ -136,7 +136,7 @@ To set Alice's device location :
 ![get the match](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/match.png "match")
 
 
-### You have iBeacons ?
+### You have iBeacons
 
 Our technology integrate iBeacon, if you have iBeacons you can attach publication/subscription on it and our cloud service will deliver the match with soon to come pusher endpoints such as Apple Pusher Notifications.
 

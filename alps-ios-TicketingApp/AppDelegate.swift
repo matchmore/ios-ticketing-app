@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     // MARK: TO DO
-    let APIKEY = "" // <- Please provide a valid Matchmore Application Api-key, obtain it for free on dev.matchmore.io, see the README.md file for more informations
+    let APIKEY = "54ca5498-98af-4314-89ce-2d48f4ddb73c" // <- Please provide a valid Matchmore Application Api-key, obtain it for free on dev.matchmore.io, see the README.md file for more informations
     
     // MARK: Properties
     // AlpsManager is the SDK core class that will communicate with the API Alps, which will then communicate with Matchmore services

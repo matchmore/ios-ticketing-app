@@ -61,8 +61,6 @@ class LoginViewController: UIViewController {
             self.appDelegate.locationManager.requestWhenInUseAuthorization()
             break
         }
-        // AlpsSDK
-        onLocationUpdate()
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,69 +72,48 @@ class LoginViewController: UIViewController {
     
     // Calls Matchmore to create the user and device
     func createDevice(username : String, completion: @escaping (_ device: MobileDevice?) -> Void) {
-        var deviceCompletion = completion
-        alps.createUser(username) {
-            (_ user) in
-            if let u = user {
-                print("Created user: id = \(String(describing: u.id!)), name = \(String(describing: u.name!))")
-                
-                guard let userId = u.id else{
-                    print("ERROR : No userId found")
-                    return
-                }
-                self.appDelegate.userId = userId
-                
-                guard let username = u.name else{
-                    print("ERROR : No name found")
-                    return
-                }
-                self.appDelegate.username = username
-                
-                if self.latitude != nil, self.longitude != nil, self.altitude != nil, self.horizontalAccuracy != nil, self.verticalAccuracy != nil {
-                        self.alps.createMobileDevice(name: "\(username)'s device", platform: "iOS 10.2",
-                                                     deviceToken: "870470ea-7a8e-11e6-b49b-5358f3beb662",
-                                                     latitude: self.latitude!, longitude: self.longitude!, altitude: self.altitude!,
-                                                     horizontalAccuracy: self.horizontalAccuracy!, verticalAccuracy: self.verticalAccuracy!) {
-                                                        (_ device) in
-                                                        if let d = device {
-                                                            guard let deviceId = d.id else{
-                                                                print("ERROR : No deviceId found.")
-                                                                return
-                                                            }
-                                                            guard let name = d.name else{
-                                                                print("ERROR : No device name found.")
-                                                                return
-                                                            }
-                                                            
-                                                            print("Created device: id = \(String(describing: deviceId)), name = \(String(describing: name))")
-                                                            self.appDelegate.device = d
-                                                            self.appDelegate.deviceId = deviceId
-                                                            deviceCompletion(device)
-                                                        }
-                    }
-                } else {
-                    self.alps.createMobileDevice(name: "\(username)'s device", platform: "iOS 10.2",
-                                                 deviceToken: "870470ea-7a8e-11e6-b49b-5358f3beb662",
-                                                 latitude: 0.0, longitude: 0.0, altitude: 0.0,
-                                                 horizontalAccuracy: 0.0, verticalAccuracy: 0.0) {
-                                                    (_ device) in
-                                                    if let d = device {
-                                                        guard let deviceId = d.id else{
-                                                            print("ERROR : No deviceId found.")
-                                                            return
-                                                        }
-                                                        guard let name = d.name else{
-                                                            print("ERROR : No device name found.")
-                                                            return
-                                                        }
-                                                        
-                                                        print("Created device: id = \(String(describing: deviceId)), name = \(String(describing: name))")
-                                                        self.appDelegate.device = d
-                                                        self.appDelegate.deviceId = deviceId
-                                                        deviceCompletion(device)
+        let deviceCompletion = completion
+        if self.latitude != nil, self.longitude != nil, self.altitude != nil, self.horizontalAccuracy != nil, self.verticalAccuracy != nil {
+            let location = Location(latitude: self.latitude!, longitude: self.longitude!, altitude: self.altitude!, horizontalAccuracy: self.horizontalAccuracy!, verticalAccuracy: self.verticalAccuracy!)
+            let mobileDevice = MobileDevice(name: "Test's device", platform: "iOS 10.2", deviceToken: "870470ea-7a8e-11e6-b49b-5358f3beb662", location: location)
+            self.appDelegate.alps.createMainDevice(device: mobileDevice) {
+                                                (_ device) in
+                                                if let d = device {
+                                                    guard let deviceId = d.id else{
+                                                        print("ERROR : No deviceId found.")
+                                                        return
                                                     }
-                    }
-                }
+                                                    guard let name = d.name else{
+                                                        print("ERROR : No device name found.")
+                                                        return
+                                                    }
+                                                    
+                                                    print("Created device: id = \(String(describing: deviceId)), name = \(String(describing: name))")
+                                                    self.appDelegate.device = d
+                                                    self.appDelegate.deviceId = deviceId
+                                                    deviceCompletion(device)
+                                                }
+            }
+        } else {
+            let location = Location(latitude: 0, longitude: 0, altitude: 0, horizontalAccuracy: 0, verticalAccuracy: 0)
+            let mobileDevice = MobileDevice(name: "Test's device", platform: "iOS 10.2", deviceToken: "870470ea-7a8e-11e6-b49b-5358f3beb662", location: location)
+            self.appDelegate.alps.createMainDevice(device: mobileDevice) {
+                                            (_ device) in
+                                            if let d = device {
+                                                guard let deviceId = d.id else{
+                                                    print("ERROR : No deviceId found.")
+                                                    return
+                                                }
+                                                guard let name = d.name else{
+                                                    print("ERROR : No device name found.")
+                                                    return
+                                                }
+                                                
+                                                print("Created device: id = \(String(describing: deviceId)), name = \(String(describing: name))")
+                                                self.appDelegate.device = d
+                                                self.appDelegate.deviceId = deviceId
+                                                deviceCompletion(device)
+                                            }
             }
         }
     }
@@ -148,26 +125,14 @@ class LoginViewController: UIViewController {
             let selector = "concert='Montreux Jazz'"
             let range = 100.0
             let duration = 300.0
-            self.appDelegate.alps.createSubscription(topic: topic,
-                                                     selector: selector, range: range, duration: duration) {
+            let subscription = Subscription.init(deviceId: self.appDelegate.deviceId, topic: topic, range: range, duration: duration, selector: selector)
+            self.appDelegate.alps.createSubscription(subscription: subscription) {
                                                         (_ subscription) in
                                                         if let s = subscription {
                                                             print("Created subscription: id = \(String(describing: s.id!)), topic = \(String(describing: s.topic!)), selector = \(String(describing: s.selector!))")
-                                                           
+                                                            self.appDelegate.alps.matchMonitor.startMonitoringFor(device: self.appDelegate.device!)
                                                         }
             }
-        }
-    }
-    
-    private func onLocationUpdate() {
-        // Get location with the AlpsSDK
-        self.alps.onLocationUpdate(){
-            (_ location) in
-            self.latitude = location.coordinate.latitude
-            self.longitude = location.coordinate.longitude
-            self.altitude = location.altitude
-            self.horizontalAccuracy = location.horizontalAccuracy
-            self.verticalAccuracy = location.verticalAccuracy
         }
     }
     

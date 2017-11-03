@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     // MARK: TO DO
-    let APIKEY = "54ca5498-98af-4314-89ce-2d48f4ddb73c" // <- Please provide a valid Matchmore Application Api-key, obtain it for free on dev.matchmore.io, see the README.md file for more informations
+    let APIKEY = "ac0652a6-4a6a-482d-94d5-3419b1b56f9e" // <- Please provide a valid Matchmore Application Api-key, obtain it for free on dev.matchmore.io, see the README.md file for more informations
     
     // MARK: Properties
     // AlpsManager is the SDK core class that will communicate with the API Alps, which will then communicate with Matchmore services
@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var locationManager = CLLocationManager()
     // UUID identifier given by Matchmore to identify users
     var username : String?
-    var userId : String?
     // UUID identifier given by Matchmore to identify devices
     var deviceId : String?
     var device : MobileDevice?
@@ -39,7 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if APIKEY.isEmpty {
             fatalError("To run this project, please provide a valid Matchmore Application Api-key. Obtain it for free on dev.matchmore.io, see the README.md file for more informations")
         }else{
-            alps = AlpsManager(apiKey: APIKEY, clLocationManager : locationManager)
+            alps = AlpsManager(apiKey: APIKEY,
+                               baseUrl: "http://146.148.15.57/v5")
+            alps.contextManager.startRanging(forUuid: UUID.init(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Beacon region estimote")
+            
         }
         return true
     }

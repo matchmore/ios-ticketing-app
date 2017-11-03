@@ -24,16 +24,16 @@ class TicketTableViewController: UITableViewController {
         self.alps = self.appDelegate.alps
         self.navigationController?.navigationBar.barTintColor = self.appDelegate.orange
         // This function will be called everytime there is a match.
-        self.monitorMatchesWithCompletion { (_ match) in self.notificationOnMatch(match: match)}
+//        self.monitorMatchesWithCompletion { (_ match) in self.notificationOnMatch(match: match)}
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if appDelegate.userId != nil && appDelegate.deviceId != nil {
+        if appDelegate.deviceId != nil {
             // call the API, to retrieve all the subscriptions for current user and device
             getAllMatches()
             self.resetNotificationOnMatch()
         }else{
-            print("ERROR in MATCHESVIEWCONTROLLER: UserId or deviceId is nil.")
+            print("ERROR in MATCHESVIEWCONTROLLER: deviceId is nil.")
         }
     }
 
@@ -96,7 +96,7 @@ class TicketTableViewController: UITableViewController {
     //MARK: Notification related
     
     // Shows notifications on match
-    func notificationOnMatch(match: Match){
+    func notificationOnMatch(){
         notificationCounter += 1
         tabBarController?.tabBar.items?[0].badgeValue = String(describing: notificationCounter)
 //        let topic = match.publication?.topic
@@ -116,20 +116,19 @@ class TicketTableViewController: UITableViewController {
     
     // Start the match service
     func monitorMatches() {
-        self.appDelegate.alps.startMonitoringMatches()
+        self.appDelegate.alps.matchMonitor.startMonitoringFor(device: self.appDelegate.device!)
     }
     
     // Get the match
-    func monitorMatchesWithCompletion(completion: @escaping (_ match: Match) -> Void) {
-        self.appDelegate.alps.onMatch(completion: completion)
-        self.appDelegate.alps.startMonitoringMatches()
-    }
+//    func monitorMatchesWithCompletion(completion: @escaping (_ match: Match) -> Void) {
+//        self.appDelegate.alps.onMatch(completion: completion)
+//    }
     
     // Calls the SDK to get all matches for actual userId and deviceId
     func getAllMatches(){
-        self.appDelegate.alps.getAllMatches() {
-            (_ matches) in
+        self.appDelegate.alps.onMatch = {(matches, device) in
             self.matches = matches
+            self.notificationOnMatch()
             self.tableView.reloadData()
         }
     }

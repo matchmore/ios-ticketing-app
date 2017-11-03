@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import AlpsSDK
+import Alps
 
 class MobilePublicationViewController: UIViewController, UITextFieldDelegate{
 
@@ -99,15 +100,13 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate{
             properties["price"] = "\(price)"
             properties["image"] = image
             properties["deviceType"] = "mobile"
-            self.alps.createPublication(topic: "ticketstosale",
-                                        range: range, duration: duration,
-                                        properties: properties, completion: {(_ publication) in
+            let pub = Publication.init(deviceId: self.appDelegate.deviceId, topic: "ticketstosale", range: range, duration: duration, properties: properties)
+            self.appDelegate.alps.createPublication(publication: pub) {(_ publication) in
                                             if let p = publication {
                                                 print("Created publication: id = \(String(describing: p.id)), topic = \(String(describing: p.topic)), properties = \(String(describing: p.properties))")
                                                 completion()
                                             }
-                                            
-            })
+            }
         }
     }
 }

@@ -80,14 +80,20 @@ class PublicationTableViewController: UITableViewController {
 //            self.publications = publications
 //            self.tableView?.reloadData()
 //        })
-        self.appDelegate.alps.getAllPublicationsMainUser(completion: {
-            (_ publications) in
-            var ourPublications = [Publication]()
-            for (id,p) in publications{
-                ourPublications.append(contentsOf: p)
+        self.appDelegate.alps.publications.findAll(completion: {
+            (_ result) in
+            switch result{
+            case .success(let publications):
+                var ourPublications = [Publication]()
+                for (p) in publications {
+                    ourPublications.append(p)
+                }
+                self.publications = ourPublications
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
             }
-            self.publications = ourPublications
-            self.tableView.reloadData()
+            
         })
     }
 }

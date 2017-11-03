@@ -19,8 +19,8 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var publishButton: UIButton!
     var i = 1
-    var pickerData : [IBeaconDevice] = []
-    var selectedValue : IBeaconDevice?
+    var pickerData : [IBeaconTriple] = []
+    var selectedValue : IBeaconTriple?
     
     // Using appDelegate as a singleton
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -38,7 +38,7 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         self.durationTextField.delegate = self
         self.priceTextField.keyboardType = .numbersAndPunctuation
         self.durationTextField.keyboardType = .numbersAndPunctuation
-        self.pickerData = self.appDelegate.alps.getExistingBeacons()
+        self.pickerData = self.appDelegate.alps.beaconDevices.items
         if !pickerData.isEmpty {
             self.selectedValue = pickerData[0]
         }
@@ -64,7 +64,7 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row].name
+        return pickerData[row].deviceId
     }
     
     
@@ -76,7 +76,7 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
     @IBAction func publishAction(_ sender: Any) {
         publishButton.isEnabled = false
         
-        if let price = Double(priceTextField.text!), let image = imageTextField.text, let concert = concertTextField.text, let duration = Double(durationTextField.text!), let deviceId = self.selectedValue?.id {
+        if let price = Double(priceTextField.text!), let image = imageTextField.text, let concert = concertTextField.text, let duration = Double(durationTextField.text!), let deviceId = self.selectedValue?.deviceId {
             createPublication(concert: concert, price: price, image: image, duration: duration, deviceId: deviceId, completion: {
                 () in
                 self.navigationController?.popToRootViewController(animated: true)
@@ -104,7 +104,8 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
             properties["price"] = "\(price)"
             properties["image"] = image
             properties["deviceType"] = "iBeacon"
-                self.alps.createPublication(userId: self.appDelegate.userId!, deviceId: deviceId, topic: "ticketstosale", range: 0.0, duration: duration, properties: properties, completion: {
+        let pub = Publication.init(deviceId: self.appDelegate.deviceId, topic: "ticketstosale", range: 0.0, duration: duration, properties: properties)
+        self.appDelegate.alps.createPublication(publication: pub) {
                     (_ publication) in
                     if let p = publication {
                         print("DEVICE ID : ")
@@ -114,6 +115,6 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
 //                        self.appDelegate.alps.addBeacon(beacon: device!)
                         completion()
                     }
-                })
+                }
     }
 }

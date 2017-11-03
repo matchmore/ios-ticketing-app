@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 import AlpsSDK
+import Alps
+
 
 class PinPublicationViewController: UIViewController, UITextFieldDelegate {
     
@@ -93,7 +95,9 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - AlpsSDK
     func createPublication(concert: String, price: Double, image: String, latitude: Double, longitude: Double, range: Double, duration: Double, completion: @escaping () -> Void) {
-        self.appDelegate.alps.createPinDevice(name: "pin device \(i)", latitude: latitude, longitude: longitude, altitude: 0.0, horizontalAccuracy: 1.0, verticalAccuracy: 1.0, completion: {
+        let location = Location.init(latitude: latitude, longitude: longitude, altitude: 0.0, horizontalAccuracy: 0.0, verticalAccuracy: 0.0)
+        let pin = PinDevice.init(name: "pin device \(i)", location: location)
+        self.appDelegate.alps.createPinDevice(device: pin) {
             (_ device) in
             print("PIN DEVICE CREATED")
                 // XXX: the property syntax is tricky at the moment: mood is a variable and 'happy' is a string value
@@ -103,17 +107,18 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
                 properties["image"] = image
                 properties["deviceType"] = "pin"
             if let deviceId = device?.id{
-                self.alps.createPublication(userId: self.appDelegate.userId!, deviceId: deviceId, topic: "ticketstosale", range: range, duration: duration, properties: properties, completion: {
+                let pub = Publication.init(deviceId: deviceId, topic: "ticketstosale", range: range, duration: duration, properties: properties)
+                self.appDelegate.alps.createPublication(publication: pub, for: deviceId){
                     (_ publication) in
                     if let p = publication {
                         print("Created publication: id = \(String(describing: p.id)), topic = \(String(describing: p.topic)), properties = \(String(describing: p.properties))")
                         self.i += 1
                         completion()
                     }
-                })
+                }
             }
             
-        })
+        }
     }
 
 }

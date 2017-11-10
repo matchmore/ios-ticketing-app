@@ -105,16 +105,18 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
             properties["image"] = image
             properties["deviceType"] = "iBeacon"
         let pub = Publication.init(deviceId: self.appDelegate.deviceId, topic: "ticketstosale", range: 0.0, duration: duration, properties: properties)
-        self.appDelegate.alps.createPublication(publication: pub) {
-                    (_ publication) in
-                    if let p = publication {
-                        print("DEVICE ID : ")
-                        print(deviceId)
-                        print("Created publication: id = \(String(describing: p.id)), topic = \(String(describing: p.topic)), properties = \(String(describing: p.properties))")
-                        self.i += 1
-//                        self.appDelegate.alps.addBeacon(beacon: device!)
-                        completion()
-                    }
-                }
+        self.appDelegate.alps.createPublication(publication: pub) { (result) in
+            switch result {
+            case .success(let publication):
+                print("DEVICE ID : ")
+                print(deviceId)
+                print("Created publication: id = \(String(describing: publication?.id)), topic = \(String(describing: publication?.topic)), properties = \(String(describing: publication?.properties))")
+                self.i += 1
+                //                        self.appDelegate.alps.addBeacon(beacon: device!)
+                completion()
+            case .failure(let error):
+                NSLog(error.debugDescription)
+            }
+        }
     }
 }

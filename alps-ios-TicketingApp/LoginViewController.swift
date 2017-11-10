@@ -76,44 +76,48 @@ class LoginViewController: UIViewController {
         if self.latitude != nil, self.longitude != nil, self.altitude != nil, self.horizontalAccuracy != nil, self.verticalAccuracy != nil {
             let location = Location(latitude: self.latitude!, longitude: self.longitude!, altitude: self.altitude!, horizontalAccuracy: self.horizontalAccuracy!, verticalAccuracy: self.verticalAccuracy!)
             let mobileDevice = MobileDevice(name: "Test's device", platform: "iOS 10.2", deviceToken: "870470ea-7a8e-11e6-b49b-5358f3beb662", location: location)
-            self.appDelegate.alps.createMainDevice(device: mobileDevice) {
-                                                (_ device) in
-                                                if let d = device {
-                                                    guard let deviceId = d.id else{
-                                                        print("ERROR : No deviceId found.")
-                                                        return
-                                                    }
-                                                    guard let name = d.name else{
-                                                        print("ERROR : No device name found.")
-                                                        return
-                                                    }
-                                                    
-                                                    print("Created device: id = \(String(describing: deviceId)), name = \(String(describing: name))")
-                                                    self.appDelegate.device = d
-                                                    self.appDelegate.deviceId = deviceId
-                                                    deviceCompletion(device)
-                                                }
-            }
-        } else {
+                self.appDelegate.alps.createMainDevice(device: mobileDevice) { (result) in
+                    switch result {
+                    case .success(let device):
+                        guard let deviceId = device?.id else{
+                            print("ERROR : No deviceId found.")
+                            return
+                        }
+                        guard let name = device?.name else{
+                            print("ERROR : No device name found.")
+                            return
+                        }
+                        
+                        print("Created device: id = \(String(describing: deviceId)), name = \(String(describing: name))")
+                        self.appDelegate.device = device
+                        self.appDelegate.deviceId = deviceId
+                        deviceCompletion(device)
+                    case .failure(let error):
+                        NSLog(error.debugDescription)
+                    }
+                }
+            } else {
             let location = Location(latitude: 0, longitude: 0, altitude: 0, horizontalAccuracy: 0, verticalAccuracy: 0)
             let mobileDevice = MobileDevice(name: "Test's device", platform: "iOS 10.2", deviceToken: "870470ea-7a8e-11e6-b49b-5358f3beb662", location: location)
-            self.appDelegate.alps.createMainDevice(device: mobileDevice) {
-                                            (_ device) in
-                                            if let d = device {
-                                                guard let deviceId = d.id else{
-                                                    print("ERROR : No deviceId found.")
-                                                    return
-                                                }
-                                                guard let name = d.name else{
-                                                    print("ERROR : No device name found.")
-                                                    return
-                                                }
-                                                
-                                                print("Created device: id = \(String(describing: deviceId)), name = \(String(describing: name))")
-                                                self.appDelegate.device = d
-                                                self.appDelegate.deviceId = deviceId
-                                                deviceCompletion(device)
-                                            }
+            self.appDelegate.alps.createMainDevice(device: mobileDevice) { (result) in
+                switch result {
+                case .success(let device):
+                    guard let deviceId = device?.id else{
+                        print("ERROR : No deviceId found.")
+                        return
+                    }
+                    guard let name = device?.name else{
+                        print("ERROR : No device name found.")
+                        return
+                    }
+                    
+                    print("Created device: id = \(String(describing: deviceId)), name = \(String(describing: name))")
+                    self.appDelegate.device = device
+                    self.appDelegate.deviceId = deviceId
+                    deviceCompletion(device)
+                case .failure(let error):
+                    NSLog(error.debugDescription)
+                }
             }
         }
     }
@@ -126,12 +130,14 @@ class LoginViewController: UIViewController {
             let range = 100.0
             let duration = 300.0
             let subscription = Subscription.init(deviceId: self.appDelegate.deviceId, topic: topic, range: range, duration: duration, selector: selector)
-            self.appDelegate.alps.createSubscription(subscription: subscription) {
-                                                        (_ subscription) in
-                                                        if let s = subscription {
-                                                            print("Created subscription: id = \(String(describing: s.id!)), topic = \(String(describing: s.topic!)), selector = \(String(describing: s.selector!))")
-                                                            self.appDelegate.alps.matchMonitor.startMonitoringFor(device: self.appDelegate.device!)
-                                                        }
+            self.appDelegate.alps.createSubscription(subscription: subscription) { (result) in
+                switch result {
+                case .success(let subscription):
+                    print("Created subscription: id = \(String(describing: subscription?.id)), topic = \(String(describing: subscription?.topic)), selector = \(String(describing: subscription?.selector))")
+                    self.appDelegate.alps.matchMonitor.startMonitoringFor(device: self.appDelegate.device!)
+                case .failure(let error):
+                    NSLog(error.debugDescription)
+                }
             }
         }
     }

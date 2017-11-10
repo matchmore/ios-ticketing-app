@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     // MARK: TO DO
-    let APIKEY = "ac0652a6-4a6a-482d-94d5-3419b1b56f9e" // <- Please provide a valid Matchmore Application Api-key, obtain it for free on dev.matchmore.io, see the README.md file for more informations
+    let APIKEY = "768c378c-bc4f-4911-a655-dbec8cab5ab8" // <- Please provide a valid Matchmore Application Api-key, obtain it for free on dev.matchmore.io, see the README.md file for more informations
     
     // MARK: Properties
     // AlpsManager is the SDK core class that will communicate with the API Alps, which will then communicate with Matchmore services
@@ -38,10 +38,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if APIKEY.isEmpty {
             fatalError("To run this project, please provide a valid Matchmore Application Api-key. Obtain it for free on dev.matchmore.io, see the README.md file for more informations")
         }else{
-            alps = AlpsManager(apiKey: APIKEY,
-                               baseUrl: "http://146.148.15.57/v5")
+//            alps = AlpsManager(apiKey: APIKEY,
+//                               baseURL: "http://146.148.15.57/v5")
+            alps = AlpsManager.init(apiKey: APIKEY, baseURL: "http://localhost:9000/v4")
             alps.contextManager.startRanging(forUuid: UUID.init(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Beacon region estimote")
-            
         }
         return true
     }
@@ -68,6 +68,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    // Called when APNs has assigned the device a unique token
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        // Convert token to string
+        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        
+        // Print it to console
+        NSLog("APNs device token: \(deviceTokenString)")
+        
+        // Persist it in your backend in case it's new
+        alps.remoteNotificationManager.registerDeviceToken(deviceToken: deviceToken)
+    }
+    
+    // Called when APNs failed to register the device for push notifications
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        // Print the error to console (you should alert the user that registration failed)
+        NSLog("APNs registration failed: \(error)")
+    }
 }
 

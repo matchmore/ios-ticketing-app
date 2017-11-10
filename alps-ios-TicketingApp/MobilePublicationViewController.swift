@@ -101,11 +101,14 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate{
             properties["image"] = image
             properties["deviceType"] = "mobile"
             let pub = Publication.init(deviceId: self.appDelegate.deviceId, topic: "ticketstosale", range: range, duration: duration, properties: properties)
-            self.appDelegate.alps.createPublication(publication: pub) {(_ publication) in
-                                            if let p = publication {
-                                                print("Created publication: id = \(String(describing: p.id)), topic = \(String(describing: p.topic)), properties = \(String(describing: p.properties))")
-                                                completion()
-                                            }
+            self.appDelegate.alps.createPublication(publication: pub) { (result) in
+                switch result {
+                case .success(let publication):
+                    print("Created publication: id = \(String(describing: publication?.id)), topic = \(String(describing: publication?.topic)), properties = \(String(describing: publication?.properties))")
+                    completion()
+                case .failure(let error):
+                    NSLog(error.debugDescription)
+                }
             }
         }
     }

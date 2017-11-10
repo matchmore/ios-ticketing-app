@@ -91,7 +91,7 @@ class PublicationTableViewController: UITableViewController {
                 self.publications = ourPublications
                 self.tableView.reloadData()
             case .failure(let error):
-                print(error)
+                NSLog(error.debugDescription)
             }
             
         })

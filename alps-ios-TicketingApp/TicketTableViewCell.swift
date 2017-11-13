@@ -16,8 +16,6 @@ class TicketTableViewCell: UITableViewCell {
     @IBOutlet var ticketImageView: UIImageView!
     @IBOutlet weak var deviceTypeLabel: UILabel!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

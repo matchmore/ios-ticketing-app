@@ -11,7 +11,6 @@ import AlpsSDK
 import Alps
 
 class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
-
     @IBOutlet weak var concertTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var imageTextField: UITextField!
@@ -19,26 +18,25 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var publishButton: UIButton!
     var i = 1
-    var pickerData : [IBeaconTriple] = []
-    var selectedValue : IBeaconTriple?
-    
+    var pickerData: [IBeaconTriple] = []
+    var selectedValue: IBeaconTriple?
     // Using appDelegate as a singleton
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var alps : AlpsManager!
+    weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
+    var alps: AlpsManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Connect data:
         self.picker.delegate = self
         self.picker.dataSource = self
-        alps = self.appDelegate.alps
+        alps = self.appDelegate?.alps
         self.concertTextField.delegate = self
         self.priceTextField.delegate = self
         self.imageTextField.delegate = self
         self.durationTextField.delegate = self
         self.priceTextField.keyboardType = .numbersAndPunctuation
         self.durationTextField.keyboardType = .numbersAndPunctuation
-        self.pickerData = self.appDelegate.alps.beaconDevices.items
+        self.pickerData = (self.appDelegate?.alps.beaconDevices.items)!
         if !pickerData.isEmpty {
             self.selectedValue = pickerData[0]
         }
@@ -67,7 +65,6 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         return pickerData[row].deviceId
     }
     
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         self.selectedValue = pickerData[row]
@@ -82,12 +79,10 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
                 self.navigationController?.popToRootViewController(animated: true)
             })
         } else {
-            print("Issue with price.")
-            print("Issue with duration.")
-            print("Issue with range.")
+            NSLog("Issue with price.")
+            NSLog("Issue with duration.")
+            NSLog("Issue with range.")
         }
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -97,20 +92,20 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
 
     // MARK: - AlpsSDK
     func createPublication(concert: String, price: Double, image: String, duration: Double, deviceId : String, completion: @escaping () -> Void) {
-            print("IBeacon DEVICE Created")
+            NSLog("IBeacon DEVICE Created")
             // XXX: the property syntax is tricky at the moment: mood is a variable and 'happy' is a string value
-            var properties : [String:String] = [:]
+            var properties: [String: String] = [:]
             properties["concert"] = concert
             properties["price"] = "\(price)"
             properties["image"] = image
             properties["deviceType"] = "iBeacon"
-        let pub = Publication.init(deviceId: self.appDelegate.deviceId, topic: "ticketstosale", range: 0.0, duration: duration, properties: properties)
-        self.appDelegate.alps.createPublication(publication: pub) { (result) in
+        let pub = Publication.init(deviceId: self.appDelegate?.deviceId, topic: "ticketstosale", range: 0.0, duration: duration, properties: properties)
+        self.appDelegate?.alps.createPublication(publication: pub) { (result) in
             switch result {
             case .success(let publication):
-                print("DEVICE ID : ")
-                print(deviceId)
-                print("Created publication: id = \(String(describing: publication?.id)), topic = \(String(describing: publication?.topic)), properties = \(String(describing: publication?.properties))")
+                NSLog("DEVICE ID : ")
+                NSLog(deviceId)
+                NSLog("Created publication: id = \(String(describing: publication?.id)), topic = \(String(describing: publication?.topic)), properties = \(String(describing: publication?.properties))")
                 self.i += 1
                 //                        self.appDelegate.alps.addBeacon(beacon: device!)
                 completion()

@@ -13,7 +13,6 @@ class AddPublicationViewController: UIViewController {
     @IBOutlet weak var mobileView: UIView!
     @IBOutlet weak var pinView: UIView!
     @IBOutlet weak var iBeaconView: UIView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         mobileView.isHidden = false
@@ -26,7 +25,6 @@ class AddPublicationViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -41,7 +39,6 @@ class AddPublicationViewController: UIViewController {
             mobileView.isHidden = true
             pinView.isHidden = true
             iBeaconView.isHidden = false
-            break
         default:
             break
         }

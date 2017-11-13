@@ -16,31 +16,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     // MARK: TO DO
-    let APIKEY = "768c378c-bc4f-4911-a655-dbec8cab5ab8" // <- Please provide a valid Matchmore Application Api-key, obtain it for free on dev.matchmore.io, see the README.md file for more informations
-    
+    let APIKEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiMGNhZDNiZWItMmExMS00ZjFjLWFlYmMtMDEwOTE0YjZjMGM3IiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MTAzMDkzODgsImlhdCI6MTUxMDMwOTM4OCwianRpIjoiMiJ9.8L7wuBTE9uwceEGay9Kl5m2kV2JzlhiLAW4uYabu9g82m2gLjiJz5_hU68P0tShodTJt31Gqb_kSNWAx3KS4wg" // <- Please provide a valid Matchmore Application Api-key, obtain it for free on dev.matchmore.io, see the README.md file for more informations
     // MARK: Properties
-    // AlpsManager is the SDK core class that will communicate with the API Alps, which will then communicate with Matchmore services
+    // AlpsManager is the SDK core class that will communicate with the API Alps.
+    // it will help you communicate with Matchmore services
     var alps: AlpsManager!
-    // In short, it will manage all the related calls with the device location. To learn more about CLLocationManager please refers to CoreLocation Documentation
+    // To learn more about CLLocationManager please refers to CoreLocation Documentation
     var locationManager = CLLocationManager()
     // UUID identifier given by Matchmore to identify users
-    var username : String?
+    var username: String?
     // UUID identifier given by Matchmore to identify devices
-    var deviceId : String?
-    var device : MobileDevice?
-    
+    var deviceId: String?
+    var device: MobileDevice?
     // MARK: UI Interface
-    let orange = UIColor(red:0.93, green:0.51, blue:0.31, alpha:1.0)
-
-
+    let orange = UIColor(red: 0.93, green: 0.51, blue: 0.31, alpha: 1.0)
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         if APIKEY.isEmpty {
             fatalError("To run this project, please provide a valid Matchmore Application Api-key. Obtain it for free on dev.matchmore.io, see the README.md file for more informations")
-        }else{
-//            alps = AlpsManager(apiKey: APIKEY,
-//                               baseURL: "http://146.148.15.57/v5")
-            alps = AlpsManager.init(apiKey: APIKEY, baseURL: "http://localhost:9000/v4")
+        } else {
+            alps = AlpsManager(apiKey: APIKEY,
+                               baseURL: "http://146.148.15.57/v5")
+//            alps = AlpsManager.init(apiKey: APIKEY, baseURL: "http://localhost:9000/v4")
             alps.contextManager.startRanging(forUuid: UUID.init(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Beacon region estimote")
         }
         return true
@@ -72,18 +70,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         // Convert token to string
         let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
-        
-        // Print it to console
-        NSLog("APNs device token: \(deviceTokenString)")
-        
-        // Persist it in your backend in case it's new
-        alps.remoteNotificationManager.registerDeviceToken(deviceToken: deviceToken)
+        // Pass Device Token to AlpsManager
+        // Note : You need to initiate AlpsManager first.
+        alps.remoteNotificationManager.registerDeviceToken(deviceToken: deviceTokenString)
     }
     
     // Called when APNs failed to register the device for push notifications
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        // Print the error to console (you should alert the user that registration failed)
+        // Shows the error to console (you should alert the user that registration failed)
         NSLog("APNs registration failed: \(error)")
     }
 }
-

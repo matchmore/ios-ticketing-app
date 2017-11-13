@@ -52,6 +52,7 @@
 		84823D421F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconPublicationViewController.swift; sourceTree = "<group>"; };
 		84823D441F5EF2DA0039CA42 /* AddPublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPublicationViewController.swift; sourceTree = "<group>"; };
 		8484E2251F6143D80086C887 /* PublicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewCell.swift; sourceTree = "<group>"; };
+		84F9216A1FB5DFDF004A2400 /* alps-ios-TicketingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "alps-ios-TicketingApp.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 		84110D701F5E8A7500C3E28D /* alps-ios-TicketingApp */ = {
 			isa = PBXGroup;
 			children = (
+				84F9216A1FB5DFDF004A2400 /* alps-ios-TicketingApp.entitlements */,
 				84110D711F5E8A7500C3E28D /* AppDelegate.swift */,
 				844410E71F602F30002AC090 /* Main.storyboard */,
 				847BC9B81F5FF8D90011F939 /* LoginViewController.swift */,
@@ -172,6 +174,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = PAYVP3AFKX;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					84110D811F5E8A7500C3E28D = {
 						CreatedOnToolsVersion = 8.3.3;

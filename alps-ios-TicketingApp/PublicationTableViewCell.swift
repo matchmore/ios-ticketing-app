@@ -9,13 +9,10 @@
 import UIKit
 
 class PublicationTableViewCell: UITableViewCell {
-    
-    // MARK: Properties
-    
+    // MARK: - Properties
     @IBOutlet weak var concertLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var deviceTypeLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

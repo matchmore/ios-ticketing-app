@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // UUID identifier given by Matchmore to identify devices
     var deviceId: String?
     var device: MobileDevice?
+    let matchMore : MatchMore! = nil
     // MARK: UI Interface
     let orange = UIColor(red: 0.93, green: 0.51, blue: 0.31, alpha: 1.0)
     
@@ -36,10 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if APIKEY.isEmpty {
             fatalError("To run this project, please provide a valid Matchmore Application Api-key. Obtain it for free on dev.matchmore.io, see the README.md file for more informations")
         } else {
-            alps = AlpsManager(apiKey: APIKEY,
-                               baseURL: "http://146.148.15.57/v5")
+            MatchMore.apiKey = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiODhjMWU4NjMtNmEzMS00Y2VlLWI3NWYtMzY5MmRhMjI0Njc5IiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MTA3NzE3NzMsImlhdCI6MTUxMDc3MTc3MywianRpIjoiMSJ9.XNiInmdPJOF7UTHrtNVnga1XQ8CsXHAuli9qR3UQi6mZBqDCyWhspXZJ5C0wlLQwDMiYq_6aOOoACdqTn5vH1g"
+            MatchMore.worldId = "88c1e863-6a31-4cee-b75f-3692da224679"
+//            alps = AlpsManager(apiKey: APIKEY,
+//                               baseURL: "http://146.148.15.57/v5")
 //            alps = AlpsManager.init(apiKey: APIKEY, baseURL: "http://localhost:9000/v4")
-            alps.contextManager.startRanging(forUuid: UUID.init(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Beacon region estimote")
+            MatchMore.startRanging(forUUID: UUID.init(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Beacon region estimote")
         }
         return true
     }
@@ -72,7 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
         // Pass Device Token to AlpsManager
         // Note : You need to initiate AlpsManager first.
-        alps.remoteNotificationManager.registerDeviceToken(deviceToken: deviceTokenString)
+        MatchMore.registerDeviceToken(deviceToken: deviceTokenString)
     }
     
     // Called when APNs failed to register the device for push notifications

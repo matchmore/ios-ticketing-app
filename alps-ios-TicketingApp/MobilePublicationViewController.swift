@@ -94,10 +94,10 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
             properties["image"] = image
             properties["deviceType"] = "mobile"
             let pub = Publication.init(deviceId: self.appDelegate?.deviceId, topic: "ticketstosale", range: range, duration: duration, properties: properties)
-            self.appDelegate?.alps.createPublication(publication: pub) { (result) in
+            MatchMore.createPublication(publication: pub) { (result) in
                 switch result {
                 case .success(let publication):
-                    NSLog("Created publication: id = \(String(describing: publication?.id)), topic = \(String(describing: publication?.topic)), properties = \(String(describing: publication?.properties))")
+                    NSLog("Created publication: id = \(String(describing: publication.id)), topic = \(String(describing: publication.topic)), properties = \(String(describing: publication.properties))")
                     completion()
                 case .failure(let error):
                     NSLog(error.debugDescription)

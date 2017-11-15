@@ -69,14 +69,14 @@ class LoginViewController: UIViewController {
         if self.latitude != nil, self.longitude != nil, self.altitude != nil, self.horizontalAccuracy != nil, self.verticalAccuracy != nil {
             let location = Location(latitude: self.latitude!, longitude: self.longitude!, altitude: self.altitude!, horizontalAccuracy: self.horizontalAccuracy!, verticalAccuracy: self.verticalAccuracy!)
             let mobileDevice = MobileDevice(name: "Test's device", platform: "iOS 10.2", deviceToken: "870470ea-7a8e-11e6-b49b-5358f3beb662", location: location)
-            self.appDelegate?.alps.createMainDevice(device: mobileDevice) { (result) in
+             MatchMore.createMainDevice(device: mobileDevice) { (result) in
                     switch result {
                     case .success(let device):
-                        guard let deviceId = device?.id else {
+                        guard let deviceId = device.id else {
                             NSLog("ERROR : No deviceId found.")
                             return
                         }
-                        guard let name = device?.name else {
+                        guard let name = device.name else {
                             NSLog("ERROR : No device name found.")
                             return
                         }
@@ -92,14 +92,14 @@ class LoginViewController: UIViewController {
             } else {
             let location = Location(latitude: 0, longitude: 0, altitude: 0, horizontalAccuracy: 0, verticalAccuracy: 0)
             let mobileDevice = MobileDevice(name: "Test's device", platform: "iOS 10.2", deviceToken: "870470ea-7a8e-11e6-b49b-5358f3beb662", location: location)
-            self.appDelegate?.alps.createMainDevice(device: mobileDevice) { (result) in
+            MatchMore.createMainDevice(device: mobileDevice) { (result) in
                 switch result {
                 case .success(let device):
-                    guard let deviceId = device?.id else {
+                    guard let deviceId = device.id else {
                         NSLog("ERROR : No deviceId found.")
                         return
                     }
-                    guard let name = device?.name else {
+                    guard let name = device.name else {
                         NSLog("ERROR : No device name found.")
                         return
                     }
@@ -122,11 +122,10 @@ class LoginViewController: UIViewController {
             let range = 100.0
             let duration = 300.0
             let subscription = Subscription.init(deviceId: self.appDelegate?.deviceId, topic: topic, range: range, duration: duration, selector: selector)
-            NSLog("la subscription")
-            self.appDelegate?.alps.createSubscription(subscription: subscription) { (result) in
+            MatchMore.createSubscription(subscription: subscription) { (result) in
                 switch result {
                 case .success(let subscription):
-                    NSLog("Created subscription: id = \(String(describing: subscription?.id)), topic = \(String(describing: subscription?.topic)), selector = \(String(describing: subscription?.selector))")
+                    NSLog("Created subscription: id = \(String(describing: subscription.id)), topic = \(String(describing: subscription.topic)), selector = \(String(describing: subscription.selector))")
                 case .failure(let error):
                     NSLog(error.debugDescription)
                 }

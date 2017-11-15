@@ -67,7 +67,7 @@ class PublicationTableViewController: UITableViewController {
 
     // MARK: - AlpsSDK Functions
     private func getPublications() {
-        self.appDelegate?.alps.publications.findAll(completion: { (result) in
+        MatchMore.publications.findAll(completion: { (result) in
             switch result {
             case .success(let publications):
                 var ourPublications = [Publication]()

@@ -2,9 +2,11 @@ PODS:
   - Alamofire (4.5.0)
   - Alps (0.0.3):
     - Alamofire (~> 4.0)
-  - AlpsSDK (0.0.3):
+  - AlpsSDK (0.5.0):
     - Alps
+    - Starscream (~> 3.0)
   - SkyFloatingLabelTextField (3.1.0)
+  - Starscream (3.0.2)
 
 DEPENDENCIES:
   - Alps (from `../alps-ios-api`)
@@ -20,8 +22,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   Alps: f97f116e679df08d4fba32730479e2f351afb258
-  AlpsSDK: a60836dcaa6599d4dbba3aa5ce56ed95bb5220ca
+  AlpsSDK: 67be29f783f0aea50d57bcbe2612e1659eb01d94
   SkyFloatingLabelTextField: 26a92ad407044dd5a7c3e4e348738ff0991514fe
+  Starscream: b512c62f6706421221b5ceb2ba01a9f58aca5bea
 
 PODFILE CHECKSUM: a4aea59dae16b3ab50eac3b9fdb510945a4517da
 

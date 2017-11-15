@@ -88,7 +88,7 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
     func createPublication(concert: String, price: Double, image: String, latitude: Double, longitude: Double, range: Double, duration: Double, completion: @escaping () -> Void) {
         let location = Location.init(latitude: latitude, longitude: longitude, altitude: 0.0, horizontalAccuracy: 0.0, verticalAccuracy: 0.0)
         let pin = PinDevice.init(name: "pin device \(i)", location: location)
-        self.appDelegate?.alps.createPinDevice(device: pin) { (result) in
+        MatchMore.createPinDevice(device: pin) { (result) in
             switch result {
             case .success(let device):
                 NSLog("PIN DEVICE CREATED")
@@ -98,12 +98,12 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
                 properties["price"] = "\(price)"
                 properties["image"] = image
                 properties["deviceType"] = "pin"
-                if let deviceId = device?.id{
+                if let deviceId = device.id{
                     let pub = Publication.init(deviceId: deviceId, topic: "ticketstosale", range: range, duration: duration, properties: properties)
-                    self.appDelegate?.alps.createPublication(publication: pub, for: deviceId) { (result) in
+                    MatchMore.createPublication(publication: pub, for: deviceId) { (result) in
                         switch result {
                         case .success(let publication):
-                            NSLog("Created publication: id = \(String(describing: publication?.id)), topic = \(String(describing: publication?.topic)), properties = \(String(describing: publication?.properties))")
+                            NSLog("Created publication: id = \(String(describing: publication.id)), topic = \(String(describing: publication.topic)), properties = \(String(describing: publication.properties))")
                             self.i += 1
                             completion()
                         case .failure(let error):

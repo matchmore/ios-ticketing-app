@@ -36,7 +36,7 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         self.durationTextField.delegate = self
         self.priceTextField.keyboardType = .numbersAndPunctuation
         self.durationTextField.keyboardType = .numbersAndPunctuation
-        self.pickerData = (self.appDelegate?.alps.beaconDevices.items)!
+        self.pickerData = MatchMore.getIBeaconTriples()
         if !pickerData.isEmpty {
             self.selectedValue = pickerData[0]
         }
@@ -100,12 +100,12 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
             properties["image"] = image
             properties["deviceType"] = "iBeacon"
         let pub = Publication.init(deviceId: self.appDelegate?.deviceId, topic: "ticketstosale", range: 0.0, duration: duration, properties: properties)
-        self.appDelegate?.alps.createPublication(publication: pub) { (result) in
+        MatchMore.createPublication(publication: pub) { (result) in
             switch result {
             case .success(let publication):
                 NSLog("DEVICE ID : ")
                 NSLog(deviceId)
-                NSLog("Created publication: id = \(String(describing: publication?.id)), topic = \(String(describing: publication?.topic)), properties = \(String(describing: publication?.properties))")
+                NSLog("Created publication: id = \(String(describing: publication.id)), topic = \(String(describing: publication.topic)), properties = \(String(describing: publication.properties))")
                 self.i += 1
                 //                        self.appDelegate.alps.addBeacon(beacon: device!)
                 completion()

@@ -38,7 +38,9 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         super.viewWillAppear(animated)
         MatchMore.refreshKnownBeacons { beacons in
             self.pickerData = beacons ?? []
+            self.picker.reloadAllComponents()
         }
+
         if !pickerData.isEmpty {
             self.selectedValue = pickerData[0]
         }

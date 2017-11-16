@@ -1,0 +1,6 @@
+framework module Pods_alps_ios_TicketingAppTests {
+  umbrella header "Pods-alps-ios-TicketingAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

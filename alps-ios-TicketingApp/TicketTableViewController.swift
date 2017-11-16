@@ -10,36 +10,25 @@ import UIKit
 import AlpsSDK
 import Alps
 
-class MatchDelegate: AlpsManagerDelegate {
-    var onMatch: OnMatchClosure
-    init(_ onMatch: @escaping OnMatchClosure) {
-        self.onMatch = onMatch
-    }
-}
-
-class TicketTableViewController: UITableViewController {
+class TicketTableViewController: UITableViewController, AlpsManagerDelegate {
     var matches = [Match]()
     var notificationCounter = 0
     // Using appDelegate as a singleton
     weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
     var alps: AlpsManager!
-    var matchDelegate: MatchDelegate!
+    var onMatch: OnMatchClosure? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.alps = self.appDelegate?.alps
         self.navigationController?.navigationBar.barTintColor = self.appDelegate?.orange
         // Start Monitoring
-        self.matchDelegate = MatchDelegate { (matches, _) in
-//            let s1 = Set(self.matches)
-//            let s2 = Set(matches)
-//            self.matches = Array(s1.symmetricDifference(s2))
+        self.onMatch = { matches, _ in
             self.matches = matches
             self.notificationOnMatch()
             self.tableView.reloadData()
         }
-        MatchMore.matchDelegates.add(self.matchDelegate)
-        MatchMore.startMonitoringFor(device: (appDelegate?.device!)!)
+        MatchMore.matchDelegates += self
         MatchMore.startPollingMatches()
     }
     
@@ -116,12 +105,5 @@ class TicketTableViewController: UITableViewController {
     func resetNotificationOnMatch() {
         notificationCounter = 0
         tabBarController?.tabBar.items?[0].badgeValue = nil
-    }
-    
-    // MARK: - AlpsSDK functions
-    
-    // Start the match service
-    func monitorMatches() {
-        MatchMore.startMonitoringFor(device: (self.appDelegate?.device!)!)
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09182C7473C7F21C579EF107 /* Pods_alps_ios_TicketingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6826B5A9222B41A5CA1D1CAF /* Pods_alps_ios_TicketingApp.framework */; };
 		84110D721F5E8A7500C3E28D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D711F5E8A7500C3E28D /* AppDelegate.swift */; };
 		84110D791F5E8A7500C3E28D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84110D781F5E8A7500C3E28D /* Assets.xcassets */; };
 		84110D7C1F5E8A7500C3E28D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84110D7A1F5E8A7500C3E28D /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 		84823D431F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D421F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift */; };
 		84823D451F5EF2DA0039CA42 /* AddPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D441F5EF2DA0039CA42 /* AddPublicationViewController.swift */; };
 		8484E2261F6143D80086C887 /* PublicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484E2251F6143D80086C887 /* PublicationTableViewCell.swift */; };
+		A1D1B247B94EEE386AE3D7E2 /* Pods_alps_ios_TicketingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C5F11156B109462AF70DC1 /* Pods_alps_ios_TicketingAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6826B5A9222B41A5CA1D1CAF /* Pods_alps_ios_TicketingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alps_ios_TicketingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84110D6E1F5E8A7500C3E28D /* alps-ios-TicketingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alps-ios-TicketingApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84110D711F5E8A7500C3E28D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84110D781F5E8A7500C3E28D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +56,11 @@
 		84823D441F5EF2DA0039CA42 /* AddPublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPublicationViewController.swift; sourceTree = "<group>"; };
 		8484E2251F6143D80086C887 /* PublicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewCell.swift; sourceTree = "<group>"; };
 		84F9216A1FB5DFDF004A2400 /* alps-ios-TicketingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "alps-ios-TicketingApp.entitlements"; sourceTree = "<group>"; };
+		88A83ABC3109D222E3E21F64 /* Pods-alps-ios-TicketingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BBB2158F749ACE6BB697E141 /* Pods-alps-ios-TicketingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC5AB4D2043C92A14BF4C579 /* Pods-alps-ios-TicketingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E9C5F11156B109462AF70DC1 /* Pods_alps_ios_TicketingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alps_ios_TicketingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBF4FEA91A578244E1EC1B44 /* Pods-alps-ios-TicketingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09182C7473C7F21C579EF107 /* Pods_alps_ios_TicketingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,18 +76,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D1B247B94EEE386AE3D7E2 /* Pods_alps_ios_TicketingAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		557DF38F63E43603AD5C5717 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6826B5A9222B41A5CA1D1CAF /* Pods_alps_ios_TicketingApp.framework */,
+				E9C5F11156B109462AF70DC1 /* Pods_alps_ios_TicketingAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71CD53E2F4B5F654FA1922E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC5AB4D2043C92A14BF4C579 /* Pods-alps-ios-TicketingApp.debug.xcconfig */,
+				EBF4FEA91A578244E1EC1B44 /* Pods-alps-ios-TicketingApp.release.xcconfig */,
+				88A83ABC3109D222E3E21F64 /* Pods-alps-ios-TicketingAppTests.debug.xcconfig */,
+				BBB2158F749ACE6BB697E141 /* Pods-alps-ios-TicketingAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		84110D651F5E8A7500C3E28D = {
 			isa = PBXGroup;
 			children = (
 				84110D701F5E8A7500C3E28D /* alps-ios-TicketingApp */,
 				84110D851F5E8A7500C3E28D /* alps-ios-TicketingAppTests */,
 				84110D6F1F5E8A7500C3E28D /* Products */,
+				71CD53E2F4B5F654FA1922E2 /* Pods */,
+				557DF38F63E43603AD5C5717 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84110D8B1F5E8A7500C3E28D /* Build configuration list for PBXNativeTarget "alps-ios-TicketingApp" */;
 			buildPhases = (
+				73A651B63EF248D9B27C6182 /* [CP] Check Pods Manifest.lock */,
 				84110D6A1F5E8A7500C3E28D /* Sources */,
 				84110D6B1F5E8A7500C3E28D /* Frameworks */,
 				84110D6C1F5E8A7500C3E28D /* Resources */,
+				08318B2835E09F156D76AFD0 /* [CP] Embed Pods Frameworks */,
+				83EE50E4D4B9C8F3ADA2B8F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84110D8E1F5E8A7500C3E28D /* Build configuration list for PBXNativeTarget "alps-ios-TicketingAppTests" */;
 			buildPhases = (
+				3446C93AC967A283E244904A /* [CP] Check Pods Manifest.lock */,
 				84110D7E1F5E8A7500C3E28D /* Sources */,
 				84110D7F1F5E8A7500C3E28D /* Frameworks */,
 				84110D801F5E8A7500C3E28D /* Resources */,
+				4F4FD3DA069B32E2F7870445 /* [CP] Embed Pods Frameworks */,
+				1C5CE459E9DFDEF1D3A6DC28 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,6 +266,116 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08318B2835E09F156D76AFD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alps/Alps.framework",
+				"${BUILT_PRODUCTS_DIR}/AlpsSDK/AlpsSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftWebSocket/SwiftWebSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alps.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlpsSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftWebSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C5CE459E9DFDEF1D3A6DC28 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3446C93AC967A283E244904A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-alps-ios-TicketingAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F4FD3DA069B32E2F7870445 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73A651B63EF248D9B27C6182 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-alps-ios-TicketingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		83EE50E4D4B9C8F3ADA2B8F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84110D6A1F5E8A7500C3E28D /* Sources */ = {
@@ -395,6 +543,7 @@
 		};
 		84110D8C1F5E8A7500C3E28D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC5AB4D2043C92A14BF4C579 /* Pods-alps-ios-TicketingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PAYVP3AFKX;
@@ -409,6 +558,7 @@
 		};
 		84110D8D1F5E8A7500C3E28D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBF4FEA91A578244E1EC1B44 /* Pods-alps-ios-TicketingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PAYVP3AFKX;
@@ -423,6 +573,7 @@
 		};
 		84110D8F1F5E8A7500C3E28D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88A83ABC3109D222E3E21F64 /* Pods-alps-ios-TicketingAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -439,6 +590,7 @@
 		};
 		84110D901F5E8A7500C3E28D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBB2158F749ACE6BB697E141 /* Pods-alps-ios-TicketingAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

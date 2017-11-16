@@ -1,0 +1,25 @@
+{
+  "name": "AlpsSDK",
+  "platforms": {
+    "ios": "10.0",
+    "osx": "10.11"
+  },
+  "version": "0.5.0",
+  "authors": "Matchmore Alps SDK Team",
+  "license": "BSD 3-Clause License",
+  "homepage": "http://matchmore.io/alps",
+  "summary": "Alps iOS SDK in Swift",
+  "source": {
+    "git": "https://github.com/MatchMore/alps-ios-sdk.git",
+    "tag": "0.5.0"
+  },
+  "source_files": "AlpsSDK/**/*.swift",
+  "dependencies": {
+    "Alps": [
+
+    ],
+    "SwiftWebSocket": [
+      "~> 2.6"
+    ]
+  }
+}

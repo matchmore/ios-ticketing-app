@@ -36,7 +36,9 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         self.durationTextField.delegate = self
         self.priceTextField.keyboardType = .numbersAndPunctuation
         self.durationTextField.keyboardType = .numbersAndPunctuation
-        self.pickerData = MatchMore.getIBeaconTriples()
+        MatchMore.refreshKnownBeacons { beacons in
+            self.pickerData = beacons ?? []
+        }
         if !pickerData.isEmpty {
             self.selectedValue = pickerData[0]
         }

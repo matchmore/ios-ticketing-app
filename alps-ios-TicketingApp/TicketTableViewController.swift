@@ -30,25 +30,17 @@ class TicketTableViewController: UITableViewController {
         self.alps = self.appDelegate?.alps
         self.navigationController?.navigationBar.barTintColor = self.appDelegate?.orange
         // Start Monitoring
-        let matchDelegate = MatchDelegate { (matches, devices) in
-            print(matches)
-            print(devices)
-            print("HELLOOO")
-        }
-        matchDelegate.onMatch = { (matches, device) in
-            print(matches)
-            print(device)
-            print("HELLOOO")
-        }
-        MatchMore.matchDelegates += matchDelegate
-        MatchMore.startMonitoringFor(device: (appDelegate?.device!)!)
         self.matchDelegate = MatchDelegate { (matches, _) in
+//            let s1 = Set(self.matches)
+//            let s2 = Set(matches)
+//            self.matches = Array(s1.symmetricDifference(s2))
             self.matches = matches
             self.notificationOnMatch()
             self.tableView.reloadData()
         }
         MatchMore.matchDelegates.add(self.matchDelegate)
         MatchMore.startMonitoringFor(device: (appDelegate?.device!)!)
+        MatchMore.startPollingMatches()
     }
     
     override func viewDidAppear(_ animated: Bool) {

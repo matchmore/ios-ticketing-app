@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     // MARK: TO DO
-    let APIKEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiMGNhZDNiZWItMmExMS00ZjFjLWFlYmMtMDEwOTE0YjZjMGM3IiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MTAzMDkzODgsImlhdCI6MTUxMDMwOTM4OCwianRpIjoiMiJ9.8L7wuBTE9uwceEGay9Kl5m2kV2JzlhiLAW4uYabu9g82m2gLjiJz5_hU68P0tShodTJt31Gqb_kSNWAx3KS4wg" // <- Please provide a valid Matchmore Application Api-key, obtain it for free on dev.matchmore.io, see the README.md file for more informations
+    let APIKEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiMjhiMmUyMDktOTQ4NC00NzE2LTg0YjAtMDc1NDJmYjYxOTg2IiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MTA4MjAwMTEsImlhdCI6MTUxMDgyMDAxMSwianRpIjoiMSJ9.4MFCfnsal_ODhFepsD4NuoKsXUt0EXX3MhuWJ2UtNrtFNO9nu3SwuKC2bB2cJhH11HrhCimtsvXvWtvtKJbNQA" // <- Please provide a valid Matchmore Application Api-key, obtain it for free on dev.matchmore.io, see the README.md file for more informations
     // MARK: Properties
     // AlpsManager is the SDK core class that will communicate with the API Alps.
     // it will help you communicate with Matchmore services
@@ -37,12 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if APIKEY.isEmpty {
             fatalError("To run this project, please provide a valid Matchmore Application Api-key. Obtain it for free on dev.matchmore.io, see the README.md file for more informations")
         } else {
-            MatchMore.apiKey = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiODhjMWU4NjMtNmEzMS00Y2VlLWI3NWYtMzY5MmRhMjI0Njc5IiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MTA3NzE3NzMsImlhdCI6MTUxMDc3MTc3MywianRpIjoiMSJ9.XNiInmdPJOF7UTHrtNVnga1XQ8CsXHAuli9qR3UQi6mZBqDCyWhspXZJ5C0wlLQwDMiYq_6aOOoACdqTn5vH1g"
-            MatchMore.worldId = "88c1e863-6a31-4cee-b75f-3692da224679"
+            MatchMore.apiKey = APIKEY
+            MatchMore.worldId = "28b2e209-9484-4716-84b0-07542fb61986"
 //            alps = AlpsManager(apiKey: APIKEY,
 //                               baseURL: "http://146.148.15.57/v5")
 //            alps = AlpsManager.init(apiKey: APIKEY, baseURL: "http://localhost:9000/v4")
-            MatchMore.startRanging(forUUID: UUID.init(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Beacon region estimote")
+            MatchMore.startRanging(forUuid: UUID.init(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Beacon region estimote")
         }
         return true
     }

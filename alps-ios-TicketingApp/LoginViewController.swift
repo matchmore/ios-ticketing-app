@@ -121,8 +121,16 @@ class LoginViewController: UIViewController {
             let selector = "concert='Montreux Jazz'"
             let range = 100.0
             let duration = 300.0
-            let subscription = Subscription.init(deviceId: self.appDelegate?.deviceId, topic: topic, range: range, duration: duration, selector: selector)
+            guard let deviceId = self.appDelegate?.deviceId else {return}
+            let subscription = Subscription.init(deviceId: deviceId, topic: topic, range: range, duration: duration, selector: selector)
             MatchMore.createSubscription(subscription: subscription) { (result) in
+                switch result {
+                case .success(let t): print(t)
+                case .failure(let t): print(t)
+                }
+                
+            }
+            MatchMore.createSubscription(subscription: subscription, for: deviceId) { (result) in
                 switch result {
                 case .success(let subscription):
                     NSLog("Created subscription: id = \(String(describing: subscription.id)), topic = \(String(describing: subscription.topic)), selector = \(String(describing: subscription.selector))")

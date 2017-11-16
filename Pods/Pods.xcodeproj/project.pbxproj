@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0764AD470A3EB02FAAB0EC1CB3454F97 /* Pods-alps-ios-TicketingApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 534212A52F490C8B1F8C0EDC62008597 /* Pods-alps-ios-TicketingApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0764AD470A3EB02FAAB0EC1CB3454F97 /* Pods-alps-ios-TicketingApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CFDB9301923CB64772D265CFD2C8E1E /* Pods-alps-ios-TicketingApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		081A9D7B34D18384DBEC36F2E58D4D16 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BB9C1D2F67F647C95749B4C77BDEFE /* WebSocket.swift */; };
 		0C23F4B351E43A19A99B621D1C31BB14 /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CB710644FEB9B55E5723D7C7449EDC /* AlamofireImplementations.swift */; };
 		0CBBCD2B00F71B1D63B5A5B52EED89B2 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FA331CE73E11BF4B1BA37EE4FA7E15 /* Devices.swift */; };
@@ -51,7 +51,6 @@
 		69BE1DFD2EC38DC2CAB463421C093FD1 /* SkyFloatingLabelTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97043331D82C544629488F5366248447 /* SkyFloatingLabelTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6B4B85C00762CA6A3C8C395D584E7198 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A1C9ADAD3D87F695463D763EE75E4D /* Match.swift */; };
 		6BAB95E9A6EF6339A7F2B4004DA61388 /* SwiftWebSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B8CCB2B842CD423EE790403D9767D9B /* SwiftWebSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C7717926432844619A35B0DF95157DB /* Pods-alps-ios-TicketingAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1411837DB3BD4E6907AB0D68BA4F636D /* Pods-alps-ios-TicketingAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70D9B73F3FF454BD89ED7F3A25F942F2 /* BeaconTripleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B18BD1010AB89FCC4B53B4585C67C20 /* BeaconTripleRepository.swift */; };
 		727BE37248C560CBA265EE45BD994358 /* Publications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED48FF2B79F483A2CAA9243452A0E1B /* Publications.swift */; };
 		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3F7D9290BEF60DF9F1C01DBDB1577E /* Foundation.framework */; };
@@ -76,7 +75,6 @@
 		AADB30864BE1AA154C1EEC61D95984CC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5A69E2B57D319EBE29FCF73825317 /* Configuration.swift */; };
 		ADA9885F488DE7E9771B64CF21289AAE /* Alps-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F381154E7D0A3C778FC38C3763ECEBD5 /* Alps-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD41D80BD4D4DE541165C5B718D2253A /* SessionManager.swift */; };
-		B18AF16862D676474F3D75C4EFF03C4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3F7D9290BEF60DF9F1C01DBDB1577E /* Foundation.framework */; };
 		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B4BCECE5C54F776D688087CE776E5B /* MultipartFormData.swift */; };
 		B8C28ABE3250C5C65D4AA26489A4DF5D /* MatchMore+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699ECBA98E5BF46C8F432AED2F28EC1 /* MatchMore+Creation.swift */; };
 		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F62FE9C46382D514B1614F5AAF1425 /* Validation.swift */; };
@@ -103,12 +101,11 @@
 		EB478FA89CE36543EE0A1732CC83D457 /* IBeaconTriple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920693B264BA9ECDD8B010B4C91DFEA6 /* IBeaconTriple.swift */; };
 		ECDB9CE4355E94CAFB4358727E6CE6FB /* PinDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8651E1230925B415FB1A8237FC838046 /* PinDevice.swift */; };
 		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817DC0704A6F5FB2DD0E10934C7B6881 /* Notifications.swift */; };
-		F2E42747E174FB214C7890BDA89B3B30 /* Pods-alps-ios-TicketingAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B2B69A7A1FB21545B5032630BAA630 /* Pods-alps-ios-TicketingAppTests-dummy.m */; };
 		F3EF1D4CC76291EF77E4A27FAC48130F /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604994DCFAD743847E613FEC6622F15C /* SkyFloatingLabelTextFieldWithIcon.swift */; };
 		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1274902D94A656320BA98CCA1BD59 /* ResponseSerialization.swift */; };
 		F822449E966FBCB6ED96DF5FD4EDE653 /* SubscriptionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25B2DD0F8BA9BC1B8744507304AD6B /* SubscriptionRepository.swift */; };
 		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D00524F4D6673D716FC4FF5E4ABD118 /* Alamofire.swift */; };
-		FCBC93EDD78EC7B5A035EAEBB3FEE214 /* Pods-alps-ios-TicketingApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CBD3F7B3278DAD3A61085339655951 /* Pods-alps-ios-TicketingApp-dummy.m */; };
+		FCBC93EDD78EC7B5A035EAEBB3FEE214 /* Pods-alps-ios-TicketingApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3417A82021685AA69D407A6D478636 /* Pods-alps-ios-TicketingApp-dummy.m */; };
 		FDAC35155F6103093FD24FC1F40F73D4 /* IBeaconTriples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7292B39E712AB073C10A5FC097A31843 /* IBeaconTriples.swift */; };
 /* End PBXBuildFile section */
 
@@ -180,20 +177,17 @@
 
 /* Begin PBXFileReference section */
 		01A5B2CEF9C919B5BC24522E78914FBC /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		028509D4137815E29C6E10F36226F7BB /* Pods-alps-ios-TicketingAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-alps-ios-TicketingAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		0363E22778FCB1DF06D48FBCE0FCA929 /* Location.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		03A5215CA3A6E6855102F50680E7DD64 /* LocationAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocationAPI.swift; sourceTree = "<group>"; };
-		0628C6AB267C72A5E14D32CC553B91B0 /* Pods-alps-ios-TicketingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-alps-ios-TicketingAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		06F62FE9C46382D514B1614F5AAF1425 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		08417DABB62C918AF7697E6A47F93D02 /* Sequence+Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Sequence+Group.swift"; sourceTree = "<group>"; };
 		0D00524F4D6673D716FC4FF5E4ABD118 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		0E236502659D377D83FEBC0626A203AA /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		0E26C1B3D3194C40138F6ACD79E61D11 /* Pods-alps-ios-TicketingAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-alps-ios-TicketingAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		0ED48FF2B79F483A2CAA9243452A0E1B /* Publications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Publications.swift; sourceTree = "<group>"; };
+		107C3A8C8F3D000D523373241A9526C0 /* Pods-alps-ios-TicketingApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-alps-ios-TicketingApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1231159EDBF9A07E5DD2240F7D1C8918 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		13808D47D2D9EE9293A245FD22E1E9FF /* MobileDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MobileDevice.swift; sourceTree = "<group>"; };
 		13D312E4A5EA6EFC7EF4181585B9B04B /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Alps/Classes/Swaggers/Extensions.swift; sourceTree = "<group>"; };
-		1411837DB3BD4E6907AB0D68BA4F636D /* Pods-alps-ios-TicketingAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-alps-ios-TicketingAppTests-umbrella.h"; sourceTree = "<group>"; };
 		16E7D0AFB88C0D40F98A438CBB70D902 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		196A36C56581FADD19971D7F345B845D /* Matches.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
 		1BEB92A2B55F26B61A3F4DC2BF156FF0 /* PersistenceManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
@@ -203,6 +197,7 @@
 		20BE96CA74910835A16A1EE26EEF0776 /* Expirable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Expirable.swift; sourceTree = "<group>"; };
 		216F03AEE01F7AD868A01EF509A0ACC5 /* Models.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Models.swift; path = Alps/Classes/Swaggers/Models.swift; sourceTree = "<group>"; };
 		21EE6A9EBAEDE8461C53CF875666D347 /* SkyFloatingLabelTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-prefix.pch"; sourceTree = "<group>"; };
+		223DC022A69037F2E21BCDC366C33D72 /* SwiftWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F54E0584AB96C337769C0544BEA41C /* AsyncClearable+Default.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "AsyncClearable+Default.swift"; sourceTree = "<group>"; };
 		2548492F2CAFD9CB8AA339CD36326174 /* SwiftWebSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftWebSocket.xcconfig; sourceTree = "<group>"; };
 		25FA331CE73E11BF4B1BA37EE4FA7E15 /* Devices.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
@@ -210,23 +205,21 @@
 		2A14AB659CBF7098EA034839EE4FDA35 /* Publication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Publication.swift; sourceTree = "<group>"; };
 		2A8D675421517CB1BE2C0ABDDDB0CFDD /* ContextManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ContextManager.swift; sourceTree = "<group>"; };
 		2B8CCB2B842CD423EE790403D9767D9B /* SwiftWebSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftWebSocket-umbrella.h"; sourceTree = "<group>"; };
-		2BF2090759F205F9CD2DAFF65A324FDC /* Pods-alps-ios-TicketingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-alps-ios-TicketingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2E17A7F844B45E63D7CBA163DFC1C069 /* Alps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		320E6284D61AD71279B1DC81002A9D0F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CFDB9301923CB64772D265CFD2C8E1E /* Pods-alps-ios-TicketingApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-alps-ios-TicketingApp-umbrella.h"; sourceTree = "<group>"; };
 		32B4BCECE5C54F776D688087CE776E5B /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		32C1DBB02491A72B977FA2391A427892 /* APIs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = APIs.swift; path = Alps/Classes/Swaggers/APIs.swift; sourceTree = "<group>"; };
-		37B2B69A7A1FB21545B5032630BAA630 /* Pods-alps-ios-TicketingAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-alps-ios-TicketingAppTests-dummy.m"; sourceTree = "<group>"; };
-		3B83141B235D17FC7B04B718EAFBDE62 /* Pods-alps-ios-TicketingApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-alps-ios-TicketingApp-frameworks.sh"; sourceTree = "<group>"; };
+		37EDA5CF60C8698E44817E141ADE5B55 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C0AE491B4D7199DBACB00FD731F6246 /* Pods-alps-ios-TicketingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-alps-ios-TicketingApp.release.xcconfig"; sourceTree = "<group>"; };
 		3CA719396BE35FFA8579384B50B1D961 /* MatchMore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchMore.swift; path = AlpsSDK/MatchMore.swift; sourceTree = "<group>"; };
 		3CB50EFC4F49B1D2C63FE96CCEFE0A29 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		3EFC80B0A697F53B9FE4CE184E32221C /* Codable.generated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Codable.generated.swift; sourceTree = "<group>"; };
 		40512C8D4543F106DF3F9984D4994910 /* DeviceDeleteDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceDeleteDelegate.swift; sourceTree = "<group>"; };
 		418E6D3C5EBF152292F3E8FC7ACD0876 /* ModelExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModelExtensions.swift; sourceTree = "<group>"; };
-		474519A5A0F789D0E040B514413121F4 /* AlpsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlpsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49B5E50753AB446B02C44C03494C47E0 /* Pods-alps-ios-TicketingApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-alps-ios-TicketingApp-frameworks.sh"; sourceTree = "<group>"; };
 		4BED5931E8F193C18B425269B382D189 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		4E488D7FEB780745AA8F6364FDA74B37 /* Alps.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alps.xcconfig; sourceTree = "<group>"; };
 		4EEA43E9ADC5A1522C012D194D44E76E /* RemoteNotificationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RemoteNotificationManager.swift; sourceTree = "<group>"; };
-		534212A52F490C8B1F8C0EDC62008597 /* Pods-alps-ios-TicketingApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-alps-ios-TicketingApp-umbrella.h"; sourceTree = "<group>"; };
+		510F154A21E26CAFFB79D5B860B984A1 /* Pods-alps-ios-TicketingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-alps-ios-TicketingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		53A4AF9AB6952FC467A507C189AE9B29 /* Subscriptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
 		5448BAADA7DF184F9B3B4D561862519A /* SwiftWebSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftWebSocket-dummy.m"; sourceTree = "<group>"; };
 		54863E54535A5269BD545124D625E435 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
@@ -239,9 +232,7 @@
 		6B2E9811B19DC59BE60EDF1D50AA363D /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEFBAAFD0CEF8911D2D7C4CF31540D4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CDD645CF7D0D052925F1D86E049712D /* SwiftWebSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftWebSocket-prefix.pch"; sourceTree = "<group>"; };
-		6D0B9EC62BAEA02080B8B289D9F25354 /* Pods-alps-ios-TicketingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-alps-ios-TicketingApp.release.xcconfig"; sourceTree = "<group>"; };
 		6D6447F466EC004B35A35B39EFE11E81 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		6F497F229E6F53AFF9AB6F9D7A75428C /* Pods-alps-ios-TicketingAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-alps-ios-TicketingAppTests-resources.sh"; sourceTree = "<group>"; };
 		701FAB89129B93A024435EE2E0981849 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		7292B39E712AB073C10A5FC097A31843 /* IBeaconTriples.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IBeaconTriples.swift; sourceTree = "<group>"; };
 		77640308B639A32607545E13F3C9D022 /* AlpsManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AlpsManager.swift; sourceTree = "<group>"; };
@@ -252,15 +243,15 @@
 		8651E1230925B415FB1A8237FC838046 /* PinDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PinDevice.swift; sourceTree = "<group>"; };
 		8699ECBA98E5BF46C8F432AED2F28EC1 /* MatchMore+Creation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MatchMore+Creation.swift"; path = "AlpsSDK/MatchMore+Creation.swift"; sourceTree = "<group>"; };
 		873D92C7E556A0D02263DCB0E34C4107 /* DeviceAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceAPI.swift; sourceTree = "<group>"; };
+		88C526F663C17A26C6BEC0CD26C35E72 /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkyFloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E5D3E7D57F85CAAAE0CB8B9FAFFF1B /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		8B18BD1010AB89FCC4B53B4585C67C20 /* BeaconTripleRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BeaconTripleRepository.swift; sourceTree = "<group>"; };
 		8B69F7C44FD57C8F11BDB391BFB7672A /* AlpsSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlpsSDK.xcconfig; sourceTree = "<group>"; };
-		8D2863FA1392B0BF66D8C159C14C8398 /* Pods-alps-ios-TicketingAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-alps-ios-TicketingAppTests.modulemap"; sourceTree = "<group>"; };
-		8D404E89D9018B731647F24D963E03CE /* Pods_alps_ios_TicketingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alps_ios_TicketingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D3417A82021685AA69D407A6D478636 /* Pods-alps-ios-TicketingApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-alps-ios-TicketingApp-dummy.m"; sourceTree = "<group>"; };
 		920693B264BA9ECDD8B010B4C91DFEA6 /* IBeaconTriple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IBeaconTriple.swift; sourceTree = "<group>"; };
+		9241F2F8614485BAFD3E3526A089E7F3 /* Pods-alps-ios-TicketingApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-alps-ios-TicketingApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93C186CAB67FF05CEA717DA3FF486D35 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		9560B7CE98427915DC38945662BD929A /* Pods-alps-ios-TicketingApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-alps-ios-TicketingApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		97043331D82C544629488F5366248447 /* SkyFloatingLabelTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-umbrella.h"; sourceTree = "<group>"; };
 		9BC683920073F31A4BE993A346DEC2FD /* Device.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		9E0562D5E32D6FF64ADFD181E909F42F /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
@@ -268,56 +259,51 @@
 		A1174B666DBD3D61E224D251C1936F98 /* IBeaconDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IBeaconDevice.swift; sourceTree = "<group>"; };
 		A131484988630015765F7F226ED48487 /* APIHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = APIHelper.swift; path = Alps/Classes/Swaggers/APIHelper.swift; sourceTree = "<group>"; };
 		A322117071F6CA9D237FEF7724CDC56D /* MatchMore+Matches.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MatchMore+Matches.swift"; path = "AlpsSDK/MatchMore+Matches.swift"; sourceTree = "<group>"; };
-		A70E8D2180AA916A69766DA1CA601A0A /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkyFloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7249CACA81F19B9D67B32A3B7D897AF /* LocationUpdateManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocationUpdateManager.swift; sourceTree = "<group>"; };
 		A9F6CC41C7FD9C5CD233E9B80546A796 /* DeviceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		AAC9C7789371DCE4F0B5428923D2ECC1 /* SwiftWebSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftWebSocket.modulemap; sourceTree = "<group>"; };
-		AC613BFCB993AD6DF631992BCA964CFF /* Pods-alps-ios-TicketingAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-alps-ios-TicketingAppTests-frameworks.sh"; sourceTree = "<group>"; };
 		AD6E2F85E5A5150F66058E600F1BF6F4 /* PublicationAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PublicationAPI.swift; sourceTree = "<group>"; };
 		ADBA97C8DEC9E7EC91DF0A3C5A8B4BE8 /* KeychainHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		AEEBCB0305448AAEF6D4218E7B7529A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF42FF28232C9B32B406679A5D5688F6 /* Alps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0108B86F476731B3AD78D5F003698F2 /* Alps-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alps-dummy.m"; sourceTree = "<group>"; };
 		B032DE1882E3261FA87E57EC05950FEC /* DataRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
-		B1CBD3F7B3278DAD3A61085339655951 /* Pods-alps-ios-TicketingApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-alps-ios-TicketingApp-dummy.m"; sourceTree = "<group>"; };
 		B2C61E5401BD1605CE6437F99C9A309B /* AlpsSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlpsSDK-dummy.m"; sourceTree = "<group>"; };
 		B3B00C4F849090DF5AF5FCD810239189 /* ErrorResponse+Convienience.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ErrorResponse+Convienience.swift"; sourceTree = "<group>"; };
 		B4B45E6B0D687E9675FD6EFBE3B40F2E /* AlpsSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlpsSDK-umbrella.h"; sourceTree = "<group>"; };
-		B584E3E06C8DB8DFD8816AD632FB7151 /* Pods-alps-ios-TicketingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-alps-ios-TicketingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B741B02E87CE3BE0E8D2F18F98BAF3C9 /* ProximityHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProximityHandler.swift; sourceTree = "<group>"; };
 		B7C6B94DC920964C2A8BDE50A5D6BDFD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B954DCD4B7BB6F978B1D45D3CCC0909B /* Alps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD4FE1702AF7AB615F622EE3DA6F1FF1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C015C7157F4AF398E6D594ABDE27017B /* Alps-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alps-prefix.pch"; sourceTree = "<group>"; };
 		C0A4AE396FEF96446271AB08FBC69186 /* MatchMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MatchMonitor.swift; sourceTree = "<group>"; };
+		C154B9C1F7EB4B3EAAFD8BD358277787 /* Pods-alps-ios-TicketingApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-alps-ios-TicketingApp.modulemap"; sourceTree = "<group>"; };
 		C18E3A4EAB7126B4D30FFEC9259F62D8 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextField.swift; path = Sources/SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
 		C274C21593363D4154077899BD62A719 /* MulticastDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
-		C454A90620324761FE968C72D0681058 /* Pods-alps-ios-TicketingApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-alps-ios-TicketingApp-resources.sh"; sourceTree = "<group>"; };
 		C52DABF39AB4E6174209F2211D88E389 /* PinDeviceRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PinDeviceRepository.swift; sourceTree = "<group>"; };
-		CB55C78830DBEE388FE2051C5D2E2A03 /* Pods_alps_ios_TicketingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alps_ios_TicketingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD41D80BD4D4DE541165C5B718D2253A /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		D0745DBA9C84B5D202A415E471F44332 /* SwiftWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B5A69E2B57D319EBE29FCF73825317 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Alps/Classes/Swaggers/Configuration.swift; sourceTree = "<group>"; };
 		D6BB9C1D2F67F647C95749B4C77BDEFE /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Source/WebSocket.swift; sourceTree = "<group>"; };
 		DB4EC1A1F21785F3AB9538FB9B987378 /* SkyFloatingLabelTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SkyFloatingLabelTextField-dummy.m"; sourceTree = "<group>"; };
+		DC19C6E2CA5283F8E87B8A37AD004768 /* AlpsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlpsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8EE2E3D6B1A1DBBD01DFF81B758EAC /* AutoCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AutoCodable.swift; sourceTree = "<group>"; };
-		DE2D139BD1262E05595BF5DD3B0E75C3 /* Pods-alps-ios-TicketingApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-alps-ios-TicketingApp.modulemap"; sourceTree = "<group>"; };
+		DE2AA055217708B050F272BC27F9DF1D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE7605C3DBE92DCE79A89895A8F3A9A6 /* Subscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		DF030AA844FC8A90A810EE1926DEA716 /* Pods-alps-ios-TicketingApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-alps-ios-TicketingApp-resources.sh"; sourceTree = "<group>"; };
 		E699A7A836DFE6E582215E67E6E3FAF2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC0A0E4F53BBEA9C44CBFB6CBB6640E2 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		EC2704F6685212BCC8D58A107B47BF92 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC3F7D9290BEF60DF9F1C01DBDB1577E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EFBB47E9431318D849FEA08215220E61 /* SkyFloatingLabelTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SkyFloatingLabelTextField.xcconfig; sourceTree = "<group>"; };
 		F381154E7D0A3C778FC38C3763ECEBD5 /* Alps-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alps-umbrella.h"; sourceTree = "<group>"; };
 		F5E15D87803262BAC7BE404DFEF8F0E8 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		F6556B57CDCBCD81F53F8EA3861E16DD /* Pods-alps-ios-TicketingApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-alps-ios-TicketingApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		F706DD357352F627C9BA1617E5721373 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		F7110047FCC0C3462F73D7129C5F1DB1 /* SubscriptionAPI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubscriptionAPI.swift; sourceTree = "<group>"; };
-		F77EE06FCC93AD943240D2578D65F0BF /* SwiftWebSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftWebSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F83CC683E6C3DF779D5C81D74D9999E4 /* MatchMore+Location.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MatchMore+Location.swift"; path = "AlpsSDK/MatchMore+Location.swift"; sourceTree = "<group>"; };
 		F8E95797AFE24CD6EF2D82EFDC8E7B45 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		F9A6DC75A674272989EFDBC6ABC500C8 /* APIError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		F9CB710644FEB9B55E5723D7C7449EDC /* AlamofireImplementations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireImplementations.swift; path = Alps/Classes/Swaggers/AlamofireImplementations.swift; sourceTree = "<group>"; };
 		FC25B2DD0F8BA9BC1B8744507304AD6B /* SubscriptionRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubscriptionRepository.swift; sourceTree = "<group>"; };
+		FF1ADAA60791BA712D1BE32B054BBD90 /* Pods_alps_ios_TicketingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alps_ios_TicketingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB284207914FC434D21E4DCD5D9C44D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -374,14 +360,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD701ECC1BEA751E9F73A878D34CAABD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B18AF16862D676474F3D75C4EFF03C4A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -399,6 +377,19 @@
 			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
+		10B4F943C192EAF18DA54C22498C2167 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37EDA5CF60C8698E44817E141ADE5B55 /* Alamofire.framework */,
+				AF42FF28232C9B32B406679A5D5688F6 /* Alps.framework */,
+				DC19C6E2CA5283F8E87B8A37AD004768 /* AlpsSDK.framework */,
+				FF1ADAA60791BA712D1BE32B054BBD90 /* Pods_alps_ios_TicketingApp.framework */,
+				88C526F663C17A26C6BEC0CD26C35E72 /* SkyFloatingLabelTextField.framework */,
+				223DC022A69037F2E21BCDC366C33D72 /* SwiftWebSocket.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		11792C72BF79C685234ED049DA7B652E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,37 +401,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		12F612EFE91528C34AAB49BC60C7AC32 /* Pods-alps-ios-TicketingAppTests */ = {
+		3A78D6E0E2828195F1F275E8027E6387 /* Pods-alps-ios-TicketingApp */ = {
 			isa = PBXGroup;
 			children = (
-				BD4FE1702AF7AB615F622EE3DA6F1FF1 /* Info.plist */,
-				8D2863FA1392B0BF66D8C159C14C8398 /* Pods-alps-ios-TicketingAppTests.modulemap */,
-				028509D4137815E29C6E10F36226F7BB /* Pods-alps-ios-TicketingAppTests-acknowledgements.markdown */,
-				0E26C1B3D3194C40138F6ACD79E61D11 /* Pods-alps-ios-TicketingAppTests-acknowledgements.plist */,
-				37B2B69A7A1FB21545B5032630BAA630 /* Pods-alps-ios-TicketingAppTests-dummy.m */,
-				AC613BFCB993AD6DF631992BCA964CFF /* Pods-alps-ios-TicketingAppTests-frameworks.sh */,
-				6F497F229E6F53AFF9AB6F9D7A75428C /* Pods-alps-ios-TicketingAppTests-resources.sh */,
-				1411837DB3BD4E6907AB0D68BA4F636D /* Pods-alps-ios-TicketingAppTests-umbrella.h */,
-				2BF2090759F205F9CD2DAFF65A324FDC /* Pods-alps-ios-TicketingAppTests.debug.xcconfig */,
-				0628C6AB267C72A5E14D32CC553B91B0 /* Pods-alps-ios-TicketingAppTests.release.xcconfig */,
-			);
-			name = "Pods-alps-ios-TicketingAppTests";
-			path = "Target Support Files/Pods-alps-ios-TicketingAppTests";
-			sourceTree = "<group>";
-		};
-		2219865AB6A794AB75851762115B095C /* Pods-alps-ios-TicketingApp */ = {
-			isa = PBXGroup;
-			children = (
-				320E6284D61AD71279B1DC81002A9D0F /* Info.plist */,
-				DE2D139BD1262E05595BF5DD3B0E75C3 /* Pods-alps-ios-TicketingApp.modulemap */,
-				9560B7CE98427915DC38945662BD929A /* Pods-alps-ios-TicketingApp-acknowledgements.markdown */,
-				F6556B57CDCBCD81F53F8EA3861E16DD /* Pods-alps-ios-TicketingApp-acknowledgements.plist */,
-				B1CBD3F7B3278DAD3A61085339655951 /* Pods-alps-ios-TicketingApp-dummy.m */,
-				3B83141B235D17FC7B04B718EAFBDE62 /* Pods-alps-ios-TicketingApp-frameworks.sh */,
-				C454A90620324761FE968C72D0681058 /* Pods-alps-ios-TicketingApp-resources.sh */,
-				534212A52F490C8B1F8C0EDC62008597 /* Pods-alps-ios-TicketingApp-umbrella.h */,
-				B584E3E06C8DB8DFD8816AD632FB7151 /* Pods-alps-ios-TicketingApp.debug.xcconfig */,
-				6D0B9EC62BAEA02080B8B289D9F25354 /* Pods-alps-ios-TicketingApp.release.xcconfig */,
+				DE2AA055217708B050F272BC27F9DF1D /* Info.plist */,
+				C154B9C1F7EB4B3EAAFD8BD358277787 /* Pods-alps-ios-TicketingApp.modulemap */,
+				107C3A8C8F3D000D523373241A9526C0 /* Pods-alps-ios-TicketingApp-acknowledgements.markdown */,
+				9241F2F8614485BAFD3E3526A089E7F3 /* Pods-alps-ios-TicketingApp-acknowledgements.plist */,
+				8D3417A82021685AA69D407A6D478636 /* Pods-alps-ios-TicketingApp-dummy.m */,
+				49B5E50753AB446B02C44C03494C47E0 /* Pods-alps-ios-TicketingApp-frameworks.sh */,
+				DF030AA844FC8A90A810EE1926DEA716 /* Pods-alps-ios-TicketingApp-resources.sh */,
+				2CFDB9301923CB64772D265CFD2C8E1E /* Pods-alps-ios-TicketingApp-umbrella.h */,
+				510F154A21E26CAFFB79D5B860B984A1 /* Pods-alps-ios-TicketingApp.debug.xcconfig */,
+				3C0AE491B4D7199DBACB00FD731F6246 /* Pods-alps-ios-TicketingApp.release.xcconfig */,
 			);
 			name = "Pods-alps-ios-TicketingApp";
 			path = "Target Support Files/Pods-alps-ios-TicketingApp";
@@ -503,6 +476,14 @@
 			path = Alps/Classes/Swaggers/APIs;
 			sourceTree = "<group>";
 		};
+		6C926165DE5F9817CAC99404A5595758 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3A78D6E0E2828195F1F275E8027E6387 /* Pods-alps-ios-TicketingApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		72C00C198B50F1B213CD4FAFF1B9913E /* Context Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,8 +541,8 @@
 				7D731343906388C5A2164F795CD6CBE7 /* Development Pods */,
 				11792C72BF79C685234ED049DA7B652E /* Frameworks */,
 				87009F3C92FC0187FC0F5E6E77B44855 /* Pods */,
-				AD0F211224B22F8120E2A437F26CA511 /* Products */,
-				9413B12A27E8BC367CEE760510965787 /* Targets Support Files */,
+				10B4F943C192EAF18DA54C22498C2167 /* Products */,
+				6C926165DE5F9817CAC99404A5595758 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -581,15 +562,6 @@
 				72E51031EEF95B17F78AF47ACFC56B64 /* SwiftWebSocket */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		9413B12A27E8BC367CEE760510965787 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2219865AB6A794AB75851762115B095C /* Pods-alps-ios-TicketingApp */,
-				12F612EFE91528C34AAB49BC60C7AC32 /* Pods-alps-ios-TicketingAppTests */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		99A6DF43D75F7BF312100B95F4367B25 /* SkyFloatingLabelTextField */ = {
@@ -615,20 +587,6 @@
 			);
 			name = Repositories;
 			path = AlpsSDK/Repositories;
-			sourceTree = "<group>";
-		};
-		AD0F211224B22F8120E2A437F26CA511 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EC2704F6685212BCC8D58A107B47BF92 /* Alamofire.framework */,
-				2E17A7F844B45E63D7CBA163DFC1C069 /* Alps.framework */,
-				474519A5A0F789D0E040B514413121F4 /* AlpsSDK.framework */,
-				8D404E89D9018B731647F24D963E03CE /* Pods_alps_ios_TicketingApp.framework */,
-				CB55C78830DBEE388FE2051C5D2E2A03 /* Pods_alps_ios_TicketingAppTests.framework */,
-				A70E8D2180AA916A69766DA1CA601A0A /* SkyFloatingLabelTextField.framework */,
-				F77EE06FCC93AD943240D2578D65F0BF /* SwiftWebSocket.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		B23A0A232BB169F6E27A3BA7B8D8A52E /* Support Files */ = {
@@ -790,14 +748,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82C3200D956A6BBF0D98350DC5F41D11 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6C7717926432844619A35B0DF95157DB /* Pods-alps-ios-TicketingAppTests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AB20B948EFDFB9F2941A94C90B08C769 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -844,7 +794,7 @@
 			);
 			name = "Pods-alps-ios-TicketingApp";
 			productName = "Pods-alps-ios-TicketingApp";
-			productReference = 8D404E89D9018B731647F24D963E03CE /* Pods_alps_ios_TicketingApp.framework */;
+			productReference = FF1ADAA60791BA712D1BE32B054BBD90 /* Pods_alps_ios_TicketingApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3D1246D3B94ED27DA16F978056F04422 /* Alps */ = {
@@ -862,7 +812,7 @@
 			);
 			name = Alps;
 			productName = Alps;
-			productReference = 2E17A7F844B45E63D7CBA163DFC1C069 /* Alps.framework */;
+			productReference = AF42FF28232C9B32B406679A5D5688F6 /* Alps.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		619EAEAF2F759C8D64E68E101801EB53 /* SwiftWebSocket */ = {
@@ -879,7 +829,7 @@
 			);
 			name = SwiftWebSocket;
 			productName = SwiftWebSocket;
-			productReference = F77EE06FCC93AD943240D2578D65F0BF /* SwiftWebSocket.framework */;
+			productReference = 223DC022A69037F2E21BCDC366C33D72 /* SwiftWebSocket.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8706A0C46BF5488022BA98DD4DA0FA07 /* AlpsSDK */ = {
@@ -899,7 +849,7 @@
 			);
 			name = AlpsSDK;
 			productName = AlpsSDK;
-			productReference = 474519A5A0F789D0E040B514413121F4 /* AlpsSDK.framework */;
+			productReference = DC19C6E2CA5283F8E87B8A37AD004768 /* AlpsSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
@@ -916,7 +866,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = EC2704F6685212BCC8D58A107B47BF92 /* Alamofire.framework */;
+			productReference = 37EDA5CF60C8698E44817E141ADE5B55 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D8D7DB46D78D32A5E8149D9B0B5535F6 /* SkyFloatingLabelTextField */ = {
@@ -933,24 +883,7 @@
 			);
 			name = SkyFloatingLabelTextField;
 			productName = SkyFloatingLabelTextField;
-			productReference = A70E8D2180AA916A69766DA1CA601A0A /* SkyFloatingLabelTextField.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		DE3BF48D6E0C6F8E3C0FF617E1E134D6 /* Pods-alps-ios-TicketingAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B6F33E478EC948C59947934C1AEE5D6D /* Build configuration list for PBXNativeTarget "Pods-alps-ios-TicketingAppTests" */;
-			buildPhases = (
-				AE96909C457740F3527840F744C88D66 /* Sources */,
-				CD701ECC1BEA751E9F73A878D34CAABD /* Frameworks */,
-				82C3200D956A6BBF0D98350DC5F41D11 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-alps-ios-TicketingAppTests";
-			productName = "Pods-alps-ios-TicketingAppTests";
-			productReference = CB55C78830DBEE388FE2051C5D2E2A03 /* Pods_alps_ios_TicketingAppTests.framework */;
+			productReference = 88C526F663C17A26C6BEC0CD26C35E72 /* SkyFloatingLabelTextField.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -960,7 +893,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -970,7 +903,7 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = AD0F211224B22F8120E2A437F26CA511 /* Products */;
+			productRefGroup = 10B4F943C192EAF18DA54C22498C2167 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -978,7 +911,6 @@
 				3D1246D3B94ED27DA16F978056F04422 /* Alps */,
 				8706A0C46BF5488022BA98DD4DA0FA07 /* AlpsSDK */,
 				33F3491862BADDD134FE0C98B92FF50D /* Pods-alps-ios-TicketingApp */,
-				DE3BF48D6E0C6F8E3C0FF617E1E134D6 /* Pods-alps-ios-TicketingAppTests */,
 				D8D7DB46D78D32A5E8149D9B0B5535F6 /* SkyFloatingLabelTextField */,
 				619EAEAF2F759C8D64E68E101801EB53 /* SwiftWebSocket */,
 			);
@@ -1043,14 +975,6 @@
 				E7B699F2733D89A4CAEC059F923A5F06 /* Result.swift in Sources */,
 				8D560C28E1E51643FCD2E9E812507287 /* Sequence+Group.swift in Sources */,
 				F822449E966FBCB6ED96DF5FD4EDE653 /* SubscriptionRepository.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE96909C457740F3527840F744C88D66 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F2E42747E174FB214C7890BDA89B3B30 /* Pods-alps-ios-TicketingAppTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1250,42 +1174,6 @@
 			};
 			name = Release;
 		};
-		68E128FBC5CF935844C2835595E0E8E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0628C6AB267C72A5E14D32CC553B91B0 /* Pods-alps-ios-TicketingAppTests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-alps-ios-TicketingAppTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_alps_ios_TicketingAppTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		707B86CFB21B645E37109F39754D4051 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1296,9 +1184,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1306,20 +1192,14 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -1333,7 +1213,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1368,42 +1247,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		97E6E4C0DDF954068F189A76EB95A72A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2BF2090759F205F9CD2DAFF65A324FDC /* Pods-alps-ios-TicketingAppTests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-alps-ios-TicketingAppTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_alps_ios_TicketingAppTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1482,7 +1325,7 @@
 		};
 		D50D224AE5B1746C4CA9D8CD67C96F1F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B584E3E06C8DB8DFD8816AD632FB7151 /* Pods-alps-ios-TicketingApp.debug.xcconfig */;
+			baseConfigurationReference = 510F154A21E26CAFFB79D5B860B984A1 /* Pods-alps-ios-TicketingApp.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1521,7 +1364,7 @@
 		};
 		E02CF9ACC5D51CF18B8FDBC789262627 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D0B9EC62BAEA02080B8B289D9F25354 /* Pods-alps-ios-TicketingApp.release.xcconfig */;
+			baseConfigurationReference = 3C0AE491B4D7199DBACB00FD731F6246 /* Pods-alps-ios-TicketingApp.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1567,9 +1410,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1577,21 +1418,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -1824,15 +1659,6 @@
 			buildConfigurations = (
 				F621C52123F48B9587A94B9C1690C0D7 /* Debug */,
 				BA545BCC360BD3106ABECABFEF6C788B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B6F33E478EC948C59947934C1AEE5D6D /* Build configuration list for PBXNativeTarget "Pods-alps-ios-TicketingAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				97E6E4C0DDF954068F189A76EB95A72A /* Debug */,
-				68E128FBC5CF935844C2835595E0E8E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

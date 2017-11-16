@@ -13,97 +13,38 @@ import Alps
 class TicketTableViewController: UITableViewController, AlpsManagerDelegate {
     var matches = [Match]()
     var notificationCounter = 0
-    // Using appDelegate as a singleton
-    weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
-    var alps: AlpsManager!
+    
     var onMatch: OnMatchClosure? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.alps = self.appDelegate?.alps
-        self.navigationController?.navigationBar.barTintColor = self.appDelegate?.orange
+        self.navigationController?.navigationBar.barTintColor = UIColor.myOrange
+        
         // Start Monitoring
         self.onMatch = { matches, _ in
             self.matches = matches
-            self.notificationOnMatch()
+            self.tabBarController?.tabBar.items?[0].badgeValue = String(describing: matches.count)
             self.tableView.reloadData()
         }
         MatchMore.matchDelegates += self
-        MatchMore.startPollingMatches()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        if appDelegate?.deviceId != nil {
-            // call the API, to retrieve all the subscriptions for current user and device
-            
-            self.resetNotificationOnMatch()
-        } else {
-            NSLog("ERROR in MATCHESVIEWCONTROLLER: deviceId is nil.")
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return matches.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "TicketTableViewCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TicketTableViewCell else {
-            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TicketTableViewCell
         
         let match = matches[indexPath.row]
         let properties = match.publication?.properties
-        // Configure the cell...
+
         cell.concertLabel.text = properties?["concert"]
         cell.priceLabel.text = properties?["price"]
         cell.deviceTypeLabel.text = properties?["deviceType"]
-
         return cell
-    }
-
-    // MARK: - HELPER method
-    // Get the match at index in matches array
-    func matchAtIndexPath(indexPath: NSIndexPath) -> Match {
-        let match = matches[indexPath.row]
-        return match
-    }
-    
-    // Use this function to transform timestampe to local date displayed in String
-    func transformTimestampToDate(timestamp: Int64) -> String {
-        let dateTimeStamp = NSDate(timeIntervalSince1970: Double(timestamp)/1000)  //UTC time
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = NSTimeZone.local //Edit
-        dateFormatter.dateFormat = "MMM dd YYYY hh:mm a"
-        dateFormatter.dateStyle = DateFormatter.Style.full
-        dateFormatter.timeStyle = DateFormatter.Style.short
-        let strDateSelect = dateFormatter.string(from: dateTimeStamp as Date)
-        return strDateSelect
-    }
-    
-    // MARK: - Notification related
-    // Shows notifications on match
-    func notificationOnMatch() {
-        notificationCounter += 1
-        tabBarController?.tabBar.items?[0].badgeValue = String(describing: notificationCounter)
-    }
-    
-    // Resets the TabBar Item badge value
-    func resetNotificationOnMatch() {
-        notificationCounter = 0
-        tabBarController?.tabBar.items?[0].badgeValue = nil
     }
 }

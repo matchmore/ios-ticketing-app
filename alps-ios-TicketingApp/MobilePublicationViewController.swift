@@ -20,16 +20,10 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var durationTextField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var publishButton: UIButton!
-    // Using appDelegate as a singleton
-    weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
-    var alps: AlpsManager!
-    let regionRadius: CLLocationDistance = 1000
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        alps = self.appDelegate?.alps
-        let initialLocation = self.appDelegate?.locationManager.location
-        centerMapOnLocation(location: initialLocation!)
+        // TODO: all these can be setup from storyboard
         self.concertTextField.delegate = self
         self.priceTextField.delegate = self
         self.imageTextField.delegate = self
@@ -41,12 +35,10 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        if let location = MatchMore.lastLocation?.clLocation {
+            centerMapOnLocation(location: location)
+        }
         publishButton.isEnabled = true
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -56,15 +48,18 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func publishAction(_ sender: Any) {
         publishButton.isEnabled = false
-        if let price = Double(priceTextField.text!), let range = Double(rangeTextField.text!), let duration = Double(durationTextField.text!), let image = imageTextField.text, let concert = concertTextField.text {
+        if let price = Double(priceTextField.text!),
+            let range = Double(rangeTextField.text!),
+            let duration = Double(durationTextField.text!),
+            let image = imageTextField.text,
+            let concert = concertTextField.text {
             createPublication(concert: concert, price: price, image: image, range: range, duration: duration, completion: {
-                () in
                 self.navigationController?.popToRootViewController(animated: true)
+                self.publishButton.isEnabled = true
             })
         } else {
-            NSLog("Issue with price.")
-            NSLog("Issue with duration.")
-            NSLog("Issue with range.")
+            self.present(AlertHelper.simpleError(title: "Please fill all needed fields."), animated: true, completion: nil)
+            publishButton.isEnabled = true
         }
     }
     
@@ -79,29 +74,30 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
     }
 
     func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                  regionRadius * 2.0, regionRadius * 2.0)
+        let regionRadius: CLLocationDistance = 1000
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
     // MARK: - AlpsSDK
     func createPublication(concert: String, price: Double, image: String, range: Double, duration: Double, completion: @escaping () -> Void) {
-        if self.appDelegate?.device != nil {
-            // XXX: the property syntax is tricky at the moment: mood is a variable and 'happy' is a string value
-            var properties: [String: String] = [:]
-            properties["concert"] = concert
-            properties["price"] = "\(price)"
-            properties["image"] = image
-            properties["deviceType"] = "mobile"
-            let pub = Publication.init(deviceId: self.appDelegate?.deviceId, topic: "ticketstosale", range: range, duration: duration, properties: properties)
-            MatchMore.createPublication(publication: pub) { (result) in
-                switch result {
-                case .success(let publication):
-                    NSLog("Created publication: id = \(String(describing: publication.id)), topic = \(String(describing: publication.topic)), properties = \(String(describing: publication.properties))")
-                    completion()
-                case .failure(let error):
-                    NSLog(error.debugDescription)
-                }
+        var properties: [String: String] = [:]
+        properties["concert"] = concert
+        properties["price"] = "\(price)"
+        properties["image"] = image
+        properties["deviceType"] = "mobile"
+        let publication = Publication(
+            topic: "ticketstosale",
+            range: range,
+            duration: duration,
+            properties: properties
+        )
+        MatchMore.createPublication(publication: publication) { (result) in
+            switch result {
+            case .success(let publication):
+                completion()
+            case .failure(let error):
+                self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
             }
         }
     }

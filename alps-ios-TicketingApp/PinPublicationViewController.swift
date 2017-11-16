@@ -49,8 +49,10 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
         }
         publishButton.isEnabled = true
         if let loc = MatchMore.lastLocation {
-            latitudeTextField.text = String(describing: loc.latitude)
-            longtitudeTextField.text = String(describing: loc.longitude)
+            guard let lat = loc.latitude else {return}
+            guard let long = loc.longitude else {return}
+            latitudeTextField.text = String(describing: lat)
+            longtitudeTextField.text = String(describing: long)
         }
     }
     

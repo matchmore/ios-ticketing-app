@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
         MatchMore.createSubscription(subscription: subscription) { (result) in
             switch result {
             case .success(let subscription):
-                // MatchMore.startPollingMatches()
+                // MatchMore.startListeningForNewMatches()
                 NSLog("Created subscription: id = \(String(describing: subscription.id)), topic = \(String(describing: subscription.topic)), selector = \(String(describing: subscription.selector))")
             case .failure(let error):
                 self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)

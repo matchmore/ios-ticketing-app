@@ -27,6 +27,11 @@ class TicketTableViewController: UITableViewController, AlpsManagerDelegate {
             self.tableView.reloadData()
         }
         MatchMore.matchDelegates += self
+        
+        // Fill with cached data
+        self.matches = MatchMore.matches
+        self.tabBarController?.tabBar.items?[0].badgeValue = String(describing: matches.count)
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source

@@ -14,7 +14,7 @@ pod 'SkyFloatingLabelTextField', '~> 3.0'
 
 post_install do |installer|
     # Your list of targets here.
-    myTargets = ['SkyFloatingLabelTextField', 'JVFloatLabeledTextField']
+    myTargets = ['SkyFloatingLabelTextField', 'SwiftWebSocket']
     
     installer.pods_project.targets.each do |target|
         if myTargets.include? target.name

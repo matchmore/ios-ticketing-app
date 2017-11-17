@@ -120,7 +120,7 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
                             completion()
                         case .failure(let error):
                             PKHUD.sharedHUD.contentView = PKHUDErrorView()
-                            PKHUD.sharedHUD.show()
+                            PKHUD.sharedHUD.hide()
                             self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
                         }
                     }

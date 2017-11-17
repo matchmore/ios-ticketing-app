@@ -110,11 +110,11 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
             switch result {
             case .success(_):
                 PKHUD.sharedHUD.contentView = PKHUDSuccessView()
-                PKHUD.sharedHUD.show()
+                PKHUD.sharedHUD.hide()
                 completion()
             case .failure(let error):
                 PKHUD.sharedHUD.contentView = PKHUDErrorView()
-                PKHUD.sharedHUD.show()
+                PKHUD.sharedHUD.hide()
                 NSLog(error.debugDescription)
             }
         }

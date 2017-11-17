@@ -27,14 +27,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Registers to APNS (remember to have proper project setup)
         PermissionsHelper.registerForPushNotifications()
         
-        // Starts getting and sending user location
-        MatchMore.startUpdatingLocation()
-        
-        // Manual beacon ranging
-        MatchMore.startRanging(forUuid: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Beacon region estimote")
-        
-        // Polls matches every 5 seconds (other available options - APNS and web socket)
-        MatchMore.startPollingMatches()
+        // Creates or loads cached main device
+        MatchMore.startUsingMainDevice { result in
+            switch result {
+            case .success(_):
+                // Starts getting and sending device location
+                MatchMore.startUpdatingLocation()
+                
+                // Manual beacon ranging
+                MatchMore.startRanging(forUuid: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Beacon region estimote")
+                
+                // Polls matches every 5 seconds (other available options: APNS, WebSocket)
+                // MatchMore.startPollingMatches()
+                
+                // Opens socket for main device matches delivery
+                MatchMore.startListeningForNewMatches()
+            case .failure(let error):
+                self.window?.rootViewController?.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
+            }
+        }
         
         return true
     }
@@ -43,7 +54,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
-        
         // Remembers APNS device token
         MatchMore.registerDeviceToken(deviceToken: deviceTokenString)
     }

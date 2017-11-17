@@ -24,6 +24,8 @@
 		C35519931FBDB15A00B21495 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35519921FBDB15A00B21495 /* UIColor+CustomColors.swift */; };
 		C35519951FBDB7CE00B21495 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35519941FBDB7CE00B21495 /* AlertHelper.swift */; };
 		C37BE0D11FBEED7400633A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D01FBEED7400633A97 /* LaunchScreen.storyboard */; };
+		C37BE0D41FBEFB8700633A97 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D31FBEFB8700633A97 /* Home.storyboard */; };
+		C37BE0D91FBEFF7300633A97 /* Buy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D81FBEFF7300633A97 /* Buy.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		C35519921FBDB15A00B21495 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 		C35519941FBDB7CE00B21495 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		C37BE0D01FBEED7400633A97 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C37BE0D31FBEFB8700633A97 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		C37BE0D81FBEFF7300633A97 /* Buy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Buy.storyboard; sourceTree = "<group>"; };
 		DC5AB4D2043C92A14BF4C579 /* Pods-alps-ios-TicketingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E9C5F11156B109462AF70DC1 /* Pods_alps_ios_TicketingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alps_ios_TicketingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF4FEA91A578244E1EC1B44 /* Pods-alps-ios-TicketingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		C37BE0CA1FBEE35E00633A97 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C37BE0D31FBEFB8700633A97 /* Home.storyboard */,
 				847BC9B81F5FF8D90011F939 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -144,6 +149,7 @@
 		C37BE0CC1FBEE38900633A97 /* Buy */ = {
 			isa = PBXGroup;
 			children = (
+				C37BE0D81FBEFF7300633A97 /* Buy.storyboard */,
 				84110D931F5E93DE00C3E28D /* TicketTableViewController.swift */,
 				84110D911F5E91D800C3E28D /* TicketTableViewCell.swift */,
 			);
@@ -251,6 +257,8 @@
 				C37BE0D11FBEED7400633A97 /* LaunchScreen.storyboard in Resources */,
 				84110D791F5E8A7500C3E28D /* Assets.xcassets in Resources */,
 				844410E91F602F30002AC090 /* Main.storyboard in Resources */,
+				C37BE0D41FBEFB8700633A97 /* Home.storyboard in Resources */,
+				C37BE0D91FBEFF7300633A97 /* Buy.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

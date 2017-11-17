@@ -16,9 +16,9 @@ import MapKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var subscriptions = [Subscription]()
+    override func viewWillAppear(_ animated: Bool) {
+        // getSubscription()
     }
     
     // MARK: - Table View Data Source and Delegate
@@ -34,19 +34,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - Action
     
-    @IBAction func useMainDevice(_ sender: UIBarButtonItem) {
-        sender.isEnabled = false
-        MatchMore.createMainDevice { result in
-            switch result {
-            case .success(_):
-                self.createSubscription()
-            case .failure(let error):
-                self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
-            }
-            sender.isEnabled = true
-        }
-    }
-    
     func createSubscription() {
         let subscription = Subscription(
             topic: "ticketstosale",
@@ -61,7 +48,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         MatchMore.createSubscription(subscription: subscription) { (result) in
             switch result {
             case .success(_):
-                MatchMore.startListeningForNewMatches()
+                print("ok")
             case .failure(let error):
                 self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
             }

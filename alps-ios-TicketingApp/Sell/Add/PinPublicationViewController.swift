@@ -47,6 +47,10 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
     override func viewDidAppear(_ animated: Bool) {
         if let location = MatchMore.lastLocation?.clLocation {
             centerMapOnLocation(location: location)
+            mapView.removeAnnotations(mapView.annotations)
+            let pin = MKPointAnnotation()
+            pin.coordinate = location.coordinate
+            mapView.addAnnotation(pin)
         }
         publishButton.isEnabled = true
         if let loc = MatchMore.lastLocation {

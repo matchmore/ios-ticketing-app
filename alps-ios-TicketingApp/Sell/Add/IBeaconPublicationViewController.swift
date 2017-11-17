@@ -42,7 +42,9 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
             self.picker.reloadAllComponents()
             self.picker.isHidden = beacons?.isEmpty ?? true
         }
-
+        if self.picker.isHidden == false {
+            self.picker.selectRow(0, inComponent: 0, animated: true)
+        }
         if !pickerData.isEmpty {
             self.selectedValue = pickerData[0]
         }
@@ -106,7 +108,7 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         let pub = Publication(topic: "ticketstosale", range: 0, duration: duration, properties: properties)
         PKHUD.sharedHUD.contentView = PKHUDProgressView()
         PKHUD.sharedHUD.show()
-        MatchMore.createPublication(publication: pub) { (result) in
+        MatchMore.createPublication(publication: pub, for: deviceId) { (result) in
             switch result {
             case .success(_):
                 PKHUD.sharedHUD.contentView = PKHUDSuccessView()

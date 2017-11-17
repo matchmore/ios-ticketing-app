@@ -49,6 +49,10 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    @IBAction func tapped(_ sender: Any) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func publishAction(_ sender: Any) {
         publishButton.isEnabled = false
         if let price = Double(priceTextField.text!),

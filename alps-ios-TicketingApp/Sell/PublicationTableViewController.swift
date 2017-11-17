@@ -9,6 +9,7 @@
 import UIKit
 import AlpsSDK
 import Alps
+import Kingfisher
 
 class PublicationTableViewController: UITableViewController {
     
@@ -32,6 +33,7 @@ class PublicationTableViewController: UITableViewController {
         cell.concertLabel.text = pub.properties?["concert"]
         cell.priceLabel.text = pub.properties?["price"]
         cell.deviceTypeLabel.text = pub.properties?["deviceType"]
+        
         return cell
     }
 

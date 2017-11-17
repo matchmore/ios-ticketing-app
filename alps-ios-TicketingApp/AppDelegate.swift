@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 MatchMore.startRanging(forUuid: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Beacon region estimote")
                 
                 // Polls matches every 5 seconds (other available options: APNS, WebSocket)
-                // MatchMore.startPollingMatches()
+                MatchMore.startPollingMatches()
                 
                 // Opens socket for main device matches delivery
                 MatchMore.startListeningForNewMatches()

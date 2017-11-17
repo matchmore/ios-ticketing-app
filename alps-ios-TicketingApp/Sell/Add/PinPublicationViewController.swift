@@ -57,6 +57,10 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func tapped(_ sender: Any) {
+        self.view.endEditing(true)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false

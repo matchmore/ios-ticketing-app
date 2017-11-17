@@ -71,6 +71,10 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         self.selectedValue = pickerData[row]
     }
     
+    @IBAction func tapped(_ sender: Any) {
+        self.view.endEditing(true)
+    }
+    
     // MARK: - Actions
     
     @IBAction func publishAction(_ sender: Any) {

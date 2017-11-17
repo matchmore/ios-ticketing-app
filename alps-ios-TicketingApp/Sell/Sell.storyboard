@@ -179,7 +179,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRa-Mr-9c4">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://dev.matchmore.com/static/img/demo/ticket_128x128.png" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRa-Mr-9c4">
                                                 <rect key="frame" x="108" y="0.0" width="235" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -261,6 +261,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="q1s-tb-SOp" firstAttribute="top" secondItem="tnp-q7-wFc" secondAttribute="bottom" constant="16" id="404-jO-6TP"/>
                             <constraint firstItem="q1s-tb-SOp" firstAttribute="trailing" secondItem="Dok-Q0-dfA" secondAttribute="trailingMargin" id="KG8-8i-sdv"/>
@@ -274,6 +275,9 @@
                             <constraint firstItem="oeL-E1-n0G" firstAttribute="top" secondItem="q1s-tb-SOp" secondAttribute="bottom" constant="9" id="qKu-56-uZp"/>
                             <constraint firstItem="Kto-Ap-4Yq" firstAttribute="leading" secondItem="Dok-Q0-dfA" secondAttribute="leading" constant="16" id="uyS-d3-MH1"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0ie-MZ-9bl" appends="YES" id="dAd-U3-26p"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="concertTextField" destination="OtQ-Ig-zuf" id="Yz9-nm-DPf"/>
@@ -286,6 +290,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wf0-lw-Suc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0ie-MZ-9bl">
+                    <connections>
+                        <action selector="tapped:" destination="ZZ3-kp-GpL" id="dMr-Xx-gv4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3097" y="323"/>
         </scene>
@@ -490,6 +499,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="uDQ-xF-dIj" firstAttribute="leading" secondItem="yIm-9L-VAD" secondAttribute="leading" constant="16" id="1Hw-nK-WnE"/>
                             <constraint firstItem="cBq-yU-Fgx" firstAttribute="leading" secondItem="yIm-9L-VAD" secondAttribute="leadingMargin" id="9js-Ob-vTX"/>
@@ -502,6 +512,9 @@
                             <constraint firstItem="cBq-yU-Fgx" firstAttribute="trailing" secondItem="yIm-9L-VAD" secondAttribute="trailingMargin" id="wDd-g5-1xx"/>
                             <constraint firstItem="bg9-0p-arU" firstAttribute="top" secondItem="cBq-yU-Fgx" secondAttribute="bottom" constant="8" symbolic="YES" id="z9g-AP-ERD"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7y8-uz-Phf" appends="YES" id="tX0-bd-mNt"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="concertTextField" destination="a23-MG-epS" id="sWu-lF-7Zk"/>
@@ -516,6 +529,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2h-Bw-K9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7y8-uz-Phf">
+                    <connections>
+                        <action selector="tapped:" destination="Egt-Qj-s70" id="d9K-jq-oVf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3098" y="931"/>
         </scene>
@@ -682,6 +700,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wi1-VT-iLm" firstAttribute="top" secondItem="fGl-ZT-u6q" secondAttribute="bottom" constant="8" id="0Ch-qz-guB"/>
                             <constraint firstAttribute="trailing" secondItem="KTh-no-3Cn" secondAttribute="trailing" constant="16" id="1z6-q7-jNE"/>
@@ -694,6 +713,9 @@
                             <constraint firstItem="fGl-ZT-u6q" firstAttribute="top" secondItem="YBq-QI-4d0" secondAttribute="bottom" constant="16" id="rDD-hT-ZFU"/>
                             <constraint firstItem="KTh-no-3Cn" firstAttribute="centerX" secondItem="PVW-ef-NfD" secondAttribute="centerX" id="xHt-Bs-8Gd"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5NU-UF-vt4" appends="YES" id="hYm-aT-c15"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="concertTextField" destination="LnB-Uc-ZwL" id="yWi-Bi-fxU"/>
@@ -705,6 +727,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zj6-Mj-Gt7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5NU-UF-vt4">
+                    <connections>
+                        <action selector="tapped:" destination="nOX-Ue-YSa" id="2Tf-vt-5RV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2350" y="1317"/>
         </scene>
@@ -716,6 +743,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PublicationTableViewCell" rowHeight="100" id="ZtV-il-SWl" customClass="PublicationTableViewCell" customModule="iTicket" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>

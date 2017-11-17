@@ -47,6 +47,12 @@ class TicketTableViewController: UITableViewController, AlpsManagerDelegate {
         cell.concertLabel.text = properties?["concert"]
         cell.priceLabel.text = properties?["price"]
         cell.deviceTypeLabel.text = properties?["deviceType"]
+        
+        if let image = properties?["image"], image != "" {
+            cell.ticketImageView.kf.setImage(with: URL(string: image))
+        } else {
+            cell.ticketImageView.image = UIImage(named: "No_image_available")
+        }
         return cell
     }
 }

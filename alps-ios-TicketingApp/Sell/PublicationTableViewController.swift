@@ -24,12 +24,10 @@ class PublicationTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "PublicationTableViewCell"
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PublicationTableViewCell else {
             fatalError("The dequeued cell is not an instance of PublicationTableViewCell.")
         }
-        // Configure the cell...
         let pub = publications[indexPath.row]
         cell.concertLabel.text = pub.properties?["concert"]
         cell.priceLabel.text = pub.properties?["price"]

@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import AlpsSDK
 import Alps
+import PKHUD
 
 class PinPublicationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var concertTextField: UITextField!
@@ -86,9 +87,12 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
     }
 
     // MARK: - AlpsSDK
+    
     func createPublication(concert: String, price: Double, image: String, latitude: Double, longitude: Double, range: Double, duration: Double, completion: @escaping () -> Void) {
         let location = Location(latitude: latitude, longitude: longitude, altitude: 0.0, horizontalAccuracy: 0.0, verticalAccuracy: 0.0)
         let pin = PinDevice(name: "pin device \(deviceNo)", location: location)
+        PKHUD.sharedHUD.contentView = PKHUDProgressView()
+        PKHUD.sharedHUD.show()
         MatchMore.createPinDevice(device: pin) { (result) in
             switch result {
             case .success(let device):
@@ -101,16 +105,21 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
                     let pub = Publication(deviceId: deviceId, topic: "ticketstosale", range: range, duration: duration, properties: properties)
                     MatchMore.createPublication(publication: pub, for: deviceId) { (result) in
                         switch result {
-                        case .success(let publication):
-                            NSLog("Created publication: id = \(String(describing: publication.id)), topic = \(String(describing: publication.topic)), properties = \(String(describing: publication.properties))")
+                        case .success(_):
+                            PKHUD.sharedHUD.contentView = PKHUDSuccessView()
+                            PKHUD.sharedHUD.hide()
                             self.deviceNo += 1
                             completion()
                         case .failure(let error):
+                            PKHUD.sharedHUD.contentView = PKHUDErrorView()
+                            PKHUD.sharedHUD.show()
                             self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
                         }
                     }
                 }
             case .failure(let error):
+                PKHUD.sharedHUD.contentView = PKHUDErrorView()
+                PKHUD.sharedHUD.show()
                 self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
             }
         }

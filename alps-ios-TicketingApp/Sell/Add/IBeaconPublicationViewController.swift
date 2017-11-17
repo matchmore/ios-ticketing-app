@@ -9,6 +9,7 @@
 import UIKit
 import AlpsSDK
 import Alps
+import PKHUD
 
 class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var concertTextField: UITextField!
@@ -98,11 +99,17 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
             properties["image"] = image
             properties["deviceType"] = "iBeacon"
         let pub = Publication(topic: "ticketstosale", range: 0, duration: duration, properties: properties)
+        PKHUD.sharedHUD.contentView = PKHUDProgressView()
+        PKHUD.sharedHUD.show()
         MatchMore.createPublication(publication: pub) { (result) in
             switch result {
             case .success(_):
+                PKHUD.sharedHUD.contentView = PKHUDSuccessView()
+                PKHUD.sharedHUD.show()
                 completion()
             case .failure(let error):
+                PKHUD.sharedHUD.contentView = PKHUDErrorView()
+                PKHUD.sharedHUD.show()
                 NSLog(error.debugDescription)
             }
         }

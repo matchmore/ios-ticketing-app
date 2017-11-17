@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,32 +26,44 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageView:rbt-RK-EP4:image" translatesAutoresizingMaskIntoConstraints="NO" id="rbt-RK-EP4">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" image="imageView:rbt-RK-EP4:image" translatesAutoresizingMaskIntoConstraints="NO" id="rbt-RK-EP4">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="rbt-RK-EP4" secondAttribute="height" multiplier="1:1" id="FW4-qM-7aA"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Concert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieG-0K-1oW">
-                                            <rect key="frame" x="108" y="8" width="259" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieG-0K-1oW">
+                                            <rect key="frame" x="116" y="8" width="251" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJy-p8-WfW">
-                                            <rect key="frame" x="108" y="37" width="259" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJy-p8-WfW">
+                                            <rect key="frame" x="116" y="37" width="39" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Device Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSA-x8-Cpm">
-                                            <rect key="frame" x="108" y="66" width="259" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSA-x8-Cpm">
+                                            <rect key="frame" x="116" y="66" width="251" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bJy-p8-WfW" firstAttribute="top" secondItem="ieG-0K-1oW" secondAttribute="bottom" constant="8" id="BzJ-Vq-NJS"/>
+                                        <constraint firstItem="rbt-RK-EP4" firstAttribute="leading" secondItem="2MO-ux-IIe" secondAttribute="leading" id="EW5-85-xva"/>
+                                        <constraint firstItem="rbt-RK-EP4" firstAttribute="top" secondItem="2MO-ux-IIe" secondAttribute="top" id="K1J-Jt-So4"/>
+                                        <constraint firstItem="bJy-p8-WfW" firstAttribute="leading" secondItem="ieG-0K-1oW" secondAttribute="leading" id="K6h-dy-QND"/>
+                                        <constraint firstItem="ieG-0K-1oW" firstAttribute="top" secondItem="2MO-ux-IIe" secondAttribute="top" constant="8" id="TUf-3l-Yka"/>
+                                        <constraint firstItem="ieG-0K-1oW" firstAttribute="leading" secondItem="rbt-RK-EP4" secondAttribute="trailing" constant="16" id="We4-ld-mdI"/>
+                                        <constraint firstAttribute="trailing" secondItem="uSA-x8-Cpm" secondAttribute="trailing" constant="8" id="f9l-dx-r50"/>
+                                        <constraint firstAttribute="trailing" secondItem="ieG-0K-1oW" secondAttribute="trailing" constant="8" id="guv-dh-jj4"/>
+                                        <constraint firstItem="uSA-x8-Cpm" firstAttribute="top" secondItem="bJy-p8-WfW" secondAttribute="bottom" constant="8" id="m2U-bi-dxb"/>
+                                        <constraint firstItem="uSA-x8-Cpm" firstAttribute="leading" secondItem="ieG-0K-1oW" secondAttribute="leading" id="mAa-6U-Pn5"/>
+                                        <constraint firstAttribute="bottom" secondItem="rbt-RK-EP4" secondAttribute="bottom" id="ttE-S0-yES"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="concertLabel" destination="ieG-0K-1oW" id="KBN-wd-iwM"/>

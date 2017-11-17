@@ -11,6 +11,8 @@ use_frameworks!
 pod 'Alps', :path => '../alps-ios-api'
 pod 'AlpsSDK', :path => '../alps-ios-sdk' 
 pod 'SkyFloatingLabelTextField', '~> 3.0'
+pod 'PKHUD', '~> 5.0'
+pod 'Kingfisher', '~> 4.0'
 
 post_install do |installer|
     # Your list of targets here.

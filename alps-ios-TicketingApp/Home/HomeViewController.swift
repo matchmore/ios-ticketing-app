@@ -7,51 +7,44 @@
 //
 
 import UIKit
-import SkyFloatingLabelTextField
 import AlpsSDK
 import Alps
-import CoreLocation
-import MapKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
+    
     var subscriptions = [Subscription]()
     override func viewWillAppear(_ animated: Bool) {
-        // getSubscription()
+        getSubscriptions()
     }
     
     // MARK: - Table View Data Source and Delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return subscriptions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cellIdentifier = "WantedCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let sub = subscriptions[indexPath.row]
+        cell.textLabel?.text = sub.id
+        cell.detailTextLabel?.text = sub.selector
+        return cell
     }
-
     
-    // MARK: - Action
+    // MARK: - AlpsSDK Functions
     
-    func createSubscription() {
-        let subscription = Subscription(
-            topic: "ticketstosale",
-            range: 100,
-            duration: 300,
-            selector: "concert='Montreux Jazz'"
-        )
-        subscription.pushers = ["ws"]
-        if let deviceToken = MatchMore.deviceToken {
-            subscription.pushers?.append("apns://\(deviceToken)")
-        }
-        MatchMore.createSubscription(subscription: subscription) { (result) in
+    private func getSubscriptions() {
+        MatchMore.subscriptions.findAll(completion: { (result) in
             switch result {
-            case .success(_):
-                print("ok")
+            case .success(let subscriptions):
+                self.subscriptions = subscriptions
+                self.tableView.reloadData()
             case .failure(let error):
                 self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
             }
-        }
+        })
     }
 }

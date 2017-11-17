@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import AlpsSDK
 import Alps
+import PKHUD
 
 class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Properties
@@ -55,10 +56,32 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
             let duration = Double(durationTextField.text!),
             let image = imageTextField.text,
             let concert = concertTextField.text {
-            createPublication(concert: concert, price: price, image: image, range: range, duration: duration, completion: {
-                self.navigationController?.popToRootViewController(animated: true)
-                self.publishButton.isEnabled = true
-            })
+            var properties: [String: String] = [:]
+            properties["concert"] = concert
+            properties["price"] = "\(price)"
+            properties["image"] = image
+            properties["deviceType"] = "mobile"
+            let publication = Publication(
+                topic: "ticketstosale",
+                range: range,
+                duration: duration,
+                properties: properties
+            )
+            PKHUD.sharedHUD.contentView = PKHUDProgressView()
+            PKHUD.sharedHUD.show()
+            MatchMore.createPublication(publication: publication) { (result) in
+                switch result {
+                case .success(_):
+                    PKHUD.sharedHUD.contentView = PKHUDSuccessView()
+                    PKHUD.sharedHUD.hide()
+                    self.navigationController?.popToRootViewController(animated: true)
+                    self.publishButton.isEnabled = true
+                case .failure(let error):
+                    PKHUD.sharedHUD.contentView = PKHUDErrorView()
+                    PKHUD.sharedHUD.hide()
+                    self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
+                }
+            }
         } else {
             self.present(AlertHelper.simpleError(title: "Please fill all needed fields."), animated: true, completion: nil)
             publishButton.isEnabled = true
@@ -79,28 +102,5 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
         let regionRadius: CLLocationDistance = 1000
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
-    }
-    
-    // MARK: - AlpsSDK
-    func createPublication(concert: String, price: Double, image: String, range: Double, duration: Double, completion: @escaping () -> Void) {
-        var properties: [String: String] = [:]
-        properties["concert"] = concert
-        properties["price"] = "\(price)"
-        properties["image"] = image
-        properties["deviceType"] = "mobile"
-        let publication = Publication(
-            topic: "ticketstosale",
-            range: range,
-            duration: duration,
-            properties: properties
-        )
-        MatchMore.createPublication(publication: publication) { (result) in
-            switch result {
-            case .success(_):
-                completion()
-            case .failure(let error):
-                self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
-            }
-        }
     }
 }

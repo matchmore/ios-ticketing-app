@@ -27,6 +27,7 @@
 		C37BE0D41FBEFB8700633A97 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D31FBEFB8700633A97 /* Home.storyboard */; };
 		C37BE0D91FBEFF7300633A97 /* Buy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D81FBEFF7300633A97 /* Buy.storyboard */; };
 		C37BE0DB1FBF01EF00633A97 /* Sell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0DA1FBF01EF00633A97 /* Sell.storyboard */; };
+		C37BE0DE1FBF0AE200633A97 /* AddWantedTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37BE0DD1FBF0AE200633A97 /* AddWantedTicketViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		C37BE0D31FBEFB8700633A97 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		C37BE0D81FBEFF7300633A97 /* Buy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Buy.storyboard; sourceTree = "<group>"; };
 		C37BE0DA1FBF01EF00633A97 /* Sell.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sell.storyboard; sourceTree = "<group>"; };
+		C37BE0DD1FBF0AE200633A97 /* AddWantedTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWantedTicketViewController.swift; sourceTree = "<group>"; };
 		DC5AB4D2043C92A14BF4C579 /* Pods-alps-ios-TicketingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E9C5F11156B109462AF70DC1 /* Pods_alps_ios_TicketingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alps_ios_TicketingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF4FEA91A578244E1EC1B44 /* Pods-alps-ios-TicketingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		84110D701F5E8A7500C3E28D /* alps-ios-TicketingApp */ = {
 			isa = PBXGroup;
 			children = (
+				C37BE0DC1FBF02BE00633A97 /* Custom Transition */,
 				84F9216A1FB5DFDF004A2400 /* alps-ios-TicketingApp.entitlements */,
 				84110D7D1F5E8A7500C3E28D /* Info.plist */,
 				84110D781F5E8A7500C3E28D /* Assets.xcassets */,
@@ -134,6 +137,7 @@
 			children = (
 				C37BE0D31FBEFB8700633A97 /* Home.storyboard */,
 				847BC9B81F5FF8D90011F939 /* HomeViewController.swift */,
+				C37BE0DD1FBF0AE200633A97 /* AddWantedTicketViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -177,6 +181,13 @@
 				C35519941FBDB7CE00B21495 /* AlertHelper.swift */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		C37BE0DC1FBF02BE00633A97 /* Custom Transition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Transition";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +290,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Alps/Alps.framework",
 				"${BUILT_PRODUCTS_DIR}/AlpsSDK/AlpsSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftWebSocket/SwiftWebSocket.framework",
 			);
@@ -287,6 +300,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alps.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlpsSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftWebSocket.framework",
 			);
@@ -347,6 +362,7 @@
 				84823D411F5EEBF40039CA42 /* PinPublicationViewController.swift in Sources */,
 				C35519951FBDB7CE00B21495 /* AlertHelper.swift in Sources */,
 				84823D431F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift in Sources */,
+				C37BE0DE1FBF0AE200633A97 /* AddWantedTicketViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

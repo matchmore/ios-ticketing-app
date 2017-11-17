@@ -40,6 +40,7 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         MatchMore.refreshKnownBeacons { beacons in
             self.pickerData = beacons ?? []
             self.picker.reloadAllComponents()
+            self.picker.isHidden = beacons?.isEmpty ?? true
         }
 
         if !pickerData.isEmpty {

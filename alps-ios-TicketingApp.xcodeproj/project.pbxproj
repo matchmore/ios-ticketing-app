@@ -10,33 +10,33 @@
 		09182C7473C7F21C579EF107 /* Pods_alps_ios_TicketingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6826B5A9222B41A5CA1D1CAF /* Pods_alps_ios_TicketingApp.framework */; };
 		84110D721F5E8A7500C3E28D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D711F5E8A7500C3E28D /* AppDelegate.swift */; };
 		84110D791F5E8A7500C3E28D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84110D781F5E8A7500C3E28D /* Assets.xcassets */; };
-		84110D7C1F5E8A7500C3E28D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84110D7A1F5E8A7500C3E28D /* LaunchScreen.storyboard */; };
 		84110D921F5E91D800C3E28D /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D911F5E91D800C3E28D /* TicketTableViewCell.swift */; };
 		84110D941F5E93DE00C3E28D /* TicketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D931F5E93DE00C3E28D /* TicketTableViewController.swift */; };
 		844410E91F602F30002AC090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844410E71F602F30002AC090 /* Main.storyboard */; };
 		847BC9B51F5FE4B90011F939 /* PublicationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BC9B41F5FE4B80011F939 /* PublicationTableViewController.swift */; };
-		847BC9B91F5FF8D90011F939 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BC9B81F5FF8D90011F939 /* LoginViewController.swift */; };
+		847BC9B91F5FF8D90011F939 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BC9B81F5FF8D90011F939 /* HomeViewController.swift */; };
 		84823D3F1F5EEBE40039CA42 /* MobilePublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D3E1F5EEBE40039CA42 /* MobilePublicationViewController.swift */; };
 		84823D411F5EEBF40039CA42 /* PinPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D401F5EEBF40039CA42 /* PinPublicationViewController.swift */; };
 		84823D431F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D421F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift */; };
 		84823D451F5EF2DA0039CA42 /* AddPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D441F5EF2DA0039CA42 /* AddPublicationViewController.swift */; };
 		8484E2261F6143D80086C887 /* PublicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484E2251F6143D80086C887 /* PublicationTableViewCell.swift */; };
+		C30A209E1FBE134A00DD661D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30A209D1FBE134A00DD661D /* MapKit.framework */; };
 		C35519931FBDB15A00B21495 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35519921FBDB15A00B21495 /* UIColor+CustomColors.swift */; };
 		C35519951FBDB7CE00B21495 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35519941FBDB7CE00B21495 /* AlertHelper.swift */; };
+		C37BE0D11FBEED7400633A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D01FBEED7400633A97 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6826B5A9222B41A5CA1D1CAF /* Pods_alps_ios_TicketingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alps_ios_TicketingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		84110D6E1F5E8A7500C3E28D /* alps-ios-TicketingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alps-ios-TicketingApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84110D6E1F5E8A7500C3E28D /* iTicket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTicket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84110D711F5E8A7500C3E28D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84110D781F5E8A7500C3E28D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		84110D7B1F5E8A7500C3E28D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84110D7D1F5E8A7500C3E28D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84110D911F5E91D800C3E28D /* TicketTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
 		84110D931F5E93DE00C3E28D /* TicketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketTableViewController.swift; sourceTree = "<group>"; };
 		844410E81F602F30002AC090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "alps-ios-TicketingApp/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		847BC9B41F5FE4B80011F939 /* PublicationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewController.swift; sourceTree = "<group>"; };
-		847BC9B81F5FF8D90011F939 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		847BC9B81F5FF8D90011F939 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		84823D3E1F5EEBE40039CA42 /* MobilePublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilePublicationViewController.swift; sourceTree = "<group>"; };
 		84823D401F5EEBF40039CA42 /* PinPublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinPublicationViewController.swift; sourceTree = "<group>"; };
 		84823D421F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconPublicationViewController.swift; sourceTree = "<group>"; };
@@ -45,8 +45,10 @@
 		84F9216A1FB5DFDF004A2400 /* alps-ios-TicketingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "alps-ios-TicketingApp.entitlements"; sourceTree = "<group>"; };
 		88A83ABC3109D222E3E21F64 /* Pods-alps-ios-TicketingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBB2158F749ACE6BB697E141 /* Pods-alps-ios-TicketingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingAppTests/Pods-alps-ios-TicketingAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C30A209D1FBE134A00DD661D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C35519921FBDB15A00B21495 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 		C35519941FBDB7CE00B21495 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		C37BE0D01FBEED7400633A97 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC5AB4D2043C92A14BF4C579 /* Pods-alps-ios-TicketingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E9C5F11156B109462AF70DC1 /* Pods_alps_ios_TicketingAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alps_ios_TicketingAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF4FEA91A578244E1EC1B44 /* Pods-alps-ios-TicketingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30A209E1FBE134A00DD661D /* MapKit.framework in Frameworks */,
 				09182C7473C7F21C579EF107 /* Pods_alps_ios_TicketingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +70,7 @@
 		557DF38F63E43603AD5C5717 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C30A209D1FBE134A00DD661D /* MapKit.framework */,
 				6826B5A9222B41A5CA1D1CAF /* Pods_alps_ios_TicketingApp.framework */,
 				E9C5F11156B109462AF70DC1 /* Pods_alps_ios_TicketingAppTests.framework */,
 			);
@@ -97,7 +101,7 @@
 		84110D6F1F5E8A7500C3E28D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84110D6E1F5E8A7500C3E28D /* alps-ios-TicketingApp.app */,
+				84110D6E1F5E8A7500C3E28D /* iTicket.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,24 +110,64 @@
 			isa = PBXGroup;
 			children = (
 				84F9216A1FB5DFDF004A2400 /* alps-ios-TicketingApp.entitlements */,
+				84110D7D1F5E8A7500C3E28D /* Info.plist */,
+				84110D781F5E8A7500C3E28D /* Assets.xcassets */,
 				844410E71F602F30002AC090 /* Main.storyboard */,
+				C37BE0D01FBEED7400633A97 /* LaunchScreen.storyboard */,
 				84110D711F5E8A7500C3E28D /* AppDelegate.swift */,
-				847BC9B81F5FF8D90011F939 /* LoginViewController.swift */,
-				84823D441F5EF2DA0039CA42 /* AddPublicationViewController.swift */,
+				C37BE0CA1FBEE35E00633A97 /* Home */,
+				C37BE0CC1FBEE38900633A97 /* Buy */,
+				C37BE0CB1FBEE37700633A97 /* Sell */,
+				C37BE0CE1FBEE3BB00633A97 /* Misc */,
+			);
+			path = "alps-ios-TicketingApp";
+			sourceTree = "<group>";
+		};
+		C37BE0CA1FBEE35E00633A97 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				847BC9B81F5FF8D90011F939 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C37BE0CB1FBEE37700633A97 /* Sell */ = {
+			isa = PBXGroup;
+			children = (
+				847BC9B41F5FE4B80011F939 /* PublicationTableViewController.swift */,
+				8484E2251F6143D80086C887 /* PublicationTableViewCell.swift */,
+				C37BE0CD1FBEE3AB00633A97 /* Add */,
+			);
+			path = Sell;
+			sourceTree = "<group>";
+		};
+		C37BE0CC1FBEE38900633A97 /* Buy */ = {
+			isa = PBXGroup;
+			children = (
 				84110D931F5E93DE00C3E28D /* TicketTableViewController.swift */,
 				84110D911F5E91D800C3E28D /* TicketTableViewCell.swift */,
+			);
+			path = Buy;
+			sourceTree = "<group>";
+		};
+		C37BE0CD1FBEE3AB00633A97 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				84823D441F5EF2DA0039CA42 /* AddPublicationViewController.swift */,
 				84823D3E1F5EEBE40039CA42 /* MobilePublicationViewController.swift */,
-				8484E2251F6143D80086C887 /* PublicationTableViewCell.swift */,
-				847BC9B41F5FE4B80011F939 /* PublicationTableViewController.swift */,
 				84823D401F5EEBF40039CA42 /* PinPublicationViewController.swift */,
 				84823D421F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift */,
-				84110D781F5E8A7500C3E28D /* Assets.xcassets */,
-				84110D7A1F5E8A7500C3E28D /* LaunchScreen.storyboard */,
-				84110D7D1F5E8A7500C3E28D /* Info.plist */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		C37BE0CE1FBEE3BB00633A97 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
 				C35519921FBDB15A00B21495 /* UIColor+CustomColors.swift */,
 				C35519941FBDB7CE00B21495 /* AlertHelper.swift */,
 			);
-			path = "alps-ios-TicketingApp";
+			path = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +190,7 @@
 			);
 			name = "alps-ios-TicketingApp";
 			productName = "alps-ios-TicketingApp";
-			productReference = 84110D6E1F5E8A7500C3E28D /* alps-ios-TicketingApp.app */;
+			productReference = 84110D6E1F5E8A7500C3E28D /* iTicket.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -168,8 +212,14 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 0;
 							};
 						};
 					};
@@ -198,7 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84110D7C1F5E8A7500C3E28D /* LaunchScreen.storyboard in Resources */,
+				C37BE0D11FBEED7400633A97 /* LaunchScreen.storyboard in Resources */,
 				84110D791F5E8A7500C3E28D /* Assets.xcassets in Resources */,
 				844410E91F602F30002AC090 /* Main.storyboard in Resources */,
 			);
@@ -274,7 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8484E2261F6143D80086C887 /* PublicationTableViewCell.swift in Sources */,
-				847BC9B91F5FF8D90011F939 /* LoginViewController.swift in Sources */,
+				847BC9B91F5FF8D90011F939 /* HomeViewController.swift in Sources */,
 				84110D921F5E91D800C3E28D /* TicketTableViewCell.swift in Sources */,
 				C35519931FBDB15A00B21495 /* UIColor+CustomColors.swift in Sources */,
 				847BC9B51F5FE4B90011F939 /* PublicationTableViewController.swift in Sources */,
@@ -291,14 +341,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		84110D7A1F5E8A7500C3E28D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84110D7B1F5E8A7500C3E28D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		844410E71F602F30002AC090 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -426,11 +468,13 @@
 				CODE_SIGN_ENTITLEMENTS = "alps-ios-TicketingApp/alps-ios-TicketingApp.entitlements";
 				DEVELOPMENT_TEAM = PAYVP3AFKX;
 				INFOPLIST_FILE = "alps-ios-TicketingApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Matchmore.alps-ios-TicketingApp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.matchmore.ios.iticket;
+				PRODUCT_NAME = iTicket;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -442,11 +486,13 @@
 				CODE_SIGN_ENTITLEMENTS = "alps-ios-TicketingApp/alps-ios-TicketingApp.entitlements";
 				DEVELOPMENT_TEAM = PAYVP3AFKX;
 				INFOPLIST_FILE = "alps-ios-TicketingApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Matchmore.alps-ios-TicketingApp";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.matchmore.ios.iticket;
+				PRODUCT_NAME = iTicket;
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

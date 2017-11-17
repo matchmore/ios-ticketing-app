@@ -11,15 +11,8 @@ import AlpsSDK
 import Alps
 
 class PublicationTableViewController: UITableViewController {
-    // Using appDelegate as a singleton
-    weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
-    var publications = [Publication]()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = UIColor.myOrange
-    }
     
+    var publications = [Publication]()
     override func viewWillAppear(_ animated: Bool) {
         getPublications()
     }
@@ -47,6 +40,7 @@ class PublicationTableViewController: UITableViewController {
     @IBAction func unwindToSubscriptionList(sender: UIStoryboardSegue) { }
 
     // MARK: - AlpsSDK Functions
+    
     private func getPublications() {
         MatchMore.publications.findAll(completion: { (result) in
             switch result {

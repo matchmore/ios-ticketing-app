@@ -39,6 +39,8 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
             centerMapOnLocation(location: location)
         }
         publishButton.isEnabled = true
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .follow
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -94,7 +96,7 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
         )
         MatchMore.createPublication(publication: publication) { (result) in
             switch result {
-            case .success(let publication):
+            case .success(_):
                 completion()
             case .failure(let error):
                 self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)

@@ -12,25 +12,22 @@ import Alps
 
 class TicketTableViewController: UITableViewController, AlpsManagerDelegate {
     var matches = [Match]()
-    var notificationCounter = 0
-    
     var onMatch: OnMatchClosure? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = UIColor.myOrange
         
         // Start Monitoring
         self.onMatch = { matches, _ in
             self.matches = matches
-            self.tabBarController?.tabBar.items?[0].badgeValue = String(describing: matches.count)
+            self.tabBarController?.tabBar.items?[0].badgeValue = self.matches.count > 0 ? String(describing: matches.count) : nil
             self.tableView.reloadData()
         }
         MatchMore.matchDelegates += self
         
         // Fill with cached data
         self.matches = MatchMore.matches
-        self.tabBarController?.tabBar.items?[0].badgeValue = String(describing: matches.count)
+        self.tabBarController?.tabBar.items?[0].badgeValue =  self.matches.count > 0 ? String(describing: matches.count) : nil
         self.tableView.reloadData()
     }
 

@@ -23,9 +23,7 @@ class AddPublicationViewController: UIViewController {
 
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
         let views = [mobileView, pinView, iBeaconView]
-        views.forEach {
-            $0?.isHidden = true
-        }
+        views.forEach { $0?.isHidden = true }
         views[sender.selectedSegmentIndex]?.isHidden = false
     }
 }

@@ -12,4 +12,17 @@ pod 'Alps', :path => '../alps-ios-api'
 pod 'AlpsSDK', :path => '../alps-ios-sdk' 
 pod 'SkyFloatingLabelTextField', '~> 3.0'
 
+post_install do |installer|
+    # Your list of targets here.
+    myTargets = ['SkyFloatingLabelTextField', 'JVFloatLabeledTextField']
+    
+    installer.pods_project.targets.each do |target|
+        if myTargets.include? target.name
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '3.2'
+            end
+        end
+    end
+end
+
 end

@@ -13,17 +13,40 @@ import Alps
 import CoreLocation
 import MapKit
 
-class HomeViewController: UIViewController {
-
-    @IBOutlet weak var mapView: MKMapView!
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        mapView.showsUserLocation = true
-        mapView.userTrackingMode = .follow
+    @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
-    // Calls The AlpsSDK to create a subscription
+    // MARK: - Table View Data Source and Delegate
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+
+    
+    // MARK: - Action
+    
+    @IBAction func useMainDevice(_ sender: UIBarButtonItem) {
+        sender.isEnabled = false
+        MatchMore.createMainDevice { result in
+            switch result {
+            case .success(_):
+                self.createSubscription()
+            case .failure(let error):
+                self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
+            }
+            sender.isEnabled = true
+        }
+    }
+    
     func createSubscription() {
         let subscription = Subscription(
             topic: "ticketstosale",
@@ -39,19 +62,6 @@ class HomeViewController: UIViewController {
             switch result {
             case .success(_):
                 MatchMore.startListeningForNewMatches()
-            case .failure(let error):
-                self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
-            }
-        }
-    }
-    
-    // MARK: - Action
-    
-    @IBAction func createMainDevice(_ sender: UIButton) {
-        MatchMore.createMainDevice { result in
-            switch result {
-            case .success(_):
-                self.createSubscription()
             case .failure(let error):
                 self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
             }

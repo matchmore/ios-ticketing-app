@@ -18,11 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="L4p-7B-4r7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iu1-y7-h4P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zIT-3D-vvq">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -65,6 +65,7 @@
                             <constraint firstItem="zIT-3D-vvq" firstAttribute="leading" secondItem="iu1-y7-h4P" secondAttribute="leading" id="ifB-tQ-8lK"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Wanted Tickets" id="Ihq-eu-fXk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="z2G-CP-GOW">
                             <connections>

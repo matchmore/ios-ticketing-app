@@ -6,6 +6,12 @@ This guide is an overview to have the first glimpse into our Alps SDK. See how i
 
 We assume that you already have knowledge about the **Advanced Location Publish/Subscribe** `ALPS` model. If not, please have a look at our portal [http://dev.matchmore.com/](http://dev.matchmore.com/).
 
+Alps iOS SDK uses Apple Push Notification Service (APNS) to deliver notifications to your iOS users.
+
+If you already know how to enable APNS, don't forget to upload the certificate in our portal.
+
+Else, you can find help on [how to setup APNS](https://github.com/matchmore/alps-ios-sdk/blob/feature/readmeApns/ApnsSetup.md).
+
 ## What will be covered
 * Register in our portal
 * Create an application in our cloud
@@ -44,7 +50,7 @@ Your first application is now registered !
 
 ![your first app api-key](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/apikey.png "apikeyFirstApp")
 
-**Note :** the api-key is needed to build an application using our Alps SDK.
+**Note :** Api-key and world id are needed to build an application using Alps SDK.
 
 ### Get Ticketing App and launch it
 
@@ -61,8 +67,8 @@ Then, enter in the folder with your terminal, you can use this command :
 To start using this project you need to install the ALPS SDK, which comes in the form of a CocoaPods.
 We have already set a pod file in this project but remember to add these lines to your own podfile for the next project, in order to use our Alps SDK.
 
-      pod 'Alps', :git => 'https://github.com/MatchMore/alps-ios-api.git', :tag => '0.4.0'
-      pod 'AlpsSDK', :git => 'https://github.com/MatchMore/alps-ios-sdk.git', :tag => ‘0.4.2’
+      pod 'Alps', :git => 'https://github.com/MatchMore/alps-ios-api.git', :tag => '0.5.0'
+      pod 'AlpsSDK', :git => 'https://github.com/MatchMore/alps-ios-sdk.git', :tag => ‘0.5.0’
 
 **NOTE :** Always check our [github ALPS SDK](https://github.com/MatchMore/alps-ios-sdk.git) and [ALPS](https://github.com/MatchMore/alps-ios-api.git) to get the last release.
 
@@ -71,8 +77,7 @@ Then save the file, and go to your terminal (which is inside of Ticketing App fo
       pod install
 
 * Open the Workspace of Ticketing App’s project.
-* Open the file AppDelegate.swift and paste the api-key from the portal (this api-key is the one created with your first app), as illustrated hereafter.
-* The constant “APIKEY” should be equal to the **UUID** of your api-key.
+* Open the file AppDelegate.swift and assign both api-key and world id to `MatchMore` static class, as illustrated hereafter.
 ![put your api-key in appDelegate](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/appApikey.png "put your api-key in appDelegate")
 * Run the project on your simulator or on your apple Iphone.
 
@@ -84,19 +89,10 @@ Then save the file, and go to your terminal (which is inside of Ticketing App fo
 
 **Reminder :** Please have a look at our portal [http://dev.matchmore.com/](http://dev.matchmore.com/) to see the `Live Demo`. We will cover this demo with a real app which is the `Ticketing App`.
 
-1. Register two users with one device each
-2. Attach a publication to device 1
-3. Attach a subscription to device 2
-4. Simulate a movement for device 2
-5. Receive a match or not
-
-#### Register a first user with a device ( The publisher / Alice )
-
-* Use the simulator in Xcode, select an iPhone 7 or iPhone 7 plus, and run the project.
-* Enter “Alice” in the username textfield and press login.
-* Selecting “No, thank you” will not create a subscription for Alice’s device.
-
-![Register Alice](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/1..png "1.")
+1. Attach a publication to device 1
+2. Attach a subscription to device 2
+3. Simulate a movement for device 2
+4. Receive a match or not
 
 #### Attach a publication to Alice’s device ( Device 1 in Live demo )
 

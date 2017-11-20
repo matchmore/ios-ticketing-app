@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupAppearance()
         
         // Basic setup
-        MatchMore.apiKey = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiYjk3MDFjNzQtMzkyMi00MjY1LTg2Y2ItNzQ0MTE4YWI4NWU0IiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MTA4NDY5NTgsImlhdCI6MTUxMDg0Njk1OCwianRpIjoiMSJ9.IDnqpc3Oco3QthoCwf-sYx_3zXFaJ_h9nFzNi5hAHzUSkVlCOHavxdBzQYeBnak744O4nr7dZHr1hb_P3YzoPQ"
-        MatchMore.worldId = "b9701c74-3922-4265-86cb-744118ab85e4"
+        MatchMore.apiKey = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiZDY1YjIwYTAtMjAwZS00MzE4LWEyZjAtNTdkZGU1ZDE0YTJiIiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MTExODI3NzMsImlhdCI6MTUxMTE4Mjc3MywianRpIjoiMSJ9.J7PpSnL80VG5G1QmJlzEpTLBgr0cKu0EwZaQnha07YZU135NlEI6yldUSR95md4o8liqeHyQXUqzgjWFgt-VQg"
+        MatchMore.worldId = "d65b20a0-200e-4318-a2f0-57dde5d14a2b"
         
         // Registers to APNS (remember to have proper project setup)
         PermissionsHelper.registerForPushNotifications()
@@ -67,9 +67,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupAppearance() {
         UIApplication.shared.statusBarStyle = .lightContent
         (self.window?.rootViewController as? UITabBarController)?.selectedIndex = 1
+        
         UINavigationBar.appearance().barTintColor = UIColor.myOrange
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor.white]
+        UINavigationBar.appearance().isTranslucent = false
+        
         UITabBar.appearance().tintColor = UIColor.myOrange
     }
 }

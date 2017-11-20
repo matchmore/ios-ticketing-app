@@ -4,13 +4,13 @@ This guide is an overview to have the first glimpse into our Alps SDK. See how i
 
 ## Prerequisities
 
-We assume that you already have knowledge about the **Advanced Location Publish/Subscribe** `ALPS` model. If not, please have a look at our portal [http://dev.matchmore.com/](http://dev.matchmore.com/).
+We assume that you already have knowledge about the **Advanced Location Publish/Subscribe** `ALPS` model. If not, please have a look at our portal [http://matchmore.io/](http://matchmore.io/).
 
 Alps iOS SDK uses Apple Push Notification Service (APNS) to deliver notifications to your iOS users.
 
 If you already know how to enable APNS, don't forget to upload the certificate in our portal.
 
-Else, you can find help on [how to setup APNS](https://github.com/matchmore/alps-ios-sdk/blob/feature/readmeApns/ApnsSetup.md).
+Else, you can find help on [how to setup APNS](https://github.com/matchmore/alps-ios-sdk/blob/master/ApnsSetup.md).
 
 ## What will be covered
 * Register in our portal
@@ -87,7 +87,7 @@ Then save the file, and go to your terminal (which is inside of Ticketing App fo
 
 ###  Ticketing App Review
 
-**Reminder :** Please have a look at our portal [http://dev.matchmore.com/](http://dev.matchmore.com/) to see the `Live Demo`. We will cover this demo with a real app which is the `Ticketing App`.
+**Reminder :** Please have a look at our portal [http://matchmore.io/](http://matchmore.io/) to see the `Live Demo`. We will cover this demo with a real app which is the `Ticketing App`.
 
 1. Attach a publication to device 1
 2. Attach a subscription to device 2

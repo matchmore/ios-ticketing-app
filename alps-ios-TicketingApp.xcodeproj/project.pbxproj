@@ -117,7 +117,6 @@
 		84110D701F5E8A7500C3E28D /* alps-ios-TicketingApp */ = {
 			isa = PBXGroup;
 			children = (
-				C37BE0DC1FBF02BE00633A97 /* Custom Transition */,
 				84F9216A1FB5DFDF004A2400 /* alps-ios-TicketingApp.entitlements */,
 				84110D7D1F5E8A7500C3E28D /* Info.plist */,
 				84110D781F5E8A7500C3E28D /* Assets.xcassets */,
@@ -181,13 +180,6 @@
 				C35519941FBDB7CE00B21495 /* AlertHelper.swift */,
 			);
 			path = Misc;
-			sourceTree = "<group>";
-		};
-		C37BE0DC1FBF02BE00633A97 /* Custom Transition */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Custom Transition";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

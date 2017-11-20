@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84110D6D1F5E8A7500C3E28D"
-               BuildableName = "alps-ios-TicketingApp.app"
+               BuildableName = "iTicket.app"
                BlueprintName = "alps-ios-TicketingApp"
                ReferencedContainer = "container:alps-ios-TicketingApp.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84110D6D1F5E8A7500C3E28D"
-            BuildableName = "alps-ios-TicketingApp.app"
+            BuildableName = "iTicket.app"
             BlueprintName = "alps-ios-TicketingApp"
             ReferencedContainer = "container:alps-ios-TicketingApp.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84110D6D1F5E8A7500C3E28D"
-            BuildableName = "alps-ios-TicketingApp.app"
+            BuildableName = "iTicket.app"
             BlueprintName = "alps-ios-TicketingApp"
             ReferencedContainer = "container:alps-ios-TicketingApp.xcodeproj">
          </BuildableReference>
@@ -87,7 +87,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84110D6D1F5E8A7500C3E28D"
-            BuildableName = "alps-ios-TicketingApp.app"
+            BuildableName = "iTicket.app"
             BlueprintName = "alps-ios-TicketingApp"
             ReferencedContainer = "container:alps-ios-TicketingApp.xcodeproj">
          </BuildableReference>

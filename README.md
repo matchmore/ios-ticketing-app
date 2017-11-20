@@ -94,45 +94,56 @@ Then save the file, and go to your terminal (which is inside of Ticketing App fo
 3. Simulate a movement for device 2
 4. Receive a match or not
 
-#### Attach a publication to Alice’s device ( Device 1 in Live demo )
+#### Attach a publication to Device 1
 
-We want to attach a publication to Alice’s device.
+We want to attach a publication to Device 1.
 * Select tab bar `Sell` at the bottom right.
 * Click on `Sell a ticket` at the top-right.
 This will switch you to another view where you can publish. Notice that we will publish only on our iPhone emulator during this demo.
-* Click on Mobile Button, you can now publish a publication on Alice’s device by clicking on “Publish” button. You can change informations but we already settled all the information you need, you can leave it like that.
+* Click on Mobile Button, you can now publish a publication on Device 1 by clicking on “Publish” button. Don't forget to set information. We recommend the following :
+Concert : Montreux Jazz
+Price : 100
+Range : 1000
+Duration : 1000
 * Press “Publish”.
 
 **Note :** Most important is that topic is the same for both publisher and subscriber and properties should equal selector ( Here Concert = “Montreux Jazz” is our property and selector )
 
-![Publish on Alice's device](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/2..png "2.")
+![Publish on Device 1](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/attachPub.png "Attach a publication on Device 1")
 
-#### Register a second user with a device ( The subscriber / Bob )
+#### Register a second device, Device 2
 
 **IMPORTANT :** You need a physical iPhone to run a second simulator.
 
 * Build and run the project by selecting your physical iPhone as the simulator
-* Register a second user with a device ( The subscriber / Bob )
-* Repeat step 1, but this time with “Bob” as a username.
-* Press login.
 
-#### Attach a subscription to Bob’s device ( Device 2 in Live demo )
+#### Attach a subscription to Device 2
 
-* Accept the subscription by clicking on `Yes, please subscribe to this topic`
-* Simulate a movement for Bob’s device
+* Go to tab "Find"  and click on the + at the top-right of the screen.
+You can now add informations for the subscription on Device 2.
+We recommend the next information for your subscription :
+Concert : Montreux Jazz
+Max Price : 3000
+Range (m) : 1000
+Duration (s) : 1000
+* Accept the subscription by clicking on `Start Getting Matches!`
+* Simulate a movement for Device 2 to enter Device 1's publication range.
 
-**Note :** You need to know where Alice’s device location is set on the Xcode Simulator.
+![Attach on Device 2](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/attachSub.png "Attach a subscription on Device 2")
 
-To set Alice's device location :
+**Note :** You need to know where Device 1 location is set on the Xcode Simulator.
+
+To set Device 1 location :
 * Go in simulator, Debug/Location/CustomLocation
-* use `Custom Location` and set it to a location and move near to it with Bob’s device to get the Match
+* use `Custom Location` and set it to a location and move near to it with Device 2 to get the Match
 
 #### Receive a match or not
 
-   You will get a notification every time you get a match !!
+   You will get a notification every time you get a match !
 
 ![get the match](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/match.png "match")
 
+**NOTE :** You can actually test the whole app without creating two devices. For the purpose to mirror the live demo on our portal, we made the choice to show describe this tutorial with two devices.
 
 ### You have iBeacons
 
@@ -164,6 +175,5 @@ Choose the beacons and click on assign. See image below for an example of what y
 
 Look at `iBeacon`, you should be able to choose between the beacons you assigned to your application.
 
-When, re-run the Ticketing-App on your physical iPhone (Bob´s device / the subscriber).
-* Approach the beacons in which you published to trigger matches.
+* Approach the beacons to trigger matches.
 ![select iBeacon](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/selectIBeacon.png "add Beacon step final")

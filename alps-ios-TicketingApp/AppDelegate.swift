@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupAppearance()
         
         // Basic setup
-        MatchMore.apiKey = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiZDY1YjIwYTAtMjAwZS00MzE4LWEyZjAtNTdkZGU1ZDE0YTJiIiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MTExODI3NzMsImlhdCI6MTUxMTE4Mjc3MywianRpIjoiMSJ9.J7PpSnL80VG5G1QmJlzEpTLBgr0cKu0EwZaQnha07YZU135NlEI6yldUSR95md4o8liqeHyQXUqzgjWFgt-VQg"
-        MatchMore.worldId = "d65b20a0-200e-4318-a2f0-57dde5d14a2b"
+        MatchMore.apiKey = "YOUR_API_KEY"
+        MatchMore.worldId = "YOUR_WORLD_ID"
         
         // Registers to APNS (remember to have proper project setup)
         PermissionsHelper.registerForPushNotifications()

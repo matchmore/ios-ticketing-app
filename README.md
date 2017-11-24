@@ -177,3 +177,8 @@ Look at `iBeacon`, you should be able to choose between the beacons you assigned
 
 * Approach the beacons to trigger matches.
 ![select iBeacon](https://github.com/matchmore/alps-ios-TicketingApp/blob/master/media/selectIBeacon.png "add Beacon step final")
+
+
+## License
+
+`Alps iOS Ticketing App` is available under the MIT license. See the LICENSE file for more info.

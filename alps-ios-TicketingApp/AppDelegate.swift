@@ -10,6 +10,7 @@ import UIKit
 
 import AlpsSDK
 import Alps
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,11 +22,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupAppearance()
         
         // Basic setup
-        MatchMore.apiKey = "YOUR_API_KEY"
-        MatchMore.worldId = "YOUR_WORLD_ID"
+        MatchMore.apiKey = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiZDY1YjIwYTAtMjAwZS00MzE4LWEyZjAtNTdkZGU1ZDE0YTJiIiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MTExODI3NzMsImlhdCI6MTUxMTE4Mjc3MywianRpIjoiMSJ9.J7PpSnL80VG5G1QmJlzEpTLBgr0cKu0EwZaQnha07YZU135NlEI6yldUSR95md4o8liqeHyQXUqzgjWFgt-VQg"
+        MatchMore.worldId = "d65b20a0-200e-4318-a2f0-57dde5d14a2"
         
         // Registers to APNS (remember to have proper project setup)
-        PermissionsHelper.registerForPushNotifications()
+        UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { (_, _) in
+            DispatchQueue.main.async {
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
         
         // Creates or loads cached main device
         MatchMore.startUsingMainDevice { result in
@@ -33,9 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case .success(_):
                 // Starts getting and sending device location
                 MatchMore.startUpdatingLocation()
-                
-                // Manual beacon ranging
-                MatchMore.startRanging(forUuid: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Beacon region estimote")
                 
                 // Polls matches every 5 seconds (other available options: APNS, WebSocket)
                 MatchMore.startPollingMatches()

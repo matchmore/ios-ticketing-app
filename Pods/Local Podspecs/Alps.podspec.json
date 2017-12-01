@@ -4,16 +4,15 @@
     "ios": "9.0",
     "osx": "10.11"
   },
-  "version": "0.5.0",
+  "version": "0.5.1",
   "source": {
-    "git": "git@bitbucket.org:alps/alps-client-ios-api.git",
-    "tag": "0.5.0"
+    "git": "https://github.com/MatchMore/alps-ios-api.git",
+    "tag": "0.5.1"
   },
   "authors": "Matchmore Alps SDK Team",
-  "license": "Apache License, Version 2.0",
+  "license": "MIT license",
   "homepage": "http://matchmore.io",
   "summary": "Matchmore Alps RESTful API",
-  "description": "This is Alps pod description",
   "source_files": "Alps/Classes/Swaggers/**/*.swift",
   "dependencies": {
     "Alamofire": [

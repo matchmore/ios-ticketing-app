@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/Skyscanner/SkyFloatingLabelTextField.svg?branch=master)](https://travis-ci.org/Skyscanner/SkyFloatingLabelTextField)
 [![Coverage Status](https://coveralls.io/repos/github/Skyscanner/SkyFloatingLabelTextField/badge.svg?branch=master)](https://coveralls.io/github/Skyscanner/SkyFloatingLabelTextField?branch=master)
 [![Pod Platform](https://img.shields.io/cocoapods/p/SkyFloatingLabelTextField.svg?style=flat)](https://cocoapods.org/pods/SkyFloatingLabelTextField)
-[![Pod License](https://img.shields.io/cocoapods/l/SkyFloatingLabelTextField.svg?style=flat)](https://github.com/SkyFloatingLabelTextField/blob/master/LICENSE.md)
+[![Pod License](https://img.shields.io/cocoapods/l/SkyFloatingLabelTextField.svg?style=flat)](https://github.com/Skyscanner/SkyFloatingLabelTextField/blob/master/LICENSE)
 
 [![Pod Version](https://img.shields.io/cocoapods/v/SkyFloatingLabelTextField.svg?style=flat)](https://cocoapods.org/pods/SkyFloatingLabelTextField)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -71,21 +71,24 @@ textField2.selectedLineHeight = 2.0
 
 ### Icons and fonts
 
-Use the `SkyFloatingLabelTextFieldWithIcon` field to display icons next to the textfields. You will have to set the `iconFont` property and bundle your icon with your app (if it's not a built in one). Icons can be rotated and more precise positioning is also supported:
+Use the `SkyFloatingLabelTextFieldWithIcon` field to display icons next to the textfields. You have the option of using a font or an image as the icon by setting the `iconType` property (Default = `IconType.font`). If using an image as icon, you will have to set the `iconImage` property. If using a font as icon, you will have to set the `iconFont` property and bundle your icon with your app (if it's not a built in one). Icons can be rotated and more precise positioning is also supported:
 
 ![](/SkyFloatingLabelTextField/images/example-3.gif)
 
+#### Using a font
+
 ```swift
 let overcastBlueColor = UIColor(red: 0, green: 187/255, blue: 204/255, alpha: 1.0)
+let textFieldFrame = CGRect(x: 150, y: 10, width: 120, height: 45)
 
-let textField1 = SkyFloatingLabelTextFieldWithIcon(frame: CGRectMake(10, 10, 120, 45))
+let textField1 = SkyFloatingLabelTextFieldWithIcon(frame: textFieldFrame, iconType: .font)
 textField1.placeholder = "Departure"
 textField1.title = "Flying from"
 textField1.iconFont = UIFont(name: "FontAwesome", size: 15)
 textField1.iconText = "\u{f072}" // plane icon as per https://fortawesome.github.io/Font-Awesome/cheatsheet/
 self.view.addSubview(textField1)
 
-let textField2 = SkyFloatingLabelTextFieldWithIcon(frame: CGRectMake(150, 10, 120, 45))
+let textField2 = SkyFloatingLabelTextFieldWithIcon(frame: textFieldFrame)
 textField2.placeholder = "Arrival"
 textField2.title = "Flying to"
 textField2.tintColor = overcastBlueColor
@@ -93,6 +96,7 @@ textField2.selectedTitleColor = overcastBlueColor
 textField2.selectedLineColor = overcastBlueColor
 
 // Set icon properties
+textField2.iconType = .font
 textField2.iconColor = UIColor.lightGrayColor()
 textField2.selectedIconColor = overcastBlueColor
 textField2.iconFont = UIFont(name: "FontAwesome", size: 15)
@@ -101,6 +105,17 @@ textField2.iconMarginBottom = 4.0 // more precise icon positioning. Usually need
 textField2.iconRotationDegrees = 90 // rotate it 90 degrees
 textField2.iconMarginLeft = 2.0
 self.view.addSubview(textField2)
+```
+
+#### Using an image
+```swift
+let textFieldframe = CGRect(x: 150, y: 10, width: 120, height: 45)
+
+let textField1 = SkyFloatingLabelTextFieldWithIcon(frame: textFieldframe, iconType: .image)
+textField1.placeholder = "Departure"
+textField1.title = "Flying from"
+textField1.iconImage = UIImage(imageLiteralResourceName: "PlaneIcon")
+self.view.addSubview(textField1)
 ```
 
 ### Error state and delegates
@@ -141,6 +156,12 @@ class MyViewController: UIViewController, UITextFieldDelegate {
 }
 ```
 
+### Disabled state
+The textfield also supports displaying a disabled state. When the `isEnabled` property is set on the control, then the control is highlighted with the color set in the `disabledColor` property.
+```swift
+    textField.disabledColor = disabledColor
+    textField.isEnabled = false
+```
 ### RTL language support
 
 The component automatically detects the language writing direction. When the phone has a RTL language set (e.g. Arabic or Hebrew), then it automatically adjusts to support this style.
@@ -176,7 +197,7 @@ $ gem install cocoapods
 Then simply add `SkyFloatingLabelTextField` to your Podfile:
 
 ```
-pod 'SkyFloatingLabelTextField', '~> 2.0.0'
+pod 'SkyFloatingLabelTextField', '~> 3.0'
 ```
 
 Lastly, let CocoaPods fetch the latest version of the component by running:
@@ -192,7 +213,7 @@ When integrating the component into an Objective C project, in the Podfile add `
 use_frameworks!
 
 target 'SkyFloatingLabelTextFieldObjectiveCExample' do
-  pod 'SkyFloatingLabelTextField', '~> 2.0.0'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
 end
 ```
 

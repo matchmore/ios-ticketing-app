@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'AB8C9986EB85B40F5FEB45975951DF70'
+               BlueprintIdentifier = 'AB7BE7337637671EF810845FB18B88D5'
                BlueprintName = 'AlpsSDK'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'AlpsSDK.framework'>

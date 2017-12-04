@@ -76,11 +76,11 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         self.selectedValue = pickerData[row]
     }
     
+    // MARK: - Actions
+    
     @IBAction func tapped(_ sender: Any) {
         self.view.endEditing(true)
     }
-    
-    // MARK: - Actions
     
     @IBAction func publishAction(_ sender: Any) {
         publishButton.isEnabled = false

@@ -14,8 +14,8 @@
   "license": "MIT license",
   "source_files": "AlpsSDK/**/*.swift",
   "dependencies": {
-    "SwiftWebSocket": [
-      "~> 2.6"
+    "Starscream": [
+      "~> 3.0"
     ],
     "Alps": [
       "~> 0.5"

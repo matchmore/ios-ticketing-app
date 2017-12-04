@@ -4,11 +4,11 @@ PODS:
     - Alamofire (~> 4.0)
   - AlpsSDK (0.5.1):
     - Alps (~> 0.5)
-    - SwiftWebSocket (~> 2.6)
+    - Starscream (~> 3.0)
   - Kingfisher (4.4.0)
   - PKHUD (5.0.0)
   - SkyFloatingLabelTextField (3.4.0)
-  - SwiftWebSocket (2.6.5)
+  - Starscream (3.0.2)
 
 DEPENDENCIES:
   - Alps (~> 0.5)
@@ -24,11 +24,11 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Alps: ff944227436c06b0826bd30eca7eb10394c7a6e2
-  AlpsSDK: 5131df38fe064df19199d7f9b358bdc652e44ac6
+  AlpsSDK: 3ff7c4cc19387a7110dea6b50749f2a06c6e0a1e
   Kingfisher: 62a43e03047a1ac5159d0be3ac62673ef4b99cc3
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
-  SwiftWebSocket: 1ef8a0efb023544643bdf480c1ec4a62b204f293
+  Starscream: b512c62f6706421221b5ceb2ba01a9f58aca5bea
 
 PODFILE CHECKSUM: a86068fa6df338158ebd7ec077862b03d3307f92
 

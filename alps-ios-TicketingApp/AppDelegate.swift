@@ -32,16 +32,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        // Gets known beacons from API
+        MatchMore.refreshKnownBeacons()
+        
         // Creates or loads cached main device
         MatchMore.startUsingMainDevice { result in
             switch result {
             case .success(_):
                 // Starts getting and sending device location
                 MatchMore.startUpdatingLocation()
-                
-                // Polls matches every 5 seconds (other available options: APNS, WebSocket)
-                MatchMore.startPollingMatches()
-                
                 // Opens socket for main device matches delivery
                 MatchMore.startListeningForNewMatches()
             case .failure(let error):

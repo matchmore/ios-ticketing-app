@@ -32,8 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
-        // Gets known beacons from API
-        MatchMore.refreshKnownBeacons()
+        // Gets known beacons from API and start ranging
+        MatchMore.refreshKnownBeacons {
+            MatchMore.startRangingKnownBeacons()
+        }
         
         // Creates or loads cached main device
         MatchMore.startUsingMainDevice { result in
@@ -43,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 MatchMore.startUpdatingLocation()
                 // Opens socket for main device matches delivery
                 MatchMore.startListeningForNewMatches()
+                MatchMore.startPollingMatches()
             case .failure(let error):
                 self.window?.rootViewController?.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
             }

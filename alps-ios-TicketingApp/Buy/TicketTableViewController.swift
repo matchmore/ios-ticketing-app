@@ -10,7 +10,7 @@ import UIKit
 import AlpsSDK
 import Alps
 
-class TicketTableViewController: UITableViewController, AlpsManagerDelegate {
+class TicketTableViewController: UITableViewController, AlpsDelegate {
     var matches = [Match]()
     var onMatch: OnMatchClosure? = nil
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0910"
+   LastUpgradeVersion = "0920"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8706A0C46BF5488022BA98DD4DA0FA07"
+               BlueprintIdentifier = "AB7BE7337637671EF810845FB18B88D5"
                BuildableName = "AlpsSDK.framework"
                BlueprintName = "AlpsSDK"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8706A0C46BF5488022BA98DD4DA0FA07"
+            BlueprintIdentifier = "AB7BE7337637671EF810845FB18B88D5"
             BuildableName = "AlpsSDK.framework"
             BlueprintName = "AlpsSDK"
             ReferencedContainer = "container:Pods.xcodeproj">

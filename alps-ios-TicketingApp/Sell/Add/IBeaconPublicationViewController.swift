@@ -37,11 +37,12 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        MatchMore.refreshKnownBeacons { beacons in
-            self.pickerData = beacons ?? []
+        MatchMore.knownBeacons.findAll(completion: { (result) in
+            let beacons = result.responseObject ?? []
+            self.pickerData = beacons
             self.picker.reloadAllComponents()
-            self.picker.isHidden = beacons?.isEmpty ?? true
-        }
+            self.picker.isHidden = beacons.isEmpty
+        })
         if self.picker.isHidden == false {
             self.picker.selectRow(0, inComponent: 0, animated: true)
         }
@@ -67,18 +68,18 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row].deviceId
+        return pickerData[row].proximityUUID
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.selectedValue = pickerData[row]
     }
     
+    // MARK: - Actions
+    
     @IBAction func tapped(_ sender: Any) {
         self.view.endEditing(true)
     }
-    
-    // MARK: - Actions
     
     @IBAction func publishAction(_ sender: Any) {
         publishButton.isEnabled = false

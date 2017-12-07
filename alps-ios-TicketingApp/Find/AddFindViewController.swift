@@ -13,7 +13,7 @@ import PKHUD
 import SkyFloatingLabelTextField
 import TagListView
 
-class AddFindViewController: UIViewController {
+class AddFindViewController: UIViewController, TagListViewDelegate {
     
     @IBOutlet weak var eventNameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var radiusLabel: UILabel!
@@ -40,10 +40,11 @@ class AddFindViewController: UIViewController {
     
     var textField: UITextField?
     @IBAction func addTag() {
-        let alert = UIAlertController(title: "Add Tag", message: nil, preferredStyle:.alert)
+        let alert = UIAlertController(title: "Add Tag", message: nil, preferredStyle: .alert)
         alert.addTextField { textField in
             self.textField = textField
         }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alert.addAction(
             UIAlertAction(title: "Ok", style: .default, handler: { _ in
                 if let tagName = self.textField?.text, tagName != "" {
@@ -52,9 +53,16 @@ class AddFindViewController: UIViewController {
                 self.textField = nil
             })
         )
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion:nil)
+        self.present(alert, animated: true, completion: nil)
     }
+    
+    // MARK: - Tag View Delegate
+    
+    func tagRemoveButtonPressed(_ title: String, tagView: TagView, sender: TagListView) {
+        sender.removeTagView(tagView)
+    }
+    
+    // MARK: - Alps SDK
     
     @IBAction func createSubscription(_ sender: Any) {
         let range = Double(Int(radiusSlider.value * 1000))

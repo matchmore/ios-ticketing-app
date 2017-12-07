@@ -81,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="-362" y="1513"/>
         </scene>
-        <!--Add Find View Controller-->
+        <!--Delegate-->
         <scene sceneID="5uW-Jr-ety">
             <objects>
                 <viewController id="Cbx-iy-OzJ" customClass="AddFindViewController" customModule="iTicket" customModuleProvider="target" sceneMemberID="viewController">
@@ -214,6 +214,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="enableRemoveButton" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="Cbx-iy-OzJ" id="y61-OV-EOg"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-u7-AZl">
                                 <rect key="frame" x="299" y="370.5" width="60" height="29"/>

@@ -13,20 +13,22 @@
 		84110D941F5E93DE00C3E28D /* TicketTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84110D931F5E93DE00C3E28D /* TicketTableViewController.swift */; };
 		844410E91F602F30002AC090 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844410E71F602F30002AC090 /* Main.storyboard */; };
 		847BC9B51F5FE4B90011F939 /* PublicationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BC9B41F5FE4B80011F939 /* PublicationTableViewController.swift */; };
-		847BC9B91F5FF8D90011F939 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BC9B81F5FF8D90011F939 /* HomeViewController.swift */; };
+		847BC9B91F5FF8D90011F939 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BC9B81F5FF8D90011F939 /* FindViewController.swift */; };
 		84823D3F1F5EEBE40039CA42 /* MobilePublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D3E1F5EEBE40039CA42 /* MobilePublicationViewController.swift */; };
 		84823D411F5EEBF40039CA42 /* PinPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D401F5EEBF40039CA42 /* PinPublicationViewController.swift */; };
 		84823D431F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D421F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift */; };
 		84823D451F5EF2DA0039CA42 /* AddPublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84823D441F5EF2DA0039CA42 /* AddPublicationViewController.swift */; };
 		8484E2261F6143D80086C887 /* PublicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484E2251F6143D80086C887 /* PublicationTableViewCell.swift */; };
 		C30A209E1FBE134A00DD661D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30A209D1FBE134A00DD661D /* MapKit.framework */; };
+		C32C1AEE1FD927AE00A32B77 /* AppDelegate+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C1AED1FD927AE00A32B77 /* AppDelegate+UI.swift */; };
+		C32C1AF01FD929DC00A32B77 /* Concert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C1AEF1FD929DC00A32B77 /* Concert.swift */; };
 		C35519931FBDB15A00B21495 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35519921FBDB15A00B21495 /* UIColor+CustomColors.swift */; };
 		C35519951FBDB7CE00B21495 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35519941FBDB7CE00B21495 /* AlertHelper.swift */; };
 		C37BE0D11FBEED7400633A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D01FBEED7400633A97 /* LaunchScreen.storyboard */; };
-		C37BE0D41FBEFB8700633A97 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D31FBEFB8700633A97 /* Home.storyboard */; };
+		C37BE0D41FBEFB8700633A97 /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D31FBEFB8700633A97 /* Find.storyboard */; };
 		C37BE0D91FBEFF7300633A97 /* Buy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D81FBEFF7300633A97 /* Buy.storyboard */; };
 		C37BE0DB1FBF01EF00633A97 /* Sell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0DA1FBF01EF00633A97 /* Sell.storyboard */; };
-		C37BE0DE1FBF0AE200633A97 /* AddWantedTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37BE0DD1FBF0AE200633A97 /* AddWantedTicketViewController.swift */; };
+		C37BE0DE1FBF0AE200633A97 /* AddFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37BE0DD1FBF0AE200633A97 /* AddFindViewController.swift */; };
 		D8181C06E54985535BAC315B /* Pods_alps_ios_TicketingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A4FC56526F3B83FF31A7BA /* Pods_alps_ios_TicketingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +43,7 @@
 		84110D931F5E93DE00C3E28D /* TicketTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketTableViewController.swift; sourceTree = "<group>"; };
 		844410E81F602F30002AC090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "alps-ios-TicketingApp/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		847BC9B41F5FE4B80011F939 /* PublicationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewController.swift; sourceTree = "<group>"; };
-		847BC9B81F5FF8D90011F939 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		847BC9B81F5FF8D90011F939 /* FindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		84823D3E1F5EEBE40039CA42 /* MobilePublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobilePublicationViewController.swift; sourceTree = "<group>"; };
 		84823D401F5EEBF40039CA42 /* PinPublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinPublicationViewController.swift; sourceTree = "<group>"; };
 		84823D421F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconPublicationViewController.swift; sourceTree = "<group>"; };
@@ -49,13 +51,15 @@
 		8484E2251F6143D80086C887 /* PublicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewCell.swift; sourceTree = "<group>"; };
 		84F9216A1FB5DFDF004A2400 /* alps-ios-TicketingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "alps-ios-TicketingApp.entitlements"; sourceTree = "<group>"; };
 		C30A209D1FBE134A00DD661D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C32C1AED1FD927AE00A32B77 /* AppDelegate+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+UI.swift"; sourceTree = "<group>"; };
+		C32C1AEF1FD929DC00A32B77 /* Concert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert.swift; sourceTree = "<group>"; };
 		C35519921FBDB15A00B21495 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 		C35519941FBDB7CE00B21495 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		C37BE0D01FBEED7400633A97 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C37BE0D31FBEFB8700633A97 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		C37BE0D31FBEFB8700633A97 /* Find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
 		C37BE0D81FBEFF7300633A97 /* Buy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Buy.storyboard; sourceTree = "<group>"; };
 		C37BE0DA1FBF01EF00633A97 /* Sell.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sell.storyboard; sourceTree = "<group>"; };
-		C37BE0DD1FBF0AE200633A97 /* AddWantedTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWantedTicketViewController.swift; sourceTree = "<group>"; };
+		C37BE0DD1FBF0AE200633A97 /* AddFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFindViewController.swift; sourceTree = "<group>"; };
 		E2754EB06BB0CC19BD0D100D /* Pods-alps-ios-TicketingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +112,9 @@
 				844410E71F602F30002AC090 /* Main.storyboard */,
 				C37BE0D01FBEED7400633A97 /* LaunchScreen.storyboard */,
 				84110D711F5E8A7500C3E28D /* AppDelegate.swift */,
-				C37BE0CA1FBEE35E00633A97 /* Home */,
+				C32C1AED1FD927AE00A32B77 /* AppDelegate+UI.swift */,
+				C32C1AF11FD929F200A32B77 /* Model */,
+				C37BE0CA1FBEE35E00633A97 /* Find */,
 				C37BE0CC1FBEE38900633A97 /* Buy */,
 				C37BE0CB1FBEE37700633A97 /* Sell */,
 				C37BE0CE1FBEE3BB00633A97 /* Misc */,
@@ -116,14 +122,22 @@
 			path = "alps-ios-TicketingApp";
 			sourceTree = "<group>";
 		};
-		C37BE0CA1FBEE35E00633A97 /* Home */ = {
+		C32C1AF11FD929F200A32B77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C37BE0D31FBEFB8700633A97 /* Home.storyboard */,
-				847BC9B81F5FF8D90011F939 /* HomeViewController.swift */,
-				C37BE0DD1FBF0AE200633A97 /* AddWantedTicketViewController.swift */,
+				C32C1AEF1FD929DC00A32B77 /* Concert.swift */,
 			);
-			path = Home;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C37BE0CA1FBEE35E00633A97 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				C37BE0D31FBEFB8700633A97 /* Find.storyboard */,
+				847BC9B81F5FF8D90011F939 /* FindViewController.swift */,
+				C37BE0DD1FBF0AE200633A97 /* AddFindViewController.swift */,
+			);
+			path = Find;
 			sourceTree = "<group>";
 		};
 		C37BE0CB1FBEE37700633A97 /* Sell */ = {
@@ -258,7 +272,7 @@
 				84110D791F5E8A7500C3E28D /* Assets.xcassets in Resources */,
 				C37BE0DB1FBF01EF00633A97 /* Sell.storyboard in Resources */,
 				844410E91F602F30002AC090 /* Main.storyboard in Resources */,
-				C37BE0D41FBEFB8700633A97 /* Home.storyboard in Resources */,
+				C37BE0D41FBEFB8700633A97 /* Find.storyboard in Resources */,
 				C37BE0D91FBEFF7300633A97 /* Buy.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,18 +351,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				8484E2261F6143D80086C887 /* PublicationTableViewCell.swift in Sources */,
-				847BC9B91F5FF8D90011F939 /* HomeViewController.swift in Sources */,
+				847BC9B91F5FF8D90011F939 /* FindViewController.swift in Sources */,
 				84110D921F5E91D800C3E28D /* TicketTableViewCell.swift in Sources */,
 				C35519931FBDB15A00B21495 /* UIColor+CustomColors.swift in Sources */,
 				847BC9B51F5FE4B90011F939 /* PublicationTableViewController.swift in Sources */,
 				84823D3F1F5EEBE40039CA42 /* MobilePublicationViewController.swift in Sources */,
+				C32C1AEE1FD927AE00A32B77 /* AppDelegate+UI.swift in Sources */,
 				84110D941F5E93DE00C3E28D /* TicketTableViewController.swift in Sources */,
 				84823D451F5EF2DA0039CA42 /* AddPublicationViewController.swift in Sources */,
 				84110D721F5E8A7500C3E28D /* AppDelegate.swift in Sources */,
 				84823D411F5EEBF40039CA42 /* PinPublicationViewController.swift in Sources */,
 				C35519951FBDB7CE00B21495 /* AlertHelper.swift in Sources */,
 				84823D431F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift in Sources */,
-				C37BE0DE1FBF0AE200633A97 /* AddWantedTicketViewController.swift in Sources */,
+				C32C1AF01FD929DC00A32B77 /* Concert.swift in Sources */,
+				C37BE0DE1FBF0AE200633A97 /* AddFindViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.matchmore.ios.iticket;
 				PRODUCT_NAME = iTicket;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -504,7 +520,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.matchmore.ios.iticket;
 				PRODUCT_NAME = iTicket;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

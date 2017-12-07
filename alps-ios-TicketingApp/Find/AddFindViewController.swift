@@ -1,5 +1,5 @@
 //
-//  AddWantedTicketViewController.swift
+//  AddFindViewController.swift
 //  alps-ios-TicketingApp
 //
 //  Created by Maciej Burda on 17/11/2017.
@@ -11,7 +11,7 @@ import AlpsSDK
 import Alps
 import PKHUD
 
-class AddWantedTicketViewController: UIViewController {
+class AddFindViewController: UIViewController {
 
     @IBOutlet weak var concertTextField: UITextField!
     @IBOutlet weak var maxPriceTextField: UITextField!

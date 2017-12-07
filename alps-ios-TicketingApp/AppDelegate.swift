@@ -64,18 +64,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         NSLog("APNs registration failed: \(error)")
     }
-    
-    // MARK: - Appearance
-    
-    func setupAppearance() {
-        UIApplication.shared.statusBarStyle = .lightContent
-        (self.window?.rootViewController as? UITabBarController)?.selectedIndex = 1
-        
-        UINavigationBar.appearance().barTintColor = UIColor.myOrange
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor.white]
-        UINavigationBar.appearance().isTranslucent = false
-        
-        UITabBar.appearance().tintColor = UIColor.myOrange
-    }
 }

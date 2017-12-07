@@ -9,7 +9,7 @@
 import UIKit
 import AlpsSDK
 import Alps
-import Kingfisher
+import PKHUD
 
 class PublicationTableViewController: UITableViewController {
     
@@ -36,8 +36,26 @@ class PublicationTableViewController: UITableViewController {
         
         return cell
     }
-
-    @IBAction func unwindToSubscriptionList(sender: UIStoryboardSegue) { }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let publication = publications[indexPath.row]
+            PKHUD.sharedHUD.contentView = PKHUDProgressView()
+            PKHUD.sharedHUD.show()
+            MatchMore.publications.delete(item: publication, completion: { (error) in
+                if error == nil {
+                    PKHUD.sharedHUD.contentView = PKHUDSuccessView()
+                    PKHUD.sharedHUD.hide()
+                    self.publications.remove(at: indexPath.row)
+                    self.tableView.deleteRows(at: [indexPath], with: .fade)
+                } else {
+                    PKHUD.sharedHUD.contentView = PKHUDErrorView()
+                    PKHUD.sharedHUD.hide()
+                    self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
+                }
+            })
+        }
+    }
 
     // MARK: - AlpsSDK Functions
     

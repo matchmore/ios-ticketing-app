@@ -21,7 +21,7 @@
 		8484E2261F6143D80086C887 /* PublicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484E2251F6143D80086C887 /* PublicationTableViewCell.swift */; };
 		C30A209E1FBE134A00DD661D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30A209D1FBE134A00DD661D /* MapKit.framework */; };
 		C32C1AEE1FD927AE00A32B77 /* AppDelegate+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C1AED1FD927AE00A32B77 /* AppDelegate+UI.swift */; };
-		C32C1AF01FD929DC00A32B77 /* Concert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C1AEF1FD929DC00A32B77 /* Concert.swift */; };
+		C32C1AF01FD929DC00A32B77 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C1AEF1FD929DC00A32B77 /* Ticket.swift */; };
 		C35519931FBDB15A00B21495 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35519921FBDB15A00B21495 /* UIColor+CustomColors.swift */; };
 		C35519951FBDB7CE00B21495 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35519941FBDB7CE00B21495 /* AlertHelper.swift */; };
 		C37BE0D11FBEED7400633A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D01FBEED7400633A97 /* LaunchScreen.storyboard */; };
@@ -52,7 +52,7 @@
 		84F9216A1FB5DFDF004A2400 /* alps-ios-TicketingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "alps-ios-TicketingApp.entitlements"; sourceTree = "<group>"; };
 		C30A209D1FBE134A00DD661D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C32C1AED1FD927AE00A32B77 /* AppDelegate+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+UI.swift"; sourceTree = "<group>"; };
-		C32C1AEF1FD929DC00A32B77 /* Concert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert.swift; sourceTree = "<group>"; };
+		C32C1AEF1FD929DC00A32B77 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		C35519921FBDB15A00B21495 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 		C35519941FBDB7CE00B21495 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		C37BE0D01FBEED7400633A97 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 		C32C1AF11FD929F200A32B77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C32C1AEF1FD929DC00A32B77 /* Concert.swift */,
+				C32C1AEF1FD929DC00A32B77 /* Ticket.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +327,7 @@
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/TagListView/TagListView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -337,6 +338,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TagListView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -363,7 +365,7 @@
 				84823D411F5EEBF40039CA42 /* PinPublicationViewController.swift in Sources */,
 				C35519951FBDB7CE00B21495 /* AlertHelper.swift in Sources */,
 				84823D431F5EEBFF0039CA42 /* IBeaconPublicationViewController.swift in Sources */,
-				C32C1AF01FD929DC00A32B77 /* Concert.swift in Sources */,
+				C32C1AF01FD929DC00A32B77 /* Ticket.swift in Sources */,
 				C37BE0DE1FBF0AE200633A97 /* AddFindViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

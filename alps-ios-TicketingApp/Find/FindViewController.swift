@@ -16,6 +16,7 @@ class FindViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var subscriptions = [Subscription]()
+    
     override func viewWillAppear(_ animated: Bool) {
         getSubscriptions()
     }
@@ -49,7 +50,7 @@ class FindViewController: UIViewController, UITableViewDelegate, UITableViewData
                 } else {
                     PKHUD.sharedHUD.contentView = PKHUDErrorView()
                     PKHUD.sharedHUD.hide()
-                    self.show(AlertHelper.simpleError(title: "Couldn't remove the subscription."), sender: nil)
+                    self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
                 }
             })
         }

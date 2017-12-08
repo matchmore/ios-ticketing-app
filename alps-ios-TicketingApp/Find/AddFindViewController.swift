@@ -71,7 +71,7 @@ class AddFindViewController: UIViewController, TagListViewDelegate {
         let price = Int(maxPriceSlider.value)
         let tags = tagsView.tagViews.map { $0.title(for: .normal)! }
         
-        let ticket = Ticket(name: name, price: price, tags: tags, seller: nil)
+        var ticket = Ticket(name: name, price: price, tags: tags, seller: nil, subscriptionId: nil)
         
         let subscription = Subscription(
             topic: "ticketstosale", 
@@ -89,9 +89,10 @@ class AddFindViewController: UIViewController, TagListViewDelegate {
         PKHUD.sharedHUD.show()
         MatchMore.createSubscription(subscription: subscription) { (result) in
             switch result {
-            case .success(_):
+            case .success(let subscription):
                 PKHUD.sharedHUD.contentView = PKHUDSuccessView()
                 PKHUD.sharedHUD.hide()
+                ticket.subscriptionId = subscription.id
                 self.navigationController?.popToRootViewController(animated: true)
             case .failure(let error):
                 PKHUD.sharedHUD.contentView = PKHUDErrorView()

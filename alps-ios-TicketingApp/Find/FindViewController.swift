@@ -28,11 +28,9 @@ class FindViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "WantedCell"
+        let cellIdentifier = "FindCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         let sub = subscriptions[indexPath.row]
-        cell.textLabel?.text = sub.id
-        cell.detailTextLabel?.text = sub.selector
         return cell
     }
     

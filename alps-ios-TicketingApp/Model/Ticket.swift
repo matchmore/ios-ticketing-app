@@ -15,6 +15,8 @@ struct Ticket {
     
     var seller: Seller?
     
+    var subscriptionId: String?
+    
     var properties: [String: Any] {
         return [
             "name": name ?? "",

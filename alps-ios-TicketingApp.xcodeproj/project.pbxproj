@@ -29,6 +29,7 @@
 		C37BE0D91FBEFF7300633A97 /* Buy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D81FBEFF7300633A97 /* Buy.storyboard */; };
 		C37BE0DB1FBF01EF00633A97 /* Sell.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0DA1FBF01EF00633A97 /* Sell.storyboard */; };
 		C37BE0DE1FBF0AE200633A97 /* AddFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37BE0DD1FBF0AE200633A97 /* AddFindViewController.swift */; };
+		C38B8C491FD9751F00D20248 /* FindTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B8C481FD9751F00D20248 /* FindTableViewCell.swift */; };
 		D8181C06E54985535BAC315B /* Pods_alps_ios_TicketingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A4FC56526F3B83FF31A7BA /* Pods_alps_ios_TicketingApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		C37BE0D81FBEFF7300633A97 /* Buy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Buy.storyboard; sourceTree = "<group>"; };
 		C37BE0DA1FBF01EF00633A97 /* Sell.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sell.storyboard; sourceTree = "<group>"; };
 		C37BE0DD1FBF0AE200633A97 /* AddFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFindViewController.swift; sourceTree = "<group>"; };
+		C38B8C481FD9751F00D20248 /* FindTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTableViewCell.swift; sourceTree = "<group>"; };
 		E2754EB06BB0CC19BD0D100D /* Pods-alps-ios-TicketingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alps-ios-TicketingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 				C37BE0D31FBEFB8700633A97 /* Find.storyboard */,
 				847BC9B81F5FF8D90011F939 /* FindViewController.swift */,
 				C37BE0DD1FBF0AE200633A97 /* AddFindViewController.swift */,
+				C38B8C481FD9751F00D20248 /* FindTableViewCell.swift */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				C35519931FBDB15A00B21495 /* UIColor+CustomColors.swift in Sources */,
 				847BC9B51F5FE4B90011F939 /* PublicationTableViewController.swift in Sources */,
 				84823D3F1F5EEBE40039CA42 /* MobilePublicationViewController.swift in Sources */,
+				C38B8C491FD9751F00D20248 /* FindTableViewCell.swift in Sources */,
 				C32C1AEE1FD927AE00A32B77 /* AppDelegate+UI.swift in Sources */,
 				84110D941F5E93DE00C3E28D /* TicketTableViewController.swift in Sources */,
 				84823D451F5EF2DA0039CA42 /* AddPublicationViewController.swift in Sources */,

@@ -30,9 +30,9 @@ class PublicationTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of PublicationTableViewCell.")
         }
         let pub = publications[indexPath.row]
-        cell.concertLabel.text = pub.properties?["concert"]
-        cell.priceLabel.text = pub.properties?["price"]
-        cell.deviceTypeLabel.text = pub.properties?["deviceType"]
+        cell.concertLabel.text = pub.properties?["concert"] as? String
+        cell.priceLabel.text = String(describing: pub.properties?["price"] as? Int)
+        cell.deviceTypeLabel.text = pub.properties?["deviceType"] as? String
         
         return cell
     }

@@ -101,7 +101,7 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
         let pin = PinDevice(name: "pin device \(deviceNo)", location: location)
         PKHUD.sharedHUD.contentView = PKHUDProgressView()
         PKHUD.sharedHUD.show()
-        MatchMore.createPinDevice(device: pin) { (result) in
+        MatchMore.createPinDevice(pinDevice: pin) { (result) in
             switch result {
             case .success(let device):
                 var properties: [String: String] = [:]

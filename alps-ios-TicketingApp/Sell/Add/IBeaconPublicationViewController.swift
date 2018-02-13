@@ -37,11 +37,18 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        MatchMore.refreshKnownBeacons { beacons in
-            self.pickerData = beacons ?? []
-            self.picker.reloadAllComponents()
-            self.picker.isHidden = beacons?.isEmpty ?? true
-        }
+        self.picker.isHidden = true
+        MatchMore.knownBeacons.findAll(completion: { (result) in
+            switch result {
+            case .success(let beacons):
+                self.pickerData = beacons
+                    self.picker.reloadAllComponents()
+                self.picker.isHidden =  beacons.isEmpty
+            default:
+                break
+            }
+        })
+        
         if self.picker.isHidden == false {
             self.picker.selectRow(0, inComponent: 0, animated: true)
         }

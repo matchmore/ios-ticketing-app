@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MatchMore.worldId = "YOUR_WORLD_ID"
         
         // Registers to APNS (remember to have proper project setup)
-        PermissionsHelper.registerForPushNotifications()
+        UIApplication.shared.registerForRemoteNotifications()
         
         // Creates or loads cached main device
         MatchMore.startUsingMainDevice { result in
@@ -33,13 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case .success(_):
                 // Starts getting and sending device location
                 MatchMore.startUpdatingLocation()
-                
-                // Manual beacon ranging
-                MatchMore.startRanging(forUuid: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Beacon region estimote")
-                
                 // Polls matches every 5 seconds (other available options: APNS, WebSocket)
                 MatchMore.startPollingMatches()
-                
                 // Opens socket for main device matches delivery
                 MatchMore.startListeningForNewMatches()
             case .failure(let error):

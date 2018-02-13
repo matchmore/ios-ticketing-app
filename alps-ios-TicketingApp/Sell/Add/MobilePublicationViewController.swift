@@ -60,9 +60,9 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
             let duration = Double(durationTextField.text!),
             let image = imageTextField.text,
             let concert = concertTextField.text {
-            var properties: [String: String] = [:]
+            var properties: [String: Any] = [:]
             properties["concert"] = concert
-            properties["price"] = "\(price)"
+            properties["price"] = price
             properties["image"] = image
             properties["deviceType"] = "mobile"
             let publication = Publication(

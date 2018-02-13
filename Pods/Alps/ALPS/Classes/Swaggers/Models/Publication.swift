@@ -26,7 +26,7 @@ open class Publication: JSONEncodable {
     /** The duration of the publication in seconds. If set to &#39;-1&#39; the publication will live forever and if set to &#39;0&#39; it will be instant at the time of publication.  */
     public var duration: Double?
     /** The dictionary of key, value pairs. */
-    public var properties: [String:String]?
+    public var properties: [String:Any]?
 
     public init() {}
 

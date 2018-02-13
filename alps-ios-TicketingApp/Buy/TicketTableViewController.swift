@@ -44,9 +44,9 @@ class TicketTableViewController: UITableViewController, AlpsDelegate {
         let match = matches[indexPath.row]
         let properties = match.publication?.properties
 
-        cell.concertLabel.text = properties?["concert"]
-        cell.priceLabel.text = properties?["price"]
-        cell.deviceTypeLabel.text = properties?["deviceType"]
+        cell.concertLabel.text = properties?["concert"] as? String
+        cell.priceLabel.text = String(describing: properties?["price"] as? Int)
+        cell.deviceTypeLabel.text = properties?["deviceType"] as? String
         
         return cell
     }

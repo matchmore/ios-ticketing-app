@@ -8,9 +8,8 @@
 
 import UIKit
 import AlpsSDK
-import Alps
 
-class TicketTableViewController: UITableViewController, AlpsDelegate {
+class TicketTableViewController: UITableViewController, MatchDelegate {
     var matches = [Match]()
     var onMatch: OnMatchClosure? = nil
 
@@ -26,7 +25,7 @@ class TicketTableViewController: UITableViewController, AlpsDelegate {
         MatchMore.matchDelegates += self
         
         // Fill with cached data
-        self.matches = MatchMore.matches
+        self.matches = MatchMore.allMatches
         self.tabBarController?.tabBar.items?[0].badgeValue =  self.matches.count > 0 ? String(describing: matches.count) : nil
         self.tableView.reloadData()
     }
@@ -45,9 +44,29 @@ class TicketTableViewController: UITableViewController, AlpsDelegate {
         let properties = match.publication?.properties
 
         cell.concertLabel.text = properties?["concert"] as? String
-        cell.priceLabel.text = String(describing: properties?["price"] as? Int)
+        cell.priceLabel.text = "$\(String(describing: properties?["price"] as! Double))"
         cell.deviceTypeLabel.text = properties?["deviceType"] as? String
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let match = matches[indexPath.row]
+        let properties = match.publication?.properties
+        let ticketName = properties?["concert"] as! String
+        let phoneNumber = properties?["phone"] as! String
+        let alert = UIAlertController(title: "Contact Seller", message: "Do you want to call \(ticketName)'s seller?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Call", style: .default) { _ in
+            let cleanPhoneNumber = phoneNumber.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: "")
+            let urlString:String = "tel://\(cleanPhoneNumber)"
+            if let phoneCallURL = URL(string: urlString) {
+                if (UIApplication.shared.canOpenURL(phoneCallURL)) {
+                    UIApplication.shared.open(phoneCallURL, options: [:], completionHandler: nil)
+                }
+            }
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

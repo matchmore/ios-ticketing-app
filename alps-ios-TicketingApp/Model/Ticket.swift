@@ -26,7 +26,7 @@ struct Ticket {
     var selector: String {
         var selector = ""
         if let name = name, name != "" {
-            selector += "name = '\(name)'"
+            selector += "concert = '\(name)'"
         }
         if let price = price, price != 0 {
             if selector != "" {

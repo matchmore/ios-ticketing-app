@@ -8,9 +8,8 @@
 
 import UIKit
 import AlpsSDK
-import Alps
 
-class TicketTableViewController: UITableViewController, AlpsDelegate {
+class TicketTableViewController: UITableViewController, MatchDelegate {
     var matches = [Match]()
     var onMatch: OnMatchClosure? = nil
 
@@ -26,7 +25,7 @@ class TicketTableViewController: UITableViewController, AlpsDelegate {
         MatchMore.matchDelegates += self
         
         // Fill with cached data
-        self.matches = MatchMore.matches
+        self.matches = MatchMore.allMatches
         self.tabBarController?.tabBar.items?[0].badgeValue =  self.matches.count > 0 ? String(describing: matches.count) : nil
         self.tableView.reloadData()
     }
@@ -44,9 +43,9 @@ class TicketTableViewController: UITableViewController, AlpsDelegate {
         let match = matches[indexPath.row]
         let properties = match.publication?.properties
 
-        cell.concertLabel.text = properties?["concert"]
-        cell.priceLabel.text = properties?["price"]
-        cell.deviceTypeLabel.text = properties?["deviceType"]
+        cell.concertLabel.text = properties?["concert"] as? String
+        cell.priceLabel.text = String(describing: properties?["price"] as? Double)
+        cell.deviceTypeLabel.text = properties?["deviceType"] as? String
         
         return cell
     }

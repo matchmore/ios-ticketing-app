@@ -8,7 +8,6 @@
 
 import UIKit
 import AlpsSDK
-import Alps
 import PKHUD
 import SkyFloatingLabelTextField
 import TagListView
@@ -69,9 +68,9 @@ class AddFindViewController: UIViewController, TagListViewDelegate {
         let duration = Double(Int(durationSlider.value * 24 * 60 * 60))
         let name = eventNameTextField.text ?? ""
         let price = Int(maxPriceSlider.value)
-        let tags = tagsView.tagViews.map { $0.title(for: .normal)! }
+        let email = "maciej.burda@me.com"
         
-        var ticket = Ticket(name: name, price: price, tags: tags, seller: nil, subscriptionId: nil)
+        var ticket = Ticket(name: name, price: price, sellerEmail: email, subscriptionId: nil)
         
         let subscription = Subscription(
             topic: "ticketstosale", 
@@ -87,18 +86,17 @@ class AddFindViewController: UIViewController, TagListViewDelegate {
         }
         PKHUD.sharedHUD.contentView = PKHUDProgressView()
         PKHUD.sharedHUD.show()
-        MatchMore.createSubscription(subscription: subscription) { (result) in
+        MatchMore.createSubscriptionForMainDevice(subscription: subscription) { (result) in
             switch result {
             case .success(let subscription):
                 PKHUD.sharedHUD.contentView = PKHUDSuccessView()
-                PKHUD.sharedHUD.hide()
                 ticket.subscriptionId = subscription.id
                 self.navigationController?.popToRootViewController(animated: true)
             case .failure(let error):
                 PKHUD.sharedHUD.contentView = PKHUDErrorView()
-                PKHUD.sharedHUD.hide()
                 self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
             }
+            PKHUD.sharedHUD.hide()
         }
     }
 }

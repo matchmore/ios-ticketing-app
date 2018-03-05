@@ -8,7 +8,6 @@
 
 import UIKit
 import AlpsSDK
-import Alps
 import PKHUD
 
 class PublicationTableViewController: UITableViewController {
@@ -30,9 +29,9 @@ class PublicationTableViewController: UITableViewController {
             fatalError("The dequeued cell is not an instance of PublicationTableViewCell.")
         }
         let pub = publications[indexPath.row]
-        cell.concertLabel.text = pub.properties?["concert"]
-        cell.priceLabel.text = pub.properties?["price"]
-        cell.deviceTypeLabel.text = pub.properties?["deviceType"]
+        cell.concertLabel.text = String(describing: pub.properties?["concert"] as! String)
+        cell.priceLabel.text = "$\(String(describing: pub.properties?["price"] as! Double))"
+        cell.deviceTypeLabel.text = pub.properties?["deviceType"] as? String
         
         return cell
     }
@@ -60,14 +59,9 @@ class PublicationTableViewController: UITableViewController {
     // MARK: - AlpsSDK Functions
     
     private func getPublications() {
-        MatchMore.publications.findAll(completion: { (result) in
-            switch result {
-            case .success(let publications):
-                self.publications = publications
-                self.tableView.reloadData()
-            case .failure(let error):
-                self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
-            }
+        MatchMore.publications.findAll(completion: { publications in
+            self.publications = publications
+            self.tableView.reloadData()
         })
     }
 }

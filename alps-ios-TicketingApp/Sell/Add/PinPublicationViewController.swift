@@ -9,7 +9,6 @@
 import UIKit
 import MapKit
 import AlpsSDK
-import Alps
 import PKHUD
 
 class PinPublicationViewController: UIViewController, UITextFieldDelegate {
@@ -104,25 +103,23 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
         MatchMore.createPinDevice(pinDevice: pin) { (result) in
             switch result {
             case .success(let device):
-                var properties: [String: String] = [:]
+                var properties: [String: Any] = [:]
                 properties["concert"] = concert
-                properties["price"] = "\(price)"
+                properties["price"] = price
                 properties["image"] = image
                 properties["deviceType"] = "pin"
-                if let deviceId = device.id {
-                    let pub = Publication(deviceId: deviceId, topic: "ticketstosale", range: range, duration: duration, properties: properties)
-                    MatchMore.createPublication(publication: pub, for: deviceId) { (result) in
-                        switch result {
-                        case .success(_):
-                            PKHUD.sharedHUD.contentView = PKHUDSuccessView()
-                            PKHUD.sharedHUD.hide()
-                            self.deviceNo += 1
-                            completion()
-                        case .failure(let error):
-                            PKHUD.sharedHUD.contentView = PKHUDErrorView()
-                            PKHUD.sharedHUD.hide()
-                            self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
-                        }
+                let pub = Publication(topic: "ticketstosale", range: range, duration: duration, properties: properties)
+                MatchMore.createPublication(publication: pub, forDevice: device) { (result) in
+                    switch result {
+                    case .success(_):
+                        PKHUD.sharedHUD.contentView = PKHUDSuccessView()
+                        PKHUD.sharedHUD.hide()
+                        self.deviceNo += 1
+                        completion()
+                    case .failure(let error):
+                        PKHUD.sharedHUD.contentView = PKHUDErrorView()
+                        PKHUD.sharedHUD.hide()
+                        self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
                     }
                 }
             case .failure(let error):

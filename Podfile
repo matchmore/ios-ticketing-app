@@ -12,7 +12,6 @@ pod 'Kingfisher', '~> 4.0'
 pod 'TagListView', '~> 1.3.0'
 
 pod 'AlpsSDK', :path => '../alps-ios-sdk'
-pod 'Alps', '~> 0.5'
 
 post_install do |installer|
     # Your list of targets here.

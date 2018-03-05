@@ -8,7 +8,6 @@
 
 import UIKit
 import AlpsSDK
-import Alps
 import PKHUD
 
 class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -37,8 +36,7 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        MatchMore.knownBeacons.findAll(completion: { (result) in
-            let beacons = result.responseObject ?? []
+        MatchMore.knownBeacons.findAll(completion: { beacons in
             self.pickerData = beacons
             self.picker.reloadAllComponents()
             self.picker.isHidden = beacons.isEmpty
@@ -87,8 +85,8 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
             let image = imageTextField.text,
             let concert = concertTextField.text,
             let duration = Double(durationTextField.text!),
-            let deviceId = self.selectedValue?.deviceId {
-            createPublication(concert: concert, price: price, image: image, duration: duration, deviceId: deviceId, completion: {
+            let beacon = self.selectedValue {
+            createPublication(concert: concert, price: price, image: image, duration: duration, beacon: beacon, completion: {
                 self.navigationController?.popToRootViewController(animated: true)
                 self.publishButton.isEnabled = true
             })
@@ -98,18 +96,18 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         }
     }
 
-    func createPublication(concert: String, price: Double, image: String, duration: Double, deviceId : String, completion: @escaping () -> Void) {
+    func createPublication(concert: String, price: Double, image: String, duration: Double, beacon: IBeaconTriple, completion: @escaping () -> Void) {
             NSLog("IBeacon DEVICE Created")
             // XXX: the property syntax is tricky at the moment: mood is a variable and 'happy' is a string value
-            var properties: [String: String] = [:]
+            var properties: [String: Any] = [:]
             properties["concert"] = concert
-            properties["price"] = "\(price)"
+            properties["price"] = price
             properties["image"] = image
             properties["deviceType"] = "iBeacon"
         let pub = Publication(topic: "ticketstosale", range: 0, duration: duration, properties: properties)
         PKHUD.sharedHUD.contentView = PKHUDProgressView()
         PKHUD.sharedHUD.show()
-        MatchMore.createPublication(publication: pub, for: deviceId) { (result) in
+        MatchMore.createPublication(publication: pub, forBeacon: beacon) { (result) in
             switch result {
             case .success(_):
                 PKHUD.sharedHUD.contentView = PKHUDSuccessView()

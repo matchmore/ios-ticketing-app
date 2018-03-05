@@ -11,9 +11,7 @@ import Foundation
 struct Ticket {
     let name: String?
     let price: Int?
-    let tags: [String]?
-    
-    var seller: Seller?
+    var sellerEmail: String?
     
     var subscriptionId: String?
     
@@ -21,18 +19,14 @@ struct Ticket {
         return [
             "name": name ?? "",
             "price": price ?? "",
-            "tags": "\(String(describing: tags))" ,
-            "seller": [
-                "email": seller?.email ?? "",
-                "phone": seller?.phone ?? ""
-            ]
+            "sellerEmail": sellerEmail ?? ""
         ]
     }
     
     var selector: String {
         var selector = ""
         if let name = name, name != "" {
-            selector += "name = \(name)"
+            selector += "name = '\(name)'"
         }
         if let price = price, price != 0 {
             if selector != "" {
@@ -40,21 +34,6 @@ struct Ticket {
             }
             selector += "price <= \(price)"
         }
-        if let tags = tags, !tags.isEmpty {
-            if selector != "" {
-                selector += " and "
-            }
-            selector += "tags in "
-            var tagsString = "\(tags)"
-            tagsString = tagsString.replacingOccurrences(of: "[", with: "(")
-            tagsString = tagsString.replacingOccurrences(of: "]", with: ")")
-            selector += tagsString
-        }
         return selector
     }
-}
-
-struct Seller {
-    let email: String?
-    let phone: String?
 }

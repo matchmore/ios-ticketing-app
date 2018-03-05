@@ -139,8 +139,8 @@
 			children = (
 				C37BE0D31FBEFB8700633A97 /* Find.storyboard */,
 				847BC9B81F5FF8D90011F939 /* FindViewController.swift */,
-				C37BE0DD1FBF0AE200633A97 /* AddFindViewController.swift */,
 				C38B8C481FD9751F00D20248 /* FindTableViewCell.swift */,
+				C37BE0DD1FBF0AE200633A97 /* AddFindViewController.swift */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -327,7 +327,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Alps/Alps.framework",
 				"${BUILT_PRODUCTS_DIR}/AlpsSDK/AlpsSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
@@ -338,7 +337,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alps.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlpsSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",

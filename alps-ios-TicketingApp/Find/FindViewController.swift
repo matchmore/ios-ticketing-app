@@ -8,7 +8,6 @@
 
 import UIKit
 import AlpsSDK
-import Alps
 import PKHUD
 
 class FindViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -29,7 +28,7 @@ class FindViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "FindCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FindTableViewCell else { return UITableViewCell() }
         let sub = subscriptions[indexPath.row]
         return cell
     }
@@ -57,14 +56,9 @@ class FindViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - AlpsSDK Functions
     
     private func getSubscriptions() {
-        MatchMore.subscriptions.findAll(completion: { (result) in
-            switch result {
-            case .success(let subscriptions):
-                self.subscriptions = subscriptions
-                self.tableView.reloadData()
-            case .failure(let error):
-                self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
-            }
+        MatchMore.subscriptions.findAll(completion: { subscriptions in
+            self.subscriptions = subscriptions
+            self.tableView.reloadData()
         })
     }
 }

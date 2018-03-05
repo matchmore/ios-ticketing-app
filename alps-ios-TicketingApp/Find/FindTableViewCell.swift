@@ -15,7 +15,6 @@ class FindTableViewCell: UITableViewCell {
     @IBOutlet weak var radiusLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var tagsView: TagListView!
 
 
     override func awakeFromNib() {

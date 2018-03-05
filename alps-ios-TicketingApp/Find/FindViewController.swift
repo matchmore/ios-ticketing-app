@@ -30,6 +30,15 @@ class FindViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cellIdentifier = "FindCell"
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FindTableViewCell else { return UITableViewCell() }
         let sub = subscriptions[indexPath.row]
+        
+        cell.nameLabel.text = sub.selector?.slice(from: "'", to: "'")
+        cell.radiusLabel.text = "\(String(sub.range!/1000)) km"
+        cell.priceLabel.text = "$\(sub.selector?.slice(from: "<= ") ?? "")"
+        
+        
+        let secondsFromCreation = (Date().timeIntervalSince1970 - Double(sub.createdAt!/1000))
+        let timeLeft: Double = sub.duration! - secondsFromCreation
+        cell.durationLabel.text = secondsToHoursMinutes(timeLeft)
         return cell
     }
     
@@ -60,5 +69,32 @@ class FindViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.subscriptions = subscriptions
             self.tableView.reloadData()
         })
+    }
+    
+    // MARK: - Helper
+    
+    func secondsToHoursMinutes(_ seconds: Double?) -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.day, .hour, .minute]
+        formatter.unitsStyle = .full
+        
+        let formattedString = formatter.string(from: TimeInterval(seconds!))!
+        return formattedString.replacingOccurrences(of: ",", with: "")
+    }
+}
+
+extension String {
+    func slice(from: String, to: String) -> String? {
+        return (range(of: from)?.upperBound).flatMap { substringFrom in
+            (range(of: to, range: substringFrom..<endIndex)?.lowerBound).map { substringTo in
+                String(self[substringFrom..<substringTo])
+            }
+        }
+    }
+    
+    func slice(from: String) -> String? {
+        return (range(of: from)?.upperBound).flatMap { substringFrom in
+            String(self[substringFrom...])
+        }
     }
 }

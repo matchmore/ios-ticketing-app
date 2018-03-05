@@ -44,7 +44,7 @@ class TicketTableViewController: UITableViewController, MatchDelegate {
         let properties = match.publication?.properties
 
         cell.concertLabel.text = properties?["concert"] as? String
-        cell.priceLabel.text = String(describing: properties?["price"] as? Double)
+        cell.priceLabel.text = "$\(String(describing: properties?["price"] as! Double))"
         cell.deviceTypeLabel.text = properties?["deviceType"] as? String
         
         return cell

@@ -18,6 +18,7 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var imageTextField: UITextField!
     @IBOutlet weak var rangeTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var publishButton: UIButton!
     
@@ -58,11 +59,13 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
             let range = Double(rangeTextField.text!),
             let duration = Double(durationTextField.text!),
             let image = imageTextField.text,
-            let concert = concertTextField.text {
+            let concert = concertTextField.text,
+            let phoneNumber = phoneTextField.text {
             var properties: [String: Any] = [:]
             properties["concert"] = concert
             properties["price"] = price
             properties["image"] = image
+            properties["phone"] = phoneNumber
             properties["deviceType"] = "mobile"
             let publication = Publication(
                 topic: "ticketstosale",

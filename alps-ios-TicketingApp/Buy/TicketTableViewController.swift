@@ -49,4 +49,24 @@ class TicketTableViewController: UITableViewController, MatchDelegate {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let match = matches[indexPath.row]
+        let properties = match.publication?.properties
+        let ticketName = properties?["concert"] as! String
+        let phoneNumber = properties?["phone"] as! String
+        let alert = UIAlertController(title: "Contact Seller", message: "Do you want to call \(ticketName)'s seller?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Call", style: .default) { _ in
+            let cleanPhoneNumber = phoneNumber.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: "")
+            let urlString:String = "tel://\(cleanPhoneNumber)"
+            if let phoneCallURL = URL(string: urlString) {
+                if (UIApplication.shared.canOpenURL(phoneCallURL)) {
+                    UIApplication.shared.open(phoneCallURL, options: [:], completionHandler: nil)
+                }
+            }
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }

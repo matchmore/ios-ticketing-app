@@ -15,6 +15,7 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var imageTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var publishButton: UIButton!
     
@@ -85,8 +86,9 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
             let image = imageTextField.text,
             let concert = concertTextField.text,
             let duration = Double(durationTextField.text!),
-            let beacon = self.selectedValue {
-            createPublication(concert: concert, price: price, image: image, duration: duration, beacon: beacon, completion: {
+            let beacon = self.selectedValue,
+            let phoneNumber = phoneTextField.text {
+            createPublication(concert: concert, price: price, image: image, duration: duration, beacon: beacon, phoneNumber: phoneNumber, completion: {
                 self.navigationController?.popToRootViewController(animated: true)
                 self.publishButton.isEnabled = true
             })
@@ -96,13 +98,14 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         }
     }
 
-    func createPublication(concert: String, price: Double, image: String, duration: Double, beacon: IBeaconTriple, completion: @escaping () -> Void) {
+    func createPublication(concert: String, price: Double, image: String, duration: Double, beacon: IBeaconTriple, phoneNumber: String, completion: @escaping () -> Void) {
             NSLog("IBeacon DEVICE Created")
             // XXX: the property syntax is tricky at the moment: mood is a variable and 'happy' is a string value
             var properties: [String: Any] = [:]
             properties["concert"] = concert
             properties["price"] = price
             properties["image"] = image
+            properties["phone"] = phoneNumber
             properties["deviceType"] = "iBeacon"
         let pub = Publication(topic: "ticketstosale", range: 0, duration: duration, properties: properties)
         PKHUD.sharedHUD.contentView = PKHUDProgressView()

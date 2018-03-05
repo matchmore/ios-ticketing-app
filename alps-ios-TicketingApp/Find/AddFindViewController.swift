@@ -10,9 +10,8 @@ import UIKit
 import AlpsSDK
 import PKHUD
 import SkyFloatingLabelTextField
-import TagListView
 
-class AddFindViewController: UIViewController, TagListViewDelegate {
+class AddFindViewController: UIViewController {
     
     @IBOutlet weak var eventNameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var radiusLabel: UILabel!
@@ -21,7 +20,6 @@ class AddFindViewController: UIViewController, TagListViewDelegate {
     @IBOutlet weak var radiusSlider: UISlider!
     @IBOutlet weak var maxPriceSlider: UISlider!
     @IBOutlet weak var durationSlider: UISlider!
-    @IBOutlet weak var tagsView: TagListView!
     
     // MARK: - Action
     
@@ -35,30 +33,6 @@ class AddFindViewController: UIViewController, TagListViewDelegate {
     
     @IBAction func durationValueChanged(_ sender: UISlider) {
         durationLabel.text = "DURATION: \(Int(sender.value)) days"
-    }
-    
-    var textField: UITextField?
-    @IBAction func addTag() {
-        let alert = UIAlertController(title: "Add Tag", message: nil, preferredStyle: .alert)
-        alert.addTextField { textField in
-            self.textField = textField
-        }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(
-            UIAlertAction(title: "Ok", style: .default, handler: { _ in
-                if let tagName = self.textField?.text, tagName != "" {
-                    self.tagsView.addTag(tagName)
-                }
-                self.textField = nil
-            })
-        )
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    // MARK: - Tag View Delegate
-    
-    func tagRemoveButtonPressed(_ title: String, tagView: TagView, sender: TagListView) {
-        sender.removeTagView(tagView)
     }
     
     // MARK: - Alps SDK

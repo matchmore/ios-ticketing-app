@@ -9,7 +9,6 @@
 import UIKit
 
 import AlpsSDK
-import Alps
 import UserNotifications
 
 @UIApplicationMain
@@ -22,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupAppearance()
         
         // Basic setup
-        MatchMore.apiKey = "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiZDY1YjIwYTAtMjAwZS00MzE4LWEyZjAtNTdkZGU1ZDE0YTJiIiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MTExODI3NzMsImlhdCI6MTUxMTE4Mjc3MywianRpIjoiMSJ9.J7PpSnL80VG5G1QmJlzEpTLBgr0cKu0EwZaQnha07YZU135NlEI6yldUSR95md4o8liqeHyQXUqzgjWFgt-VQg"
-        MatchMore.worldId = "d65b20a0-200e-4318-a2f0-57dde5d14a2"
+        let config = MatchMoreConfig(apiKey: "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiZDY1YjIwYTAtMjAwZS00MzE4LWEyZjAtNTdkZGU1ZDE0YTJiIiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MTExODI3NzMsImlhdCI6MTUxMTE4Mjc3MywianRpIjoiMSJ9.J7PpSnL80VG5G1QmJlzEpTLBgr0cKu0EwZaQnha07YZU135NlEI6yldUSR95md4o8liqeHyQXUqzgjWFgt-VQg")
+        MatchMore.configure(config)
         
         // Registers to APNS (remember to have proper project setup)
         UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { (_, _) in
@@ -44,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 // Opens socket for main device matches delivery
                 MatchMore.startListeningForNewMatches()
                 // Starts polling matches every 5 seconds
-                MatchMore.startPollingMatches()
+                MatchMore.startPollingMatches(pollingTimeInterval: 5)
             case .failure(let error):
                 self.window?.rootViewController?.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
             }
@@ -63,19 +62,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         NSLog("APNs registration failed: \(error)")
-    }
-    
-    // MARK: - Appearance
-    
-    func setupAppearance() {
-        UIApplication.shared.statusBarStyle = .lightContent
-        (self.window?.rootViewController as? UITabBarController)?.selectedIndex = 1
-        
-        UINavigationBar.appearance().barTintColor = UIColor.myOrange
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor.white]
-        UINavigationBar.appearance().isTranslucent = false
-        
-        UITabBar.appearance().tintColor = UIColor.myOrange
     }
 }

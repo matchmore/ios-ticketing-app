@@ -10,12 +10,11 @@ pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'PKHUD', '~> 5.0'
 pod 'Kingfisher', '~> 4.0'
 
-pod 'AlpsSDK', :path => '../alps-ios-sdk'
-pod 'Alps', '~> 0.5'
+pod 'AlpsSDK', '~> 0.6'
 
 post_install do |installer|
     # Your list of targets here.
-    myTargets = ['SkyFloatingLabelTextField', 'SwiftWebSocket']
+    myTargets = ['SkyFloatingLabelTextField']
     
     installer.pods_project.targets.each do |target|
         if myTargets.include? target.name

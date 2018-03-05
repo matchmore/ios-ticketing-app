@@ -9,7 +9,6 @@
 import UIKit
 import MapKit
 import AlpsSDK
-import Alps
 import PKHUD
 
 class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
@@ -19,6 +18,7 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var imageTextField: UITextField!
     @IBOutlet weak var rangeTextField: UITextField!
     @IBOutlet weak var durationTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var publishButton: UIButton!
     
@@ -59,11 +59,13 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
             let range = Double(rangeTextField.text!),
             let duration = Double(durationTextField.text!),
             let image = imageTextField.text,
-            let concert = concertTextField.text {
-            var properties: [String: String] = [:]
+            let concert = concertTextField.text,
+            let phoneNumber = phoneTextField.text {
+            var properties: [String: Any] = [:]
             properties["concert"] = concert
-            properties["price"] = "\(price)"
+            properties["price"] = price
             properties["image"] = image
+            properties["phone"] = phoneNumber
             properties["deviceType"] = "mobile"
             let publication = Publication(
                 topic: "ticketstosale",
@@ -73,7 +75,7 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
             )
             PKHUD.sharedHUD.contentView = PKHUDProgressView()
             PKHUD.sharedHUD.show()
-            MatchMore.createPublication(publication: publication) { (result) in
+            MatchMore.createPublicationForMainDevice(publication: publication) { (result) in
                 switch result {
                 case .success(_):
                     PKHUD.sharedHUD.contentView = PKHUDSuccessView()

@@ -1,35 +1,27 @@
 PODS:
-  - Alamofire (4.5.1)
-  - Alps (0.5.1):
+  - Alamofire (4.7.0)
+  - AlpsSDK (0.6.0):
     - Alamofire (~> 4.0)
-  - AlpsSDK (0.5.1):
-    - Alps (~> 0.5)
     - Starscream (~> 3.0)
-  - Kingfisher (4.4.0)
+  - Kingfisher (4.6.3)
   - PKHUD (5.0.0)
   - SkyFloatingLabelTextField (3.4.0)
-  - Starscream (3.0.2)
+  - Starscream (3.0.4)
 
 DEPENDENCIES:
-  - Alps (~> 0.5)
-  - AlpsSDK (from `../alps-ios-sdk`)
+  - AlpsSDK (~> 0.6)
   - Kingfisher (~> 4.0)
   - PKHUD (~> 5.0)
   - SkyFloatingLabelTextField (~> 3.0)
 
-EXTERNAL SOURCES:
-  AlpsSDK:
-    :path: ../alps-ios-sdk
-
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Alps: ff944227436c06b0826bd30eca7eb10394c7a6e2
-  AlpsSDK: 3ff7c4cc19387a7110dea6b50749f2a06c6e0a1e
-  Kingfisher: 62a43e03047a1ac5159d0be3ac62673ef4b99cc3
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  AlpsSDK: 89fc7d35777e8bc230e6cd604cdaeefb3bd915b7
+  Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
-  Starscream: b512c62f6706421221b5ceb2ba01a9f58aca5bea
+  Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
 
-PODFILE CHECKSUM: a86068fa6df338158ebd7ec077862b03d3307f92
+PODFILE CHECKSUM: 1323a69e8ca125025928fc3331c9bdd383503b05
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

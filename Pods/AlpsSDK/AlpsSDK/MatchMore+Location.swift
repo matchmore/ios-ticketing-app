@@ -3,35 +3,31 @@
 //  AlpsSDK
 //
 //  Created by Maciej Burda on 15/11/2017.
-//  Copyright © 2017 Alps. All rights reserved.
+//  Copyright © 2018 Matchmore SA. All rights reserved.
 //
 
 import Foundation
-import Alps
 
 public extension MatchMore {
+    /// Last location gathered by SDK.
+    public static var lastLocation: Location? {
+        return instance.locationUpdateManager.lastLocation
+    }
     
     /// Starts location updating and sending to MatchMore's cloud.
     public class func startUpdatingLocation() {
-        manager.contextManager.locationManager.startUpdatingLocation()
+        instance.contextManager.locationManager?.startUpdatingLocation()
     }
     
     /// Stops location updating and sending to MatchMore's cloud.
     public class func stopUpdatingLocation() {
-        manager.contextManager.locationManager.stopUpdatingLocation()
-    }
-    
-    /// Allows manual registration of iBecaon devices.
-    ///
-    /// - Parameters:
-    ///   - forUuid: uuid of a iBeacon device.
-    ///   - identifier: identifier of a iBeacon device.
-    public class func manualyStartRangingBeacon(forUuid: UUID, identifier: String) {
-        manager.contextManager.startRanging(forUuid: forUuid, identifier: identifier)
+        instance.contextManager.locationManager?.stopUpdatingLocation()
     }
     
     /// Forces refreshing known iBecaon devices from MatchMore cloud.
     public class func refreshKnownBeacons() {
-        manager.contextManager.beaconTriples.updateBeaconTriplets()
+        instance.contextManager.beaconTriples.updateBeaconTriplets {
+            instance.contextManager.startRanging()
+        }
     }
 }

@@ -3,19 +3,16 @@
 //  Alps
 //
 //  Created by Rafal Kowalski on 28/02/2017
-//  Copyright © 2017 Alps. All rights reserved.
+//  Copyright © 2018 Matchmore SA. All rights reserved.
 //
 
-import Alps
-import Foundation
-import SwiftWebSocket
+import Starscream
 
 protocol MatchMonitorDelegate: class {
     func didFind(matches: [Match], for device: Device)
 }
 
-public class MatchMonitor: RemoteNotificationManagerDelegate {
-    
+public class MatchMonitor {
     private(set) weak var delegate: MatchMonitorDelegate?
     private(set) var monitoredDevices = Set<Device>()
     private(set) var deliveredMatches = Set<Match>()
@@ -39,9 +36,9 @@ public class MatchMonitor: RemoteNotificationManagerDelegate {
     
     // MARK: - Polling
     
-    func startPollingMatches() {
+    func startPollingMatches(pollingTimeInterval: TimeInterval) {
         if timer != nil { return }
-        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(getMatches), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: pollingTimeInterval, target: self, selector: #selector(getMatches), userInfo: nil, repeats: true)
     }
     
     func stopPollingMatches() {
@@ -51,27 +48,34 @@ public class MatchMonitor: RemoteNotificationManagerDelegate {
     
     // MARK: - Socket
     
+    // TODO: start new socket after adding new device ?
     func openSocketForMatches() {
         if socket != nil { return }
         guard let deviceId = monitoredDevices.first?.id else { return }
-        
-        var request = URLRequest(url: URL(string: "ws://\(MatchMore.baseUrl)/pusher/v5/ws/\(deviceId)")!)
-        request.timeoutInterval = -1
-        request.setValue("api-key, \(MatchMore.worldId)", forHTTPHeaderField: "Sec-WebSocket-Protocol")
-        socket = WebSocket(request: request)
-        socket?.event.close = { _, _, _ in
-            self.socket?.open()
-        }
-        socket?.event.message = { text in
-            if let messeage = text as? String, messeage != "" { // empty string just keeps connection alive
+        let worldId = MatchMore.config.apiKey.getWorldIdFromToken()
+        var url = MatchMore.config.serverUrl
+        url = url.replacingOccurrences(of: "https://", with: "")
+        url = url.replacingOccurrences(of: "http://", with: "")
+        url = url.replacingOccurrences(of: "/v5", with: "")
+        let request = URLRequest(url: URL(string: "ws://\(url)/pusher/v5/ws/\(deviceId)")!)
+        socket = WebSocket(request: request, protocols: ["api-key", worldId])
+        socket?.disableSSLCertValidation = true
+        socket?.onText = { text in
+            if text != "ping" && text != "" && text != "pong" { // empty string or "ping" just keeps connection alive
                 self.getMatches()
             }
         }
-        socket?.open()
+        socket?.onDisconnect = { error in
+            self.socket?.connect()
+        }
+        socket?.onPong = { _ in
+            self.socket?.write(ping: "ping".data(using: .utf8)!)
+        }
+        socket?.connect()
     }
     
     func closeSocketForMatches() {
-        socket?.close()
+        socket?.disconnect()
         socket = nil
     }
     
@@ -97,7 +101,7 @@ public class MatchMonitor: RemoteNotificationManagerDelegate {
     
     // MARK: - Remote Notification Manager Delegate
     
-    func didReceiveMatchUpdateForDeviceId(deviceId: String) {
+    func refreshMatchesFor(deviceId: String) {
         getMatches()
     }
 }

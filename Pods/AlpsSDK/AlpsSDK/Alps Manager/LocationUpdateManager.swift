@@ -3,11 +3,8 @@
 //  AlpsSDK
 //
 //  Created by Maciej Burda on 27/10/2017.
-//  Copyright © 2017 Alps. All rights reserved.
+//  Copyright © 2018 Matchmore SA. All rights reserved.
 //
-
-import Foundation
-import Alps
 
 /// filters location data update
 final public class LocationUpdateManager {
@@ -15,8 +12,8 @@ final public class LocationUpdateManager {
     
     func tryToSend(location: Location, for deviceId: String) {
         if location == lastLocation { return }
-        LocationAPI.createLocation(deviceId: deviceId, location: location, completion: { (_, error) in
-            if error == nil { self.lastLocation = location }
+        LocationAPI.createLocation(deviceId: deviceId, location: location, completion: { _, _ in
+            self.lastLocation = location
         })
     }
 }

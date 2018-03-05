@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TagListView
 
 class FindTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!

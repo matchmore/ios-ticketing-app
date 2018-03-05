@@ -10,7 +10,7 @@ pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'PKHUD', '~> 5.0'
 pod 'Kingfisher', '~> 4.0'
 
-pod 'AlpsSDK', :path => '../alps-ios-sdk'
+pod 'AlpsSDK', '~> 0.6'
 
 post_install do |installer|
     # Your list of targets here.

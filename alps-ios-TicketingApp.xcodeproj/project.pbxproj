@@ -24,6 +24,8 @@
 		C32C1AF01FD929DC00A32B77 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C1AEF1FD929DC00A32B77 /* Ticket.swift */; };
 		C35519931FBDB15A00B21495 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35519921FBDB15A00B21495 /* UIColor+CustomColors.swift */; };
 		C35519951FBDB7CE00B21495 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35519941FBDB7CE00B21495 /* AlertHelper.swift */; };
+		C364356C20500AC60031A434 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C364356B20500AC60031A434 /* README.md */; };
+		C364356E20500ACD0031A434 /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = C364356D20500ACD0031A434 /* LICENCE */; };
 		C37BE0D11FBEED7400633A97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D01FBEED7400633A97 /* LaunchScreen.storyboard */; };
 		C37BE0D41FBEFB8700633A97 /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D31FBEFB8700633A97 /* Find.storyboard */; };
 		C37BE0D91FBEFF7300633A97 /* Buy.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37BE0D81FBEFF7300633A97 /* Buy.storyboard */; };
@@ -57,6 +59,8 @@
 		C32C1AEF1FD929DC00A32B77 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		C35519921FBDB15A00B21495 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CustomColors.swift"; sourceTree = "<group>"; };
 		C35519941FBDB7CE00B21495 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		C364356B20500AC60031A434 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C364356D20500ACD0031A434 /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		C37BE0D01FBEED7400633A97 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C37BE0D31FBEFB8700633A97 /* Find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
 		C37BE0D81FBEFF7300633A97 /* Buy.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Buy.storyboard; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 		84110D651F5E8A7500C3E28D = {
 			isa = PBXGroup;
 			children = (
+				C364356B20500AC60031A434 /* README.md */,
+				C364356D20500ACD0031A434 /* LICENCE */,
 				84110D701F5E8A7500C3E28D /* alps-ios-TicketingApp */,
 				84110D6F1F5E8A7500C3E28D /* Products */,
 				557DF38F63E43603AD5C5717 /* Frameworks */,
@@ -276,7 +282,9 @@
 			files = (
 				C37BE0D11FBEED7400633A97 /* LaunchScreen.storyboard in Resources */,
 				84110D791F5E8A7500C3E28D /* Assets.xcassets in Resources */,
+				C364356E20500ACD0031A434 /* LICENCE in Resources */,
 				C37BE0DB1FBF01EF00633A97 /* Sell.storyboard in Resources */,
+				C364356C20500AC60031A434 /* README.md in Resources */,
 				844410E91F602F30002AC090 /* Main.storyboard in Resources */,
 				C37BE0D41FBEFB8700633A97 /* Find.storyboard in Resources */,
 				C37BE0D91FBEFF7300633A97 /* Buy.storyboard in Resources */,

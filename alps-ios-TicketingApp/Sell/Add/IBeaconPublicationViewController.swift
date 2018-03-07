@@ -3,7 +3,7 @@
 //  alps-ios-TicketingApp
 //
 //  Created by Wen on 05.09.17.
-//  Copyright © 2017 WhenWens. All rights reserved.
+//  Copyright © 2018 Matchmore. All rights reserved.
 //
 
 import UIKit
@@ -41,13 +41,11 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
             self.pickerData = beacons
             self.picker.reloadAllComponents()
             self.picker.isHidden = beacons.isEmpty
+            if self.picker.isHidden == false {
+                self.picker.selectRow(0, inComponent: 0, animated: true)
+                self.selectedValue = self.pickerData[0]
+            }
         })
-        if self.picker.isHidden == false {
-            self.picker.selectRow(0, inComponent: 0, animated: true)
-        }
-        if !pickerData.isEmpty {
-            self.selectedValue = pickerData[0]
-        }
         publishButton.isEnabled = true
     }
     
@@ -81,6 +79,13 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
     }
     
     @IBAction func publishAction(_ sender: Any) {
+        if picker.isHidden {
+            let alert = UIAlertController(title: "No iBeacons", message: "Please add a few beacons to your world first.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default , handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+        
         publishButton.isEnabled = false
         if let price = Double(priceTextField.text!),
             let image = imageTextField.text,

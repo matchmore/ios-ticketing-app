@@ -3,7 +3,7 @@
 //  alps-ios-TicketingApp
 //
 //  Created by Wen on 05.09.17.
-//  Copyright © 2017 WhenWens. All rights reserved.
+//  Copyright © 2018 Matchmore. All rights reserved.
 //
 
 import UIKit

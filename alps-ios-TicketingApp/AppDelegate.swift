@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         // UI Setup
         setupAppearance()
+        AppDelegate.setBadgeIndicator(0)
         
         // Basic setup
         let config = MatchMoreConfig(apiKey: "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiZWVkYTU3MjctNTVjNy00NDYwLTg0MmUtNTI1ZTc5NDk2ZWVjIiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MjIxNTI1NTEsImlhdCI6MTUyMjE1MjU1MSwianRpIjoiMSJ9.iXoO95et3cv3zsBL6yT6z0G76Lsr7iSebASj-DOEsNxwAgr7LHTE3pXULRSSgiMnkVclJB-ipOHVa9B3zLS1Sg", customLocationManager: locationManager) // create your own app at https://www.matchmore.io
@@ -76,14 +77,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - APNS
     
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
         // Saves APNS device token using key chain
         print(deviceTokenString)
         MatchMore.registerDeviceToken(deviceToken: deviceTokenString)
     }
 
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+    func application(_ application: UIApplication,
+                     didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         MatchMore.processPushNotification(pushNotification: userInfo)
     }
     
@@ -140,5 +144,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UIApplication.shared.canOpenURL(settingsUrl) {
             UIApplication.shared.open(settingsUrl, options: [:], completionHandler: nil)
         }
+    }
+    
+    class func setBadgeIndicator(_ badgeCount: Int) {
+        let application = UIApplication.shared
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options: [.badge, .alert, .sound]) { _, _ in }
+        } else {
+            application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil))
+        }
+        application.registerForRemoteNotifications()
+        application.applicationIconBadgeNumber = badgeCount
     }
 }

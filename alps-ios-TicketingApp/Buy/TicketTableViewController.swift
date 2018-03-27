@@ -30,7 +30,10 @@ class TicketTableViewController: UITableViewController, MatchDelegate {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return matches.count
+        let count = matches.count
+        AppDelegate.setBadgeIndicator(count)
+        navigationController?.tabBarItem.badgeValue = String(count)
+        return count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

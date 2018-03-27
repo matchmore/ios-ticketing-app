@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDelegate.setBadgeIndicator(0)
         
         // Basic setup
-        let config = MatchMoreConfig(apiKey: "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiZWVkYTU3MjctNTVjNy00NDYwLTg0MmUtNTI1ZTc5NDk2ZWVjIiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MjIxNTI1NTEsImlhdCI6MTUyMjE1MjU1MSwianRpIjoiMSJ9.iXoO95et3cv3zsBL6yT6z0G76Lsr7iSebASj-DOEsNxwAgr7LHTE3pXULRSSgiMnkVclJB-ipOHVa9B3zLS1Sg", customLocationManager: locationManager) // create your own app at https://www.matchmore.io
+        let config = MatchMoreConfig(apiKey: "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiYzgxZThlMjItNWY1ZS00NmZmLWIzYTEtMjRjOWI0YTQyNzUwIiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MjIxNjQxMTMsImlhdCI6MTUyMjE2NDExMywianRpIjoiMSJ9.qRMDdIejn4aUQ4ypAHeJR6UM9O_PivAGSoSyIe6n87aiYx8d9x4hB4qnDooxOP4mi4pGEYeEuWfRLQsUt3biKA", serverUrl: "http://35.201.116.232/v5", customLocationManager: locationManager) // create your own app at https://www.matchmore.io
         MatchMore.configure(config)
         
         // Gets known beacons from API and start ranging
@@ -88,6 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didReceiveRemoteNotification userInfo: [AnyHashable : Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print(userInfo)
         MatchMore.processPushNotification(pushNotification: userInfo)
     }
     

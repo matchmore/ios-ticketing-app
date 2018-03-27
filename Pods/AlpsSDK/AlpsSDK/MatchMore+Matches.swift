@@ -23,6 +23,11 @@ public extension MatchMore {
         instance.matchMonitor.startPollingMatches(pollingTimeInterval: pollingTimeInterval)
     }
     
+    /// Stops polling matches.
+    public class func stopPollingMatches(pollingTimeInterval: TimeInterval) {
+        instance.matchMonitor.stopPollingMatches()
+    }
+    
     /// Opens socket listening for new matches notifications. All `matchDelegates` are notified about the change.
     public class func startListeningForNewMatches() {
         instance.matchMonitor.openSocketForMatches()

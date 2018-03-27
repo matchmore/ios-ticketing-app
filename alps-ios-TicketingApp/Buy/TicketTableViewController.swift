@@ -16,18 +16,15 @@ class TicketTableViewController: UITableViewController, MatchDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Fill with cached data
+        self.matches = MatchMore.allMatches
+        
         // Start Monitoring
         self.onMatch = { matches, _ in
             self.matches = matches
-            self.tabBarController?.tabBar.items?[0].badgeValue = self.matches.count > 0 ? String(describing: matches.count) : nil
             self.tableView.reloadData()
         }
         MatchMore.matchDelegates += self
-        
-        // Fill with cached data
-        self.matches = MatchMore.allMatches
-        self.tabBarController?.tabBar.items?[0].badgeValue =  self.matches.count > 0 ? String(describing: matches.count) : nil
-        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source

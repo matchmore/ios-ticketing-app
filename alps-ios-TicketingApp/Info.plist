@@ -28,7 +28,21 @@
 	<key>CFBundleShortVersionString</key>
 	<string>0.6.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>128</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>c58a1b639177884e303497a5ca6a94cd9dda4862</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>

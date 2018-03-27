@@ -215,6 +215,7 @@
 				84110D6C1F5E8A7500C3E28D /* Resources */,
 				987BF8C37AAC3EA867768BEB /* [CP] Embed Pods Frameworks */,
 				DB13C5F30816BF56A12A332D /* [CP] Copy Pods Resources */,
+				C345B7BE2068FBC40023E2D3 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -339,6 +340,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C345B7BE2068FBC40023E2D3 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" c58a1b639177884e303497a5ca6a94cd9dda4862 5ff14f170b258d54fef941732fd8da3012ac2bdd2e63f07499bb1074094bcf14";
 		};
 		DB13C5F30816BF56A12A332D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -510,6 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "alps-ios-TicketingApp/alps-ios-TicketingApp.entitlements";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = PAYVP3AFKX;
 				INFOPLIST_FILE = "alps-ios-TicketingApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

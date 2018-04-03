@@ -216,6 +216,7 @@
 				987BF8C37AAC3EA867768BEB /* [CP] Embed Pods Frameworks */,
 				DB13C5F30816BF56A12A332D /* [CP] Copy Pods Resources */,
 				C345B7BE2068FBC40023E2D3 /* Crashlytics */,
+				C38BC4F020738A7F0078B2BE /* SwiftFormat */,
 			);
 			buildRules = (
 			);
@@ -354,6 +355,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" c58a1b639177884e303497a5ca6a94cd9dda4862 5ff14f170b258d54fef941732fd8da3012ac2bdd2e63f07499bb1074094bcf14";
+		};
+		C38BC4F020738A7F0078B2BE /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/alps-ios-TicketingApp\"";
 		};
 		DB13C5F30816BF56A12A332D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

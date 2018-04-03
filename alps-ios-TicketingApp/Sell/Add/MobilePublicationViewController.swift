@@ -6,36 +6,38 @@
 //  Copyright © 2018 Matchmore. All rights reserved.
 //
 
-import UIKit
-import MapKit
 import AlpsSDK
+import MapKit
 import PKHUD
+import UIKit
 
 class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
+
     // MARK: - Properties
-    @IBOutlet weak var concertTextField: UITextField!
-    @IBOutlet weak var priceTextField: UITextField!
-    @IBOutlet weak var imageTextField: UITextField!
-    @IBOutlet weak var rangeTextField: UITextField!
-    @IBOutlet weak var durationTextField: UITextField!
-    @IBOutlet weak var phoneTextField: UITextField!
-    @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var publishButton: UIButton!
-    
+
+    @IBOutlet var concertTextField: UITextField!
+    @IBOutlet var priceTextField: UITextField!
+    @IBOutlet var imageTextField: UITextField!
+    @IBOutlet var rangeTextField: UITextField!
+    @IBOutlet var durationTextField: UITextField!
+    @IBOutlet var phoneTextField: UITextField!
+    @IBOutlet var mapView: MKMapView!
+    @IBOutlet var publishButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // TODO: all these can be setup from storyboard
-        self.concertTextField.delegate = self
-        self.priceTextField.delegate = self
-        self.imageTextField.delegate = self
-        self.durationTextField.delegate = self
-        self.rangeTextField.delegate = self
-        self.priceTextField.keyboardType = .numbersAndPunctuation
-        self.durationTextField.keyboardType = .numbersAndPunctuation
-        self.rangeTextField.keyboardType = .numbersAndPunctuation
+        concertTextField.delegate = self
+        priceTextField.delegate = self
+        imageTextField.delegate = self
+        durationTextField.delegate = self
+        rangeTextField.delegate = self
+        priceTextField.keyboardType = .numbersAndPunctuation
+        durationTextField.keyboardType = .numbersAndPunctuation
+        rangeTextField.keyboardType = .numbersAndPunctuation
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_: Bool) {
         if let location = MatchMore.lastLocation?.clLocation {
             centerMapOnLocation(location: location)
         }
@@ -43,17 +45,17 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
     }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
+
+    func textFieldShouldReturn(_: UITextField) -> Bool {
+        view.endEditing(true)
         return false
     }
-    
-    @IBAction func tapped(_ sender: Any) {
-        self.view.endEditing(true)
+
+    @IBAction func tapped(_: Any) {
+        view.endEditing(true)
     }
-    
-    @IBAction func publishAction(_ sender: Any) {
+
+    @IBAction func publishAction(_: Any) {
         publishButton.isEnabled = false
         if let price = Double(priceTextField.text!),
             let range = Double(rangeTextField.text!),
@@ -75,25 +77,25 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
             )
             PKHUD.sharedHUD.contentView = PKHUDProgressView()
             PKHUD.sharedHUD.show()
-            MatchMore.createPublicationForMainDevice(publication: publication) { (result) in
+            MatchMore.createPublicationForMainDevice(publication: publication) { result in
                 switch result {
-                case .success(_):
+                case .success:
                     PKHUD.sharedHUD.contentView = PKHUDSuccessView()
                     PKHUD.sharedHUD.hide()
                     self.navigationController?.popToRootViewController(animated: true)
                     self.publishButton.isEnabled = true
-                case .failure(let error):
+                case let .failure(error):
                     PKHUD.sharedHUD.contentView = PKHUDErrorView()
                     PKHUD.sharedHUD.hide()
                     self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
                 }
             }
         } else {
-            self.present(AlertHelper.simpleError(title: "Please fill all needed fields."), animated: true, completion: nil)
+            present(AlertHelper.simpleError(title: "Please fill all needed fields."), animated: true, completion: nil)
             publishButton.isEnabled = true
         }
     }
-    
+
     // Triggers when publishButton is pressed
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)

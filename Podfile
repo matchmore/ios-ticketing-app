@@ -15,6 +15,8 @@ pod 'AlpsSDK', :path => '../alps-ios-sdk'
 pod 'Fabric'
 pod 'Crashlytics'
 
+pod 'SwiftFormat/CLI'
+
 post_install do |installer|
     # Your list of targets here.
     myTargets = ['SkyFloatingLabelTextField']

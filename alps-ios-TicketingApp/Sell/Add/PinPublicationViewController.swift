@@ -6,45 +6,45 @@
 //  Copyright © 2018 Matchmore. All rights reserved.
 //
 
-import UIKit
-import MapKit
 import AlpsSDK
+import MapKit
 import PKHUD
+import UIKit
 
 class PinPublicationViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var concertTextField: UITextField!
-    @IBOutlet weak var priceTextField: UITextField!
-    @IBOutlet weak var imageTextField: UITextField!
-    @IBOutlet weak var latitudeTextField: UITextField!
-    @IBOutlet weak var longtitudeTextField: UITextField!
-    @IBOutlet weak var rangeTextField: UITextField!
-    @IBOutlet weak var durationTextField: UITextField!
-    @IBOutlet weak var phoneTextField: UITextField!
-    @IBOutlet weak var publishButton: UIButton!
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet var concertTextField: UITextField!
+    @IBOutlet var priceTextField: UITextField!
+    @IBOutlet var imageTextField: UITextField!
+    @IBOutlet var latitudeTextField: UITextField!
+    @IBOutlet var longtitudeTextField: UITextField!
+    @IBOutlet var rangeTextField: UITextField!
+    @IBOutlet var durationTextField: UITextField!
+    @IBOutlet var phoneTextField: UITextField!
+    @IBOutlet var publishButton: UIButton!
+    @IBOutlet var mapView: MKMapView!
     let regionRadius: CLLocationDistance = 1000
     var deviceNo = 1
     // Using appDelegate as a singleton
     weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
     var alps: AlpsManager!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.concertTextField.delegate = self
-        self.priceTextField.delegate = self
-        self.imageTextField.delegate = self
-        self.durationTextField.delegate = self
-        self.latitudeTextField.delegate = self
-        self.longtitudeTextField.delegate = self
-        self.rangeTextField.delegate = self
-        self.priceTextField.keyboardType = .numbersAndPunctuation
-        self.durationTextField.keyboardType = .numbersAndPunctuation
-        self.rangeTextField.keyboardType = .numbersAndPunctuation
-        self.latitudeTextField.keyboardType = .numbersAndPunctuation
-        self.longtitudeTextField.keyboardType = .numbersAndPunctuation
+        concertTextField.delegate = self
+        priceTextField.delegate = self
+        imageTextField.delegate = self
+        durationTextField.delegate = self
+        latitudeTextField.delegate = self
+        longtitudeTextField.delegate = self
+        rangeTextField.delegate = self
+        priceTextField.keyboardType = .numbersAndPunctuation
+        durationTextField.keyboardType = .numbersAndPunctuation
+        rangeTextField.keyboardType = .numbersAndPunctuation
+        latitudeTextField.keyboardType = .numbersAndPunctuation
+        longtitudeTextField.keyboardType = .numbersAndPunctuation
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
+
+    override func viewDidAppear(_: Bool) {
         if let location = MatchMore.lastLocation?.clLocation {
             centerMapOnLocation(location: location)
             mapView.removeAnnotations(mapView.annotations)
@@ -54,23 +54,23 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
         }
         publishButton.isEnabled = true
         if let loc = MatchMore.lastLocation {
-            guard let lat = loc.latitude else {return}
-            guard let long = loc.longitude else {return}
+            guard let lat = loc.latitude else { return }
+            guard let long = loc.longitude else { return }
             latitudeTextField.text = String(describing: lat)
             longtitudeTextField.text = String(describing: long)
         }
     }
-    
-    @IBAction func tapped(_ sender: Any) {
-        self.view.endEditing(true)
+
+    @IBAction func tapped(_: Any) {
+        view.endEditing(true)
     }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
+
+    func textFieldShouldReturn(_: UITextField) -> Bool {
+        view.endEditing(true)
         return false
     }
-    
-    @IBAction func publishAction(_ sender: Any) {
+
+    @IBAction func publishAction(_: Any) {
         publishButton.isEnabled = false
         if let price = Double(priceTextField.text!),
             let range = Double(rangeTextField.text!),
@@ -85,26 +85,26 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
                 self.publishButton.isEnabled = true
             })
         } else {
-            self.present(AlertHelper.simpleError(title: "Please fill all needed fields."), animated: true, completion: nil)
-            self.publishButton.isEnabled = true
+            present(AlertHelper.simpleError(title: "Please fill all needed fields."), animated: true, completion: nil)
+            publishButton.isEnabled = true
         }
     }
-    
+
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
 
     // MARK: - AlpsSDK
-    
+
     func createPublication(concert: String, price: Double, image: String, latitude: Double, longitude: Double, range: Double, duration: Double, phoneNumber: String, completion: @escaping () -> Void) {
         let location = Location(latitude: latitude, longitude: longitude, altitude: 0.0, horizontalAccuracy: 0.0, verticalAccuracy: 0.0)
         let pin = PinDevice(name: "pin device \(deviceNo)", location: location)
         PKHUD.sharedHUD.contentView = PKHUDProgressView()
         PKHUD.sharedHUD.show()
-        MatchMore.createPinDevice(pinDevice: pin) { (result) in
+        MatchMore.createPinDevice(pinDevice: pin) { result in
             switch result {
-            case .success(let device):
+            case let .success(device):
                 var properties: [String: Any] = [:]
                 properties["concert"] = concert
                 properties["price"] = price
@@ -112,25 +112,24 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
                 properties["phone"] = phoneNumber
                 properties["deviceType"] = "pin"
                 let pub = Publication(topic: "ticketstosale", range: range, duration: duration, properties: properties)
-                MatchMore.createPublication(publication: pub, forDevice: device) { (result) in
+                MatchMore.createPublication(publication: pub, forDevice: device) { result in
                     switch result {
-                    case .success(_):
+                    case .success:
                         PKHUD.sharedHUD.contentView = PKHUDSuccessView()
                         PKHUD.sharedHUD.hide()
                         self.deviceNo += 1
                         completion()
-                    case .failure(let error):
+                    case let .failure(error):
                         PKHUD.sharedHUD.contentView = PKHUDErrorView()
                         PKHUD.sharedHUD.hide()
                         self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
                     }
                 }
-            case .failure(let error):
+            case let .failure(error):
                 PKHUD.sharedHUD.contentView = PKHUDErrorView()
                 PKHUD.sharedHUD.show()
                 self.present(AlertHelper.simpleError(title: error?.message), animated: true, completion: nil)
             }
         }
     }
-
 }

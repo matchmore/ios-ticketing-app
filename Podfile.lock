@@ -10,6 +10,7 @@ PODS:
   - PKHUD (5.0.0)
   - SkyFloatingLabelTextField (3.4.0)
   - Starscream (3.0.4)
+  - SwiftFormat/CLI (0.33.4)
 
 DEPENDENCIES:
   - AlpsSDK (from `../alps-ios-sdk`)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - Kingfisher (~> 4.0)
   - PKHUD (~> 5.0)
   - SkyFloatingLabelTextField (~> 3.0)
+  - SwiftFormat/CLI
 
 EXTERNAL SOURCES:
   AlpsSDK:
@@ -32,7 +34,8 @@ SPEC CHECKSUMS:
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
   Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
+  SwiftFormat: f39044d75d5e58dbbc7c436c089104ec9c8f717a
 
-PODFILE CHECKSUM: 3112be6bd881fefa1610603aaf01aa42251ec0b1
+PODFILE CHECKSUM: 5ae63c276c50f9287b25308ddee2e14656909671
 
 COCOAPODS: 1.4.0

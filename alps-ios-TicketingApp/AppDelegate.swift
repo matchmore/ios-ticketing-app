@@ -6,18 +6,15 @@
 //  Copyright © 2017 Matchmore. All rights reserved.
 //
 
-import UIKit
-
 import AlpsSDK
-import UserNotifications
 import CoreLocation
-
-import Fabric
 import Crashlytics
+import Fabric
+import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
     lazy var locationManager: CLLocationManager = {
         let locationManager = CLLocationManager()
@@ -27,79 +24,79 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         locationManager.allowsBackgroundLocationUpdates = true
         return locationManager
     }()
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions
-        launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+    func application(_: UIApplication, didFinishLaunchingWithOptions
+        _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Crashlytics.self])
         // UI Setup
         setupAppearance()
         AppDelegate.setBadgeIndicator(0)
-        
+
         // Basic setup
         let config = MatchMoreConfig(apiKey: "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiYzgxZThlMjItNWY1ZS00NmZmLWIzYTEtMjRjOWI0YTQyNzUwIiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MjIxNjQxMTMsImlhdCI6MTUyMjE2NDExMywianRpIjoiMSJ9.qRMDdIejn4aUQ4ypAHeJR6UM9O_PivAGSoSyIe6n87aiYx8d9x4hB4qnDooxOP4mi4pGEYeEuWfRLQsUt3biKA", serverUrl: "http://35.201.116.232/v5", customLocationManager: locationManager) // create your own app at https://www.matchmore.io
         MatchMore.configure(config)
-        
+
         // Gets known beacons from API and start ranging
         MatchMore.refreshKnownBeacons()
-        
+
         // Creates or loads cached main device
         MatchMore.startUsingMainDevice { [weak self] in
             self?.startWatchingMatches()
             guard let error = $0.errorMessage else { return }
             self?.window?.rootViewController?.present(AlertHelper.simpleError(title: error), animated: true, completion: nil)
         }
-        
+
         // Custom Location Manager
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         locationManager.startMonitoringSignificantLocationChanges()
         locationManager.startUpdatingLocation()
-        
+
         // Registers to APNS (remember to have proper project setup)
         registerForPushNotifications()
         return true
     }
-    
+
     func startWatchingMatches() {
         MatchMore.refreshMatches()
         MatchMore.refreshKnownBeacons()
         MatchMore.startPollingMatches(pollingTimeInterval: 500)
         locationManager.requestLocation()
     }
-    
-    func applicationWillEnterForeground(_ application: UIApplication) {
+
+    func applicationWillEnterForeground(_: UIApplication) {
         startWatchingMatches()
     }
-    
-    func applicationDidEnterBackground(_ application: UIApplication) {
+
+    func applicationDidEnterBackground(_: UIApplication) {
         MatchMore.stopPollingMatches()
     }
-    
+
     // MARK: - APNS
-    
-    func application(_ application: UIApplication,
+
+    func application(_: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        let deviceTokenString = deviceToken.reduce("", { $0 + String(format: "%02X", $1) })
         // Saves APNS device token using key chain
         print(deviceTokenString)
         MatchMore.registerDeviceToken(deviceToken: deviceTokenString)
     }
 
-    func application(_ application: UIApplication,
-                     didReceiveRemoteNotification userInfo: [AnyHashable : Any],
-                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+    func application(_: UIApplication,
+                     didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler _: @escaping (UIBackgroundFetchResult) -> Void) {
         print(userInfo)
         MatchMore.processPushNotification(pushNotification: userInfo)
     }
-    
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+
+    func application(_: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         NSLog("APNs registration failed: \(error)")
     }
-    
+
     func registerForPushNotifications() {
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
-                (granted, error) in
+                granted, _ in
                 print("Permission granted: \(granted)")
                 guard granted else {
                     self.showPermissionAlert()
@@ -113,31 +110,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIApplication.shared.registerForRemoteNotifications()
         }
     }
-    
+
     @available(iOS 10.0, *)
     func getNotificationSettings() {
-        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+        UNUserNotificationCenter.current().getNotificationSettings { settings in
             guard settings.authorizationStatus == .authorized else { return }
             DispatchQueue.main.async {
                 UIApplication.shared.registerForRemoteNotifications()
             }
         }
     }
-    
+
     func showPermissionAlert() {
         let alert = UIAlertController(title: "Error", message: "Please enable access to Notifications in the Settings app.", preferredStyle: .alert)
-        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (alertAction) in
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { _ in
             self.gotoAppSettings()
             alert.dismiss(animated: false, completion: nil)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-        
+
         alert.addAction(settingsAction)
         alert.addAction(cancelAction)
-        
-        self.window?.rootViewController?.show(alert, sender: nil)
+
+        window?.rootViewController?.show(alert, sender: nil)
     }
-    
+
     private func gotoAppSettings() {
         guard let settingsUrl = URL(string: UIApplicationOpenSettingsURLString) else {
             return
@@ -146,7 +143,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIApplication.shared.open(settingsUrl, options: [:], completionHandler: nil)
         }
     }
-    
+
     class func setBadgeIndicator(_ badgeCount: Int) {
         let application = UIApplication.shared
         if #available(iOS 10.0, *) {

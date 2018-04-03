@@ -12,17 +12,17 @@ struct Ticket {
     let name: String?
     let price: Int?
     var sellerEmail: String?
-    
+
     var subscriptionId: String?
-    
+
     var properties: [String: Any] {
         return [
             "name": name ?? "",
             "price": price ?? "",
-            "sellerEmail": sellerEmail ?? ""
+            "sellerEmail": sellerEmail ?? "",
         ]
     }
-    
+
     var selector: String {
         var selector = ""
         if let name = name, name != "" {

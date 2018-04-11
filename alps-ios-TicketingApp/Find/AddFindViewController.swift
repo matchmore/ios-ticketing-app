@@ -6,7 +6,7 @@
 //  Copyright © 2018 Matchmore. All rights reserved.
 //
 
-import AlpsSDK
+import Matchmore
 import PKHUD
 import SkyFloatingLabelTextField
 import UIKit
@@ -52,14 +52,14 @@ class AddFindViewController: UIViewController {
             selector: ticket.selector
         )
         subscription.pushers = ["ws"]
-        if let deviceToken = MatchMore.deviceToken {
+        if let deviceToken = Matchmore.deviceToken {
             subscription.pushers?.append("apns://\(deviceToken)")
         } else {
             print("Device is not configured to receive push notification.")
         }
         PKHUD.sharedHUD.contentView = PKHUDProgressView()
         PKHUD.sharedHUD.show()
-        MatchMore.createSubscriptionForMainDevice(subscription: subscription) { result in
+        Matchmore.createSubscriptionForMainDevice(subscription: subscription) { result in
             switch result {
             case let .success(subscription):
                 PKHUD.sharedHUD.contentView = PKHUDSuccessView()

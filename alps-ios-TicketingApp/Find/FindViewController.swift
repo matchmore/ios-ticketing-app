@@ -6,7 +6,7 @@
 //  Copyright © 2018 Matchmore. All rights reserved.
 //
 
-import AlpsSDK
+import Matchmore
 import PKHUD
 import UIKit
 
@@ -45,7 +45,7 @@ class FindViewController: UIViewController, UITableViewDelegate, UITableViewData
             let subscription = subscriptions[indexPath.row]
             PKHUD.sharedHUD.contentView = PKHUDProgressView()
             PKHUD.sharedHUD.show()
-            MatchMore.subscriptions.delete(item: subscription, completion: { error in
+            Matchmore.subscriptions.delete(item: subscription, completion: { error in
                 if error == nil {
                     PKHUD.sharedHUD.contentView = PKHUDSuccessView()
                     PKHUD.sharedHUD.hide()
@@ -63,7 +63,7 @@ class FindViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - AlpsSDK Functions
 
     private func getSubscriptions() {
-        MatchMore.subscriptions.findAll(completion: { subscriptions in
+        Matchmore.subscriptions.findAll(completion: { subscriptions in
             self.subscriptions = subscriptions
             self.tableView.reloadData()
         })

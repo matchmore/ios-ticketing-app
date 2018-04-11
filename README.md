@@ -79,12 +79,12 @@ In case of any problems with CocoaPods try:
     pod repo update
 
 * Open the Workspace of Ticketing App’s project.
-* Open the file AppDelegate.swift and assign api-key and to `MatchMore` static class, as illustrated hereafter.
+* Open the file AppDelegate.swift and assign api-key and to `Matchmore` static class, as illustrated hereafter.
 
 ```swift
 // Basic setup
 let config = MatchMoreConfig(apiKey: "YOUR_API_KEY")
-MatchMore.configure(config)
+Matchmore.configure(config)
 ```
 
 * Run the project on your simulator or on your apple Iphone.

@@ -6,10 +6,10 @@
 //  Copyright © 2017 Matchmore. All rights reserved.
 //
 
-import AlpsSDK
 import CoreLocation
 import Crashlytics
 import Fabric
+import Matchmore
 import UIKit
 import UserNotifications
 
@@ -25,8 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return locationManager
     }()
 
-    func application(_: UIApplication, didFinishLaunchingWithOptions
-        _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Crashlytics.self])
         // UI Setup
         setupAppearance()
@@ -34,13 +33,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Basic setup
         let config = MatchMoreConfig(apiKey: "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpc3MiOiJhbHBzIiwic3ViIjoiYzgxZThlMjItNWY1ZS00NmZmLWIzYTEtMjRjOWI0YTQyNzUwIiwiYXVkIjpbIlB1YmxpYyJdLCJuYmYiOjE1MjIxNjQxMTMsImlhdCI6MTUyMjE2NDExMywianRpIjoiMSJ9.qRMDdIejn4aUQ4ypAHeJR6UM9O_PivAGSoSyIe6n87aiYx8d9x4hB4qnDooxOP4mi4pGEYeEuWfRLQsUt3biKA", serverUrl: "http://35.201.116.232/v5", customLocationManager: locationManager) // create your own app at https://www.matchmore.io
-        MatchMore.configure(config)
+        Matchmore.configure(config)
 
         // Gets known beacons from API and start ranging
-        MatchMore.refreshKnownBeacons()
+        Matchmore.refreshKnownBeacons()
 
         // Creates or loads cached main device
-        MatchMore.startUsingMainDevice { [weak self] in
+        Matchmore.startUsingMainDevice { [weak self] in
             self?.startWatchingMatches()
             guard let error = $0.errorMessage else { return }
             self?.window?.rootViewController?.present(AlertHelper.simpleError(title: error), animated: true, completion: nil)
@@ -58,9 +57,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func startWatchingMatches() {
-        MatchMore.refreshMatches()
-        MatchMore.refreshKnownBeacons()
-        MatchMore.startPollingMatches(pollingTimeInterval: 500)
+        Matchmore.refreshMatches()
+        Matchmore.refreshKnownBeacons()
+        Matchmore.startPollingMatches(pollingTimeInterval: 500)
         locationManager.requestLocation()
     }
 
@@ -69,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_: UIApplication) {
-        MatchMore.stopPollingMatches()
+        Matchmore.stopPollingMatches()
     }
 
     // MARK: - APNS
@@ -79,14 +78,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let deviceTokenString = deviceToken.reduce("", { $0 + String(format: "%02X", $1) })
         // Saves APNS device token using key chain
         print(deviceTokenString)
-        MatchMore.registerDeviceToken(deviceToken: deviceTokenString)
+        Matchmore.registerDeviceToken(deviceToken: deviceTokenString)
     }
 
     func application(_: UIApplication,
                      didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler _: @escaping (UIBackgroundFetchResult) -> Void) {
         print(userInfo)
-        MatchMore.processPushNotification(pushNotification: userInfo)
+        Matchmore.processPushNotification(pushNotification: userInfo)
     }
 
     func application(_: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {

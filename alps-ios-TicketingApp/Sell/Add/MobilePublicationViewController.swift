@@ -6,8 +6,8 @@
 //  Copyright © 2018 Matchmore. All rights reserved.
 //
 
-import AlpsSDK
 import MapKit
+import Matchmore
 import PKHUD
 import UIKit
 
@@ -38,7 +38,7 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
     }
 
     override func viewDidAppear(_: Bool) {
-        if let location = MatchMore.lastLocation?.clLocation {
+        if let location = Matchmore.lastLocation?.clLocation {
             centerMapOnLocation(location: location)
         }
         publishButton.isEnabled = true
@@ -77,7 +77,7 @@ class MobilePublicationViewController: UIViewController, UITextFieldDelegate {
             )
             PKHUD.sharedHUD.contentView = PKHUDProgressView()
             PKHUD.sharedHUD.show()
-            MatchMore.createPublicationForMainDevice(publication: publication) { result in
+            Matchmore.createPublicationForMainDevice(publication: publication) { result in
                 switch result {
                 case .success:
                     PKHUD.sharedHUD.contentView = PKHUDSuccessView()

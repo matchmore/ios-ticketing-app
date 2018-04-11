@@ -6,8 +6,8 @@
 //  Copyright © 2018 Matchmore. All rights reserved.
 //
 
-import AlpsSDK
 import MapKit
+import Matchmore
 import PKHUD
 import UIKit
 
@@ -45,7 +45,7 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
     }
 
     override func viewDidAppear(_: Bool) {
-        if let location = MatchMore.lastLocation?.clLocation {
+        if let location = Matchmore.lastLocation?.clLocation {
             centerMapOnLocation(location: location)
             mapView.removeAnnotations(mapView.annotations)
             let pin = MKPointAnnotation()
@@ -53,7 +53,7 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
             mapView.addAnnotation(pin)
         }
         publishButton.isEnabled = true
-        if let loc = MatchMore.lastLocation {
+        if let loc = Matchmore.lastLocation {
             guard let lat = loc.latitude else { return }
             guard let long = loc.longitude else { return }
             latitudeTextField.text = String(describing: lat)
@@ -102,7 +102,7 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
         let pin = PinDevice(name: "pin device \(deviceNo)", location: location)
         PKHUD.sharedHUD.contentView = PKHUDProgressView()
         PKHUD.sharedHUD.show()
-        MatchMore.createPinDevice(pinDevice: pin) { result in
+        Matchmore.createPinDevice(pinDevice: pin) { result in
             switch result {
             case let .success(device):
                 var properties: [String: Any] = [:]
@@ -112,7 +112,7 @@ class PinPublicationViewController: UIViewController, UITextFieldDelegate {
                 properties["phone"] = phoneNumber
                 properties["deviceType"] = "pin"
                 let pub = Publication(topic: "ticketstosale", range: range, duration: duration, properties: properties)
-                MatchMore.createPublication(publication: pub, forDevice: device) { result in
+                Matchmore.createPublication(publication: pub, forDevice: device) { result in
                     switch result {
                     case .success:
                         PKHUD.sharedHUD.contentView = PKHUDSuccessView()

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double AlpsSDKVersionNumber;
-FOUNDATION_EXPORT const unsigned char AlpsSDKVersionString[];
+FOUNDATION_EXPORT double MatchmoreVersionNumber;
+FOUNDATION_EXPORT const unsigned char MatchmoreVersionString[];
 

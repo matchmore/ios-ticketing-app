@@ -6,7 +6,7 @@
 //  Copyright © 2018 Matchmore. All rights reserved.
 //
 
-import AlpsSDK
+import Matchmore
 import UIKit
 
 class TicketTableViewController: UITableViewController, MatchDelegate {
@@ -17,14 +17,14 @@ class TicketTableViewController: UITableViewController, MatchDelegate {
         super.viewDidLoad()
 
         // Fill with cached data
-        matches = MatchMore.allMatches
+        matches = Matchmore.allMatches
 
         // Start Monitoring
         onMatch = { matches, _ in
             self.matches = matches
             self.tableView.reloadData()
         }
-        MatchMore.matchDelegates += self
+        Matchmore.matchDelegates += self
     }
 
     // MARK: - Table view data source

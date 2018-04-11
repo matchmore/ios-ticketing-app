@@ -6,7 +6,7 @@
 //  Copyright © 2018 Matchmore. All rights reserved.
 //
 
-import AlpsSDK
+import Matchmore
 import PKHUD
 import UIKit
 
@@ -37,7 +37,7 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        MatchMore.knownBeacons.findAll(completion: { beacons in
+        Matchmore.knownBeacons.findAll(completion: { beacons in
             self.pickerData = beacons
             self.picker.reloadAllComponents()
             self.picker.isHidden = beacons.isEmpty
@@ -115,7 +115,7 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
         let pub = Publication(topic: "ticketstosale", range: 0, duration: duration, properties: properties)
         PKHUD.sharedHUD.contentView = PKHUDProgressView()
         PKHUD.sharedHUD.show()
-        MatchMore.createPublication(publication: pub, forBeacon: beacon) { result in
+        Matchmore.createPublication(publication: pub, forBeacon: beacon) { result in
             switch result {
             case .success:
                 PKHUD.sharedHUD.contentView = PKHUDSuccessView()

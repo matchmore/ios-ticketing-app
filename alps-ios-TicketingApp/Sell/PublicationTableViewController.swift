@@ -6,7 +6,7 @@
 //  Copyright © 2018 Matchmore. All rights reserved.
 //
 
-import AlpsSDK
+import Matchmore
 import PKHUD
 import UIKit
 
@@ -40,7 +40,7 @@ class PublicationTableViewController: UITableViewController {
             let publication = publications[indexPath.row]
             PKHUD.sharedHUD.contentView = PKHUDProgressView()
             PKHUD.sharedHUD.show()
-            MatchMore.publications.delete(item: publication, completion: { error in
+            Matchmore.publications.delete(item: publication, completion: { error in
                 if error == nil {
                     PKHUD.sharedHUD.contentView = PKHUDSuccessView()
                     PKHUD.sharedHUD.hide()
@@ -58,7 +58,7 @@ class PublicationTableViewController: UITableViewController {
     // MARK: - AlpsSDK Functions
 
     private func getPublications() {
-        MatchMore.publications.findAll(completion: { publications in
+        Matchmore.publications.findAll(completion: { publications in
             self.publications = publications
             self.tableView.reloadData()
         })

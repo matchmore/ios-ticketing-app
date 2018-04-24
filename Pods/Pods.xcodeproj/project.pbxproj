@@ -7,153 +7,153 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0407602489C1F98ECBFE71770E5DF859 /* SkyFloatingLabelTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EEC47D92D99D4BF19C3D70CDCCFDBB /* SkyFloatingLabelTextField-dummy.m */; };
-		047C4D945343F46AFF1273DE29F8A290 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78993F520E17D831A2AF4761B8D80930 /* ImageView+Kingfisher.swift */; };
-		05A8974284E0CD1173B13F095E319544 /* MatchesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966DCCEE2CE1BAC7B4AC6834A3CEE3E /* MatchesAPI.swift */; };
-		09A0DDE1726C527699A0C0F53482505B /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9405EE822A9FCD1051E5358631119BD7 /* AnimatedImageView.swift */; };
+		00E153632A414101E0A66AE23569802B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73E57BC07A06E8E430B31BC7697EF6B /* Result.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		027818475CF08EA70F7E2E675B24843F /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE11E30A39A73226231C80530F7B360 /* ContextManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		071803395FA4B2D29D0AA9BC0A457A3E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16E869E80A903FC73D2637D1FA078 /* Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		079D990738735591330332B5F2551AE4 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C6475E7C3540EC17ED7700CB6BA532 /* NetworkReachabilityManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		08DFB08827FC686B60A6FDA32B449C24 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAE689AC3FF16B4561768C89B1652D6 /* HUD.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0CA6357476373C221D44C498AA1D65FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E55F37417E18F095064E9D042BC2A8 /* Foundation.framework */; };
-		0D4B01282C028022949704CE93A5422F /* ContextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE11E30A39A73226231C80530F7B360 /* ContextManager.swift */; };
-		0F755ADCEAA8BF40FF7BECCBD8B5310B /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4051AAD98ECE3AC0C722E72B2386C6A /* ImageDownloader.swift */; };
-		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116A7CDAAE0585B08B2E81827AA844D /* Timeline.swift */; };
-		11ECC5C9BE0D9AE6AE8079882CB5AF75 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD270BC15C743FB8496249423A43994 /* Image.swift */; };
-		12CF563678704ED1369F793FA30AAEA9 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EFB188E929BFDBDBA25C7B7E7D8FEF /* Resource.swift */; };
-		140FFE7C48EDF8B1AB28083EF501C411 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C06B0DD0D8D60AD219BA28D2E82F2 /* Configuration.swift */; };
-		15C87B42E7A27C72338E6B63562C5166 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A9BC53C1455F41E87C3CB26533967 /* Match.swift */; };
-		171D92BAB767E217703001B86CAF5E9E /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A59CA9C928054218F3B7E06D3CB5FF /* FormatIndicatedCacheSerializer.swift */; };
-		17E7E62102D200AFE11B049F570C9397 /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8AF9426CB34365FF117BB5AF8B547 /* PKHUDErrorView.swift */; };
+		103FE2B2E6C458BCE12AC720E5055243 /* PinDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C45EDFBB2730AD6EC7341A8A78F30 /* PinDevice.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		118C21E7B798DD6E5B8476C08ACB61D1 /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD13DCA6746038729B48AD6C933892 /* AlamofireImplementations.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		124E96D9C02B9D72C1B4802B8E1091BD /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687E796235279279D2630E736F68325 /* UITextField+fixCaretPosition.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		145FDE7DF86C734D327BDBD7E38A3686 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA4894E3E656648D46AE300DFA3522 /* DataStore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		14CECE238604E1D44104E5BCD14EB2BE /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDBB8CDAEB7B39E900F488E7EE88EAF /* SessionDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		164781197625A3149B3BDBCAA2AC8CC3 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22037DFBD6D2D01B01A2A2BC36F828F7 /* Validation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		18B8259113915CD5A4B5EAC741FE84EB /* PublicationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E429F4C49793061C1D973BC4B60BA0 /* PublicationStore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1929F91EB38B923FBFA0B2F53C0C4877 /* PKHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46FCF9799A52A94F09B9993960A0A66A /* PKHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A7DF30005C1B5074C94128DF56A4602 /* SubscriptionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3C6F6B94D671BE4134FF6E50E1FF8 /* SubscriptionAPI.swift */; };
-		1AFA8353538FB624AAB509E224153A64 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517BC816ABC30181FDE38213D900F69 /* APIError.swift */; };
+		1AD97DBDF1301A09236AD6C1C1996736 /* Expirable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D8F8EF02969A4C6801777DCC4E3518 /* Expirable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1B241D22B142541C7B51EF28FDF2A8C6 /* PKHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0593E694218B232FDCEBF74039E26 /* PKHUD-dummy.m */; };
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AAB1D9F224C9ACD4081C796F56F042E0 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1BD54920ABDAA1DA72B4E8FD6354BCF8 /* LocationUpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60D45DED9DF187C5A0150F7745513DB /* LocationUpdateManager.swift */; };
+		1C3B11A652C2AF1235E6981DBBBDA1D5 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9832F1CD678DE7C2B002225C9376890C /* Kingfisher-dummy.m */; };
+		1CFCA91D81EC4C5E5FE6A4512CD54BFF /* AlpsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E7B6FC904E0994A3FA489B08A4875 /* AlpsManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1D074B9127FA5FC2639ADEABB5B3D2A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E55F37417E18F095064E9D042BC2A8 /* Foundation.framework */; };
-		1D889622B764E69AE9F88E1031433BA0 /* Publications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E6E22E3A76E82C49A68A7B2B81B261 /* Publications.swift */; };
-		1F34910B27A3B86966E07898A2B70AE6 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FD172ADDB5A6D03BE24BA710D3188 /* FrameView.swift */; };
-		1F4F8CCC586D9EDEE1A013604D76BA25 /* PinDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C45EDFBB2730AD6EC7341A8A78F30 /* PinDevice.swift */; };
-		203FFC86426B4CDAB9FD112972370DC7 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1687E796235279279D2630E736F68325 /* UITextField+fixCaretPosition.swift */; };
-		20E431DA5C426B4E5CCA9D126F39A0B9 /* BeaconTripleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F981EBA3CEBB36F0A85AABE49D50FDDB /* BeaconTripleStore.swift */; };
-		250831ED9AFC0AA29662F9D20BD0231C /* PublicationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E429F4C49793061C1D973BC4B60BA0 /* PublicationStore.swift */; };
-		252204E5FFD258972ACC98F2FC1F5DDA /* MobileDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41DD0F0E60C52A20A77F1203F7B6F6 /* MobileDevice.swift */; };
-		270728363BC4B690C40E53B053710684 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A12E0F91AABC2736A27BFB330025331 /* ImageCache.swift */; };
-		27A5D23E9CA77A6C2CB08EBC29A927FD /* DeviceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F27DAD63727EAA1508BBA65469BF23 /* DeviceAPI.swift */; };
-		297EB82D81D00F24159B78DD8F57A3B8 /* AutoCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132E4CCBEDBAB3357F438EF5CA95AE24 /* AutoCodable.swift */; };
+		204944D67267632DD7CD4BEFB60AC389 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06271F106D46E7C1B66C68578626760E /* Response.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		25296207497F52341E34C3F4E35B3FE6 /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3C13B0C33D04771975787DD5C4B5C /* PKHUDSquareBaseView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		280AF380471897EA10E1922CD21B7644 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830935E1F0220DC5199183471242E9 /* ImageModifier.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		28983077A46BF521F8E1B9B6F31051EC /* IBeaconTriples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E4F8CBDE0AF69F7451CF92CBDD4EC /* IBeaconTriples.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2A67FB67B2037FEA772B750068D896CD /* PKHUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174E7B14E53DFF7B3B7538C3C128A3A8 /* PKHUDAnimation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2B58B070F9D7324583D01EE906BC918C /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA788847ADF5D805A0533A50D7CED0D2 /* SessionManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2D3DF79750FFAB7BCCF86FB15466D411 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D83C786D439D7EF82EC637B1D89DE /* SSLSecurity.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2DCA4225866D2445C444325589BD9744 /* PKHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = D79A34007E06B286A571D32A55DB2B81 /* PKHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F288ED3641B2B4775884C462AE377E6 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92159B2B42B0BD78E30E6C7F81B4CE4C /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3253755CA8B8E9787E1F8AA24993B728 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA4894E3E656648D46AE300DFA3522 /* DataStore.swift */; };
-		343D786A2E3810E55837B0596807C0E6 /* PinDeviceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F00B62AD7F75F49EFB5FBD04D4299B6 /* PinDeviceStore.swift */; };
+		314C4328D56632684787FCEC5B86AE89 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517BC816ABC30181FDE38213D900F69 /* APIError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		343B30C989188B77FB1149FED753A63C /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858909D1B93E654D9D39EF4AAAE01AF7 /* ServerTrustPolicy.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		345F3A68FF914C928597D0613E675E43 /* Pods-alps-ios-TicketingApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 713E9DB41AB44D6F4947B5349AD458C2 /* Pods-alps-ios-TicketingApp-dummy.m */; };
-		3470186F176465D3CA04711D0D82DF38 /* PKHUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174E7B14E53DFF7B3B7538C3C128A3A8 /* PKHUDAnimation.swift */; };
 		34D8AB5C8FA400C58D7CA084633DF744 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14892F703A02B2D51E6767165F20158A /* Images.xcassets */; };
-		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A6313009D16F553981E04C81DD43E /* TaskDelegate.swift */; };
-		376019855CEEF9BCC5EBE1764191FAD2 /* PublicationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5665AC66AE5486901B5610542DA7E /* PublicationAPI.swift */; };
-		3845689DFB2BE4BFAD2D3C2733D7054A /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA910D54CDC2167180D1FBC6280A9EB /* ImageTransition.swift */; };
-		386547D8C16A71984C5C1FCD4360627A /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBA379325DCEA0922949C5AB83F75D8 /* MulticastDelegate.swift */; };
-		3DA9227F3FD83241A4D4BA9DBAE405AD /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830935E1F0220DC5199183471242E9 /* ImageModifier.swift */; };
+		3588EDF1661E40F5A820F53A24015875 /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C73D5282093520A8B08C2B351931D1 /* Matches.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		36B4616E83B2DDE3C216DF569725EE9C /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D8AF9426CB34365FF117BB5AF8B547 /* PKHUDErrorView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		36F68238894E2555EF727015BD7E60B6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE7A3151E3CC55E73BEBA12A5F90C1E /* Models.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		385513D45913F4AEA9EC117599A92F3C /* Matchmore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC912D53360406A93B8C85051268E /* Matchmore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3C85FC5C878C64267B78E9E6792BB0AD /* MatchmoreConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E898A5EFF65A91B3591C0191110B3A0 /* MatchmoreConfig.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3F6AF7DB20321948C39C0B444446B56C /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EB3A6855F5E7712347EC724C11410A /* Publication.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		42F5C516BD88DAF466FF5F5A70DFF104 /* ErrorResponse+Convienience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8488BAF54BD05F862528D33A3CBEEAF /* ErrorResponse+Convienience.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		432D8294961EC6165DC9DE9AFFD0284C /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA910D54CDC2167180D1FBC6280A9EB /* ImageTransition.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		433A9FCC435F7A84A562F3D540E8C935 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E55F37417E18F095064E9D042BC2A8 /* Foundation.framework */; };
-		436EC8427E29B8279055AA2B8BB664BC /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0422C251D1ACB8D772E4F67DF87D07 /* APIs.swift */; };
-		43C88F7D7791728A28460AD0AFF03270 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3395987EEADFDB5A341E0D6506B3A77 /* DeviceType.swift */; };
-		45EEEDE9FA9A17CE41D60241D347E423 /* Matchmore+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60306A605C3605F929C520D260211426 /* Matchmore+Creation.swift */; };
-		4A497E3056CEC2546E4F987BEC551FA2 /* SubscriptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A46F7E4BDC00D4BE1B48F5BC0C354 /* SubscriptionStore.swift */; };
-		4B7F7839C3BA1FCC63D53AE5D56F2CE6 /* RemoteNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3460AE5ABFEE031AB5CD62960B581853 /* RemoteNotificationManager.swift */; };
+		43827F5A9222141CE17293B01F53E163 /* MatchesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966DCCEE2CE1BAC7B4AC6834A3CEE3E /* MatchesAPI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		44CA785480D468895E2A504F6239493A /* AutoCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132E4CCBEDBAB3357F438EF5CA95AE24 /* AutoCodable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		499222E7F9810362C349A99340FFAF83 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154C06B0DD0D8D60AD219BA28D2E82F2 /* Configuration.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4A79E904C80B13D4DBBE7D7A0A0B4774 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E967C59BCC07981B7DE5EBA39A15A1 /* KingfisherOptionsInfo.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		50C8E0F3759B54600464EFF3E3BCE350 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6A9BC53C1455F41E87C3CB26533967 /* Match.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		51FED2A6C89830AE1DB8C79763A173C1 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3395987EEADFDB5A341E0D6506B3A77 /* DeviceType.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		52416A6AC7387ECACCC45596498D96AD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D85337E52E0767BBB2042EADBFAD8BC /* CFNetwork.framework */; };
-		53723CBFC8E7855567C068B8DF3C1659 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE7A3151E3CC55E73BEBA12A5F90C1E /* Models.swift */; };
-		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7174EEF9A9C0DF1E36F42F1D5765B515 /* Request.swift */; };
-		556003F6ADF73A65ADCEE7F4157908B3 /* IBeaconTriple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FD61E06CAEEC21B78C3B4E01665C0 /* IBeaconTriple.swift */; };
-		5605200EB661580F6B7102F556616435 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5674597B9BC8536A999372E05737CB /* Compression.swift */; };
+		52F6096C8EE34FDF3EDA863BE0172621 /* Matchmore+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60306A605C3605F929C520D260211426 /* Matchmore+Creation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		54FA52A3868E0BD84CC4BC51C8E745F3 /* DeviceUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920AE6B6C2D31F0566364C46BB7B96DF /* DeviceUpdate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		56283C4D397C058D245EB1E2F5B67C41 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C6411B873D0FE4929EC858B623E89 /* ThreadHelper.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		581F79DC6CA98B5B5AEBC2D1F1AE2F6C /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AAEBD20ABD4B073763E4AC08B88C47 /* PersistenceManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		58812AABBC0A1E7AE019752424DF31A7 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11ABEA74622A855A48420F10AD61F3F /* MultipartFormData.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		588DE823A7BBBE7B157B13E98F487A67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E55F37417E18F095064E9D042BC2A8 /* Foundation.framework */; };
-		5AC063843F5C822D8E0DAD049DB2172C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C666025607E894EE22C741AEE75CF /* Filter.swift */; };
+		596B417CAB38CB148042CC170270C01D /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963764FCC5C90E67FBEE172552A5FEA7 /* PKHUDSuccessView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5AEB12AAB711A7454CB77D9A879C924E /* SubscriptionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3C6F6B94D671BE4134FF6E50E1FF8 /* SubscriptionAPI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5B5D8AE167BD8E304CE474A9B8DBA2B4 /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 854E34EEF28239C72B77D2A9702FE40C /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4318FF0A359F2550569EDDA7E277F7F /* DispatchQueue+Alamofire.swift */; };
+		5BC1ADEB3D2487CF960E6CC306636B02 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E75EAF03CAF9A3342C090A0F38FD8E /* WebSocket.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5DF788CF9F3E451D6C7B83FD687B66E6 /* Matchmore+Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621A225D9C61B0F5FFFD22F2B5844F5F /* Matchmore+Matches.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5E25BCD30BDE2E7A68D1A6FAF7253AD4 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4318FF0A359F2550569EDDA7E277F7F /* DispatchQueue+Alamofire.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		613241F7CB372E931171E64C2952C364 /* MobileDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E41DD0F0E60C52A20A77F1203F7B6F6 /* MobileDevice.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		61B30566A066E82EDBB1CEAAFCB42093 /* Pods-alps-ios-TicketingApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F645BE82627B1DE6E2E2798594533E44 /* Pods-alps-ios-TicketingApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858909D1B93E654D9D39EF4AAAE01AF7 /* ServerTrustPolicy.swift */; };
 		6405CA890C0D29B66E76634E4F51A4A6 /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43442487B37118680EDE3E2FBA41B6CE /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		67D747FEC17D1037189F60DBDBBD8125 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD532368B319DF0504CFA04688744C8 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
-		682975BE18F3C29843689C6235EBAC30 /* IBeaconTriples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5E4F8CBDE0AF69F7451CF92CBDD4EC /* IBeaconTriples.swift */; };
-		6A1704CE88C03C4D952DB16CC7CF5E2C /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C915F2042006AB654C7507160BB7F /* ModelExtensions.swift */; };
-		6AE8DA783077285DFA7F210F4E779A65 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098FE0FCA60365A8FC88CEB82165A720 /* KingfisherManager.swift */; };
+		6540CC4D369A32F6DE54AFA8D5D6FAF9 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01526D737C66C19770AE72D321607FCD /* Alamofire-dummy.m */; };
+		68CE407570AB0EC7311B04E53F94AE42 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E891925F63297E95AE6DBF40B9BDF8 /* Location.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6B6F949227F2BDCD3A4763FF0A8F34D8 /* DeviceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F27DAD63727EAA1508BBA65469BF23 /* DeviceAPI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6C540216712675791F507E32A285BE8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E55F37417E18F095064E9D042BC2A8 /* Foundation.framework */; };
-		6CE1C94C77286026C282829E29923864 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6705351FD542924DE37CEE0BF39FC5 /* Subscription.swift */; };
+		6E8F597BA9D8AD09E372CD356C0823D1 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A59CA9C928054218F3B7E06D3CB5FF /* FormatIndicatedCacheSerializer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6EDCE4FA7F9B0129F1B33CA64765A95C /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098FE0FCA60365A8FC88CEB82165A720 /* KingfisherManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6F103C59776A5A4B5665510283D10365 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD532368B319DF0504CFA04688744C8 /* SkyFloatingLabelTextFieldWithIcon.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7019A18F5385C788CE6B408E76845E90 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6705351FD542924DE37CEE0BF39FC5 /* Subscription.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		713C95FF7B2F6368E0B54BAAF22210DD /* MatchMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B6ACDB9347964F8131B41A74A75DF /* MatchMonitor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E55F37417E18F095064E9D042BC2A8 /* Foundation.framework */; };
-		766750E7B98FF8495403D0C7B5064D6C /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6120B513F27A4FB64F00F49D304F1951 /* PKHUDProgressView.swift */; };
-		769BB159C38C980B63E0B3E86F973600 /* Expirable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D8F8EF02969A4C6801777DCC4E3518 /* Expirable.swift */; };
-		7858411789FFC3399A8F0F926C11CE0C /* Sequence+Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB604820F635C42B892912F0704ACDB /* Sequence+Group.swift */; };
-		7873DE13FA205B782826B5303F61F53F /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD13DCA6746038729B48AD6C933892 /* AlamofireImplementations.swift */; };
-		7AE672DC4B32AF19F80EF28AD5096EDE /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E81E99140B66E8C5934B582A05E075 /* UIButton+Kingfisher.swift */; };
-		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDBB8CDAEB7B39E900F488E7EE88EAF /* SessionDelegate.swift */; };
-		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73E57BC07A06E8E430B31BC7697EF6B /* Result.swift */; };
-		7ED35751C5582A54F66E8BA8431AEC8A /* IBeaconDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE06577F0C7CCA057DF550304EA16 /* IBeaconDevice.swift */; };
-		7F09171ED8899C35E45511452323B3DF /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3C13B0C33D04771975787DD5C4B5C /* PKHUDSquareBaseView.swift */; };
-		7F0B3111D41B314575EC5A957DAFF2BA /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E967C59BCC07981B7DE5EBA39A15A1 /* KingfisherOptionsInfo.swift */; };
-		869B25CDDA4D1BDA81A495A23D43E108 /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C62B9BEB8A14118CF66EBE452675E5 /* PKHUDAssets.swift */; };
-		89C4ADD534D41DF5442F67D799B8E12B /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290E439795A9D5DFEF2B5A3265C18D2B /* PKHUDSystemActivityIndicatorView.swift */; };
-		8AB76319C54E060946930A436EE49666 /* DeviceUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920AE6B6C2D31F0566364C46BB7B96DF /* DeviceUpdate.swift */; };
-		8DAC406911E6461B6D924B05DC368BA4 /* MatchmoreConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E898A5EFF65A91B3591C0191110B3A0 /* MatchmoreConfig.swift */; };
-		905CF9B81462FF7CFC3978D0F78FE868 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442D4764370F486922EF82A3E28632FF /* SkyFloatingLabelTextField.swift */; };
-		923EB9487045D3297D9932193420D597 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5422C0533249A0D4DCF6CC6D67489 /* ImageProcessor.swift */; };
-		973B3225308F60B10BC71DD3C2F3D932 /* Matchmore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926EC912D53360406A93B8C85051268E /* Matchmore.swift */; };
-		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CAB081DA12555ED64792B4EC90C752 /* AFError.swift */; };
-		A0665EF863EED1FB35311292B78685D1 /* Matchmore+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEA436322FB830454C6C4A10F060C1 /* Matchmore+Location.swift */; };
-		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C6475E7C3540EC17ED7700CB6BA532 /* NetworkReachabilityManager.swift */; };
+		73FF24AA80809201BF86AF266FD5D181 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBB1867B3956FEAA63D79FDB21B221C /* Device.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		760CC74F9D2338CE4B04CF74B90CB6E2 /* ModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6C915F2042006AB654C7507160BB7F /* ModelExtensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		78F4229B4A746A38341474FEB9DADB25 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5F7A5A8CC73D05D0CF100CDB3BB2C /* ParameterEncoding.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		797F5AB366EDB6E6206BBAA899E9EE1C /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75177CD38AB6853F62E032C6EBEB698C /* Placeholder.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7A00D368404B765092D20A4D394C3073 /* Matchmore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 797F049CF1FA38CA19A408AF63BA4662 /* Matchmore-dummy.m */; };
+		7F32CB7D597AE60C269285A062FBF3BE /* Codable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4B5413BC906AC3B04715F186940A3 /* Codable.generated.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		81C63C24AAA54FDAD0FB3EDCA11A76B6 /* BeaconTripleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F981EBA3CEBB36F0A85AABE49D50FDDB /* BeaconTripleStore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		81F483A62A9350EA70CBD6714F9491FB /* RemoteNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3460AE5ABFEE031AB5CD62960B581853 /* RemoteNotificationManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		842ECE2E8FD88BD099EB6FD501CE2403 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C666025607E894EE22C741AEE75CF /* Filter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		84403CC062BDF9A84C7241756167B959 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19B67BC742EE6A587EF6BC0506C2C86 /* RequestModifier.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		861921DE738D3714974C13F7B3F48FED /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BBD37C15D7335136222FDA50F009E /* PKHUDWideBaseView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8C35B9762D8E4EF30BB7982FAF46380C /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F15B59511384BCBC0F6865487508A7D /* Starscream-dummy.m */; };
+		8ED02FCBD8B8C86F157439AD0FA56C4C /* ProximityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3142B50CA5E67BF98C73292A732FC /* ProximityHandler.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8F5C0849D2757FC5A7C81B81BA3813C3 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E8DF0E1209A55CD17CED83B6E48E1 /* ResponseSerialization.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8FEB5A055629639A2073D30D3EBEF5ED /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4066A0B3E58CA37AD21463117D8EFB3 /* APIHelper.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		90C53AE24EEF77FA94421C37D3BBDD22 /* DeviceDeleteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2720A1847D5440E8C0070CCCC6F7900 /* DeviceDeleteDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		981EFF1371FCE40F1907DA262743B93E /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753DD154D2EFAE62DAD90F88105BA55B /* Notifications.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9BC0F89A57E1B4DF575CC736E880FAEA /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFFC94F521241B0B104EBB8DF47454 /* Kingfisher.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9C386C809AD2CAA3F4D008ED7D4E9002 /* PublicationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5665AC66AE5486901B5610542DA7E /* PublicationAPI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9F809007E5F430F4E8D4EB2B43DAD0E5 /* MobileDeviceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D8603CD0D8D7EA9EBE93915D989190 /* MobileDeviceStore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A120A61A9EB7A318A26A6965EE56A473 /* ProximityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E46C21E8DC9D2FE80580BAF3E1C7E55 /* ProximityEvent.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A4A880A0A1FE7857249E9FAE54E72298 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E55F37417E18F095064E9D042BC2A8 /* Foundation.framework */; };
-		A5A9F17A94A6CC0F7D4E9DE0FCAFE5AB /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963764FCC5C90E67FBEE172552A5FEA7 /* PKHUDSuccessView.swift */; };
-		A714933CEED799B1895058B16B3BD2E7 /* Codable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC4B5413BC906AC3B04715F186940A3 /* Codable.generated.swift */; };
-		A7BA7C4E4C047A5698A68CA76A453605 /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11076FF8700BEDEB5DB1EBFA1AF4970 /* PKHUDTextView.swift */; };
-		A8096F51DB82ADD9F002809E064F98F9 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60ACC04B3AA7620C8EBC7839BF5034E /* Indicator.swift */; };
-		A92069F1C4408CE756B4B340177F4774 /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B37159C6CC2A262A449A2151351DB /* Subscriptions.swift */; };
-		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01526D737C66C19770AE72D321607FCD /* Alamofire-dummy.m */; };
-		AA276321E3A96169B102E2B4EFF4F02D /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4101A4B9497CCC97197F01D331D5E3 /* CacheSerializer.swift */; };
-		AC9CB2B178FF701B76A75AC7C2047F03 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D76605537AAAF40BB101C65986467 /* Devices.swift */; };
-		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA788847ADF5D805A0533A50D7CED0D2 /* SessionManager.swift */; };
-		AE69D5C998E4D1197C281D923C3BB6CF /* Matchmore+Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621A225D9C61B0F5FFFD22F2B5844F5F /* Matchmore+Matches.swift */; };
-		AEA27A6C1523E5B1A1B3B74CA02FB67D /* PKHUDRotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF25F63678549C9C8A9D3C2330E7FA5 /* PKHUDRotatingImageView.swift */; };
-		B1784F0B1492D9E12C19058767DA90BA /* AlpsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E7B6FC904E0994A3FA489B08A4875 /* AlpsManager.swift */; };
-		B1DC643D39F725A5C89C8195B5C10A09 /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F3A29549D642212A8AEA92C07DCFD /* PKHUDAnimating.swift */; };
-		B4D967DCEF51BD9CD0B30FD8B70AEC85 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AAEBD20ABD4B073763E4AC08B88C47 /* PersistenceManager.swift */; };
-		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11ABEA74622A855A48420F10AD61F3F /* MultipartFormData.swift */; };
-		BA1B53BE85DE9BD789FE1C32FBA8C752 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAE689AC3FF16B4561768C89B1652D6 /* HUD.swift */; };
-		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22037DFBD6D2D01B01A2A2BC36F828F7 /* Validation.swift */; };
-		BCDA6101487ADAF8CE25A92727B57C24 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9832F1CD678DE7C2B002225C9376890C /* Kingfisher-dummy.m */; };
-		BD7282034A14451018E5ED7473FB52F5 /* MobileDeviceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D8603CD0D8D7EA9EBE93915D989190 /* MobileDeviceStore.swift */; };
-		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5F7A5A8CC73D05D0CF100CDB3BB2C /* ParameterEncoding.swift */; };
-		BF541FB658B81D55E6A960701BF0619E /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183D6C3626905800A4A64ABFC0906B1 /* PKHUD.swift */; };
-		C5B8BC12EDE37BB5B677BCBE5B8E17B0 /* MatchMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B6ACDB9347964F8131B41A74A75DF /* MatchMonitor.swift */; };
-		C738A9E89E8049C6B48E8314748B80CA /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F15B59511384BCBC0F6865487508A7D /* Starscream-dummy.m */; };
-		C95972A15988FE58E50E29D632C2E359 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A620CB56F45427A91789601684500F /* Result.swift */; };
-		C9B4DA6F34F73BA6AE5A04FEC982363E /* Matchmore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 797F049CF1FA38CA19A408AF63BA4662 /* Matchmore-dummy.m */; };
-		CAA669EB8CEBF5592352E1791401602C /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D83C786D439D7EF82EC637B1D89DE /* SSLSecurity.swift */; };
-		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06271F106D46E7C1B66C68578626760E /* Response.swift */; };
-		CE0F0FA9B46EC5D90FF0DCDA20A0ED31 /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EB3A6855F5E7712347EC724C11410A /* Publication.swift */; };
-		CE92B73A6564B60B9DE85E7014A6FC83 /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C73D5282093520A8B08C2B351931D1 /* Matches.swift */; };
-		D0F542D62E2AA523E0A3D28DC85D2012 /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7BBD37C15D7335136222FDA50F009E /* PKHUDWideBaseView.swift */; };
+		AA2554D7E59EC30FE32823144BA6E56A /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C62B9BEB8A14118CF66EBE452675E5 /* PKHUDAssets.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AB7843FDC2A5F823CD570246A3E12D0B /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471F3A29549D642212A8AEA92C07DCFD /* PKHUDAnimating.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AD2C576F50E67B2417C1D17FBF5E32B2 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CAB081DA12555ED64792B4EC90C752 /* AFError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ADF3C807D3C2EFE5016962A67EF55BB9 /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11076FF8700BEDEB5DB1EBFA1AF4970 /* PKHUDTextView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AE45399DF2AB5C46392DD6EDD1B9E959 /* Sequence+Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB604820F635C42B892912F0704ACDB /* Sequence+Group.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AEB21C6FD808C527505F4C65844533B8 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C75485B1442AA091C95FA9479CF3D /* String+MD5.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B6240A9292C7603582B90F9225712B4E /* LocationUpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60D45DED9DF187C5A0150F7745513DB /* LocationUpdateManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B637B7B9935ABFC735902CECF7E97CAD /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9405EE822A9FCD1051E5358631119BD7 /* AnimatedImageView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B8E2F5560A296598E9C277ABC2A4BAA1 /* SubscriptionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74A46F7E4BDC00D4BE1B48F5BC0C354 /* SubscriptionStore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BC51409F79DC7DAC96C6E44F3C766884 /* Publications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E6E22E3A76E82C49A68A7B2B81B261 /* Publications.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BD0A00399102E5C7EF7021DFAEC59D15 /* APIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0422C251D1ACB8D772E4F67DF87D07 /* APIs.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BF70BFC0EF94A2882F73B4CCE24C618A /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD270BC15C743FB8496249423A43994 /* Image.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C118EE5ED18814632DFEDA3385D5C6D6 /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B37159C6CC2A262A449A2151351DB /* Subscriptions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C5FD57751548EFFA6567AFD2EB47CD56 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7174EEF9A9C0DF1E36F42F1D5765B515 /* Request.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C67B7B469D97151BC8DA06ACC5117223 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442D4764370F486922EF82A3E28632FF /* SkyFloatingLabelTextField.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C793E31699992609E7C76C746610737D /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9418A80E71D8004CBB46A917D03FE089 /* WindowRootViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C8C855FC1AA2FC47EEFCD01D8B4D5622 /* Matchmore+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEA436322FB830454C6C4A10F060C1 /* Matchmore+Location.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CB69668C869F000C95B7CD1FC4A8AA30 /* PKHUDRotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF25F63678549C9C8A9D3C2330E7FA5 /* PKHUDRotatingImageView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CC8FCDE085D83949D8FC0E5A12DFB372 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE955895B06CAAEF2DF6494E25EA204 /* Window.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CCD511112C75259DEC04089982E6AC70 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4051AAD98ECE3AC0C722E72B2386C6A /* ImageDownloader.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CD327CFFB6EF4F3F465F5E9DDC6AD21F /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97D76605537AAAF40BB101C65986467 /* Devices.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CDD3FD03A0F69EDF309DF32976E03C8C /* LocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD96D274986519BC7B15B85CEBF243 /* LocationAPI.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CE95507AB14AFEB978899E5A65A8B5C2 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60ACC04B3AA7620C8EBC7839BF5034E /* Indicator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D19FA2021EB0A999879EC192BF17D0DB /* SkyFloatingLabelTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B3CB1871193061B3B323952D418F385 /* SkyFloatingLabelTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D205E953E843C195D4D27A6960483863 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19B67BC742EE6A587EF6BC0506C2C86 /* RequestModifier.swift */; };
-		D42E1C9C953771026150086BF7BEBD2B /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5C6411B873D0FE4929EC858B623E89 /* ThreadHelper.swift */; };
-		D472B17C81637E5A348997920034CC8E /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C68B6F20F92314A188D8DEE4689D1 /* ImagePrefetcher.swift */; };
-		D4C30923355EE693C977C75F98E31AC6 /* ErrorResponse+Convienience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8488BAF54BD05F862528D33A3CBEEAF /* ErrorResponse+Convienience.swift */; };
 		D4E0E996ED6293114FEFA55251A63ED2 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AA024BFEE99CEC34D75992832F60A1 /* Starscream.framework */; };
-		DACC27B33D71FAD63D46E1D3AB9DBBB6 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4066A0B3E58CA37AD21463117D8EFB3 /* APIHelper.swift */; };
+		D5686072DEC1A0E14F8C100FCC873F73 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3A6313009D16F553981E04C81DD43E /* TaskDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D6FBE881555E633D746F301C86124BF6 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78993F520E17D831A2AF4761B8D80930 /* ImageView+Kingfisher.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D8AB5693A4BA949370FDCAB55BBD1950 /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183D6C3626905800A4A64ABFC0906B1 /* PKHUD.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DD051242A77B2A97560C418ECA726582 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBA379325DCEA0922949C5AB83F75D8 /* MulticastDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DDBE670AD152272D156B19824C4927FF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A12E0F91AABC2736A27BFB330025331 /* ImageCache.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DE59BA46EFEA885A3F139E8E12F33260 /* Matchmore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EFD0EFCF565ADD66801B7BC60E9D654 /* Matchmore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0DC63E3FEA808360D265AC495098144 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C75485B1442AA091C95FA9479CF3D /* String+MD5.swift */; };
-		E1B6C18711EC72C2C9DC3263513EE387 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBB1867B3956FEAA63D79FDB21B221C /* Device.swift */; };
-		E484053CDA56C4DCCAD5AB1060A8D09A /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45A43530CF760A18FDCC4BB5A9F763 /* KeychainHelper.swift */; };
-		E57944FDD00D7F5F2674D4D52E0F52BA /* PKHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE0593E694218B232FDCEBF74039E26 /* PKHUD-dummy.m */; };
-		E7388B4D8B519DCE593408B922DC6AAB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A16E869E80A903FC73D2637D1FA078 /* Extensions.swift */; };
-		E84966064FC1C0803BE923842202ACEF /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75177CD38AB6853F62E032C6EBEB698C /* Placeholder.swift */; };
+		DF4774DA6F27D354518C787EC48A999E /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6120B513F27A4FB64F00F49D304F1951 /* PKHUDProgressView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E0F3D2264835E3EA055C261A17B58A76 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5674597B9BC8536A999372E05737CB /* Compression.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E198F398404F07805E5189165F3C1E64 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0116A7CDAAE0585B08B2E81827AA844D /* Timeline.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E21967A159BF4399FE09532AC193A56B /* AsyncClearable+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66049CFFD1F4AD6EE857100BD76A248 /* AsyncClearable+Default.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E25043A06049D7A0A6C39BFEA055C62A /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45A43530CF760A18FDCC4BB5A9F763 /* KeychainHelper.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E5382DB1BE5A42B5E274D4050959FB17 /* PinDeviceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F00B62AD7F75F49EFB5FBD04D4299B6 /* PinDeviceStore.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E7C28DF1EC12E603BCAE58B587E626BE /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E81E99140B66E8C5934B582A05E075 /* UIButton+Kingfisher.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E86D55B03913F468D9D971FB3FC21DF2 /* SkyFloatingLabelTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EEC47D92D99D4BF19C3D70CDCCFDBB /* SkyFloatingLabelTextField-dummy.m */; };
 		E9ACEEA6F61E676B9240AB85005C4320 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBF1AD32B7D7669D6438B2FF5BA94B4 /* Alamofire.framework */; };
-		EAD88630A1E91E142686ABE00CD4301A /* DeviceDeleteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2720A1847D5440E8C0070CCCC6F7900 /* DeviceDeleteDelegate.swift */; };
-		EEBD6C847D84D87F1A5881B0BCF1AFAC /* LocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD96D274986519BC7B15B85CEBF243 /* LocationAPI.swift */; };
-		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753DD154D2EFAE62DAD90F88105BA55B /* Notifications.swift */; };
-		F30D72157B0033EA048E52D4A8C25BDE /* ProximityEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E46C21E8DC9D2FE80580BAF3E1C7E55 /* ProximityEvent.swift */; };
-		F4AEE8A0BA86E4DD854E3BFE0FE55480 /* AsyncClearable+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66049CFFD1F4AD6EE857100BD76A248 /* AsyncClearable+Default.swift */; };
-		F4C22A07683E879CB3ECF7D6A73F667E /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9418A80E71D8004CBB46A917D03FE089 /* WindowRootViewController.swift */; };
-		F61C2235825FE532417891978344385E /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE955895B06CAAEF2DF6494E25EA204 /* Window.swift */; };
-		F68528712B7B85C8AD906EC404FCB471 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E891925F63297E95AE6DBF40B9BDF8 /* Location.swift */; };
-		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96E8DF0E1209A55CD17CED83B6E48E1 /* ResponseSerialization.swift */; };
-		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2937AD8C055D3B00A67DE9C748B190 /* Alamofire.swift */; };
-		F949B79CF0DE1A67721B764EC95D20AD /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAFFC94F521241B0B104EBB8DF47454 /* Kingfisher.swift */; };
-		F9722DAD1597A2F8DC750722A578756D /* ProximityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C3142B50CA5E67BF98C73292A732FC /* ProximityHandler.swift */; };
-		FA01D4BC67C3A6F535AA04AD3CE1B133 /* String+JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C2BF8403102C51510EE59413D2D603 /* String+JWT.swift */; };
-		FF8F8F3C3FFE013E98F9050940BF3C35 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E75EAF03CAF9A3342C090A0F38FD8E /* WebSocket.swift */; };
+		EBA06512F07D7C8D7BEC613E1FCD27AA /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6FD172ADDB5A6D03BE24BA710D3188 /* FrameView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EBA0781A1E2822CF7DFD56ACD394A63E /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2937AD8C055D3B00A67DE9C748B190 /* Alamofire.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ED37B360D5C446703ECC48CD58016677 /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4101A4B9497CCC97197F01D331D5E3 /* CacheSerializer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EDA8958AE6DFEF723B2E9DEBC9091ABC /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5422C0533249A0D4DCF6CC6D67489 /* ImageProcessor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EE7B8515907147560F5332F0BC83C481 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EFB188E929BFDBDBA25C7B7E7D8FEF /* Resource.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EF6A67AA04DE896BB84594BAF6FE152D /* IBeaconTriple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FD61E06CAEEC21B78C3B4E01665C0 /* IBeaconTriple.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F4E509F392A027ABAD2922148C7B4A2E /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443C68B6F20F92314A188D8DEE4689D1 /* ImagePrefetcher.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F6D165882E2090ADFCE7DDEC10B53AA3 /* String+JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C2BF8403102C51510EE59413D2D603 /* String+JWT.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FAC9C58E5DFBA92A637E5F5CAB6DF71C /* IBeaconDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DBE06577F0C7CCA057DF550304EA16 /* IBeaconDevice.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FB106BFBD84A8AF57F544C61AD79A008 /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290E439795A9D5DFEF2B5A3265C18D2B /* PKHUDSystemActivityIndicatorView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FEC070194D17DAB01C6592E940BE3444 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A620CB56F45427A91789601684500F /* Result.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1348,7 +1348,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C1E4CEFB2390CBE75E70BAC20F44BBF /* Build configuration list for PBXNativeTarget "Kingfisher" */;
 			buildPhases = (
-				028CF0EB906C10D636EC909AF25FA2CF /* Sources */,
+				1B0C4DBE28D2E9C5B9585DFADB8C3463 /* Sources */,
 				C0B9722E352CF90C920286E6F029D3C0 /* Frameworks */,
 				84676F7D46FF521291CDEB2AB04A454C /* Headers */,
 			);
@@ -1365,7 +1365,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
 			buildPhases = (
-				32B9974868188C4803318E36329C87FE /* Sources */,
+				47AA244DE0C8B2C0F0A585D845356E59 /* Sources */,
 				99195E4207764744AEC07ECCBCD550EB /* Frameworks */,
 				B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */,
 			);
@@ -1382,7 +1382,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 964A1D61C5B589C83882FC9E71E1025B /* Build configuration list for PBXNativeTarget "SkyFloatingLabelTextField" */;
 			buildPhases = (
-				1F29CC91AFCDE5D68D5EC84027547D0B /* Sources */,
+				C8EEA28CF52E3776E41151EBA6D20EC4 /* Sources */,
 				7847CCDC20DAA84FC7873D3D0E11EDF3 /* Frameworks */,
 				2866367379288E6779C15C3C38C67662 /* Headers */,
 			);
@@ -1399,7 +1399,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE75A4C6CE9E9E2D118E3EC8CCEADC64 /* Build configuration list for PBXNativeTarget "Starscream" */;
 			buildPhases = (
-				08F2A9A96B1F0DEB470B72FB849CABE7 /* Sources */,
+				B8E4A12CD183C1C8998430E1A4C2BC4C /* Sources */,
 				4C3044123F7D19917CC787F96FD10BF1 /* Frameworks */,
 				00649278FAE06AC14494AC75B1578374 /* Headers */,
 			);
@@ -1416,7 +1416,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9306D49004A2A30AC52787A7B1C9C87A /* Build configuration list for PBXNativeTarget "PKHUD" */;
 			buildPhases = (
-				64C2A244B5B13B1D5FBAAA42BFE1724F /* Sources */,
+				9857B4E9731EED214B480E2A8304F9A8 /* Sources */,
 				09097AE0247A71FADE9AE4A13E3E0C55 /* Frameworks */,
 				CEEFB59308D9874EDAA446AD0659FA29 /* Headers */,
 				A6E5CC81DF41A96AA2FC861070D8146A /* Resources */,
@@ -1434,7 +1434,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05E1CCA2FB0C720B1303D6D77F9F7E54 /* Build configuration list for PBXNativeTarget "Matchmore" */;
 			buildPhases = (
-				407CC11604BF9C7928890C1B16B74AEC /* Sources */,
+				FDC796BD3A3391897D4316EA9E51E287 /* Sources */,
 				E6E12BA1C40BFDCECDC4FA549F0C4C15 /* Frameworks */,
 				57432C83FCA4763A120606B7A919346E /* Headers */,
 			);
@@ -1493,171 +1493,82 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		028CF0EB906C10D636EC909AF25FA2CF /* Sources */ = {
+		1B0C4DBE28D2E9C5B9585DFADB8C3463 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09A0DDE1726C527699A0C0F53482505B /* AnimatedImageView.swift in Sources */,
-				AA276321E3A96169B102E2B4EFF4F02D /* CacheSerializer.swift in Sources */,
-				5AC063843F5C822D8E0DAD049DB2172C /* Filter.swift in Sources */,
-				171D92BAB767E217703001B86CAF5E9E /* FormatIndicatedCacheSerializer.swift in Sources */,
-				11ECC5C9BE0D9AE6AE8079882CB5AF75 /* Image.swift in Sources */,
-				270728363BC4B690C40E53B053710684 /* ImageCache.swift in Sources */,
-				0F755ADCEAA8BF40FF7BECCBD8B5310B /* ImageDownloader.swift in Sources */,
-				3DA9227F3FD83241A4D4BA9DBAE405AD /* ImageModifier.swift in Sources */,
-				D472B17C81637E5A348997920034CC8E /* ImagePrefetcher.swift in Sources */,
-				923EB9487045D3297D9932193420D597 /* ImageProcessor.swift in Sources */,
-				3845689DFB2BE4BFAD2D3C2733D7054A /* ImageTransition.swift in Sources */,
-				047C4D945343F46AFF1273DE29F8A290 /* ImageView+Kingfisher.swift in Sources */,
-				A8096F51DB82ADD9F002809E064F98F9 /* Indicator.swift in Sources */,
-				BCDA6101487ADAF8CE25A92727B57C24 /* Kingfisher-dummy.m in Sources */,
-				F949B79CF0DE1A67721B764EC95D20AD /* Kingfisher.swift in Sources */,
-				6AE8DA783077285DFA7F210F4E779A65 /* KingfisherManager.swift in Sources */,
-				7F0B3111D41B314575EC5A957DAFF2BA /* KingfisherOptionsInfo.swift in Sources */,
-				E84966064FC1C0803BE923842202ACEF /* Placeholder.swift in Sources */,
-				D205E953E843C195D4D27A6960483863 /* RequestModifier.swift in Sources */,
-				12CF563678704ED1369F793FA30AAEA9 /* Resource.swift in Sources */,
-				E0DC63E3FEA808360D265AC495098144 /* String+MD5.swift in Sources */,
-				D42E1C9C953771026150086BF7BEBD2B /* ThreadHelper.swift in Sources */,
-				7AE672DC4B32AF19F80EF28AD5096EDE /* UIButton+Kingfisher.swift in Sources */,
+				B637B7B9935ABFC735902CECF7E97CAD /* AnimatedImageView.swift in Sources */,
+				ED37B360D5C446703ECC48CD58016677 /* CacheSerializer.swift in Sources */,
+				842ECE2E8FD88BD099EB6FD501CE2403 /* Filter.swift in Sources */,
+				6E8F597BA9D8AD09E372CD356C0823D1 /* FormatIndicatedCacheSerializer.swift in Sources */,
+				BF70BFC0EF94A2882F73B4CCE24C618A /* Image.swift in Sources */,
+				DDBE670AD152272D156B19824C4927FF /* ImageCache.swift in Sources */,
+				CCD511112C75259DEC04089982E6AC70 /* ImageDownloader.swift in Sources */,
+				280AF380471897EA10E1922CD21B7644 /* ImageModifier.swift in Sources */,
+				F4E509F392A027ABAD2922148C7B4A2E /* ImagePrefetcher.swift in Sources */,
+				EDA8958AE6DFEF723B2E9DEBC9091ABC /* ImageProcessor.swift in Sources */,
+				432D8294961EC6165DC9DE9AFFD0284C /* ImageTransition.swift in Sources */,
+				D6FBE881555E633D746F301C86124BF6 /* ImageView+Kingfisher.swift in Sources */,
+				CE95507AB14AFEB978899E5A65A8B5C2 /* Indicator.swift in Sources */,
+				1C3B11A652C2AF1235E6981DBBBDA1D5 /* Kingfisher-dummy.m in Sources */,
+				9BC0F89A57E1B4DF575CC736E880FAEA /* Kingfisher.swift in Sources */,
+				6EDCE4FA7F9B0129F1B33CA64765A95C /* KingfisherManager.swift in Sources */,
+				4A79E904C80B13D4DBBE7D7A0A0B4774 /* KingfisherOptionsInfo.swift in Sources */,
+				797F5AB366EDB6E6206BBAA899E9EE1C /* Placeholder.swift in Sources */,
+				84403CC062BDF9A84C7241756167B959 /* RequestModifier.swift in Sources */,
+				EE7B8515907147560F5332F0BC83C481 /* Resource.swift in Sources */,
+				AEB21C6FD808C527505F4C65844533B8 /* String+MD5.swift in Sources */,
+				56283C4D397C058D245EB1E2F5B67C41 /* ThreadHelper.swift in Sources */,
+				E7C28DF1EC12E603BCAE58B587E626BE /* UIButton+Kingfisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		08F2A9A96B1F0DEB470B72FB849CABE7 /* Sources */ = {
+		47AA244DE0C8B2C0F0A585D845356E59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5605200EB661580F6B7102F556616435 /* Compression.swift in Sources */,
-				CAA669EB8CEBF5592352E1791401602C /* SSLSecurity.swift in Sources */,
-				C738A9E89E8049C6B48E8314748B80CA /* Starscream-dummy.m in Sources */,
-				FF8F8F3C3FFE013E98F9050940BF3C35 /* WebSocket.swift in Sources */,
+				AD2C576F50E67B2417C1D17FBF5E32B2 /* AFError.swift in Sources */,
+				6540CC4D369A32F6DE54AFA8D5D6FAF9 /* Alamofire-dummy.m in Sources */,
+				EBA0781A1E2822CF7DFD56ACD394A63E /* Alamofire.swift in Sources */,
+				5E25BCD30BDE2E7A68D1A6FAF7253AD4 /* DispatchQueue+Alamofire.swift in Sources */,
+				58812AABBC0A1E7AE019752424DF31A7 /* MultipartFormData.swift in Sources */,
+				079D990738735591330332B5F2551AE4 /* NetworkReachabilityManager.swift in Sources */,
+				981EFF1371FCE40F1907DA262743B93E /* Notifications.swift in Sources */,
+				78F4229B4A746A38341474FEB9DADB25 /* ParameterEncoding.swift in Sources */,
+				C5FD57751548EFFA6567AFD2EB47CD56 /* Request.swift in Sources */,
+				204944D67267632DD7CD4BEFB60AC389 /* Response.swift in Sources */,
+				8F5C0849D2757FC5A7C81B81BA3813C3 /* ResponseSerialization.swift in Sources */,
+				00E153632A414101E0A66AE23569802B /* Result.swift in Sources */,
+				343B30C989188B77FB1149FED753A63C /* ServerTrustPolicy.swift in Sources */,
+				14CECE238604E1D44104E5BCD14EB2BE /* SessionDelegate.swift in Sources */,
+				2B58B070F9D7324583D01EE906BC918C /* SessionManager.swift in Sources */,
+				D5686072DEC1A0E14F8C100FCC873F73 /* TaskDelegate.swift in Sources */,
+				E198F398404F07805E5189165F3C1E64 /* Timeline.swift in Sources */,
+				164781197625A3149B3BDBCAA2AC8CC3 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1F29CC91AFCDE5D68D5EC84027547D0B /* Sources */ = {
+		9857B4E9731EED214B480E2A8304F9A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0407602489C1F98ECBFE71770E5DF859 /* SkyFloatingLabelTextField-dummy.m in Sources */,
-				905CF9B81462FF7CFC3978D0F78FE868 /* SkyFloatingLabelTextField.swift in Sources */,
-				67D747FEC17D1037189F60DBDBBD8125 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
-				203FFC86426B4CDAB9FD112972370DC7 /* UITextField+fixCaretPosition.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		32B9974868188C4803318E36329C87FE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
-				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
-				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,
-				61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */,
-				B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */,
-				A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */,
-				EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */,
-				BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */,
-				5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */,
-				CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */,
-				F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */,
-				7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */,
-				62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */,
-				7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */,
-				AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */,
-				3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */,
-				10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */,
-				BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		407CC11604BF9C7928890C1B16B74AEC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7873DE13FA205B782826B5303F61F53F /* AlamofireImplementations.swift in Sources */,
-				B1784F0B1492D9E12C19058767DA90BA /* AlpsManager.swift in Sources */,
-				1AFA8353538FB624AAB509E224153A64 /* APIError.swift in Sources */,
-				DACC27B33D71FAD63D46E1D3AB9DBBB6 /* APIHelper.swift in Sources */,
-				436EC8427E29B8279055AA2B8BB664BC /* APIs.swift in Sources */,
-				F4AEE8A0BA86E4DD854E3BFE0FE55480 /* AsyncClearable+Default.swift in Sources */,
-				297EB82D81D00F24159B78DD8F57A3B8 /* AutoCodable.swift in Sources */,
-				20E431DA5C426B4E5CCA9D126F39A0B9 /* BeaconTripleStore.swift in Sources */,
-				A714933CEED799B1895058B16B3BD2E7 /* Codable.generated.swift in Sources */,
-				140FFE7C48EDF8B1AB28083EF501C411 /* Configuration.swift in Sources */,
-				0D4B01282C028022949704CE93A5422F /* ContextManager.swift in Sources */,
-				3253755CA8B8E9787E1F8AA24993B728 /* DataStore.swift in Sources */,
-				E1B6C18711EC72C2C9DC3263513EE387 /* Device.swift in Sources */,
-				27A5D23E9CA77A6C2CB08EBC29A927FD /* DeviceAPI.swift in Sources */,
-				EAD88630A1E91E142686ABE00CD4301A /* DeviceDeleteDelegate.swift in Sources */,
-				AC9CB2B178FF701B76A75AC7C2047F03 /* Devices.swift in Sources */,
-				43C88F7D7791728A28460AD0AFF03270 /* DeviceType.swift in Sources */,
-				8AB76319C54E060946930A436EE49666 /* DeviceUpdate.swift in Sources */,
-				D4C30923355EE693C977C75F98E31AC6 /* ErrorResponse+Convienience.swift in Sources */,
-				769BB159C38C980B63E0B3E86F973600 /* Expirable.swift in Sources */,
-				E7388B4D8B519DCE593408B922DC6AAB /* Extensions.swift in Sources */,
-				7ED35751C5582A54F66E8BA8431AEC8A /* IBeaconDevice.swift in Sources */,
-				556003F6ADF73A65ADCEE7F4157908B3 /* IBeaconTriple.swift in Sources */,
-				682975BE18F3C29843689C6235EBAC30 /* IBeaconTriples.swift in Sources */,
-				E484053CDA56C4DCCAD5AB1060A8D09A /* KeychainHelper.swift in Sources */,
-				F68528712B7B85C8AD906EC404FCB471 /* Location.swift in Sources */,
-				EEBD6C847D84D87F1A5881B0BCF1AFAC /* LocationAPI.swift in Sources */,
-				1BD54920ABDAA1DA72B4E8FD6354BCF8 /* LocationUpdateManager.swift in Sources */,
-				15C87B42E7A27C72338E6B63562C5166 /* Match.swift in Sources */,
-				CE92B73A6564B60B9DE85E7014A6FC83 /* Matches.swift in Sources */,
-				05A8974284E0CD1173B13F095E319544 /* MatchesAPI.swift in Sources */,
-				C5B8BC12EDE37BB5B677BCBE5B8E17B0 /* MatchMonitor.swift in Sources */,
-				45EEEDE9FA9A17CE41D60241D347E423 /* Matchmore+Creation.swift in Sources */,
-				A0665EF863EED1FB35311292B78685D1 /* Matchmore+Location.swift in Sources */,
-				AE69D5C998E4D1197C281D923C3BB6CF /* Matchmore+Matches.swift in Sources */,
-				C9B4DA6F34F73BA6AE5A04FEC982363E /* Matchmore-dummy.m in Sources */,
-				973B3225308F60B10BC71DD3C2F3D932 /* Matchmore.swift in Sources */,
-				8DAC406911E6461B6D924B05DC368BA4 /* MatchmoreConfig.swift in Sources */,
-				252204E5FFD258972ACC98F2FC1F5DDA /* MobileDevice.swift in Sources */,
-				BD7282034A14451018E5ED7473FB52F5 /* MobileDeviceStore.swift in Sources */,
-				6A1704CE88C03C4D952DB16CC7CF5E2C /* ModelExtensions.swift in Sources */,
-				53723CBFC8E7855567C068B8DF3C1659 /* Models.swift in Sources */,
-				386547D8C16A71984C5C1FCD4360627A /* MulticastDelegate.swift in Sources */,
-				B4D967DCEF51BD9CD0B30FD8B70AEC85 /* PersistenceManager.swift in Sources */,
-				1F4F8CCC586D9EDEE1A013604D76BA25 /* PinDevice.swift in Sources */,
-				343D786A2E3810E55837B0596807C0E6 /* PinDeviceStore.swift in Sources */,
-				F30D72157B0033EA048E52D4A8C25BDE /* ProximityEvent.swift in Sources */,
-				F9722DAD1597A2F8DC750722A578756D /* ProximityHandler.swift in Sources */,
-				CE0F0FA9B46EC5D90FF0DCDA20A0ED31 /* Publication.swift in Sources */,
-				376019855CEEF9BCC5EBE1764191FAD2 /* PublicationAPI.swift in Sources */,
-				1D889622B764E69AE9F88E1031433BA0 /* Publications.swift in Sources */,
-				250831ED9AFC0AA29662F9D20BD0231C /* PublicationStore.swift in Sources */,
-				4B7F7839C3BA1FCC63D53AE5D56F2CE6 /* RemoteNotificationManager.swift in Sources */,
-				C95972A15988FE58E50E29D632C2E359 /* Result.swift in Sources */,
-				7858411789FFC3399A8F0F926C11CE0C /* Sequence+Group.swift in Sources */,
-				FA01D4BC67C3A6F535AA04AD3CE1B133 /* String+JWT.swift in Sources */,
-				6CE1C94C77286026C282829E29923864 /* Subscription.swift in Sources */,
-				1A7DF30005C1B5074C94128DF56A4602 /* SubscriptionAPI.swift in Sources */,
-				A92069F1C4408CE756B4B340177F4774 /* Subscriptions.swift in Sources */,
-				4A497E3056CEC2546E4F987BEC551FA2 /* SubscriptionStore.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		64C2A244B5B13B1D5FBAAA42BFE1724F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F34910B27A3B86966E07898A2B70AE6 /* FrameView.swift in Sources */,
-				BA1B53BE85DE9BD789FE1C32FBA8C752 /* HUD.swift in Sources */,
-				E57944FDD00D7F5F2674D4D52E0F52BA /* PKHUD-dummy.m in Sources */,
-				BF541FB658B81D55E6A960701BF0619E /* PKHUD.swift in Sources */,
-				B1DC643D39F725A5C89C8195B5C10A09 /* PKHUDAnimating.swift in Sources */,
-				3470186F176465D3CA04711D0D82DF38 /* PKHUDAnimation.swift in Sources */,
-				869B25CDDA4D1BDA81A495A23D43E108 /* PKHUDAssets.swift in Sources */,
-				17E7E62102D200AFE11B049F570C9397 /* PKHUDErrorView.swift in Sources */,
-				766750E7B98FF8495403D0C7B5064D6C /* PKHUDProgressView.swift in Sources */,
-				AEA27A6C1523E5B1A1B3B74CA02FB67D /* PKHUDRotatingImageView.swift in Sources */,
-				7F09171ED8899C35E45511452323B3DF /* PKHUDSquareBaseView.swift in Sources */,
-				A5A9F17A94A6CC0F7D4E9DE0FCAFE5AB /* PKHUDSuccessView.swift in Sources */,
-				89C4ADD534D41DF5442F67D799B8E12B /* PKHUDSystemActivityIndicatorView.swift in Sources */,
-				A7BA7C4E4C047A5698A68CA76A453605 /* PKHUDTextView.swift in Sources */,
-				D0F542D62E2AA523E0A3D28DC85D2012 /* PKHUDWideBaseView.swift in Sources */,
-				F61C2235825FE532417891978344385E /* Window.swift in Sources */,
-				F4C22A07683E879CB3ECF7D6A73F667E /* WindowRootViewController.swift in Sources */,
+				EBA06512F07D7C8D7BEC613E1FCD27AA /* FrameView.swift in Sources */,
+				08DFB08827FC686B60A6FDA32B449C24 /* HUD.swift in Sources */,
+				1B241D22B142541C7B51EF28FDF2A8C6 /* PKHUD-dummy.m in Sources */,
+				D8AB5693A4BA949370FDCAB55BBD1950 /* PKHUD.swift in Sources */,
+				AB7843FDC2A5F823CD570246A3E12D0B /* PKHUDAnimating.swift in Sources */,
+				2A67FB67B2037FEA772B750068D896CD /* PKHUDAnimation.swift in Sources */,
+				AA2554D7E59EC30FE32823144BA6E56A /* PKHUDAssets.swift in Sources */,
+				36B4616E83B2DDE3C216DF569725EE9C /* PKHUDErrorView.swift in Sources */,
+				DF4774DA6F27D354518C787EC48A999E /* PKHUDProgressView.swift in Sources */,
+				CB69668C869F000C95B7CD1FC4A8AA30 /* PKHUDRotatingImageView.swift in Sources */,
+				25296207497F52341E34C3F4E35B3FE6 /* PKHUDSquareBaseView.swift in Sources */,
+				596B417CAB38CB148042CC170270C01D /* PKHUDSuccessView.swift in Sources */,
+				FB106BFBD84A8AF57F544C61AD79A008 /* PKHUDSystemActivityIndicatorView.swift in Sources */,
+				ADF3C807D3C2EFE5016962A67EF55BB9 /* PKHUDTextView.swift in Sources */,
+				861921DE738D3714974C13F7B3F48FED /* PKHUDWideBaseView.swift in Sources */,
+				CC8FCDE085D83949D8FC0E5A12DFB372 /* Window.swift in Sources */,
+				C793E31699992609E7C76C746610737D /* WindowRootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1666,6 +1577,95 @@
 			buildActionMask = 2147483647;
 			files = (
 				345F3A68FF914C928597D0613E675E43 /* Pods-alps-ios-TicketingApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E4A12CD183C1C8998430E1A4C2BC4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0F3D2264835E3EA055C261A17B58A76 /* Compression.swift in Sources */,
+				2D3DF79750FFAB7BCCF86FB15466D411 /* SSLSecurity.swift in Sources */,
+				8C35B9762D8E4EF30BB7982FAF46380C /* Starscream-dummy.m in Sources */,
+				5BC1ADEB3D2487CF960E6CC306636B02 /* WebSocket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8EEA28CF52E3776E41151EBA6D20EC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E86D55B03913F468D9D971FB3FC21DF2 /* SkyFloatingLabelTextField-dummy.m in Sources */,
+				C67B7B469D97151BC8DA06ACC5117223 /* SkyFloatingLabelTextField.swift in Sources */,
+				6F103C59776A5A4B5665510283D10365 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
+				124E96D9C02B9D72C1B4802B8E1091BD /* UITextField+fixCaretPosition.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC796BD3A3391897D4316EA9E51E287 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				118C21E7B798DD6E5B8476C08ACB61D1 /* AlamofireImplementations.swift in Sources */,
+				1CFCA91D81EC4C5E5FE6A4512CD54BFF /* AlpsManager.swift in Sources */,
+				314C4328D56632684787FCEC5B86AE89 /* APIError.swift in Sources */,
+				8FEB5A055629639A2073D30D3EBEF5ED /* APIHelper.swift in Sources */,
+				BD0A00399102E5C7EF7021DFAEC59D15 /* APIs.swift in Sources */,
+				E21967A159BF4399FE09532AC193A56B /* AsyncClearable+Default.swift in Sources */,
+				44CA785480D468895E2A504F6239493A /* AutoCodable.swift in Sources */,
+				81C63C24AAA54FDAD0FB3EDCA11A76B6 /* BeaconTripleStore.swift in Sources */,
+				7F32CB7D597AE60C269285A062FBF3BE /* Codable.generated.swift in Sources */,
+				499222E7F9810362C349A99340FFAF83 /* Configuration.swift in Sources */,
+				027818475CF08EA70F7E2E675B24843F /* ContextManager.swift in Sources */,
+				145FDE7DF86C734D327BDBD7E38A3686 /* DataStore.swift in Sources */,
+				73FF24AA80809201BF86AF266FD5D181 /* Device.swift in Sources */,
+				6B6F949227F2BDCD3A4763FF0A8F34D8 /* DeviceAPI.swift in Sources */,
+				90C53AE24EEF77FA94421C37D3BBDD22 /* DeviceDeleteDelegate.swift in Sources */,
+				CD327CFFB6EF4F3F465F5E9DDC6AD21F /* Devices.swift in Sources */,
+				51FED2A6C89830AE1DB8C79763A173C1 /* DeviceType.swift in Sources */,
+				54FA52A3868E0BD84CC4BC51C8E745F3 /* DeviceUpdate.swift in Sources */,
+				42F5C516BD88DAF466FF5F5A70DFF104 /* ErrorResponse+Convienience.swift in Sources */,
+				1AD97DBDF1301A09236AD6C1C1996736 /* Expirable.swift in Sources */,
+				071803395FA4B2D29D0AA9BC0A457A3E /* Extensions.swift in Sources */,
+				FAC9C58E5DFBA92A637E5F5CAB6DF71C /* IBeaconDevice.swift in Sources */,
+				EF6A67AA04DE896BB84594BAF6FE152D /* IBeaconTriple.swift in Sources */,
+				28983077A46BF521F8E1B9B6F31051EC /* IBeaconTriples.swift in Sources */,
+				E25043A06049D7A0A6C39BFEA055C62A /* KeychainHelper.swift in Sources */,
+				68CE407570AB0EC7311B04E53F94AE42 /* Location.swift in Sources */,
+				CDD3FD03A0F69EDF309DF32976E03C8C /* LocationAPI.swift in Sources */,
+				B6240A9292C7603582B90F9225712B4E /* LocationUpdateManager.swift in Sources */,
+				50C8E0F3759B54600464EFF3E3BCE350 /* Match.swift in Sources */,
+				3588EDF1661E40F5A820F53A24015875 /* Matches.swift in Sources */,
+				43827F5A9222141CE17293B01F53E163 /* MatchesAPI.swift in Sources */,
+				713C95FF7B2F6368E0B54BAAF22210DD /* MatchMonitor.swift in Sources */,
+				52F6096C8EE34FDF3EDA863BE0172621 /* Matchmore+Creation.swift in Sources */,
+				C8C855FC1AA2FC47EEFCD01D8B4D5622 /* Matchmore+Location.swift in Sources */,
+				5DF788CF9F3E451D6C7B83FD687B66E6 /* Matchmore+Matches.swift in Sources */,
+				7A00D368404B765092D20A4D394C3073 /* Matchmore-dummy.m in Sources */,
+				385513D45913F4AEA9EC117599A92F3C /* Matchmore.swift in Sources */,
+				3C85FC5C878C64267B78E9E6792BB0AD /* MatchmoreConfig.swift in Sources */,
+				613241F7CB372E931171E64C2952C364 /* MobileDevice.swift in Sources */,
+				9F809007E5F430F4E8D4EB2B43DAD0E5 /* MobileDeviceStore.swift in Sources */,
+				760CC74F9D2338CE4B04CF74B90CB6E2 /* ModelExtensions.swift in Sources */,
+				36F68238894E2555EF727015BD7E60B6 /* Models.swift in Sources */,
+				DD051242A77B2A97560C418ECA726582 /* MulticastDelegate.swift in Sources */,
+				581F79DC6CA98B5B5AEBC2D1F1AE2F6C /* PersistenceManager.swift in Sources */,
+				103FE2B2E6C458BCE12AC720E5055243 /* PinDevice.swift in Sources */,
+				E5382DB1BE5A42B5E274D4050959FB17 /* PinDeviceStore.swift in Sources */,
+				A120A61A9EB7A318A26A6965EE56A473 /* ProximityEvent.swift in Sources */,
+				8ED02FCBD8B8C86F157439AD0FA56C4C /* ProximityHandler.swift in Sources */,
+				3F6AF7DB20321948C39C0B444446B56C /* Publication.swift in Sources */,
+				9C386C809AD2CAA3F4D008ED7D4E9002 /* PublicationAPI.swift in Sources */,
+				BC51409F79DC7DAC96C6E44F3C766884 /* Publications.swift in Sources */,
+				18B8259113915CD5A4B5EAC741FE84EB /* PublicationStore.swift in Sources */,
+				81F483A62A9350EA70CBD6714F9491FB /* RemoteNotificationManager.swift in Sources */,
+				FEC070194D17DAB01C6592E940BE3444 /* Result.swift in Sources */,
+				AE45399DF2AB5C46392DD6EDD1B9E959 /* Sequence+Group.swift in Sources */,
+				F6D165882E2090ADFCE7DDEC10B53AA3 /* String+JWT.swift in Sources */,
+				7019A18F5385C788CE6B408E76845E90 /* Subscription.swift in Sources */,
+				5AEB12AAB711A7454CB77D9A879C924E /* SubscriptionAPI.swift in Sources */,
+				C118EE5ED18814632DFEDA3385D5C6D6 /* Subscriptions.swift in Sources */,
+				B8E2F5560A296598E9C277ABC2A4BAA1 /* SubscriptionStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

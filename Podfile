@@ -17,7 +17,7 @@ pod 'Matchmore', '~> 0.7'
 
 pod 'Fabric'
 pod 'Crashlytics'
-
+pod 'IQKeyboardManager'
 pod 'SwiftFormat/CLI'
 
 post_install do |installer|

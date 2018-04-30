@@ -65,7 +65,9 @@ class IBeaconPublicationViewController: UIViewController, UITextFieldDelegate, U
     }
 
     func pickerView(_: UIPickerView, titleForRow row: Int, forComponent _: Int) -> String? {
-        return pickerData[row].proximityUUID
+        let beacon = pickerData[row]
+        let title = "🆔\(beacon.proximityUUID?.prefix(4) ?? "")•••• 🔻:\(beacon.minor ?? 0) 🔺:\(beacon.major ?? 0))"
+        return title
     }
 
     func pickerView(_: UIPickerView, didSelectRow row: Int, inComponent _: Int) {

@@ -13,7 +13,7 @@ pod 'SkyFloatingLabelTextField', '~> 3.0'
 pod 'PKHUD', '~> 5.0'
 pod 'Kingfisher', '~> 4.0'
 
-pod 'Matchmore', :path => '../alps-ios-sdk'
+pod 'Matchmore', '~> 0.7'
 
 pod 'Fabric'
 pod 'Crashlytics'

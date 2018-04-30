@@ -1,6 +1,0 @@
-framework module Matchmore {
-  umbrella header "Matchmore-umbrella.h"
-
-  export *
-  module * { export * }
-}

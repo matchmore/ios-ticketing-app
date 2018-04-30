@@ -11,14 +11,15 @@ import UIKit
 class TicketTableViewCell: UITableViewCell {
 
     // MARK: Properties
-    @IBOutlet weak var concertLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
+
+    @IBOutlet var concertLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
     @IBOutlet var iconImageView: UIImageView!
-    @IBOutlet weak var deviceTypeLabel: UILabel!
-    
+    @IBOutlet var deviceTypeLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         iconImageView.image = iconImageView.image!.withRenderingMode(.alwaysTemplate)
-        iconImageView.tintColor = UIColor(red:0.87, green:0.53, blue:0.35, alpha:1.00)
+        iconImageView.tintColor = UIColor(red: 0.87, green: 0.53, blue: 0.35, alpha: 1.00)
     }
 }

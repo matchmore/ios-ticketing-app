@@ -214,7 +214,8 @@
 				84110D6B1F5E8A7500C3E28D /* Frameworks */,
 				84110D6C1F5E8A7500C3E28D /* Resources */,
 				987BF8C37AAC3EA867768BEB /* [CP] Embed Pods Frameworks */,
-				DB13C5F30816BF56A12A332D /* [CP] Copy Pods Resources */,
+				C345B7BE2068FBC40023E2D3 /* Crashlytics */,
+				C38BC4F020738A7F0078B2BE /* SwiftFormat */,
 			);
 			buildRules = (
 			);
@@ -320,8 +321,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlpsSDK/AlpsSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Matchmore/Matchmore.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
@@ -329,8 +330,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlpsSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Matchmore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
@@ -340,20 +341,33 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB13C5F30816BF56A12A332D /* [CP] Copy Pods Resources */ = {
+		C345B7BE2068FBC40023E2D3 /* Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = Crashlytics;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alps-ios-TicketingApp/Pods-alps-ios-TicketingApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" c58a1b639177884e303497a5ca6a94cd9dda4862 5ff14f170b258d54fef941732fd8da3012ac2bdd2e63f07499bb1074094bcf14";
+		};
+		C38BC4F020738A7F0078B2BE /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" \"${SRCROOT}/alps-ios-TicketingApp\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -510,6 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "alps-ios-TicketingApp/alps-ios-TicketingApp.entitlements";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = PAYVP3AFKX;
 				INFOPLIST_FILE = "alps-ios-TicketingApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

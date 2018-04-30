@@ -11,13 +11,15 @@ import UIKit
 extension AppDelegate {
     func setupAppearance() {
         UIApplication.shared.statusBarStyle = .lightContent
-        (self.window?.rootViewController as? UITabBarController)?.selectedIndex = 1
-        
+        if let tabBarController = self.window?.rootViewController as? UITabBarController {
+            tabBarController.selectedIndex = 0
+        }
+
         UINavigationBar.appearance().barTintColor = UIColor.myOrange
         UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().isTranslucent = false
-        
+
         UITabBar.appearance().tintColor = UIColor.myOrange
     }
 }

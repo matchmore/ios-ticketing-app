@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE95A2C64C01BBBD87DF0016BBB0116B"
+               BlueprintIdentifier = "485039B235A2F1553DE457D16004FC65"
                BuildableName = "Pods_alps_ios_TicketingApp.framework"
                BlueprintName = "Pods-alps-ios-TicketingApp"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE95A2C64C01BBBD87DF0016BBB0116B"
+            BlueprintIdentifier = "485039B235A2F1553DE457D16004FC65"
             BuildableName = "Pods_alps_ios_TicketingApp.framework"
             BlueprintName = "Pods-alps-ios-TicketingApp"
             ReferencedContainer = "container:Pods.xcodeproj">

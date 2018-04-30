@@ -6,48 +6,46 @@
 //  Copyright © 2018 Matchmore. All rights reserved.
 //
 
-import UIKit
-import AlpsSDK
+import Matchmore
 import PKHUD
+import UIKit
 
 class FindViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet var tableView: UITableView!
+
     var subscriptions = [Subscription]()
-    
-    override func viewWillAppear(_ animated: Bool) {
+
+    override func viewWillAppear(_: Bool) {
         getSubscriptions()
     }
-    
+
     // MARK: - Table View Data Source and Delegate
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return subscriptions.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "FindCell"
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FindTableViewCell else { return UITableViewCell() }
         let sub = subscriptions[indexPath.row]
-        
+
         cell.nameLabel.text = sub.selector?.slice(from: "'", to: "'")
-        cell.radiusLabel.text = "\(String(sub.range!/1000)) km"
+        cell.radiusLabel.text = "\(String(sub.range! / 1000)) km"
         cell.priceLabel.text = "$\(sub.selector?.slice(from: "<= ") ?? "")"
-        
-        
-        let secondsFromCreation = (Date().timeIntervalSince1970 - Double(sub.createdAt!/1000))
+
+        let secondsFromCreation = (Date().timeIntervalSince1970 - Double(sub.createdAt! / 1000))
         let timeLeft: Double = sub.duration! - secondsFromCreation
         cell.durationLabel.text = secondsToHoursMinutes(timeLeft)
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+
+    func tableView(_: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let subscription = subscriptions[indexPath.row]
             PKHUD.sharedHUD.contentView = PKHUDProgressView()
             PKHUD.sharedHUD.show()
-            MatchMore.subscriptions.delete(item: subscription, completion: { (error) in
+            Matchmore.subscriptions.delete(item: subscription, completion: { error in
                 if error == nil {
                     PKHUD.sharedHUD.contentView = PKHUDSuccessView()
                     PKHUD.sharedHUD.hide()
@@ -61,23 +59,23 @@ class FindViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
         }
     }
-    
+
     // MARK: - AlpsSDK Functions
-    
+
     private func getSubscriptions() {
-        MatchMore.subscriptions.findAll(completion: { subscriptions in
+        Matchmore.subscriptions.findAll(completion: { subscriptions in
             self.subscriptions = subscriptions
             self.tableView.reloadData()
         })
     }
-    
+
     // MARK: - Helper
-    
+
     func secondsToHoursMinutes(_ seconds: Double?) -> String {
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = [.day, .hour, .minute]
         formatter.unitsStyle = .full
-        
+
         let formattedString = formatter.string(from: TimeInterval(seconds!))!
         return formattedString.replacingOccurrences(of: ",", with: "")
     }
@@ -86,12 +84,12 @@ class FindViewController: UIViewController, UITableViewDelegate, UITableViewData
 extension String {
     func slice(from: String, to: String) -> String? {
         return (range(of: from)?.upperBound).flatMap { substringFrom in
-            (range(of: to, range: substringFrom..<endIndex)?.lowerBound).map { substringTo in
-                String(self[substringFrom..<substringTo])
+            (range(of: to, range: substringFrom ..< endIndex)?.lowerBound).map { substringTo in
+                String(self[substringFrom ..< substringTo])
             }
         }
     }
-    
+
     func slice(from: String) -> String? {
         return (range(of: from)?.upperBound).flatMap { substringFrom in
             String(self[substringFrom...])

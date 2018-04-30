@@ -9,11 +9,10 @@
 import UIKit
 
 class AddPublicationViewController: UIViewController {
+    @IBOutlet var mobileView: UIView!
+    @IBOutlet var pinView: UIView!
+    @IBOutlet var iBeaconView: UIView!
 
-    @IBOutlet weak var mobileView: UIView!
-    @IBOutlet weak var pinView: UIView!
-    @IBOutlet weak var iBeaconView: UIView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         mobileView.isHidden = false

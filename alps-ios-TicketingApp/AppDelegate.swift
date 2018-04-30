@@ -9,6 +9,7 @@
 import CoreLocation
 import Crashlytics
 import Fabric
+import IQKeyboardManager
 import Matchmore
 import UIKit
 import UserNotifications
@@ -27,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Crashlytics.self])
+        IQKeyboardManager.shared().previousNextDisplayMode = .alwaysHide
+        IQKeyboardManager.shared().shouldShowToolbarPlaceholder = false
         // UI Setup
         setupAppearance()
         AppDelegate.setBadgeIndicator(0)

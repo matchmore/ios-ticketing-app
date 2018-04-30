@@ -24,3 +24,6 @@ DerivedData
 
 # AppCode
 .idea/
+
+# Pods
+Pods/

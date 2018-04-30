@@ -23,11 +23,11 @@ class AddFindViewController: UIViewController {
     // MARK: - Action
 
     @IBAction func radiusValueChanged(_ sender: UISlider) {
-        radiusLabel.text = "RADIUS: \(Int(sender.value)) km"
+        radiusLabel.text = "RADIUS: \(String(format: "%.1f", sender.value)) km"
     }
 
     @IBAction func maxPriceValueChanged(_ sender: UISlider) {
-        maxPriceLabel.text = "MAX PRICE: $\(Int(sender.value))"
+        maxPriceLabel.text = "MAX PRICE: $\(String(format: "%.2f", sender.value))"
     }
 
     @IBAction func durationValueChanged(_ sender: UISlider) {

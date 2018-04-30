@@ -1,10 +1,11 @@
 PODS:
-  - Alamofire (4.7.1)
+  - Alamofire (4.7.2)
   - Crashlytics (3.10.1):
     - Fabric (~> 1.7.5)
   - Fabric (1.7.5)
+  - IQKeyboardManager (6.0.2)
   - Kingfisher (4.6.3)
-  - Matchmore (0.6.0):
+  - Matchmore (0.7.0):
     - Alamofire (~> 4.0)
     - Starscream (~> 3.0)
   - PKHUD (5.0.0)
@@ -15,8 +16,9 @@ PODS:
 DEPENDENCIES:
   - Crashlytics
   - Fabric
+  - IQKeyboardManager
   - Kingfisher (~> 4.0)
-  - Matchmore (from `../alps-ios-sdk`)
+  - Matchmore (~> 0.7)
   - PKHUD (~> 5.0)
   - SkyFloatingLabelTextField (~> 3.0)
   - SwiftFormat/CLI
@@ -26,27 +28,26 @@ SPEC REPOS:
     - Alamofire
     - Crashlytics
     - Fabric
+    - IQKeyboardManager
     - Kingfisher
+    - Matchmore
     - PKHUD
     - SkyFloatingLabelTextField
     - Starscream
     - SwiftFormat
 
-EXTERNAL SOURCES:
-  Matchmore:
-    :path: "../alps-ios-sdk"
-
 SPEC CHECKSUMS:
-  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
   Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
+  IQKeyboardManager: c49d59e358aeeffaa0280aa305093c2b194d2607
   Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
-  Matchmore: 923767d3cb16d21a3a82fb02119174adbe4e34f3
+  Matchmore: 467e28a2a4b0f9c7560d57605d724eda773fcdb8
   PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
   SkyFloatingLabelTextField: 703aa1420b697392b1e7dba25571180dde018477
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
   SwiftFormat: f39044d75d5e58dbbc7c436c089104ec9c8f717a
 
-PODFILE CHECKSUM: f418664ef0f1af16bdba90d6fb8daf3b12bbd696
+PODFILE CHECKSUM: 99be67c942134e6bbc7a0ed05bbca7c498f8bf29
 
 COCOAPODS: 1.5.0
